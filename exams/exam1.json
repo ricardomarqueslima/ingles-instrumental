@@ -1,0 +1,109 @@
+{
+  "module": 1,
+  "title": "Prova - Inferencia Contextual",
+  "timeLimit": 1800,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "prompt": "Leia a frase abaixo e infira o significado da palavra destacada com base no contexto:",
+      "text": "The congregation gathered in the sanctuary to hear the pastor's sermon on forgiveness. Many parishioners were deeply moved by his words.",
+      "options": [
+        "a) Parishioners significa 'padrinhos'",
+        "b) Parishioners significa 'membros da igreja/paroquia'",
+        "c) Parishioners significa 'pastores auxiliares'",
+        "d) Parishioners significa 'missionarios'"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "prompt": "Com base no contexto da frase, qual e o significado mais provavel da palavra 'atonement'?",
+      "text": "Through Christ's sacrifice on the cross, believers receive atonement for their sins, restoring their relationship with God.",
+      "options": [
+        "a) Castigo divino",
+        "b) Expiacao/reconciliacao",
+        "c) Confissao publica",
+        "d) Batismo"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "true_false",
+      "prompt": "Leia o trecho abaixo e avalie se as afirmacoes sobre o significado das palavras sao verdadeiras ou falsas, com base no contexto:",
+      "text": "The elders of the church convened a meeting to discuss the plight of the impoverished families in the community. They resolved to establish a benevolence fund to provide relief.",
+      "statements": [
+        { "id": "3a", "text": "A palavra 'plight' pode ser inferida como 'situacao dificil' pelo contexto de familias empobrecidas." },
+        { "id": "3b", "text": "A palavra 'benevolence' pode ser inferida como 'punicao' pelo contexto da frase." },
+        { "id": "3c", "text": "A palavra 'resolved' indica que os lideres tomaram uma decisao firme." },
+        { "id": "3d", "text": "A palavra 'relief' pode ser entendida como 'alivio/ajuda' com base no contexto." }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "drag_match",
+      "prompt": "Leia o paragrafo abaixo. Em seguida, associe cada palavra destacada ao significado inferido pelo contexto:",
+      "text": "The theologian devoted decades to the meticulous study of ancient manuscripts. His scholarly work shed light on previously obscure passages of Scripture, and his findings were deemed groundbreaking by his peers.",
+      "items": ["meticulous", "obscure", "deemed", "peers"],
+      "targets": ["considerado/julgado", "cuidadoso/minucioso", "colegas/iguais", "obscuro/pouco claro"]
+    },
+    {
+      "id": 5,
+      "type": "fill_blank",
+      "prompt": "Complete as frases abaixo com as palavras do banco de palavras. Use o contexto para inferir qual palavra se encaixa em cada lacuna:",
+      "sentence": "The missionary traveled to a remote ___ to share the Gospel. The local people had never heard the ___ of Jesus, so the missionary learned their ___ to communicate effectively. After months of work, a small ___ was established.",
+      "wordBank": ["village", "message", "language", "church", "mountain", "Bible"]
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "prompt": "Analise o texto e determine o significado da palavra 'steadfast' usando as pistas contextuais:",
+      "text": "Despite years of persecution and hardship, the early Christians remained steadfast in their faith. They never wavered or abandoned their beliefs, even when threatened with death.",
+      "options": [
+        "a) Temeroso",
+        "b) Firme e inabalavel",
+        "c) Indiferente",
+        "d) Revoltado"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "column_match",
+      "prompt": "Leia as frases abaixo e associe cada palavra sublinhada ao significado inferido pelo contexto. Use as pistas contextuais para determinar o significado correto:",
+      "text": "1) The prophet foretold the coming of the Messiah. 2) God's covenant with Abraham was everlasting. 3) The disciples forsook everything to follow Jesus. 4) The priest offered a burnt offering to atone for the people's transgressions.",
+      "leftColumn": ["foretold", "covenant", "forsook", "transgressions"],
+      "rightColumn": ["abandonaram/deixaram", "alianca/pacto", "previu/profetizou", "transgressoes/pecados"]
+    },
+    {
+      "id": 8,
+      "type": "true_false",
+      "prompt": "Analise o texto e julgue as inferencias feitas sobre as palavras destacadas:",
+      "text": "The seminary curriculum encompasses a wide range of subjects, from hermeneutics to homiletics. Students are expected to exegete biblical passages with precision and to articulate their interpretations clearly in both written and oral form.",
+      "statements": [
+        { "id": "8a", "text": "A palavra 'encompasses' pode ser inferida como 'abrange/inclui' com base na ideia de uma variedade de disciplinas." },
+        { "id": "8b", "text": "A palavra 'exegete' pode ser inferida como 'ignorar' pelo contexto academico." },
+        { "id": "8c", "text": "A palavra 'articulate' no contexto significa 'expressar com clareza'." }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "drag_match",
+      "prompt": "Infira o significado das palavras abaixo a partir do contexto em que aparecem e faca a correspondencia correta:",
+      "text": "A) The congregation was deeply grieved by the loss of their beloved pastor. B) The revival brought about a remarkable spiritual awakening in the town. C) The apostle Paul endured many tribulations during his missionary journeys. D) Christ's resurrection is the cornerstone of the Christian faith.",
+      "items": ["grieved", "awakening", "tribulations", "cornerstone"],
+      "targets": ["pedra angular/fundamento", "entristecida/enlutada", "despertar/avivamento", "tribulacoes/sofrimentos"]
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "prompt": "Usando pistas tipograficas e contextuais, infira o significado do termo em italico no texto abaixo:",
+      "text": "The doctrine of *sola fide* -- that is, the belief that justification comes through faith alone, without the need for human works -- was central to the Protestant Reformation.",
+      "options": [
+        "a) Sola fide refere-se a salvacao pelas obras",
+        "b) Sola fide significa 'somente a fe'",
+        "c) Sola fide e um termo para 'somente a graca'",
+        "d) Sola fide refere-se ao batismo infantil"
+      ]
+    }
+  ]
+}

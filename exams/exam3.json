@@ -1,0 +1,104 @@
+{
+  "module": 3,
+  "title": "Prova - Afixacao",
+  "timeLimit": 1800,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "prompt": "Analise a palavra 'unfaithfulness'. Quais sao os afixos presentes e como eles modificam a raiz 'faith'?",
+      "options": [
+        "a) Prefixo 'un-' (negacao) + raiz 'faith' (fe) + sufixo '-ful' (cheio de) + sufixo '-ness' (qualidade) = qualidade de ser sem fe/infidelidade",
+        "b) Prefixo 'un-' (excesso) + raiz 'faith' (fe) + sufixo '-ful' (sem) + sufixo '-ness' (acao) = acao de ter muita fe",
+        "c) Prefixo 'un-' (negacao) + raiz 'faith' (fe) + sufixo '-ful' (cheio de) + sufixo '-ness' (lugar) = lugar sem fe",
+        "d) Nao ha afixos nesta palavra; e uma palavra simples"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "prompt": "Qual e o significado do prefixo 'mis-' na palavra 'misinterpret', comum em contextos de hermeneutica biblica?",
+      "text": "Many scholars warn against misinterpreting Scripture by taking verses out of context.",
+      "options": [
+        "a) 'Mis-' indica repeticao - misinterpret = interpretar novamente",
+        "b) 'Mis-' indica negacao total - misinterpret = nao interpretar",
+        "c) 'Mis-' indica erro/equivoco - misinterpret = interpretar erroneamente",
+        "d) 'Mis-' indica excesso - misinterpret = interpretar demais"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "drag_match",
+      "prompt": "Associe cada prefixo ao seu significado e a um exemplo teologico:",
+      "items": ["pre- (predestination)", "re- (redemption)", "un- (unbelief)", "dis- (disobedience)"],
+      "targets": ["negacao/oposto (desobediencia)", "antes/anterior (predestinacao)", "de volta/novamente (redencao/resgate)", "negacao/ausencia (incredulidade)"]
+    },
+    {
+      "id": 4,
+      "type": "true_false",
+      "prompt": "Avalie as afirmacoes sobre sufixos e seus significados em palavras teologicas:",
+      "statements": [
+        { "id": "4a", "text": "O sufixo '-tion' em 'salvation' transforma o verbo 'salvar' em substantivo (acao de salvar)." },
+        { "id": "4b", "text": "O sufixo '-less' em 'graceless' indica 'cheio de graca'." },
+        { "id": "4c", "text": "O sufixo '-ment' em 'atonement' indica um substantivo que expressa resultado ou estado." },
+        { "id": "4d", "text": "O sufixo '-able' em 'teachable' indica capacidade ou possibilidade (capaz de ser ensinado)." },
+        { "id": "4e", "text": "O sufixo '-ly' em 'righteously' transforma o adjetivo em adverbio (de maneira justa)." }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "fill_blank",
+      "prompt": "Adicione o prefixo ou sufixo correto para formar a palavra descrita entre parenteses:",
+      "sentence": "The ___believe (nao acreditar) of Thomas was temporary. God's ___fulness (qualidade de ser fiel) endures forever. The ___interpret (interpretar de forma errada) of prophecy can lead to confusion. Christ calls us to live ___lessly (sem medo/temor).",
+      "wordBank": ["un", "dis", "faith", "mis", "fear", "re"]
+    },
+    {
+      "id": 6,
+      "type": "column_match",
+      "prompt": "Associe cada palavra formada por afixacao ao seu significado em portugues:",
+      "leftColumn": ["overcoming", "unrighteous", "reformation", "prayerful", "disobedience"],
+      "rightColumn": ["desobediencia", "superando/vencendo", "injusto/improbo", "reformacao", "devoto em oracao"]
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "prompt": "Na frase abaixo, identifique a palavra que contem TANTO um prefixo QUANTO um sufixo:",
+      "text": "The unconditional love of God is the foundation of evangelical preaching about predestination and sanctification.",
+      "options": [
+        "a) evangelical (sufixo -al apenas)",
+        "b) unconditional (prefixo un- e sufixo -al)",
+        "c) predestination (prefixo pre- e sufixo -tion)",
+        "d) sanctification (sufixo -tion apenas)"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "drag_match",
+      "prompt": "Decomponha as palavras teologicas abaixo e associe cada uma a sua estrutura correta de afixos:",
+      "items": ["redeemable", "ungodliness", "overjoyed", "disbelief"],
+      "targets": ["prefixo dis- + raiz belief", "prefixo re- + raiz deem + sufixo -able", "prefixo un- + raiz god + sufixo -li + sufixo -ness", "prefixo over- + raiz joy + sufixo -ed"]
+    },
+    {
+      "id": 9,
+      "type": "true_false",
+      "prompt": "Analise as decomposicoes morfologicas abaixo e indique se estao corretas:",
+      "statements": [
+        { "id": "9a", "text": "Predetermination = pre (antes) + determine (determinar) + ation (substantivo) = ato de determinar antes/predeterminacao" },
+        { "id": "9b", "text": "Merciless = mercy (misericordia) + less (sem) = sem misericordia/impiedoso" },
+        { "id": "9c", "text": "Repentance = re (de volta) + pent (pensar) + ance (substantivo) = ato de pensar novamente/arrependimento" },
+        { "id": "9d", "text": "Anticlericalism = anti (contra) + clerical (clerical) + ism (doutrina) = doutrina contra o clero/anticlericalismo" }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "prompt": "Qual sufixo voce usaria para transformar o adjetivo 'righteous' (justo) em um substantivo que indica qualidade?",
+      "options": [
+        "a) -ment (righteousment)",
+        "b) -ness (righteousness)",
+        "c) -tion (righteoustion)",
+        "d) -able (righteousable)"
+      ]
+    }
+  ]
+}
