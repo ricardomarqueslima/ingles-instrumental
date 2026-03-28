@@ -3465,9 +3465,11 @@
             },
 
             speak(text, btn) {
-                // If already speaking, stop
-                if (this.synth.speaking) {
+                // If already speaking, force stop
+                if (this.synth.speaking || this.currentBtn) {
                     this.synth.cancel();
+                    // Workaround: Chrome bug where cancel() doesn't always work
+                    try { this.synth.resume(); this.synth.cancel(); } catch(e) {}
                     if (this.currentBtn) {
                         this.currentBtn.classList.remove('playing');
                         this.currentBtn.innerHTML = '&#9654;';
@@ -3477,14 +3479,17 @@
                         this.currentBtn = null;
                         return;
                     }
+                    this.currentBtn = null;
                 }
 
-                // Clean text for speech
+                // Clean text for speech - remove tooltip content and special chars
                 const cleanText = text
                     .replace(/[\u201c\u201d\u201e\u201f\u2033\u2036]/g, '')
                     .replace(/[\u2018\u2019\u201a\u201b\u2032\u2035]/g, "'")
                     .replace(/\s+/g, ' ')
                     .trim();
+
+                if (!cleanText) return;
 
                 const utterance = new SpeechSynthesisUtterance(cleanText);
                 utterance.voice = this.voice;
@@ -3496,17 +3501,26 @@
                 btn.classList.add('playing');
                 btn.innerHTML = '&#9724;';
 
-                utterance.onend = () => {
+                const resetBtn = () => {
                     btn.classList.remove('playing');
                     btn.innerHTML = '&#9654;';
-                    this.currentBtn = null;
+                    tts.currentBtn = null;
                 };
 
-                utterance.onerror = () => {
-                    btn.classList.remove('playing');
-                    btn.innerHTML = '&#9654;';
-                    this.currentBtn = null;
-                };
+                utterance.onend = resetBtn;
+                utterance.onerror = resetBtn;
+
+                // Workaround: Chrome pauses long speech after ~15s
+                // Resume periodically to prevent freezing
+                if (this._resumeInterval) clearInterval(this._resumeInterval);
+                this._resumeInterval = setInterval(() => {
+                    if (this.synth.speaking && !this.synth.paused) {
+                        this.synth.pause();
+                        this.synth.resume();
+                    } else if (!this.synth.speaking) {
+                        clearInterval(this._resumeInterval);
+                    }
+                }, 10000);
 
                 this.synth.speak(utterance);
             }
@@ -3556,7 +3570,10 @@
             // 3. Add play button to text-analysis blocks
             document.querySelectorAll('.text-analysis').forEach(block => {
                 if (block.querySelector('.tts-block-btn')) return;
-                const text = block.textContent.trim();
+                // Extrair apenas texto visivel, ignorando tooltips
+                const clone = block.cloneNode(true);
+                clone.querySelectorAll('.tooltip-text').forEach(el => el.remove());
+                const text = clone.textContent.trim();
                 if (!text) return;
                 const wrapper = document.createElement('div');
                 wrapper.className = 'tts-block-btn';
