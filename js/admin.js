@@ -143,7 +143,10 @@ const Admin = {
 
   async toggleModule(modulo, tipo, habilitado) {
     const result = await API.toggleModule(modulo, tipo, habilitado);
-    if (!result.success) {
+    if (result.success) {
+      // Atualizar estado local
+      this.config['modulo' + modulo + '_' + tipo] = habilitado;
+    } else {
       alert(result.error || 'Erro ao alterar modulo.');
       this.loadDashboard();
     }
