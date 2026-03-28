@@ -1,7 +1,7 @@
 {
   "module": 8,
   "title": "Prova - Reconhecimento Gramatical",
-  "timeLimit": 1800,
+  "timeLimit": 5400,
   "questions": [
     {
       "id": 1,
@@ -44,11 +44,26 @@
       "type": "true_false",
       "prompt": "Avalie as afirmacoes sobre os elementos gramaticais nas frases teologicas abaixo.",
       "statements": [
-        { "id": "4a", "text": "Na frase 'Christ Himself bore our sins on the cross', a palavra 'Himself' e um pronome reflexivo que enfatiza o sujeito." },
-        { "id": "4b", "text": "Na frase 'The church has grown significantly since its founding', o tempo verbal e Present Perfect." },
-        { "id": "4c", "text": "Na frase 'Their faith was stronger than ours', 'Their' e pronome possessivo adjetivo e 'ours' e pronome possessivo substantivo." },
-        { "id": "4d", "text": "Na frase 'Jesus will come again', o tempo verbal e Simple Present." },
-        { "id": "4e", "text": "Na frase 'The psalm that David wrote', 'that' funciona como pronome demonstrativo." }
+        {
+          "id": "4a",
+          "text": "Na frase 'Christ Himself bore our sins on the cross', a palavra 'Himself' e um pronome reflexivo que enfatiza o sujeito."
+        },
+        {
+          "id": "4b",
+          "text": "Na frase 'The church has grown significantly since its founding', o tempo verbal e Present Perfect."
+        },
+        {
+          "id": "4c",
+          "text": "Na frase 'Their faith was stronger than ours', 'Their' e pronome possessivo adjetivo e 'ours' e pronome possessivo substantivo."
+        },
+        {
+          "id": "4d",
+          "text": "Na frase 'Jesus will come again', o tempo verbal e Simple Present."
+        },
+        {
+          "id": "4e",
+          "text": "Na frase 'The psalm that David wrote', 'that' funciona como pronome demonstrativo."
+        }
       ]
     },
     {
@@ -61,21 +76,47 @@
         "Believers WILL INHERIT eternal life.",
         "The pastor IS PREPARING his sermon."
       ],
-      "targets": ["Simple Past", "Present Perfect", "Simple Future", "Present Continuous"]
+      "targets": [
+        "Simple Past",
+        "Present Perfect",
+        "Simple Future",
+        "Present Continuous"
+      ]
     },
     {
       "id": 6,
       "type": "column_match",
       "prompt": "Associe cada pronome com sua classificacao gramatical correta.",
-      "leftColumn": ["whom", "herself", "theirs", "we", "whose"],
-      "rightColumn": ["Pronome pessoal (personal - subject)", "Pronome relativo caso possessivo (relative - possessive)", "Pronome relativo caso objetivo (relative - object)", "Pronome reflexivo (reflexive)", "Pronome possessivo substantivo (possessive - independent)"]
+      "leftColumn": [
+        "whom",
+        "herself",
+        "theirs",
+        "we",
+        "whose"
+      ],
+      "rightColumn": [
+        "Pronome pessoal (personal - subject)",
+        "Pronome relativo caso possessivo (relative - possessive)",
+        "Pronome relativo caso objetivo (relative - object)",
+        "Pronome reflexivo (reflexive)",
+        "Pronome possessivo substantivo (possessive - independent)"
+      ]
     },
     {
       "id": 7,
       "type": "fill_blank",
       "prompt": "Complete as frases com a forma correta do verbo entre colchetes, usando o tempo verbal indicado.",
       "sentence": "By the time Paul ___ (reach - Past Perfect) Rome, he ___ (write - Past Perfect) several epistles. Today, scholars ___ (study - Present Continuous) these texts, and they ___ (discover - Present Perfect) many insights about early Christianity.",
-      "wordBank": ["had reached", "had written", "are studying", "have discovered", "reached", "wrote", "study", "discovered"]
+      "wordBank": [
+        "had reached",
+        "had written",
+        "are studying",
+        "have discovered",
+        "reached",
+        "wrote",
+        "study",
+        "discovered"
+      ]
     },
     {
       "id": 8,
@@ -94,10 +135,22 @@
       "type": "true_false",
       "prompt": "Analise as formas comparativas e superlativas nas frases abaixo e indique se estao gramaticalmente corretas.",
       "statements": [
-        { "id": "9a", "text": "'The Gospel of John is more theological than the Synoptic Gospels.' - Forma comparativa correta." },
-        { "id": "9b", "text": "'Revelation is the most difficultest book to interpret.' - Forma superlativa correta." },
-        { "id": "9c", "text": "'Paul's letters are better known than the General Epistles.' - Forma comparativa irregular correta." },
-        { "id": "9d", "text": "'The Dead Sea Scrolls are the oldest biblical manuscripts ever found.' - Forma superlativa correta." }
+        {
+          "id": "9a",
+          "text": "'The Gospel of John is more theological than the Synoptic Gospels.' - Forma comparativa correta."
+        },
+        {
+          "id": "9b",
+          "text": "'Revelation is the most difficultest book to interpret.' - Forma superlativa correta."
+        },
+        {
+          "id": "9c",
+          "text": "'Paul's letters are better known than the General Epistles.' - Forma comparativa irregular correta."
+        },
+        {
+          "id": "9d",
+          "text": "'The Dead Sea Scrolls are the oldest biblical manuscripts ever found.' - Forma superlativa correta."
+        }
       ]
     },
     {
@@ -105,7 +158,18 @@
       "type": "fill_blank",
       "prompt": "Complete o texto com os pronomes corretos (pessoais, possessivos, reflexivos ou relativos).",
       "sentence": "The pastor ___ preached last Sunday dedicated ___ to serving the community. ___ congregation admires ___ greatly because ___ always puts others before ___.",
-      "wordBank": ["who", "whom", "himself", "herself", "His", "Her", "him", "he", "They", "she"]
+      "wordBank": [
+        "who",
+        "whom",
+        "himself",
+        "herself",
+        "His",
+        "Her",
+        "him",
+        "he",
+        "They",
+        "she"
+      ]
     }
   ]
 }

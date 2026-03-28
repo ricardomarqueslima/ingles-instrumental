@@ -1,7 +1,7 @@
 {
   "module": 6,
   "title": "Prova - Ordem das Palavras",
-  "timeLimit": 1800,
+  "timeLimit": 5400,
   "questions": [
     {
       "id": 1,
@@ -32,32 +32,71 @@
       "type": "true_false",
       "prompt": "Avalie as afirmacoes sobre a ordem das palavras em ingles comparada ao portugues.",
       "statements": [
-        { "id": "3a", "text": "Em 'beautiful ancient stone church', os adjetivos seguem a ordem: opiniao - idade - material, antes do substantivo." },
-        { "id": "3b", "text": "O composto 'Bible study group' se traduz literalmente como 'Biblia estudo grupo' em portugues." },
-        { "id": "3c", "text": "Em ingles, o modificador vem antes do nucleo do grupo nominal, enquanto em portugues geralmente vem depois." },
-        { "id": "3d", "text": "A expressao 'church history professor' contem tres substantivos, sendo 'professor' o nucleo do grupo nominal." }
+        {
+          "id": "3a",
+          "text": "Em 'beautiful ancient stone church', os adjetivos seguem a ordem: opiniao - idade - material, antes do substantivo."
+        },
+        {
+          "id": "3b",
+          "text": "O composto 'Bible study group' se traduz literalmente como 'Biblia estudo grupo' em portugues."
+        },
+        {
+          "id": "3c",
+          "text": "Em ingles, o modificador vem antes do nucleo do grupo nominal, enquanto em portugues geralmente vem depois."
+        },
+        {
+          "id": "3d",
+          "text": "A expressao 'church history professor' contem tres substantivos, sendo 'professor' o nucleo do grupo nominal."
+        }
       ]
     },
     {
       "id": 4,
       "type": "drag_match",
       "prompt": "Associe cada substantivo composto em ingles com sua traducao correta em portugues, observando a inversao na ordem das palavras.",
-      "items": ["worship service", "prayer room", "theology student", "mission field"],
-      "targets": ["culto de adoracao", "sala de oracao", "estudante de teologia", "campo missionario"]
+      "items": [
+        "worship service",
+        "prayer room",
+        "theology student",
+        "mission field"
+      ],
+      "targets": [
+        "culto de adoracao",
+        "sala de oracao",
+        "estudante de teologia",
+        "campo missionario"
+      ]
     },
     {
       "id": 5,
       "type": "fill_blank",
       "prompt": "Complete o grupo nominal em ingles colocando os adjetivos na ordem correta. Lembre-se: opiniao > tamanho > idade > forma > cor > origem > material > proposito.",
       "sentence": "They discovered a ___ ___ ___ chalice in the archaeological site.",
-      "wordBank": ["golden", "beautiful", "ancient", "small", "Roman", "round"]
+      "wordBank": [
+        "golden",
+        "beautiful",
+        "ancient",
+        "small",
+        "Roman",
+        "round"
+      ]
     },
     {
       "id": 6,
       "type": "column_match",
       "prompt": "Associe cada grupo nominal em ingles com sua traducao correta em portugues, atentando para a ordem invertida dos termos.",
-      "leftColumn": ["Old Testament prophecy", "Reformed theology book", "Greek New Testament", "pastoral care ministry"],
-      "rightColumn": ["ministerio de cuidado pastoral", "profecia do Antigo Testamento", "livro de teologia reformada", "Novo Testamento grego"]
+      "leftColumn": [
+        "Old Testament prophecy",
+        "Reformed theology book",
+        "Greek New Testament",
+        "pastoral care ministry"
+      ],
+      "rightColumn": [
+        "ministerio de cuidado pastoral",
+        "profecia do Antigo Testamento",
+        "livro de teologia reformada",
+        "Novo Testamento grego"
+      ]
     },
     {
       "id": 7,
@@ -76,10 +115,22 @@
       "type": "true_false",
       "prompt": "Analise as traducoes dos grupos nominais compostos e indique se estao corretas.",
       "statements": [
-        { "id": "8a", "text": "'Seminary admission committee' traduz-se como 'comite de admissao do seminario'." },
-        { "id": "8b", "text": "'Church planting movement' traduz-se como 'igreja plantando movimento'." },
-        { "id": "8c", "text": "'Daily devotional reading' traduz-se como 'leitura devocional diaria'." },
-        { "id": "8d", "text": "'Youth ministry leader' traduz-se como 'lider do ministerio de jovens'." }
+        {
+          "id": "8a",
+          "text": "'Seminary admission committee' traduz-se como 'comite de admissao do seminario'."
+        },
+        {
+          "id": "8b",
+          "text": "'Church planting movement' traduz-se como 'igreja plantando movimento'."
+        },
+        {
+          "id": "8c",
+          "text": "'Daily devotional reading' traduz-se como 'leitura devocional diaria'."
+        },
+        {
+          "id": "8d",
+          "text": "'Youth ministry leader' traduz-se como 'lider do ministerio de jovens'."
+        }
       ]
     },
     {
@@ -87,14 +138,33 @@
       "type": "fill_blank",
       "prompt": "Organize as palavras para formar grupos nominais corretos em ingles, preenchendo os espacos na ordem adequada.",
       "sentence": "The ___ ___ conference invited a ___ ___ speaker to discuss ___ ___ theology.",
-      "wordBank": ["international", "Reformed", "biblical", "renowned", "missionary", "systematic", "Brazilian", "annual"]
+      "wordBank": [
+        "international",
+        "Reformed",
+        "biblical",
+        "renowned",
+        "missionary",
+        "systematic",
+        "Brazilian",
+        "annual"
+      ]
     },
     {
       "id": 10,
       "type": "drag_match",
       "prompt": "Identifique o nucleo (head noun) de cada grupo nominal composto e associe corretamente.",
-      "items": ["church growth strategy", "Bible translation project", "theological education reform", "worship music ministry"],
-      "targets": ["strategy (estrategia)", "project (projeto)", "reform (reforma)", "ministry (ministerio)"]
+      "items": [
+        "church growth strategy",
+        "Bible translation project",
+        "theological education reform",
+        "worship music ministry"
+      ],
+      "targets": [
+        "strategy (estrategia)",
+        "project (projeto)",
+        "reform (reforma)",
+        "ministry (ministerio)"
+      ]
     }
   ]
 }

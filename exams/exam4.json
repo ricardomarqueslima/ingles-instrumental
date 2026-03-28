@@ -1,7 +1,7 @@
 {
   "module": 4,
   "title": "Prova - Sinonimia e Antonimia",
-  "timeLimit": 1800,
+  "timeLimit": 5400,
   "questions": [
     {
       "id": 1,
@@ -31,34 +31,79 @@
       "id": 3,
       "type": "column_match",
       "prompt": "Associe cada palavra teologica em ingles ao seu antonimo correto:",
-      "leftColumn": ["faith", "salvation", "blessing", "holy", "mercy"],
-      "rightColumn": ["profane/secular", "doubt/unbelief", "curse/condemnation", "judgment/punishment", "damnation/perdition"]
+      "leftColumn": [
+        "faith",
+        "salvation",
+        "blessing",
+        "holy",
+        "mercy"
+      ],
+      "rightColumn": [
+        "profane/secular",
+        "doubt/unbelief",
+        "curse/condemnation",
+        "judgment/punishment",
+        "damnation/perdition"
+      ]
     },
     {
       "id": 4,
       "type": "true_false",
       "prompt": "Avalie se os pares de palavras apresentados sao sinonimos (S) ou antonimos (A) no contexto teologico:",
       "statements": [
-        { "id": "4a", "text": "Grace e mercy sao sinonimos (ambos expressam bondade divina imerecida)." },
-        { "id": "4b", "text": "Redemption e condemnation sao sinonimos." },
-        { "id": "4c", "text": "Sin e transgression sao sinonimos (ambos se referem a violacao da lei divina)." },
-        { "id": "4d", "text": "Humble e proud sao antonimos." },
-        { "id": "4e", "text": "Worship e praise sao antonimos." }
+        {
+          "id": "4a",
+          "text": "Grace e mercy sao sinonimos (ambos expressam bondade divina imerecida)."
+        },
+        {
+          "id": "4b",
+          "text": "Redemption e condemnation sao sinonimos."
+        },
+        {
+          "id": "4c",
+          "text": "Sin e transgression sao sinonimos (ambos se referem a violacao da lei divina)."
+        },
+        {
+          "id": "4d",
+          "text": "Humble e proud sao antonimos."
+        },
+        {
+          "id": "4e",
+          "text": "Worship e praise sao antonimos."
+        }
       ]
     },
     {
       "id": 5,
       "type": "drag_match",
       "prompt": "Associe cada palavra a seu sinonimo no contexto biblico/teologico:",
-      "items": ["Scripture", "congregation", "preach", "repentance"],
-      "targets": ["arrependimento/contrition", "Biblia/Holy Writ", "assembleia/flock", "proclamar/proclaim"]
+      "items": [
+        "Scripture",
+        "congregation",
+        "preach",
+        "repentance"
+      ],
+      "targets": [
+        "arrependimento/contrition",
+        "Biblia/Holy Writ",
+        "assembleia/flock",
+        "proclamar/proclaim"
+      ]
     },
     {
       "id": 6,
       "type": "fill_blank",
       "prompt": "Substitua as palavras entre parenteses por um sinonimo adequado do banco de palavras:",
       "sentence": "The ___ (happy/alegre) pastor shared the ___ (good news/boas novas) with the ___ (believers/crentes). They were ___ (thankful/agradecidos) for God's ___ (kindness/bondade).",
-      "wordBank": ["joyful", "Gospel", "faithful", "grateful", "benevolence", "sorrowful", "wrath"]
+      "wordBank": [
+        "joyful",
+        "Gospel",
+        "faithful",
+        "grateful",
+        "benevolence",
+        "sorrowful",
+        "wrath"
+      ]
     },
     {
       "id": 7,
@@ -76,15 +121,37 @@
       "id": 8,
       "type": "column_match",
       "prompt": "Associe cada palavra da coluna esquerda ao seu sinonimo na coluna direita, no contexto teologico:",
-      "leftColumn": ["forgiveness", "wicked", "prophecy", "disciple", "covenant"],
-      "rightColumn": ["follower/aprendiz", "pardon/absolvicao", "evil/perverso", "prediction/oracle", "agreement/pact"]
+      "leftColumn": [
+        "forgiveness",
+        "wicked",
+        "prophecy",
+        "disciple",
+        "covenant"
+      ],
+      "rightColumn": [
+        "follower/aprendiz",
+        "pardon/absolvicao",
+        "evil/perverso",
+        "prediction/oracle",
+        "agreement/pact"
+      ]
     },
     {
       "id": 9,
       "type": "drag_match",
       "prompt": "Associe cada palavra ao seu antonimo correto no contexto biblico:",
-      "items": ["light", "love", "truth", "hope"],
-      "targets": ["despair/desespero", "darkness/trevas", "hatred/odio", "falsehood/mentira"]
+      "items": [
+        "light",
+        "love",
+        "truth",
+        "hope"
+      ],
+      "targets": [
+        "despair/desespero",
+        "darkness/trevas",
+        "hatred/odio",
+        "falsehood/mentira"
+      ]
     },
     {
       "id": 10,
@@ -92,10 +159,22 @@
       "prompt": "Leia o texto e avalie as afirmacoes sobre relacoes de sinonimia e antonimia:",
       "text": "The righteous shall flourish like a palm tree, but the wicked shall perish. God exalts the humble and humbles the exalted.",
       "statements": [
-        { "id": "10a", "text": "No texto, 'flourish' e 'perish' funcionam como antonimos (prosperar vs perecer)." },
-        { "id": "10b", "text": "No texto, 'righteous' e 'wicked' sao sinonimos." },
-        { "id": "10c", "text": "No texto, 'exalts' e 'humbles' funcionam como antonimos (exaltar vs humilhar)." },
-        { "id": "10d", "text": "'Humble' e 'exalted' sao apresentados como conceitos opostos no texto." }
+        {
+          "id": "10a",
+          "text": "No texto, 'flourish' e 'perish' funcionam como antonimos (prosperar vs perecer)."
+        },
+        {
+          "id": "10b",
+          "text": "No texto, 'righteous' e 'wicked' sao sinonimos."
+        },
+        {
+          "id": "10c",
+          "text": "No texto, 'exalts' e 'humbles' funcionam como antonimos (exaltar vs humilhar)."
+        },
+        {
+          "id": "10d",
+          "text": "'Humble' e 'exalted' sao apresentados como conceitos opostos no texto."
+        }
       ]
     }
   ]

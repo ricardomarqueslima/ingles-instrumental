@@ -1,7 +1,7 @@
 {
   "module": 3,
   "title": "Prova - Afixacao",
-  "timeLimit": 1800,
+  "timeLimit": 5400,
   "questions": [
     {
       "id": 1,
@@ -30,19 +30,44 @@
       "id": 3,
       "type": "drag_match",
       "prompt": "Associe cada prefixo ao seu significado e a um exemplo teologico:",
-      "items": ["pre- (predestination)", "re- (redemption)", "un- (unbelief)", "dis- (disobedience)"],
-      "targets": ["negacao/oposto (desobediencia)", "antes/anterior (predestinacao)", "de volta/novamente (redencao/resgate)", "negacao/ausencia (incredulidade)"]
+      "items": [
+        "pre- (predestination)",
+        "re- (redemption)",
+        "un- (unbelief)",
+        "dis- (disobedience)"
+      ],
+      "targets": [
+        "negacao/oposto (desobediencia)",
+        "antes/anterior (predestinacao)",
+        "de volta/novamente (redencao/resgate)",
+        "negacao/ausencia (incredulidade)"
+      ]
     },
     {
       "id": 4,
       "type": "true_false",
       "prompt": "Avalie as afirmacoes sobre sufixos e seus significados em palavras teologicas:",
       "statements": [
-        { "id": "4a", "text": "O sufixo '-tion' em 'salvation' transforma o verbo 'salvar' em substantivo (acao de salvar)." },
-        { "id": "4b", "text": "O sufixo '-less' em 'graceless' indica 'cheio de graca'." },
-        { "id": "4c", "text": "O sufixo '-ment' em 'atonement' indica um substantivo que expressa resultado ou estado." },
-        { "id": "4d", "text": "O sufixo '-able' em 'teachable' indica capacidade ou possibilidade (capaz de ser ensinado)." },
-        { "id": "4e", "text": "O sufixo '-ly' em 'righteously' transforma o adjetivo em adverbio (de maneira justa)." }
+        {
+          "id": "4a",
+          "text": "O sufixo '-tion' em 'salvation' transforma o verbo 'salvar' em substantivo (acao de salvar)."
+        },
+        {
+          "id": "4b",
+          "text": "O sufixo '-less' em 'graceless' indica 'cheio de graca'."
+        },
+        {
+          "id": "4c",
+          "text": "O sufixo '-ment' em 'atonement' indica um substantivo que expressa resultado ou estado."
+        },
+        {
+          "id": "4d",
+          "text": "O sufixo '-able' em 'teachable' indica capacidade ou possibilidade (capaz de ser ensinado)."
+        },
+        {
+          "id": "4e",
+          "text": "O sufixo '-ly' em 'righteously' transforma o adjetivo em adverbio (de maneira justa)."
+        }
       ]
     },
     {
@@ -50,14 +75,33 @@
       "type": "fill_blank",
       "prompt": "Adicione o prefixo ou sufixo correto para formar a palavra descrita entre parenteses:",
       "sentence": "The ___believe (nao acreditar) of Thomas was temporary. God's ___fulness (qualidade de ser fiel) endures forever. The ___interpret (interpretar de forma errada) of prophecy can lead to confusion. Christ calls us to live ___lessly (sem medo/temor).",
-      "wordBank": ["un", "dis", "faith", "mis", "fear", "re"]
+      "wordBank": [
+        "un",
+        "dis",
+        "faith",
+        "mis",
+        "fear",
+        "re"
+      ]
     },
     {
       "id": 6,
       "type": "column_match",
       "prompt": "Associe cada palavra formada por afixacao ao seu significado em portugues:",
-      "leftColumn": ["overcoming", "unrighteous", "reformation", "prayerful", "disobedience"],
-      "rightColumn": ["desobediencia", "superando/vencendo", "injusto/improbo", "reformacao", "devoto em oracao"]
+      "leftColumn": [
+        "overcoming",
+        "unrighteous",
+        "reformation",
+        "prayerful",
+        "disobedience"
+      ],
+      "rightColumn": [
+        "desobediencia",
+        "superando/vencendo",
+        "injusto/improbo",
+        "reformacao",
+        "devoto em oracao"
+      ]
     },
     {
       "id": 7,
@@ -75,18 +119,40 @@
       "id": 8,
       "type": "drag_match",
       "prompt": "Decomponha as palavras teologicas abaixo e associe cada uma a sua estrutura correta de afixos:",
-      "items": ["redeemable", "ungodliness", "overjoyed", "disbelief"],
-      "targets": ["prefixo dis- + raiz belief", "prefixo re- + raiz deem + sufixo -able", "prefixo un- + raiz god + sufixo -li + sufixo -ness", "prefixo over- + raiz joy + sufixo -ed"]
+      "items": [
+        "redeemable",
+        "ungodliness",
+        "overjoyed",
+        "disbelief"
+      ],
+      "targets": [
+        "prefixo dis- + raiz belief",
+        "prefixo re- + raiz deem + sufixo -able",
+        "prefixo un- + raiz god + sufixo -li + sufixo -ness",
+        "prefixo over- + raiz joy + sufixo -ed"
+      ]
     },
     {
       "id": 9,
       "type": "true_false",
       "prompt": "Analise as decomposicoes morfologicas abaixo e indique se estao corretas:",
       "statements": [
-        { "id": "9a", "text": "Predetermination = pre (antes) + determine (determinar) + ation (substantivo) = ato de determinar antes/predeterminacao" },
-        { "id": "9b", "text": "Merciless = mercy (misericordia) + less (sem) = sem misericordia/impiedoso" },
-        { "id": "9c", "text": "Repentance = re (de volta) + pent (pensar) + ance (substantivo) = ato de pensar novamente/arrependimento" },
-        { "id": "9d", "text": "Anticlericalism = anti (contra) + clerical (clerical) + ism (doutrina) = doutrina contra o clero/anticlericalismo" }
+        {
+          "id": "9a",
+          "text": "Predetermination = pre (antes) + determine (determinar) + ation (substantivo) = ato de determinar antes/predeterminacao"
+        },
+        {
+          "id": "9b",
+          "text": "Merciless = mercy (misericordia) + less (sem) = sem misericordia/impiedoso"
+        },
+        {
+          "id": "9c",
+          "text": "Repentance = re (de volta) + pent (pensar) + ance (substantivo) = ato de pensar novamente/arrependimento"
+        },
+        {
+          "id": "9d",
+          "text": "Anticlericalism = anti (contra) + clerical (clerical) + ism (doutrina) = doutrina contra o clero/anticlericalismo"
+        }
       ]
     },
     {

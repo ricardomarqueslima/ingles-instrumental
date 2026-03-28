@@ -97,8 +97,11 @@ const ExamEngine = {
       this.currentQuestion === total - 1 ? 'Revisar' : 'Proxima';
   },
 
+  _alertsShown: {},
+
   startTimer() {
     this.stopTimer();
+    this._alertsShown = {};
     const timerEl = document.getElementById('examTimer');
 
     this.timerInterval = setInterval(() => {
@@ -109,14 +112,69 @@ const ExamEngine = {
 
       timerEl.textContent = `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
 
-      if (remaining <= 300) timerEl.classList.add('timer-warning');
-      if (remaining <= 60) timerEl.classList.add('timer-danger');
+      // Estilo visual do timer
+      timerEl.classList.remove('timer-warning', 'timer-danger');
+      if (remaining <= 300) timerEl.classList.add('timer-danger');
+      else if (remaining <= 900) timerEl.classList.add('timer-warning');
+
+      // === POPUPS DE AVISO ===
+      const elapsedMin = Math.floor(elapsed / 60);
+      const remainMin = Math.floor(remaining / 60);
+
+      // Aviso a cada 30 minutos de prova (30min, 60min)
+      if (elapsedMin === 30 && !this._alertsShown['30min']) {
+        this._alertsShown['30min'] = true;
+        this._showTimeAlert('30 minutos de prova', remainMin);
+      }
+      if (elapsedMin === 60 && !this._alertsShown['60min']) {
+        this._alertsShown['60min'] = true;
+        this._showTimeAlert('60 minutos de prova', remainMin);
+      }
+
+      // Aviso nos ultimos 15 minutos: a cada 5 min (15, 10, 5)
+      if (remainMin === 15 && sec === 0 && !this._alertsShown['r15']) {
+        this._alertsShown['r15'] = true;
+        this._showTimeAlert('Aten\u00e7\u00e3o!', 15);
+      }
+      if (remainMin === 10 && sec === 0 && !this._alertsShown['r10']) {
+        this._alertsShown['r10'] = true;
+        this._showTimeAlert('Aten\u00e7\u00e3o!', 10);
+      }
+      if (remainMin === 5 && sec === 0 && !this._alertsShown['r5']) {
+        this._alertsShown['r5'] = true;
+        this._showTimeAlert('\u00daltimo aviso!', 5);
+      }
 
       if (remaining <= 0) {
         this.stopTimer();
         this.finishExam(true);
       }
     }, 1000);
+  },
+
+  _showTimeAlert(titulo, minutosRestantes) {
+    // Criar popup elegante em vez de alert() para nao pausar o timer
+    const overlay = document.createElement('div');
+    overlay.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:99998;display:flex;justify-content:center;align-items:center;';
+    const box = document.createElement('div');
+    box.style.cssText = 'background:white;border-radius:16px;padding:30px 40px;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,0.3);max-width:400px;animation:fadeIn 0.3s ease;';
+    const isUrgent = minutosRestantes <= 15;
+    box.innerHTML = `
+      <div style="font-size:48px;margin-bottom:10px;">${isUrgent ? '\u23f0' : '\u231b'}</div>
+      <h3 style="margin:0 0 8px;color:${isUrgent ? '#c0392b' : '#1a5632'};font-size:1.2rem;">${titulo}</h3>
+      <p style="margin:0 0 20px;color:#555;font-size:1rem;">
+        ${minutosRestantes <= 5
+          ? '<strong style="color:#c0392b;font-size:1.3rem;">Faltam apenas ' + minutosRestantes + ' minutos!</strong><br>Finalize suas respostas.'
+          : 'Faltam <strong>' + minutosRestantes + ' minutos</strong> para o t\u00e9rmino da prova.'}
+      </p>
+      <button onclick="this.closest('div[style*=fixed]').remove()" style="padding:10px 30px;background:${isUrgent ? '#c0392b' : '#1a5632'};color:white;border:none;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer;">Entendi</button>
+    `;
+    overlay.appendChild(box);
+    overlay.onclick = (e) => { if (e.target === overlay) overlay.remove(); };
+    document.body.appendChild(overlay);
+
+    // Auto-fechar apos 8 segundos
+    setTimeout(() => { if (overlay.parentNode) overlay.remove(); }, 8000);
   },
 
   stopTimer() {

@@ -1,7 +1,7 @@
 {
   "module": 1,
-  "title": "Prova - Infer\u00eancia Contextual",
-  "timeLimit": 1800,
+  "title": "Prova - Inferência Contextual",
+  "timeLimit": 5400,
   "questions": [
     {
       "id": 1,
@@ -10,49 +10,78 @@
       "text": "The congregation gathered in the sanctuary to hear the pastor's sermon on forgiveness. Many <strong>parishioners</strong> were deeply moved by his words.",
       "options": [
         "a) Parishioners significa 'padrinhos'",
-        "b) Parishioners significa 'membros da igreja/par\u00f3quia'",
+        "b) Parishioners significa 'membros da igreja/paróquia'",
         "c) Parishioners significa 'pastores auxiliares'",
-        "d) Parishioners significa 'mission\u00e1rios'"
+        "d) Parishioners significa 'missionários'"
       ]
     },
     {
       "id": 2,
       "type": "multiple_choice",
-      "prompt": "Com base no contexto da frase, qual \u00e9 o significado mais prov\u00e1vel da palavra <strong>atonement</strong>?",
+      "prompt": "Com base no contexto da frase, qual é o significado mais provável da palavra <strong>atonement</strong>?",
       "text": "Through Christ's sacrifice on the cross, believers receive <strong>atonement</strong> for their sins, restoring their relationship with God.",
       "options": [
         "a) Castigo divino",
-        "b) Expia\u00e7\u00e3o/reconcilia\u00e7\u00e3o",
-        "c) Confiss\u00e3o p\u00fablica",
+        "b) Expiação/reconciliação",
+        "c) Confissão pública",
         "d) Batismo"
       ]
     },
     {
       "id": 3,
       "type": "true_false",
-      "prompt": "Leia o trecho abaixo e avalie se as afirma\u00e7\u00f5es sobre o significado das palavras s\u00e3o verdadeiras ou falsas, com base no contexto:",
+      "prompt": "Leia o trecho abaixo e avalie se as afirmações sobre o significado das palavras são verdadeiras ou falsas, com base no contexto:",
       "text": "The elders of the church convened a meeting to discuss the <strong>plight</strong> of the impoverished families in the community. They <strong>resolved</strong> to establish a <strong>benevolence</strong> fund to provide <strong>relief</strong>.",
       "statements": [
-        { "id": "3a", "text": "A palavra 'plight' pode ser inferida como 'situa\u00e7\u00e3o dif\u00edcil' pelo contexto de fam\u00edlias empobrecidas." },
-        { "id": "3b", "text": "A palavra 'benevolence' pode ser inferida como 'puni\u00e7\u00e3o' pelo contexto da frase." },
-        { "id": "3c", "text": "A palavra 'resolved' indica que os l\u00edderes tomaram uma decis\u00e3o firme." },
-        { "id": "3d", "text": "A palavra 'relief' pode ser entendida como 'al\u00edvio/ajuda' com base no contexto." }
+        {
+          "id": "3a",
+          "text": "A palavra 'plight' pode ser inferida como 'situação difícil' pelo contexto de famílias empobrecidas."
+        },
+        {
+          "id": "3b",
+          "text": "A palavra 'benevolence' pode ser inferida como 'punição' pelo contexto da frase."
+        },
+        {
+          "id": "3c",
+          "text": "A palavra 'resolved' indica que os líderes tomaram uma decisão firme."
+        },
+        {
+          "id": "3d",
+          "text": "A palavra 'relief' pode ser entendida como 'alívio/ajuda' com base no contexto."
+        }
       ]
     },
     {
       "id": 4,
       "type": "drag_match",
-      "prompt": "Leia o par\u00e1grafo abaixo. Em seguida, associe cada palavra destacada ao significado inferido pelo contexto:",
+      "prompt": "Leia o parágrafo abaixo. Em seguida, associe cada palavra destacada ao significado inferido pelo contexto:",
       "text": "The theologian devoted decades to the <strong>meticulous</strong> study of ancient manuscripts. His scholarly work shed light on previously <strong>obscure</strong> passages of Scripture, and his findings were <strong>deemed</strong> groundbreaking by his <strong>peers</strong>.",
-      "items": ["meticulous", "obscure", "deemed", "peers"],
-      "targets": ["considerado/julgado", "cuidadoso/minucioso", "colegas/iguais", "obscuro/pouco claro"]
+      "items": [
+        "meticulous",
+        "obscure",
+        "deemed",
+        "peers"
+      ],
+      "targets": [
+        "considerado/julgado",
+        "cuidadoso/minucioso",
+        "colegas/iguais",
+        "obscuro/pouco claro"
+      ]
     },
     {
       "id": 5,
       "type": "fill_blank",
       "prompt": "Complete as frases abaixo com as palavras do banco de palavras. Use o contexto para inferir qual palavra se encaixa em cada lacuna:",
       "sentence": "The missionary traveled to a remote ___ to share the Gospel. The local people had never heard the ___ of Jesus, so the missionary learned their ___ to communicate effectively. After months of work, a small ___ was established.",
-      "wordBank": ["village", "message", "language", "church", "mountain", "Bible"]
+      "wordBank": [
+        "village",
+        "message",
+        "language",
+        "church",
+        "mountain",
+        "Bible"
+      ]
     },
     {
       "id": 6,
@@ -61,7 +90,7 @@
       "text": "Despite years of persecution and hardship, the early Christians remained <strong>steadfast</strong> in their faith. They never wavered or abandoned their beliefs, even when threatened with death.",
       "options": [
         "a) Temeroso",
-        "b) Firme e inabal\u00e1vel",
+        "b) Firme e inabalável",
         "c) Indiferente",
         "d) Revoltado"
       ]
@@ -71,37 +100,66 @@
       "type": "column_match",
       "prompt": "Leia as frases abaixo e associe cada palavra sublinhada ao significado inferido pelo contexto:",
       "text": "1) The prophet <strong>foretold</strong> the coming of the Messiah. 2) God's <strong>covenant</strong> with Abraham was everlasting. 3) The disciples <strong>forsook</strong> everything to follow Jesus. 4) The priest offered a burnt offering to atone for the people's <strong>transgressions</strong>.",
-      "leftColumn": ["foretold", "covenant", "forsook", "transgressions"],
-      "rightColumn": ["abandonaram/deixaram", "alian\u00e7a/pacto", "previu/profetizou", "transgress\u00f5es/pecados"]
+      "leftColumn": [
+        "foretold",
+        "covenant",
+        "forsook",
+        "transgressions"
+      ],
+      "rightColumn": [
+        "abandonaram/deixaram",
+        "aliança/pacto",
+        "previu/profetizou",
+        "transgressões/pecados"
+      ]
     },
     {
       "id": 8,
       "type": "true_false",
-      "prompt": "Analise o texto abaixo e julgue as infer\u00eancias feitas sobre as palavras destacadas:",
+      "prompt": "Analise o texto abaixo e julgue as inferências feitas sobre as palavras destacadas:",
       "text": "The seminary curriculum <strong>encompasses</strong> a wide range of subjects, from hermeneutics to homiletics. Students are expected to <strong>exegete</strong> biblical passages with precision and to <strong>articulate</strong> their interpretations clearly in both written and oral form.",
       "statements": [
-        { "id": "8a", "text": "A palavra 'encompasses' pode ser inferida como 'abrange/inclui' com base na ideia de uma variedade de disciplinas." },
-        { "id": "8b", "text": "A palavra 'exegete' pode ser inferida como 'ignorar' pelo contexto acad\u00eamico." },
-        { "id": "8c", "text": "A palavra 'articulate' no contexto significa 'expressar com clareza'." }
+        {
+          "id": "8a",
+          "text": "A palavra 'encompasses' pode ser inferida como 'abrange/inclui' com base na ideia de uma variedade de disciplinas."
+        },
+        {
+          "id": "8b",
+          "text": "A palavra 'exegete' pode ser inferida como 'ignorar' pelo contexto acadêmico."
+        },
+        {
+          "id": "8c",
+          "text": "A palavra 'articulate' no contexto significa 'expressar com clareza'."
+        }
       ]
     },
     {
       "id": 9,
       "type": "drag_match",
-      "prompt": "Infira o significado das palavras abaixo a partir do contexto em que aparecem e fa\u00e7a a correspond\u00eancia correta:",
+      "prompt": "Infira o significado das palavras abaixo a partir do contexto em que aparecem e faça a correspondência correta:",
       "text": "A) The congregation was deeply <strong>grieved</strong> by the loss of their beloved pastor. B) The revival brought about a remarkable spiritual <strong>awakening</strong> in the town. C) The apostle Paul endured many <strong>tribulations</strong> during his missionary journeys. D) Christ's resurrection is the <strong>cornerstone</strong> of the Christian faith.",
-      "items": ["grieved", "awakening", "tribulations", "cornerstone"],
-      "targets": ["pedra angular/fundamento", "entristecida/enlutada", "despertar/avivamento", "tribula\u00e7\u00f5es/sofrimentos"]
+      "items": [
+        "grieved",
+        "awakening",
+        "tribulations",
+        "cornerstone"
+      ],
+      "targets": [
+        "pedra angular/fundamento",
+        "entristecida/enlutada",
+        "despertar/avivamento",
+        "tribulações/sofrimentos"
+      ]
     },
     {
       "id": 10,
       "type": "multiple_choice",
-      "prompt": "Usando pistas tipogr\u00e1ficas e contextuais, infira o significado do termo em it\u00e1lico no texto abaixo:",
-      "text": "The doctrine of <em>sola fide</em> \u2014 that is, the belief that justification comes through faith alone, without the need for human works \u2014 was central to the Protestant Reformation.",
+      "prompt": "Usando pistas tipográficas e contextuais, infira o significado do termo em itálico no texto abaixo:",
+      "text": "The doctrine of <em>sola fide</em> — that is, the belief that justification comes through faith alone, without the need for human works — was central to the Protestant Reformation.",
       "options": [
-        "a) Sola fide refere-se \u00e0 salva\u00e7\u00e3o pelas obras",
-        "b) Sola fide significa 'somente a f\u00e9'",
-        "c) Sola fide \u00e9 um termo para 'somente a gra\u00e7a'",
+        "a) Sola fide refere-se à salvação pelas obras",
+        "b) Sola fide significa 'somente a fé'",
+        "c) Sola fide é um termo para 'somente a graça'",
         "d) Sola fide refere-se ao batismo infantil"
       ]
     }

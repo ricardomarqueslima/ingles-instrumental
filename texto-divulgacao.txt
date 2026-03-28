@@ -1,0 +1,180 @@
+=====================================================================
+INGLES INSTRUMENTAL - GUIA DO ALUNO
+Seminario Presbiteriano da Amazonia | CG05
+=====================================================================
+
+Prezado(a) aluno(a),
+
+Seja bem-vindo(a) ao ambiente de estudos da disciplina INGLES
+INSTRUMENTAL (CG05) do Seminario Presbiteriano da Amazonia!
+
+Este sistema foi desenvolvido especialmente para voce desenvolver
+habilidades de leitura e compreensao de textos teologicos em lingua
+inglesa, de forma interativa e no seu proprio ritmo.
+
+Abaixo, voce encontra um guia completo de como utilizar a plataforma.
+
+---------------------------------------------------------------------
+1. COMO ACESSAR
+---------------------------------------------------------------------
+
+- Acesse o link fornecido pelo professor no seu navegador (Chrome,
+  Firefox, Safari ou Edge).
+- Na tela de login, clique em "Cadastrar".
+- Preencha: nome completo, e-mail, senha e o CODIGO DE CONVITE
+  fornecido pelo professor.
+- Apos o cadastro, voce ja estara logado e podera acessar os
+  conteudos liberados.
+- Nas proximas vezes, basta usar seu e-mail e senha na aba "Entrar".
+
+---------------------------------------------------------------------
+2. ESTRUTURA DO CURSO - 8 MODULOS
+---------------------------------------------------------------------
+
+O curso esta organizado em 8 modulos progressivos:
+
+  1. Inferencia Contextual - Aprenda a deduzir o significado de
+     palavras desconhecidas usando pistas do contexto.
+  2. Cognatos - Descubra palavras semelhantes entre ingles e
+     portugues e cuidado com os falsos amigos!
+  3. Afixacao - Domine prefixos e sufixos para multiplicar seu
+     vocabulario.
+  4. Sinonimia e Antonimia - Entenda relacoes entre palavras
+     no contexto teologico.
+  5. Morfossintaxe - Identifique classes gramaticais e a estrutura
+     SVO (Sujeito-Verbo-Objeto).
+  6. Ordem das Palavras - Aprenda como funciona a ordem de
+     adjetivos e substantivos compostos em ingles.
+  7. Coesao Textual - Entenda como pronomes e conectores dao
+     fluidez aos textos.
+  8. Reconhecimento Gramatical - Consolide seus conhecimentos
+     de pronomes, tempos verbais e comparativos.
+
+IMPORTANTE: Os modulos sao liberados progressivamente pelo
+professor. Voce so tera acesso aos modulos que estiverem
+habilitados. Da mesma forma, as provas so estarao disponiveis
+quando o professor libera-las.
+
+---------------------------------------------------------------------
+3. RECURSOS INTERATIVOS DE CADA MODULO
+---------------------------------------------------------------------
+
+Cada modulo oferece diversos recursos para facilitar seu aprendizado:
+
+>> VIDEOAULAS DE APRESENTACAO
+   No inicio de cada modulo, ha um video curto com uma professora
+   explicando, em portugues, o tema que sera estudado. Assista
+   antes de comecar a leitura do conteudo!
+
+>> LEITURA EM VOZ ALTA (Text-to-Speech)
+   Ao lado dos textos em ingles, voce encontrara botoes de play
+   (triangulo). Ao clicar, o sistema le o texto em ingles com
+   pronuncia nativa. Voce pode:
+   - Ajustar a velocidade da leitura pelo controle no topo da pagina.
+   - Clicar novamente no botao para parar a leitura.
+   Use esse recurso para treinar sua compreensao auditiva!
+
+>> TOOLTIPS (DICAS NAS PALAVRAS)
+   No texto de analise (modulo 1), ao passar o mouse sobre as
+   palavras destacadas em amarelo, aparecera uma dica com a
+   traducao e explicacao em portugues. No celular, toque na
+   palavra para ver a dica.
+
+>> VIDEOS DE APOIO DO YOUTUBE (COM LEGENDAS EM PORTUGUES)
+   Cada modulo possui videos complementares do YouTube que
+   aprofundam o tema. Esses videos ja abrem com legendas
+   traduzidas automaticamente para o portugues! Se por algum
+   motivo a legenda nao aparecer, clique no icone de engrenagem
+   (configuracoes) do player > Legendas > Traduzir automaticamente
+   > Portugues.
+
+>> EXERCICIOS PRATICOS
+   Ao final de cada modulo, ha exercicios de fixacao com feedback
+   imediato (verde = correto, vermelho = incorreto). Esses
+   exercicios nao valem nota - sao para voce praticar!
+
+---------------------------------------------------------------------
+4. PROVAS - COMO FUNCIONAM
+---------------------------------------------------------------------
+
+>> LIBERACAO
+   As provas so ficam disponiveis quando o professor as libera.
+   Voce vera o botao "Fazer Prova" ao final do modulo quando a
+   prova estiver disponivel. Se o botao aparecer como "Prova
+   bloqueada", aguarde a liberacao.
+
+>> FORMATO DAS QUESTOES
+   Cada prova tem 10 questoes com 5 tipos diferentes:
+
+   - MULTIPLA ESCOLHA: Selecione a alternativa correta.
+   - VERDADEIRO OU FALSO: Avalie cada afirmacao clicando V ou F.
+   - ARRASTE E COMBINE: Arraste os itens da esquerda para os
+     alvos correspondentes a direita. No celular, toque primeiro
+     no item e depois no alvo.
+   - COMPLETE AS LACUNAS: Clique numa palavra do banco e depois
+     na lacuna onde deseja coloca-la. Para remover, clique na
+     lacuna preenchida.
+   - ASSOCIE AS COLUNAS: Clique num item da esquerda e depois
+     no correspondente da direita para conecta-los.
+
+>> TEMPO
+   Voce tera 90 MINUTOS para completar cada prova. Um cronometro
+   sera exibido no topo da tela. O sistema avisara voce a cada
+   30 minutos e com mais frequencia nos ultimos 15 minutos.
+   Se o tempo esgotar, suas respostas serao enviadas automaticamente.
+
+>> NAVEGACAO NA PROVA
+   - Use os botoes "Anterior" e "Proxima" para navegar entre
+     as questoes.
+   - Os circulos numerados no topo mostram seu progresso:
+     branco = nao respondida, verde = respondida.
+   - Voce pode voltar a qualquer questao antes de finalizar.
+   - Clique em "Finalizar Prova" quando terminar.
+
+>> UMA TENTATIVA POR PROVA
+   Atencao: voce so pode realizar cada prova UMA UNICA VEZ.
+   Certifique-se de que estudou todo o conteudo antes de comecar!
+
+>> RESULTADO
+   Apos finalizar, voce vera imediatamente sua nota e quais
+   questoes acertou ou errou. A nota ficara registrada e sera
+   validada pelo professor.
+
+>> EMAIL COM PROVA CORRIGIDA
+   Quando o professor validar sua nota, voce recebera um e-mail
+   no endereco cadastrado contendo:
+   - Todas as questoes da prova
+   - Suas respostas (destacadas em verde ou vermelho)
+   - As respostas corretas
+   - Explicacoes detalhadas de cada questao
+   - Sua nota final
+
+---------------------------------------------------------------------
+5. DICAS PARA UM BOM DESEMPENHO
+---------------------------------------------------------------------
+
+1. Assista ao video de apresentacao antes de estudar o conteudo.
+2. Leia todo o material do modulo com atencao.
+3. Use o botao de leitura em voz alta para treinar a pronuncia.
+4. Passe o mouse sobre as palavras destacadas para ver as dicas.
+5. Faca os exercicios de fixacao antes da prova.
+6. Assista aos videos complementares do YouTube com legendas.
+7. So faca a prova quando se sentir preparado - voce so tem
+   uma chance!
+8. Na prova, responda todas as questoes antes de finalizar.
+
+---------------------------------------------------------------------
+6. SUPORTE
+---------------------------------------------------------------------
+
+Em caso de duvidas ou problemas tecnicos, procure o professor
+responsavel pela disciplina.
+
+"Procura apresentar-te a Deus aprovado, como obreiro que nao tem
+de que se envergonhar, que maneja bem a palavra da verdade."
+- 2 Timoteo 2:15
+
+---------------------------------------------------------------------
+Bons estudos e que Deus abencoe sua jornada de aprendizado!
+Seminario Presbiteriano da Amazonia - CG05
+=====================================================================

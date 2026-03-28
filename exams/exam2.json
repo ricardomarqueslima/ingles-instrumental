@@ -1,7 +1,7 @@
 {
   "module": 2,
   "title": "Prova - Cognatos",
-  "timeLimit": 1800,
+  "timeLimit": 5400,
   "questions": [
     {
       "id": 1,
@@ -32,33 +32,81 @@
       "type": "true_false",
       "prompt": "Avalie as afirmacoes abaixo sobre cognatos verdadeiros e falsos no vocabulario teologico:",
       "statements": [
-        { "id": "3a", "text": "'Baptism' e um cognato verdadeiro de 'batismo'." },
-        { "id": "3b", "text": "'Sensible' e um cognato verdadeiro de 'sensivel'." },
-        { "id": "3c", "text": "'Theology' e um cognato verdadeiro de 'teologia'." },
-        { "id": "3d", "text": "'Actually' e um cognato verdadeiro de 'atualmente'." },
-        { "id": "3e", "text": "'Prophet' e um cognato verdadeiro de 'profeta'." }
+        {
+          "id": "3a",
+          "text": "'Baptism' e um cognato verdadeiro de 'batismo'."
+        },
+        {
+          "id": "3b",
+          "text": "'Sensible' e um cognato verdadeiro de 'sensivel'."
+        },
+        {
+          "id": "3c",
+          "text": "'Theology' e um cognato verdadeiro de 'teologia'."
+        },
+        {
+          "id": "3d",
+          "text": "'Actually' e um cognato verdadeiro de 'atualmente'."
+        },
+        {
+          "id": "3e",
+          "text": "'Prophet' e um cognato verdadeiro de 'profeta'."
+        }
       ]
     },
     {
       "id": 4,
       "type": "drag_match",
       "prompt": "Classifique cada palavra como cognato verdadeiro ou cognato falso, arrastando para a categoria correta:",
-      "items": ["redemption", "library", "communion", "fabric", "grace", "pretend"],
-      "targets": ["cognato verdadeiro (redencao)", "cognato falso (nao significa livraria, mas biblioteca)", "cognato verdadeiro (comunhao)", "cognato falso (nao significa fabrica, mas tecido)", "cognato verdadeiro (graca)", "cognato falso (nao significa pretender, mas fingir)"]
+      "items": [
+        "redemption",
+        "library",
+        "communion",
+        "fabric",
+        "grace",
+        "pretend"
+      ],
+      "targets": [
+        "cognato verdadeiro (redencao)",
+        "cognato falso (nao significa livraria, mas biblioteca)",
+        "cognato verdadeiro (comunhao)",
+        "cognato falso (nao significa fabrica, mas tecido)",
+        "cognato verdadeiro (graca)",
+        "cognato falso (nao significa pretender, mas fingir)"
+      ]
     },
     {
       "id": 5,
       "type": "fill_blank",
       "prompt": "Complete as frases com a traducao correta das palavras entre parenteses. Cuidado com os cognatos falsos!",
       "sentence": "The ___ (biblioteca) of the seminary has many ancient texts. The student was ___ (atualmente) writing a paper on Reformation history. The ___ (palestra) on hermeneutics was very informative.",
-      "wordBank": ["library", "lecture", "actually", "fabric", "currently", "bookstore"]
+      "wordBank": [
+        "library",
+        "lecture",
+        "actually",
+        "fabric",
+        "currently",
+        "bookstore"
+      ]
     },
     {
       "id": 6,
       "type": "column_match",
       "prompt": "Associe cada cognato falso ao seu significado real em ingles (nao ao significado aparente em portugues):",
-      "leftColumn": ["attend", "assume", "particular", "realize", "novel"],
-      "rightColumn": ["perceber/dar-se conta", "comparecer/participar", "especifico/determinado", "presumir/supor", "romance (livro)/novo"]
+      "leftColumn": [
+        "attend",
+        "assume",
+        "particular",
+        "realize",
+        "novel"
+      ],
+      "rightColumn": [
+        "perceber/dar-se conta",
+        "comparecer/participar",
+        "especifico/determinado",
+        "presumir/supor",
+        "romance (livro)/novo"
+      ]
     },
     {
       "id": 7,
@@ -77,18 +125,40 @@
       "type": "true_false",
       "prompt": "Leia as frases e julgue se a traducao sugerida para o cognato destacado esta correta:",
       "statements": [
-        { "id": "8a", "text": "'The deacon was very sympathetic to the family's situation.' - 'Sympathetic' significa 'simpatico'. (traducao sugerida)" },
-        { "id": "8b", "text": "'The seminary offers a comprehensive curriculum.' - 'Comprehensive' significa 'abrangente/completo'. (traducao sugerida)" },
-        { "id": "8c", "text": "'The pastor was asked to resign after the incident.' - 'Resign' significa 'resignar-se'. (traducao sugerida)" },
-        { "id": "8d", "text": "'The missionary showed great courage and determination.' - 'Determination' significa 'determinacao'. (traducao sugerida)" }
+        {
+          "id": "8a",
+          "text": "'The deacon was very sympathetic to the family's situation.' - 'Sympathetic' significa 'simpatico'. (traducao sugerida)"
+        },
+        {
+          "id": "8b",
+          "text": "'The seminary offers a comprehensive curriculum.' - 'Comprehensive' significa 'abrangente/completo'. (traducao sugerida)"
+        },
+        {
+          "id": "8c",
+          "text": "'The pastor was asked to resign after the incident.' - 'Resign' significa 'resignar-se'. (traducao sugerida)"
+        },
+        {
+          "id": "8d",
+          "text": "'The missionary showed great courage and determination.' - 'Determination' significa 'determinacao'. (traducao sugerida)"
+        }
       ]
     },
     {
       "id": 9,
       "type": "drag_match",
       "prompt": "Associe cada palavra em ingles ao seu significado correto em portugues. Atencao aos cognatos falsos!",
-      "items": ["journal", "parents", "intend", "support"],
-      "targets": ["pais (pai e mae)", "diario/periodico", "apoiar/sustentar", "pretender/ter a intencao"]
+      "items": [
+        "journal",
+        "parents",
+        "intend",
+        "support"
+      ],
+      "targets": [
+        "pais (pai e mae)",
+        "diario/periodico",
+        "apoiar/sustentar",
+        "pretender/ter a intencao"
+      ]
     },
     {
       "id": 10,
