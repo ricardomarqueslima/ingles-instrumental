@@ -54,8 +54,13 @@ const API = {
   },
 
   // ===== AUTH =====
-  async register(nome, email, password, inviteCode) {
-    return this.call('register', { nome, email, password, inviteCode });
+  async register(nome, email, password, inviteCode, foto) {
+    return this.call('register', { nome, email, password, inviteCode, foto });
+  },
+
+  async updatePhoto(foto) {
+    const token = localStorage.getItem('sessionToken');
+    return this.call('updatePhoto', { token, foto });
   },
 
   async login(email, password) {
