@@ -204,7 +204,7 @@ const ExamEngine = {
 
   getTypeBadge(type) {
     const badges = {
-      'multiple_choice': 'Multipla Escolha',
+      'multiple_choice': 'M\u00faltipla Escolha',
       'true_false': 'Verdadeiro ou Falso',
       'drag_match': 'Arraste e Combine',
       'fill_blank': 'Complete as Lacunas',
@@ -239,7 +239,11 @@ const ExamEngine = {
 
   // --- VERDADEIRO / FALSO ---
   renderTrueFalse(q) {
-    let html = '<div class="tf-statements">';
+    let html = '';
+    if (q.text) {
+      html += `<div class="exam-q-text">${q.text}</div>`;
+    }
+    html += '<div class="tf-statements">';
     q.statements.forEach(st => {
       html += `
         <div class="tf-statement" data-id="${st.id}">
@@ -268,9 +272,13 @@ const ExamEngine = {
   renderDragMatch(q) {
     const shuffledTargets = [...q.targets].sort(() => Math.random() - 0.5);
 
-    let html = `
+    let html = '';
+    if (q.text) {
+      html += `<div class="exam-q-text">${q.text}</div>`;
+    }
+    html += `
       <div class="dm-container">
-        <div class="dm-instruction">Arraste os itens da esquerda para os alvos correspondentes a direita. No celular, toque primeiro no item e depois no alvo.</div>
+        <div class="dm-instruction">Arraste os itens da esquerda para os alvos correspondentes \u00e0 direita. No celular, toque primeiro no item e depois no alvo.</div>
         <div class="dm-columns">
           <div class="dm-items" id="dmItems">`;
 
@@ -295,6 +303,10 @@ const ExamEngine = {
 
   // --- COMPLETAR LACUNAS ---
   renderFillBlank(q) {
+    let html = '';
+    if (q.text) {
+      html += `<div class="exam-q-text">${q.text}</div>`;
+    }
     // Substituir ___ por spans clicaveis
     let sentenceHTML = q.sentence.replace(/___+/g, (match, offset) => {
       const blankIdx = (q.sentence.substring(0, offset).match(/___+/g) || []).length;
@@ -303,7 +315,7 @@ const ExamEngine = {
 
     const shuffledWords = [...q.wordBank].sort(() => Math.random() - 0.5);
 
-    let html = `
+    html += `
       <div class="fb-container">
         <div class="fb-sentence">${sentenceHTML}</div>
         <div class="fb-instruction">Clique numa palavra e depois numa lacuna para preenche-la.</div>
@@ -377,9 +389,13 @@ const ExamEngine = {
   renderColumnMatch(q) {
     const shuffledRight = [...q.rightColumn].sort(() => Math.random() - 0.5);
 
-    let html = `
+    let html = '';
+    if (q.text) {
+      html += `<div class="exam-q-text">${q.text}</div>`;
+    }
+    html += `
       <div class="cm-container">
-        <div class="cm-instruction">Clique num item da esquerda e depois no item correspondente da direita para conecta-los.</div>
+        <div class="cm-instruction">Clique num item da esquerda e depois no item correspondente da direita para conect\u00e1-los.</div>
         <div class="cm-columns">
           <div class="cm-left">`;
 
