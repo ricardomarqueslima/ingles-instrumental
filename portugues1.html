@@ -1,0 +1,3648 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portugu&ecirc;s 1 - Semin&aacute;rio Presbiteriano da Amaz&ocirc;nia</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:wght@300;400;600;700&family=Fira+Code&display=swap');
+
+        :root {
+            --primary: #1a5632;
+            --primary-light: #2d8a4e;
+            --primary-dark: #0e3a20;
+            --accent: #c0392b;
+            --accent-light: #e74c3c;
+            --gold: #d4a017;
+            --gold-light: #f4d03f;
+            --bg: #faf8f5;
+            --bg-card: #ffffff;
+            --text: #2c3e50;
+            --text-light: #5d6d7e;
+            --border: #e8e0d8;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --info: #3498db;
+            --shadow: 0 2px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ===================== HEADER ===================== */
+        header {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+            color: white;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .logo-text h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            opacity: 0.85;
+            font-weight: 300;
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .progress-badge {
+            background: rgba(255,255,255,0.15);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-presenter {
+            background: var(--gold);
+            color: var(--primary-dark);
+            border: none;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-presenter:hover {
+            background: var(--gold-light);
+            transform: translateY(-1px);
+        }
+
+        /* ===================== NAVIGATION ===================== */
+        nav {
+            background: rgba(0,0,0,0.15);
+            overflow-x: auto;
+            scrollbar-width: thin;
+        }
+
+        nav::-webkit-scrollbar {
+            height: 3px;
+        }
+
+        nav::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.3);
+            border-radius: 3px;
+        }
+
+        .nav-inner {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-item {
+            padding: 10px 16px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            white-space: nowrap;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: var(--transition);
+            opacity: 0.75;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-item:hover {
+            opacity: 1;
+            background: rgba(255,255,255,0.08);
+        }
+
+        .nav-item.active {
+            opacity: 1;
+            border-bottom-color: var(--gold);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .nav-item .nav-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            font-size: 0.65rem;
+            margin-right: 5px;
+        }
+
+        .nav-item.completed .nav-num {
+            background: var(--success);
+        }
+
+        /* ===================== MAIN CONTENT ===================== */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
+        }
+
+        /* ===================== WELCOME SCREEN ===================== */
+        .welcome-screen {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .welcome-screen .welcome-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .welcome-screen h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .welcome-screen .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .welcome-verse {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 25px 30px;
+            border-radius: var(--radius);
+            margin: 25px auto;
+            max-width: 600px;
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .welcome-verse .ref {
+            display: block;
+            margin-top: 10px;
+            font-style: normal;
+            font-size: 0.85rem;
+            opacity: 0.85;
+        }
+
+        .units-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 35px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .unit-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid var(--border);
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .unit-card:hover {
+            border-color: var(--primary-light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .unit-card .unit-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: var(--primary);
+            color: white;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .unit-card h3 {
+            font-size: 0.95rem;
+            color: var(--primary-dark);
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .unit-card p {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        .unit-card .card-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 28px;
+            opacity: 0.15;
+        }
+
+        /* ===================== UNIT VIEWS ===================== */
+        .unit-view {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .unit-view.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .unit-header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .unit-header::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+
+        .unit-header .unit-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .unit-header h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .unit-header p {
+            opacity: 0.9;
+            font-size: 0.9rem;
+            max-width: 700px;
+        }
+
+        /* ===================== SECTIONS ===================== */
+        .section {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .section h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.15rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h3 .icon {
+            font-size: 1.3rem;
+        }
+
+        .section h4 {
+            font-size: 0.95rem;
+            color: var(--primary-dark);
+            margin: 18px 0 10px;
+            font-weight: 700;
+        }
+
+        .section p, .section li {
+            font-size: 0.92rem;
+            line-height: 1.8;
+            color: var(--text);
+        }
+
+        .section ul, .section ol {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        .section li {
+            margin-bottom: 6px;
+        }
+
+        /* ===================== EXAMPLE BOXES ===================== */
+        .example-box {
+            background: #f0faf4;
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 14px 0;
+        }
+
+        .example-box.theological {
+            background: #fdf6ec;
+            border-left-color: var(--gold);
+        }
+
+        .example-box.warning {
+            background: #fef5f5;
+            border-left-color: var(--accent);
+        }
+
+        .example-box .label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        .example-box.theological .label {
+            color: var(--gold);
+        }
+
+        .example-box.warning .label {
+            color: var(--accent);
+        }
+
+        .example-box .en {
+            font-family: 'Merriweather', serif;
+            font-size: 0.95rem;
+            color: var(--primary-dark);
+            font-style: italic;
+            margin-bottom: 4px;
+        }
+
+        .example-box .pt {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .highlight {
+            background: #fef3cd;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .highlight-green {
+            background: #d4edda;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .highlight-red {
+            background: #f8d7da;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .highlight-blue {
+            background: #d1ecf1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* ===================== WORD TABLE ===================== */
+        .word-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+            font-size: 0.88rem;
+        }
+
+        .word-table th {
+            background: var(--primary);
+            color: white;
+            padding: 10px 14px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .word-table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .word-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .word-table tr:hover {
+            background: #e8f5e9;
+        }
+
+        /* ===================== INTERACTIVE EXERCISES ===================== */
+        .exercise-area {
+            background: linear-gradient(135deg, #f8f9fa, #e8f5e9);
+            border: 2px dashed var(--primary-light);
+            border-radius: var(--radius);
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .exercise-area h3 {
+            color: var(--primary);
+            font-family: 'Merriweather', serif;
+            margin-bottom: 15px;
+        }
+
+        .exercise-item {
+            background: white;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .exercise-item:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .exercise-item .question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 0.92rem;
+        }
+
+        .exercise-item .question .q-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.7rem;
+            margin-right: 8px;
+        }
+
+        .options-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .option-btn {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 10px 14px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            font-size: 0.88rem;
+            transition: var(--transition);
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text);
+        }
+
+        .option-btn:hover {
+            border-color: var(--primary-light);
+            background: #f0faf4;
+        }
+
+        .option-btn.correct {
+            border-color: var(--success);
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .option-btn.incorrect {
+            border-color: var(--accent);
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .option-btn.disabled {
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        .feedback-msg {
+            margin-top: 10px;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .feedback-msg.show {
+            display: block;
+        }
+
+        .feedback-msg.correct {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .feedback-msg.incorrect {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* ===================== FILL-IN EXERCISES ===================== */
+        .fill-input {
+            border: 2px solid var(--border);
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-size: 0.9rem;
+            font-family: 'Fira Code', monospace;
+            width: 180px;
+            transition: var(--transition);
+        }
+
+        .fill-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26,86,50,0.1);
+        }
+
+        .fill-input.correct {
+            border-color: var(--success);
+            background: #d4edda;
+        }
+
+        .fill-input.incorrect {
+            border-color: var(--accent);
+            background: #f8d7da;
+        }
+
+        .check-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 10px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .check-btn:hover {
+            background: var(--primary-light);
+            transform: translateY(-1px);
+        }
+
+        .score-display {
+            text-align: center;
+            padding: 20px;
+            margin-top: 15px;
+            background: white;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .score-display.show {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .score-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .score-text {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* ===================== MATCH EXERCISE ===================== */
+        .match-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 15px 0;
+        }
+
+        .match-column h4 {
+            font-size: 0.85rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .match-item {
+            padding: 10px 14px;
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.88rem;
+        }
+
+        .match-item:hover {
+            border-color: var(--primary-light);
+        }
+
+        .match-item.selected {
+            border-color: var(--primary);
+            background: #e8f5e9;
+        }
+
+        .match-item.matched {
+            border-color: var(--success);
+            background: #d4edda;
+            cursor: default;
+        }
+
+        .match-item.error {
+            border-color: var(--accent);
+            background: #f8d7da;
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+        /* ===================== MOTIVATIONAL ===================== */
+        .motivation-box {
+            background: linear-gradient(135deg, var(--gold), #e67e22);
+            color: white;
+            padding: 20px 25px;
+            border-radius: var(--radius);
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .motivation-box .emoji {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .motivation-box p {
+            font-family: 'Merriweather', serif;
+            font-size: 0.95rem;
+            font-style: italic;
+            color: white;
+        }
+
+        .motivation-box .author {
+            font-style: normal;
+            font-size: 0.8rem;
+            opacity: 0.9;
+            margin-top: 6px;
+        }
+
+        /* ===================== TIP BOX ===================== */
+        .tip-box {
+            background: #e8f4fd;
+            border: 1px solid #bee5eb;
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin: 14px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .tip-box .tip-icon {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .tip-box p {
+            font-size: 0.88rem;
+            color: #0c5460;
+        }
+
+        /* ===================== NAVIGATION BUTTONS ===================== */
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid var(--border);
+        }
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border: 2px solid var(--primary);
+            border-radius: 10px;
+            background: white;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .nav-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .nav-btn.primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .nav-btn.primary:hover {
+            background: var(--primary-dark);
+        }
+
+        /* ===================== COLLAPSIBLE ===================== */
+        .collapsible {
+            margin: 12px 0;
+        }
+
+        .collapsible-header {
+            background: #f8f9fa;
+            padding: 12px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: var(--transition);
+            border: 1px solid var(--border);
+        }
+
+        .collapsible-header:hover {
+            background: #e8f5e9;
+        }
+
+        .collapsible-header .arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .collapsible-header.open .arrow {
+            transform: rotate(180deg);
+        }
+
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .collapsible-content.open {
+            max-height: 2000px;
+        }
+
+        .collapsible-content .inner {
+            padding: 15px;
+        }
+
+        /* ===================== VIDEO SECTION ===================== */
+        .video-section {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .video-section h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.15rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .video-caption {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .video-grid .video-item h4 {
+            font-size: 0.88rem;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===================== YOUTUBE FALLBACK ===================== */
+        .video-thumb-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .video-play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.35);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .video-thumb-link:hover .video-play-overlay {
+            background: rgba(0,0,0,0.5);
+        }
+
+        .video-play-btn {
+            width: 68px;
+            height: 48px;
+            background: #ff0000;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 22px;
+            margin-bottom: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .video-thumb-link:hover .video-play-btn {
+            transform: scale(1.1);
+        }
+
+        .video-play-text {
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        /* ===================== PRINT ===================== */
+        @media print {
+            header, nav, .nav-buttons, .exercise-area, .btn-presenter {
+                display: none;
+            }
+            .unit-view.active {
+                display: block;
+            }
+        }
+
+        /* ===================== FOOTER ===================== */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-light);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+
+        /* ===================== LOADING OVERLAY ===================== */
+        #loadingOverlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.3);
+            z-index: 99999;
+            justify-content: center;
+            align-items: center;
+        }
+        #loadingOverlay .loading-spinner {
+            width: 48px; height: 48px;
+            border: 4px solid #fff;
+            border-top-color: var(--gold);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* ===================== AUTH OVERLAY ===================== */
+        #authOverlay {
+            display: flex;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, #0e3a20 0%, #1a5632 40%, #2d8a4e 100%);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        #authOverlay.auth-fade-out {
+            animation: authFadeOut 0.4s ease forwards;
+        }
+        @keyframes authFadeOut {
+            to { opacity: 0; transform: scale(1.02); }
+        }
+        .auth-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 440px;
+            overflow: hidden;
+        }
+        .auth-header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+        .auth-header .auth-logo { font-size: 40px; margin-bottom: 8px; }
+        .auth-header h2 { margin: 0; font-family: 'Merriweather', serif; font-size: 1.3rem; }
+        .auth-header p { margin: 5px 0 0; opacity: 0.8; font-size: 0.85rem; }
+        .auth-tabs {
+            display: flex;
+            border-bottom: 2px solid var(--border);
+        }
+        .auth-tab {
+            flex: 1;
+            padding: 14px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-light);
+            background: none;
+            border: none;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+        .auth-tab.active {
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+            margin-bottom: -2px;
+        }
+        .auth-tab:hover { color: var(--primary); }
+        .auth-form {
+            padding: 25px 30px;
+        }
+        .auth-field {
+            margin-bottom: 16px;
+        }
+        .auth-field label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+        .auth-field input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .auth-field input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26,86,50,0.1);
+        }
+        .auth-submit {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Open Sans', sans-serif;
+        }
+        .auth-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(26,86,50,0.3);
+        }
+        .auth-error {
+            color: var(--accent);
+            font-size: 0.85rem;
+            text-align: center;
+            min-height: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        /* ===================== USER HEADER ===================== */
+        #userGreeting {
+            display: none;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.15);
+            padding: 4px 14px 4px 4px;
+            border-radius: 24px;
+            color: white;
+            font-size: 0.85rem;
+        }
+        .user-photo {
+            width: 32px; height: 32px; border-radius: 50%; object-fit: cover;
+            border: 2px solid rgba(255,255,255,0.4); flex-shrink: 0;
+        }
+        .user-photo-placeholder {
+            width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+            background: rgba(255,255,255,0.2); display: flex; align-items: center;
+            justify-content: center; font-size: 16px; color: rgba(255,255,255,0.7);
+        }
+
+        /* Photo Request Overlay */
+        #photoRequestOverlay {
+            display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6); z-index: 9998;
+            justify-content: center; align-items: center; padding: 20px;
+        }
+        .photo-request-box {
+            background: white; border-radius: 20px; max-width: 420px; width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden;
+        }
+        .photo-request-header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            padding: 24px; text-align: center; color: white;
+        }
+        .photo-request-header h3 { font-family: 'Merriweather', serif; font-size: 1.1rem; margin-top: 8px; }
+        .photo-request-body { padding: 24px; text-align: center; }
+        .photo-request-preview {
+            width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 16px;
+            background: #e8e0d8; display: flex; align-items: center; justify-content: center;
+            overflow: hidden; border: 3px solid var(--border);
+        }
+        .photo-request-preview img { width: 100%; height: 100%; object-fit: cover; }
+        .photo-request-body p { color: var(--text-light); font-size: 0.9rem; margin-bottom: 16px; }
+        .photo-request-body input[type=file] { margin-bottom: 16px; }
+        .photo-request-btns { display: flex; gap: 10px; justify-content: center; }
+        .photo-request-btns button {
+            padding: 10px 24px; border-radius: 10px; font-weight: 700; cursor: pointer;
+            font-size: 0.9rem; font-family: 'Open Sans', sans-serif; border: none;
+        }
+        .btn-photo-save { background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: white; }
+        .btn-photo-skip { background: #e8e0d8; color: var(--text-light); }
+
+        #logoutBtn {
+            display: none;
+            align-items: center;
+            background: rgba(192,57,43,0.8);
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        #logoutBtn:hover { background: var(--accent); }
+
+        /* ===================== EXAM BUTTON AREA ===================== */
+        .exam-btn-area {
+            margin-top: 30px;
+            padding: 25px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: var(--radius);
+            text-align: center;
+            border: 2px dashed var(--border);
+        }
+        .btn-exam {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--gold), #e6b422);
+            color: #1a1a1a;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Open Sans', sans-serif;
+        }
+        .btn-exam:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212,160,23,0.4);
+        }
+        .btn-exam:disabled, .btn-exam.locked {
+            background: #ccc;
+            color: #888;
+            cursor: not-allowed;
+        }
+        .exam-status { margin-top: 10px; font-size: 0.9rem; }
+        .exam-done { color: var(--primary); font-weight: 600; }
+        .exam-locked-msg { color: var(--text-light); font-style: italic; }
+        .validated-badge {
+            background: var(--success);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+        .pending-badge {
+            background: var(--warning);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        /* ===================== EXAM CONTAINER ===================== */
+        #examContainer {
+            display: none;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .exam-top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .exam-top-info h3 { margin: 0; color: var(--primary); font-size: 1.1rem; }
+        .exam-top-info small { color: var(--text-light); }
+        #examTimer {
+            font-family: 'Fira Code', monospace;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            background: #e8f5e9;
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
+        #examTimer.timer-warning { color: var(--warning); background: #fff3cd; }
+        #examTimer.timer-danger { color: var(--accent); background: #ffebee; animation: pulse 1s infinite; }
+        @keyframes pulse { 50% { opacity: 0.6; } }
+
+        .exam-progress-bar-container {
+            width: 100%;
+            height: 6px;
+            background: var(--border);
+            border-radius: 3px;
+            margin-bottom: 5px;
+        }
+        #examProgressBar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--gold));
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+        .exam-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.82rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        #examDots {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .exam-dot {
+            width: 34px; height: 34px;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            background: white;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--text-light);
+        }
+        .exam-dot.current { border-color: var(--primary); color: var(--primary); box-shadow: 0 0 0 3px rgba(26,86,50,0.15); }
+        .exam-dot.answered { background: var(--primary); color: white; border-color: var(--primary); }
+
+        .exam-question {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        .exam-q-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .exam-q-number {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        .exam-q-type {
+            background: #e8f5e9;
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+        .exam-q-prompt {
+            font-size: 1.05rem;
+            color: var(--text);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .exam-q-text {
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: #444;
+            background: #fdf8e8;
+            padding: 15px 20px;
+            border-left: 4px solid var(--gold);
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .mc-options { display: flex; flex-direction: column; gap: 10px; }
+        .mc-option {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 18px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: var(--transition);
+            background: white;
+            text-align: left;
+            font-size: 0.95rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .mc-option:hover { border-color: var(--primary-light); background: #f0faf4; }
+        .mc-option.selected { border-color: var(--primary); background: #e8f5e9; }
+        .mc-letter {
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            background: var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--text-light);
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+        .mc-option.selected .mc-letter { background: var(--primary); color: white; }
+
+        .tf-statements { display: flex; flex-direction: column; gap: 16px; }
+        .tf-statement {
+            padding: 16px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: #fafafa;
+        }
+        .tf-text { margin: 0 0 12px; font-size: 0.95rem; line-height: 1.5; }
+        .tf-buttons { display: flex; gap: 10px; }
+        .tf-btn {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            background: white;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .tf-btn:hover { border-color: var(--text-light); }
+        .tf-btn.tf-true.selected { border-color: var(--success); background: #e8f5e9; color: var(--success); }
+        .tf-btn.tf-false.selected { border-color: var(--accent); background: #ffebee; color: var(--accent); }
+
+        .dm-container { user-select: none; }
+        .dm-instruction { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; text-align: center; font-style: italic; }
+        .dm-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .dm-item {
+            padding: 12px 16px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border-radius: 8px;
+            cursor: grab;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .dm-item:hover { transform: scale(1.02); }
+        .dm-item.dragging { opacity: 0.5; }
+        .dm-item.dm-selected { box-shadow: 0 0 0 3px var(--gold); }
+        .dm-item.placed { opacity: 0.4; cursor: default; }
+        .dm-target { margin-bottom: 8px; }
+        .dm-target-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 4px;
+            text-align: center;
+        }
+        .dm-drop-zone {
+            padding: 12px;
+            border: 2px dashed var(--border);
+            border-radius: 8px;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            min-height: 42px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .dm-drop-zone.drag-over { border-color: var(--gold); background: #fdf8e8; }
+        .dm-drop-zone.has-item {
+            border-style: solid;
+            border-color: var(--primary);
+            background: #e8f5e9;
+        }
+        .dm-placed-text { font-weight: 600; color: var(--primary); }
+
+        .fb-container {}
+        .fb-sentence {
+            font-family: 'Merriweather', serif;
+            font-size: 1.05rem;
+            line-height: 2.2;
+            color: #333;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+        .fb-blank {
+            display: inline-block;
+            min-width: 80px;
+            border-bottom: 3px solid var(--primary);
+            padding: 2px 8px;
+            margin: 0 4px;
+            cursor: pointer;
+            text-align: center;
+            color: var(--primary);
+            font-weight: 700;
+            transition: var(--transition);
+            font-family: 'Open Sans', sans-serif;
+        }
+        .fb-blank.filled { border-bottom-color: var(--gold); background: #fdf8e8; border-radius: 4px; }
+        .fb-blank:hover { background: #e8f5e9; }
+        .fb-instruction { font-size: 0.85rem; color: var(--text-light); margin-bottom: 12px; text-align: center; font-style: italic; }
+        .fb-wordbank { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+        .fb-word {
+            padding: 8px 16px;
+            border: 2px solid var(--primary);
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            background: white;
+            color: var(--primary);
+            font-family: 'Open Sans', sans-serif;
+        }
+        .fb-word:hover:not(.used) { background: #e8f5e9; }
+        .fb-word.selected { background: var(--gold); color: #1a1a1a; border-color: var(--gold); }
+        .fb-word.used { opacity: 0.3; cursor: default; }
+
+        .cm-container {}
+        .cm-instruction { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; text-align: center; font-style: italic; }
+        .cm-columns {
+            display: grid;
+            grid-template-columns: 1fr 40px 1fr;
+            gap: 10px;
+            align-items: start;
+        }
+        .cm-left, .cm-right { display: flex; flex-direction: column; gap: 10px; }
+        .cm-item {
+            padding: 12px 16px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            background: white;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .cm-item:hover { border-color: var(--primary-light); }
+        .cm-item.active { border-color: var(--gold); background: #fdf8e8; box-shadow: 0 0 0 3px rgba(212,160,23,0.2); }
+        .cm-item.connected { border-color: var(--primary); background: #e8f5e9; }
+        .cm-left-item { color: var(--primary); }
+        .cm-right-item { color: #555; }
+        #cmLines { position: relative; }
+
+        #examNav {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        #examNav button {
+            padding: 12px 24px;
+            border: 2px solid var(--primary);
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            font-family: 'Open Sans', sans-serif;
+        }
+        #examPrevBtn { background: white; color: var(--primary); }
+        #examPrevBtn:hover:not(:disabled) { background: #e8f5e9; }
+        #examPrevBtn:disabled { opacity: 0.4; cursor: default; }
+        #examNextBtn { background: var(--primary); color: white; border-color: var(--primary); }
+        #examNextBtn:hover { background: var(--primary-light); }
+        #examFinishBtn {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, var(--gold), #e6b422);
+            color: #1a1a1a;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        #examFinishBtn:hover { box-shadow: 0 4px 15px rgba(212,160,23,0.4); }
+
+        .exam-result { text-align: center; padding: 40px 20px; }
+        .result-emoji { font-size: 64px; margin-bottom: 10px; }
+        .result-nota { font-size: 3rem; margin: 10px 0; }
+        .exam-result.excellent .result-nota { color: var(--success); }
+        .exam-result.good .result-nota { color: var(--primary); }
+        .exam-result.average .result-nota { color: var(--warning); }
+        .exam-result.poor .result-nota { color: var(--accent); }
+        .result-acertos { font-size: 1.1rem; color: var(--text-light); margin: 5px 0; }
+        .result-msg { font-size: 1.15rem; font-weight: 600; margin: 15px 0; }
+        .result-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin: 25px 0;
+        }
+        .result-item {
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .result-item.correct { background: #e8f5e9; color: var(--success); }
+        .result-item.wrong { background: #ffebee; color: var(--accent); }
+        .result-info {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f0f8ff;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        .btn-back { margin-top: 20px; }
+
+        .exam-submitting { text-align: center; padding: 60px 20px; }
+        .exam-spinner {
+            width: 48px; height: 48px;
+            border: 4px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        .module-locked-overlay {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .module-locked-overlay .lock-icon { font-size: 64px; margin-bottom: 15px; }
+        .module-locked-overlay h3 { color: var(--text); }
+        .module-locked-overlay p { color: var(--text-light); }
+
+        /* ===================== PRESENTER MODE ===================== */
+        body.presenter-mode .section {
+            font-size: 1.1rem;
+        }
+
+        body.presenter-mode .section p,
+        body.presenter-mode .section li {
+            font-size: 1.05rem;
+        }
+
+        body.presenter-mode .example-box .en {
+            font-size: 1.1rem;
+        }
+
+        body.presenter-mode .unit-header h2 {
+            font-size: 1.8rem;
+        }
+
+        /* ===================== RESPONSIVE ===================== */
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                gap: 10px;
+                padding: 12px 15px;
+            }
+
+            .header-controls {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .units-grid {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                padding: 15px 12px 40px;
+            }
+
+            .match-container {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-btn {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .dm-columns { grid-template-columns: 1fr; }
+            .cm-columns { grid-template-columns: 1fr; }
+            #cmLines { display: none; }
+            .cm-item.connected { position: relative; }
+            .cm-left-item.connected::after {
+                content: '\2192';
+                position: absolute;
+                right: -5px;
+                color: var(--gold);
+            }
+            .exam-top-bar { flex-direction: column; text-align: center; }
+            .auth-form { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay"><div class="loading-spinner"></div></div>
+
+    <!-- Photo Request Overlay -->
+    <div id="photoRequestOverlay">
+        <div class="photo-request-box">
+            <div class="photo-request-header">
+                <div style="font-size:48px;">&#128247;</div>
+                <h3>Adicione sua foto</h3>
+            </div>
+            <div class="photo-request-body">
+                <div class="photo-request-preview" id="photoReqPreview">
+                    <span style="font-size:48px;color:#aaa;">&#128100;</span>
+                </div>
+                <p>Sua foto aparece no topo da p&aacute;gina e ajuda o professor a identificar voc&ecirc;.</p>
+                <input type="file" id="photoReqFile" accept="image/*" onchange="Auth.previewPhotoRequest(this)">
+                <div class="photo-request-btns">
+                    <button class="btn-photo-skip" onclick="Auth.skipPhoto()">Depois</button>
+                    <button class="btn-photo-save" onclick="Auth.savePhotoRequest()">Salvar Foto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Overlay -->
+    <div id="authOverlay">
+        <div class="auth-container">
+            <div class="auth-header">
+                <div class="auth-logo"><img src="imagens/logo.jpg" alt="Logo SPA" style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.3);"></div>
+                <h2>Portugu&ecirc;s 1</h2>
+                <p>Semin&aacute;rio Presbiteriano da Amaz&ocirc;nia &bull; CG01</p>
+            </div>
+            <div class="auth-tabs">
+                <button class="auth-tab active" id="loginTab" onclick="Auth.switchAuthTab('login')">Entrar</button>
+                <button class="auth-tab" id="registerTab" onclick="Auth.switchAuthTab('register')">Cadastrar</button>
+            </div>
+            <form id="loginForm" class="auth-form" onsubmit="Auth.handleLogin(event)">
+                <div class="auth-field">
+                    <label>Email</label>
+                    <input type="email" id="loginEmail" placeholder="seu@email.com" required>
+                </div>
+                <div class="auth-field">
+                    <label>Senha</label>
+                    <input type="password" id="loginPassword" placeholder="Sua senha" required>
+                </div>
+                <div class="auth-error" id="loginError"></div>
+                <button type="submit" class="auth-submit">Entrar</button>
+            </form>
+            <form id="registerForm" class="auth-form" style="display:none" onsubmit="Auth.handleRegister(event)">
+                <div class="auth-field">
+                    <label>Nome Completo</label>
+                    <input type="text" id="regNome" placeholder="Seu nome completo" required>
+                </div>
+                <div class="auth-field">
+                    <label>Email</label>
+                    <input type="email" id="regEmail" placeholder="seu@email.com" required>
+                </div>
+                <div class="auth-field">
+                    <label>Senha</label>
+                    <input type="password" id="regPassword" placeholder="Minimo 6 caracteres" required>
+                </div>
+                <div class="auth-field">
+                    <label>Confirmar Senha</label>
+                    <input type="password" id="regConfirmPassword" placeholder="Repita a senha" required>
+                </div>
+                <div class="auth-field">
+                    <label>C&oacute;digo de Convite</label>
+                    <input type="text" id="regInviteCode" placeholder="Codigo fornecido pelo professor" required>
+                </div>
+                <div class="auth-field">
+                    <label>Sua Foto</label>
+                    <div style="display:flex;align-items:center;gap:14px;">
+                        <div id="regPhotoPreview" style="width:64px;height:64px;border-radius:50%;background:#e8e0d8;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;border:2px solid var(--border);">
+                            <span style="font-size:28px;color:#aaa;">&#128100;</span>
+                        </div>
+                        <div style="flex:1;">
+                            <input type="file" id="regPhoto" accept="image/*" onchange="Auth.previewPhoto(this)" style="font-size:0.85rem;width:100%;">
+                            <small style="color:var(--text-light);font-size:0.75rem;">Foto de rosto (opcional no cadastro, mas ser&aacute; solicitada depois)</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="auth-error" id="registerError"></div>
+                <button type="submit" class="auth-submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-top">
+            <div class="logo-area">
+                <div class="logo-icon"><img src="imagens/logo.jpg" alt="Logo SPA" style="width:44px;height:44px;border-radius:50%;object-fit:cover;"></div>
+                <div class="logo-text">
+                    <h1>Portugu&ecirc;s 1</h1>
+                    <p>Semin&aacute;rio Presbiteriano da Amaz&ocirc;nia &bull; CG01</p>
+                </div>
+            </div>
+            <div class="header-controls">
+                <span id="userGreeting"><span id="userPhotoContainer" class="user-photo-placeholder">&#128100;</span> Ol&aacute;, <span id="userName"></span></span>
+                <a id="adminLink" href="admin.html" style="display:none;align-items:center;background:rgba(212,160,23,0.9);color:#1a1a1a;padding:6px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;text-decoration:none;">Painel Admin</a>
+                <button id="logoutBtn" onclick="Auth.handleLogout()">Sair</button>
+                <div class="progress-badge">
+                    &#9733; <span id="progressText">0 de 4 unidades</span>
+                </div>
+                <button class="btn-presenter" onclick="togglePresenterMode()">
+                    &#128250; Modo Apresenta&ccedil;&atilde;o
+                </button>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-inner">
+                <a class="nav-item active" onclick="showView('welcome')">
+                    &#127968; In&iacute;cio
+                </a>
+                <a class="nav-item" onclick="showUnit(1)">
+                    <span class="nav-num">1</span> L&iacute;ngua
+                </a>
+                <a class="nav-item" onclick="showUnit(2)">
+                    <span class="nav-num">2</span> Fon&eacute;tica
+                </a>
+                <a class="nav-item" onclick="showUnit(3)">
+                    <span class="nav-num">3</span> Morfologia
+                </a>
+                <a class="nav-item" onclick="showUnit(4)">
+                    <span class="nav-num">4</span> Classes
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ==================== WELCOME ==================== -->
+        <div id="welcome" class="unit-view active">
+            <div class="welcome-screen">
+                <div class="welcome-icon">&#128214;</div>
+                <h2>Bem-vindo ao Portugu&ecirc;s 1!</h2>
+                <p class="subtitle">
+                    Um curso interativo de gram&aacute;tica da l&iacute;ngua portuguesa, com fundamentos essenciais para a forma&ccedil;&atilde;o teol&oacute;gica e pastoral.
+                </p>
+                <div class="welcome-verse">
+                    &ldquo;Toda a Escritura &eacute; divinamente inspirada, e proveitosa para ensinar, para redarguir, para corrigir, para instruir em justi&ccedil;a.&rdquo;
+                    <span class="ref">&mdash; 2 Tim&oacute;teo 3:16 (ARC)</span>
+                </div>
+
+                <div class="units-grid">
+                    <div class="unit-card" onclick="showUnit(1)">
+                        <div class="card-icon">&#128172;</div>
+                        <div class="unit-num">1</div>
+                        <h3>L&iacute;ngua, Linguagem e Comunica&ccedil;&atilde;o</h3>
+                        <p>Conceitos fundamentais de l&iacute;ngua, variedade lingu&iacute;stica e comunica&ccedil;&atilde;o.</p>
+                    </div>
+                    <div class="unit-card" onclick="showUnit(2)">
+                        <div class="card-icon">&#128264;</div>
+                        <div class="unit-num">2</div>
+                        <h3>Introdu&ccedil;&atilde;o &agrave; Fon&eacute;tica</h3>
+                        <p>Os sons da l&iacute;ngua portuguesa: fonemas, classifica&ccedil;&atilde;o e produ&ccedil;&atilde;o.</p>
+                    </div>
+                    <div class="unit-card" onclick="showUnit(3)">
+                        <div class="card-icon">&#128297;</div>
+                        <div class="unit-num">3</div>
+                        <h3>Introdu&ccedil;&atilde;o &agrave; Morfologia</h3>
+                        <p>Estrutura e forma&ccedil;&atilde;o de palavras: morfemas, deriva&ccedil;&atilde;o e composi&ccedil;&atilde;o.</p>
+                    </div>
+                    <div class="unit-card" onclick="showUnit(4)">
+                        <div class="card-icon">&#128218;</div>
+                        <div class="unit-num">4</div>
+                        <h3>Classes de Palavras</h3>
+                        <p>Substantivo, adjetivo, verbo, adv&eacute;rbio, pronome, preposi&ccedil;&atilde;o e mais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== UNIT 1: L&iacute;ngua, Linguagem e Comunica&ccedil;&atilde;o ==================== -->
+        <div id="unit1" class="unit-view">
+            <div class="unit-header">
+                <span class="unit-badge">UNIDADE 1</span>
+                <h2>L&iacute;ngua, Linguagem e Comunica&ccedil;&atilde;o</h2>
+                <p>Compreenda os conceitos fundamentais sobre l&iacute;ngua, linguagem, variedades lingu&iacute;sticas e os elementos da comunica&ccedil;&atilde;o humana.</p>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 1.1 -->
+            <div class="section">
+                <h3><span class="icon">&#128172;</span> L&iacute;ngua e Linguagem</h3>
+
+                <p>
+                    A <strong>linguagem</strong> &eacute; a capacidade humana de se comunicar por meio de signos. Ela n&atilde;o se limita &agrave;s palavras: gestos, express&otilde;es faciais, m&uacute;sica e imagens tamb&eacute;m s&atilde;o formas de linguagem. J&aacute; a <strong>l&iacute;ngua</strong> &eacute; um sistema organizado de signos verbais compartilhado por uma comunidade lingu&iacute;stica.
+                </p>
+
+                <h4>A Distin&ccedil;&atilde;o de Saussure</h4>
+                <p>
+                    O lingu&iacute;sta su&iacute;&ccedil;o Ferdinand de Saussure (1857&ndash;1913) estabeleceu uma distin&ccedil;&atilde;o fundamental entre:
+                </p>
+
+                <table class="word-table">
+                    <tr>
+                        <th>Conceito</th>
+                        <th>Defini&ccedil;&atilde;o</th>
+                        <th>Exemplo</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Langue</strong> (L&iacute;ngua)</td>
+                        <td>Sistema abstrato de regras e signos, compartilhado socialmente</td>
+                        <td>A gram&aacute;tica e o vocabul&aacute;rio do portugu&ecirc;s brasileiro</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Parole</strong> (Fala)</td>
+                        <td>Uso individual e concreto da l&iacute;ngua</td>
+                        <td>A maneira como cada pessoa fala ou escreve</td>
+                    </tr>
+                </table>
+
+                <div class="example-box theological">
+                    <div class="label">Contexto Teol&oacute;gico</div>
+                    <div class="en">Na pregação, o pastor utiliza a <em>langue</em> (o sistema da l&iacute;ngua portuguesa) atrav&eacute;s de sua <em>parole</em> (seu estilo pessoal de comunicar a mensagem b&iacute;blica).</div>
+                    <div class="pt">A distin&ccedil;&atilde;o entre l&iacute;ngua e fala &eacute; essencial para entender como a Palavra de Deus, registrada em texto, ganha vida na pregação de cada ministro.</div>
+                </div>
+
+                <h4>Signo Lingu&iacute;stico</h4>
+                <p>
+                    Para Saussure, o <strong>signo lingu&iacute;stico</strong> &eacute; composto de duas faces insepar&aacute;veis:
+                </p>
+                <ul>
+                    <li><span class="highlight-green">Significante</span> &mdash; a imagem ac&uacute;stica, a sequ&ecirc;ncia de sons (ou letras) que forma a palavra.</li>
+                    <li><span class="highlight">Significado</span> &mdash; o conceito, a ideia que a palavra representa na mente do falante.</li>
+                </ul>
+
+                <div class="example-box">
+                    <div class="label">Exemplo</div>
+                    <div class="en">Palavra: &ldquo;gra&ccedil;a&rdquo;</div>
+                    <div class="pt"><strong>Significante:</strong> /&apos;gra.sa/ (som) &bull; <strong>Significado:</strong> favor imerecido de Deus; ou eleg&acirc;ncia, beleza.</div>
+                </div>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 1.2 -->
+            <div class="section">
+                <h3><span class="icon">&#127758;</span> Variedade Lingu&iacute;stica</h3>
+
+                <p>
+                    A l&iacute;ngua portuguesa n&atilde;o &eacute; homog&ecirc;nea. Ela varia conforme a regi&atilde;o, a classe social, a profiss&atilde;o, a idade e a situa&ccedil;&atilde;o de comunica&ccedil;&atilde;o. Essas diferen&ccedil;as s&atilde;o chamadas de <strong>variedades lingu&iacute;sticas</strong>.
+                </p>
+
+                <h4>Tipos de Varia&ccedil;&atilde;o</h4>
+
+                <table class="word-table">
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Descri&ccedil;&atilde;o</th>
+                        <th>Exemplo</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Diat&oacute;pica</strong> (regional)</td>
+                        <td>Diferen&ccedil;as entre regi&otilde;es geogr&aacute;ficas</td>
+                        <td>&ldquo;macaxeira&rdquo; (Norte), &ldquo;aipim&rdquo; (Sudeste), &ldquo;mandioca&rdquo; (Sul)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diastr&aacute;tica</strong> (social)</td>
+                        <td>Diferen&ccedil;as entre grupos sociais</td>
+                        <td>G&iacute;rias de jovens vs. linguagem acad&ecirc;mica</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diaf&aacute;sica</strong> (situacional)</td>
+                        <td>Diferen&ccedil;as conforme a situa&ccedil;&atilde;o comunicativa</td>
+                        <td>Linguagem formal (serm&atilde;o) vs. informal (conversa)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diacr&ocirc;nica</strong> (hist&oacute;rica)</td>
+                        <td>Mudan&ccedil;as ao longo do tempo</td>
+                        <td>&ldquo;vossa merc&ecirc;&rdquo; &rarr; &ldquo;vosmec&ecirc;&rdquo; &rarr; &ldquo;voc&ecirc;&rdquo;</td>
+                    </tr>
+                </table>
+
+                <h4>Norma Culta vs. Norma Coloquial</h4>
+                <p>
+                    A <span class="highlight-green">norma culta</span> &eacute; a variedade de prest&iacute;gio, utilizada em textos acad&ecirc;micos, documentos oficiais e na literatura. A <span class="highlight-blue">norma coloquial</span> &eacute; a linguagem espont&acirc;nea do dia a dia, que n&atilde;o segue rigorosamente as regras gramaticais.
+                </p>
+
+                <div class="example-box">
+                    <div class="label">Compara&ccedil;&atilde;o</div>
+                    <div class="en"><strong>Norma culta:</strong> &ldquo;N&oacute;s fomos &agrave; igreja e assistimos ao culto.&rdquo;</div>
+                    <div class="pt"><strong>Norma coloquial:</strong> &ldquo;A gente foi na igreja e assistiu o culto.&rdquo;</div>
+                </div>
+
+                <div class="example-box warning">
+                    <div class="label">Aten&ccedil;&atilde;o &mdash; Preconceito Lingu&iacute;stico</div>
+                    <div class="en">Nenhuma variedade lingu&iacute;stica &eacute; superior a outra. Todas cumprem sua fun&ccedil;&atilde;o comunicativa.</div>
+                    <div class="pt">O preconceito lingu&iacute;stico discrimina falantes por sua maneira de falar. Como seminaristas, devemos respeitar a diversidade lingu&iacute;stica do povo de Deus.</div>
+                </div>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 1.3 -->
+            <div class="section">
+                <h3><span class="icon">&#128221;</span> Oralidade e Escrita</h3>
+
+                <p>
+                    A l&iacute;ngua se manifesta em duas modalidades fundamentais: a <strong>oralidade</strong> (fala) e a <strong>escrita</strong>. Cada uma possui caracter&iacute;sticas pr&oacute;prias.
+                </p>
+
+                <table class="word-table">
+                    <tr>
+                        <th>Caracter&iacute;stica</th>
+                        <th>Oralidade</th>
+                        <th>Escrita</th>
+                    </tr>
+                    <tr>
+                        <td>Planejamento</td>
+                        <td>Geralmente espont&acirc;nea</td>
+                        <td>Geralmente planejada</td>
+                    </tr>
+                    <tr>
+                        <td>Intera&ccedil;&atilde;o</td>
+                        <td>Presencial, imediata</td>
+                        <td>&Agrave; dist&acirc;ncia, diferida</td>
+                    </tr>
+                    <tr>
+                        <td>Recursos</td>
+                        <td>Entona&ccedil;&atilde;o, gestos, pausas</td>
+                        <td>Pontua&ccedil;&atilde;o, par&aacute;grafos, formatação</td>
+                    </tr>
+                    <tr>
+                        <td>Perman&ecirc;ncia</td>
+                        <td>Ef&ecirc;mera (se n&atilde;o gravada)</td>
+                        <td>Permanente, registrada</td>
+                    </tr>
+                    <tr>
+                        <td>Exemplo no minist&eacute;rio</td>
+                        <td>Pregação, aconselhamento pastoral</td>
+                        <td>Artigos teol&oacute;gicos, exegese</td>
+                    </tr>
+                </table>
+
+                <div class="tip-box">
+                    <span class="tip-icon">&#128161;</span>
+                    <p>Um bom pregador domina ambas as modalidades: sabe escrever com clareza (para estudar e preparar serm&otilde;es) e falar com eloq&uuml;&ecirc;ncia (para comunicar a mensagem ao povo).</p>
+                </div>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 1.4 -->
+            <div class="section">
+                <h3><span class="icon">&#128225;</span> Comunica&ccedil;&atilde;o Verbal e N&atilde;o Verbal</h3>
+
+                <h4>Elementos da Comunica&ccedil;&atilde;o</h4>
+                <p>
+                    O lingu&iacute;sta Roman Jakobson identificou seis elementos fundamentais em todo ato de comunica&ccedil;&atilde;o:
+                </p>
+
+                <table class="word-table">
+                    <tr>
+                        <th>Elemento</th>
+                        <th>Defini&ccedil;&atilde;o</th>
+                        <th>Exemplo (Pregação)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Emissor</strong></td>
+                        <td>Quem produz a mensagem</td>
+                        <td>O pregador</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Receptor</strong></td>
+                        <td>Quem recebe a mensagem</td>
+                        <td>A congrega&ccedil;&atilde;o</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mensagem</strong></td>
+                        <td>O conte&uacute;do transmitido</td>
+                        <td>O serm&atilde;o</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Canal</strong></td>
+                        <td>O meio f&iacute;sico de transmiss&atilde;o</td>
+                        <td>O ar (voz), microfone</td>
+                    </tr>
+                    <tr>
+                        <td><strong>C&oacute;digo</strong></td>
+                        <td>O sistema de signos utilizado</td>
+                        <td>A l&iacute;ngua portuguesa</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Referente</strong></td>
+                        <td>O assunto, o contexto</td>
+                        <td>O texto b&iacute;blico em quest&atilde;o</td>
+                    </tr>
+                </table>
+
+                <h4>Linguagem Verbal e N&atilde;o Verbal</h4>
+                <ul>
+                    <li><strong>Verbal:</strong> utiliza palavras (faladas ou escritas). Ex.: serm&atilde;o, carta pastoral, texto b&iacute;blico.</li>
+                    <li><strong>N&atilde;o verbal:</strong> utiliza outros signos. Ex.: gestos do pregador, m&uacute;sica do louvor, s&iacute;mbolos lit&uacute;rgicos (p&atilde;o e vinho na Santa Ceia).</li>
+                    <li><strong>Mista:</strong> combina verbal e n&atilde;o verbal. Ex.: hist&oacute;ria em quadrinhos, v&iacute;deo, apresenta&ccedil;&atilde;o com slides.</li>
+                </ul>
+
+                <div class="example-box theological">
+                    <div class="label">Reflex&atilde;o Teol&oacute;gica</div>
+                    <div class="en">A Ceia do Senhor &eacute; um poderoso ato de comunica&ccedil;&atilde;o n&atilde;o verbal: o p&atilde;o e o vinho comunicam a morte e ressurrei&ccedil;&atilde;o de Cristo sem uma &uacute;nica palavra.</div>
+                    <div class="pt">Assim tamb&eacute;m o batismo, o ato de imposi&ccedil;&atilde;o de m&atilde;os e a liturgia da igreja comunicam verdades profundas por meio de s&iacute;mbolos.</div>
+                </div>
+            </div>
+
+            <!-- V&iacute;deos -->
+            <div class="video-section">
+                <h3><span class="icon">&#127909;</span> V&iacute;deos Complementares</h3>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <h4>Linguagem, L&iacute;ngua e Fala</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/J2HisNLWkU0?cc_load_policy=1" allowfullscreen></iframe>
+                        </div>
+                        <p class="video-caption">Professor Noslen &mdash; Linguagem, L&iacute;ngua e Fala</p>
+                    </div>
+                    <div class="video-item">
+                        <h4>Varia&ccedil;&atilde;o Lingu&iacute;stica</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/JBBQosSEYyI?cc_load_policy=1" allowfullscreen></iframe>
+                        </div>
+                        <p class="video-caption">Professor Noslen &mdash; Varia&ccedil;&otilde;es Lingu&iacute;sticas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exerc&iacute;cios Unidade 1 -->
+            <div class="exercise-area">
+                <h3>&#9998; Exerc&iacute;cios &mdash; Unidade 1</h3>
+
+                <div class="exercise-item" id="ex1-q1">
+                    <div class="question"><span class="q-num">1</span> Qual &eacute; a diferen&ccedil;a entre <em>langue</em> e <em>parole</em>, segundo Saussure?</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex1-q1')">a) Langue &eacute; a fala individual; parole &eacute; o sistema social.</button>
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex1-q1')">b) Langue &eacute; o sistema abstrato da l&iacute;ngua; parole &eacute; o uso individual e concreto.</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex1-q1')">c) Langue e parole s&atilde;o sin&ocirc;nimos usados na lingu&iacute;stica.</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex1-q1')">d) Langue se refere &agrave; escrita e parole, &agrave; oralidade.</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex1-q1"></div>
+                </div>
+
+                <div class="exercise-item" id="ex1-q2">
+                    <div class="question"><span class="q-num">2</span> A varia&ccedil;&atilde;o lingu&iacute;stica que ocorre entre diferentes regi&otilde;es geogr&aacute;ficas &eacute; chamada de:</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex1-q2')">a) Diastr&aacute;tica</button>
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex1-q2')">b) Diat&oacute;pica</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex1-q2')">c) Diaf&aacute;sica</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex1-q2')">d) Diacr&ocirc;nica</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex1-q2"></div>
+                </div>
+
+                <div class="exercise-item" id="ex1-q3">
+                    <div class="question"><span class="q-num">3</span> Qual elemento da comunica&ccedil;&atilde;o se refere ao &ldquo;assunto&rdquo; sobre o qual se fala?</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex1-q3')">a) Canal</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex1-q3')">b) C&oacute;digo</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex1-q3')">c) Mensagem</button>
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex1-q3')">d) Referente</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex1-q3"></div>
+                </div>
+
+                <div class="exercise-item" id="ex1-q4">
+                    <div class="question"><span class="q-num">4</span> Assinale a alternativa que apresenta um exemplo de linguagem n&atilde;o verbal:</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex1-q4')">a) Um serm&atilde;o pregado no p&uacute;lpito</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex1-q4')">b) Uma carta pastoral</button>
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex1-q4')">c) O gesto de imposi&ccedil;&atilde;o de m&atilde;os na ordena&ccedil;&atilde;o</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex1-q4')">d) A leitura b&iacute;blica em voz alta</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex1-q4"></div>
+                </div>
+
+                <div class="exercise-item" id="ex1-q5">
+                    <div class="question"><span class="q-num">5</span> A norma culta se diferencia da norma coloquial principalmente porque:</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex1-q5')">a) &Eacute; a &uacute;nica forma correta de falar portugu&ecirc;s.</button>
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex1-q5')">b) &Eacute; a variedade de prest&iacute;gio, usada em contextos formais e acad&ecirc;micos.</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex1-q5')">c) &Eacute; falada apenas por pessoas instruídas.</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex1-q5')">d) N&atilde;o possui regras gramaticais.</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex1-q5"></div>
+                </div>
+
+                <div class="score-display" id="score-ex1">
+                    <div class="score-number" id="score-ex1-num"></div>
+                    <div class="score-text" id="score-ex1-text"></div>
+                </div>
+            </div>
+
+            <div class="motivation-box">
+                <div class="emoji">&#128218;</div>
+                <p>&ldquo;A l&iacute;ngua &eacute; a chave que abre portas para o entendimento da Palavra de Deus e para a edifica&ccedil;&atilde;o do Seu povo.&rdquo;</p>
+            </div>
+
+            <div class="exam-btn-area" id="exam-area-1">
+                <button class="btn-exam" onclick="ExamEngine.start(1)" disabled>Prova bloqueada</button>
+                <p class="exam-status" id="exam-status-1"></p>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn" onclick="showView('welcome')">&#9664; In&iacute;cio</button>
+                <button class="nav-btn primary" onclick="showUnit(2)">Unidade 2: Fon&eacute;tica &#9654;</button>
+            </div>
+        </div>
+
+        <!-- ==================== UNIT 2: Introdu&ccedil;&atilde;o &agrave; Fon&eacute;tica ==================== -->
+        <div id="unit2" class="unit-view">
+            <div class="unit-header">
+                <span class="unit-badge">UNIDADE 2</span>
+                <h2>Introdu&ccedil;&atilde;o &agrave; Fon&eacute;tica</h2>
+                <p>Explore o mundo dos sons da l&iacute;ngua portuguesa: como os fonemas s&atilde;o produzidos, classificados e organizados no sistema fonol&oacute;gico.</p>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 2.1 -->
+            <div class="section">
+                <h3><span class="icon">&#128264;</span> Fon&eacute;tica e Fonologia</h3>
+
+                <p>
+                    Embora relacionadas, <strong>fon&eacute;tica</strong> e <strong>fonologia</strong> estudam aspectos diferentes dos sons da l&iacute;ngua:
+                </p>
+
+                <table class="word-table">
+                    <tr>
+                        <th>Disciplina</th>
+                        <th>Objeto de Estudo</th>
+                        <th>Foco</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Fon&eacute;tica</strong></td>
+                        <td>Os sons da fala (fones)</td>
+                        <td>Propriedades f&iacute;sicas e articulat&oacute;rias dos sons</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fonologia</strong></td>
+                        <td>O sistema de sons (fonemas)</td>
+                        <td>Fun&ccedil;&atilde;o dos sons na l&iacute;ngua, distin&ccedil;&otilde;es de significado</td>
+                    </tr>
+                </table>
+
+                <div class="tip-box">
+                    <span class="tip-icon">&#128161;</span>
+                    <p>A fon&eacute;tica pergunta &ldquo;como esse som &eacute; produzido?&rdquo;. A fonologia pergunta &ldquo;esse som faz diferen&ccedil;a de significado?&rdquo;.</p>
+                </div>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 2.2 -->
+            <div class="section">
+                <h3><span class="icon">&#128300;</span> Fonema</h3>
+
+                <p>
+                    O <strong>fonema</strong> &eacute; a menor unidade sonora capaz de distinguir significados em uma l&iacute;ngua. &Eacute; importante n&atilde;o confundir fonema com letra:
+                </p>
+
+                <table class="word-table">
+                    <tr>
+                        <th>Conceito</th>
+                        <th>Natureza</th>
+                        <th>Exemplo</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Fonema</strong></td>
+                        <td>Sonoro (representado entre barras: / /)</td>
+                        <td>/k/ &mdash; som inicial de &ldquo;casa&rdquo;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Letra</strong></td>
+                        <td>Gr&aacute;fico (representa&ccedil;&atilde;o escrita)</td>
+                        <td>&ldquo;c&rdquo; &mdash; letra que aparece em &ldquo;casa&rdquo;</td>
+                    </tr>
+                </table>
+
+                <h4>Pares M&iacute;nimos</h4>
+                <p>
+                    <strong>Pares m&iacute;nimos</strong> s&atilde;o pares de palavras que diferem em apenas um fonema, provando que aquele som &eacute; um fonema distinto:
+                </p>
+
+                <div class="example-box">
+                    <div class="label">Exemplos de Pares M&iacute;nimos</div>
+                    <div class="en"><strong>b</strong>ato / <strong>p</strong>ato &mdash; /b/ vs. /p/</div>
+                    <div class="pt"><strong>m</strong>ala / <strong>b</strong>ala &mdash; /m/ vs. /b/ &bull; <strong>f</strong>aca / <strong>v</strong>aca &mdash; /f/ vs. /v/</div>
+                </div>
+
+                <div class="example-box theological">
+                    <div class="label">Contexto B&iacute;blico</div>
+                    <div class="en">A precis&atilde;o fon&eacute;tica importa na leitura b&iacute;blica: &ldquo;c&eacute;u&rdquo; e &ldquo;seu&rdquo; diferem em apenas um fonema (/s/ vs. /s/), mas alteram completamente o sentido de um vers&iacute;culo.</div>
+                </div>
+
+                <h4>Rela&ccedil;&atilde;o entre Fonemas e Letras</h4>
+                <p>Nem sempre h&aacute; correspond&ecirc;ncia de um para um entre fonemas e letras:</p>
+                <ul>
+                    <li><strong>&ldquo;t&aacute;xi&rdquo;</strong> &mdash; 4 letras, mas 5 fonemas: /t/, /a/, /k/, /s/, /i/</li>
+                    <li><strong>&ldquo;chuva&rdquo;</strong> &mdash; 5 letras, mas 4 fonemas: /&Integral;/, /u/, /v/, /a/</li>
+                    <li><strong>&ldquo;guerra&rdquo;</strong> &mdash; 6 letras, mas 4 fonemas: /g/, /e/, /R/, /a/ (o &ldquo;u&rdquo; n&atilde;o &eacute; pronunciado; &ldquo;rr&rdquo; representa um s&oacute; fonema)</li>
+                </ul>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 2.3 -->
+            <div class="section">
+                <h3><span class="icon">&#127925;</span> Classifica&ccedil;&atilde;o dos Fonemas</h3>
+
+                <p>Os fonemas do portugu&ecirc;s se dividem em tr&ecirc;s grandes grupos:</p>
+
+                <h4>1. Vogais</h4>
+                <p>S&atilde;o sons produzidos com livre passagem do ar pela cavidade bucal. As vogais s&atilde;o o n&uacute;cleo da s&iacute;laba.</p>
+
+                <table class="word-table">
+                    <tr>
+                        <th>Classifica&ccedil;&atilde;o</th>
+                        <th>Tipo</th>
+                        <th>Exemplos</th>
+                    </tr>
+                    <tr>
+                        <td>Abertura da boca</td>
+                        <td>Abertas: /a/, /&epsilon;/, /&otilde;/</td>
+                        <td>p<strong>&aacute;</strong>, p<strong>&eacute;</strong>, p<strong>&oacute;</strong></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Fechadas: /e/, /o/, /i/, /u/</td>
+                        <td>d<strong>&ecirc;</strong>, av<strong>&ocirc;</strong>, f<strong>i</strong>m, l<strong>u</strong>z</td>
+                    </tr>
+                    <tr>
+                        <td>Papel das cavidades</td>
+                        <td>Orais: ar sai pela boca</td>
+                        <td>c<strong>a</strong>sa, m<strong>e</strong>sa</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Nasais: ar sai pelo nariz tamb&eacute;m</td>
+                        <td>l<strong>&atilde;</strong>, s<strong>em</strong>, b<strong>om</strong></td>
+                    </tr>
+                </table>
+
+                <h4>2. Consoantes</h4>
+                <p>S&atilde;o sons produzidos com obstru&ccedil;&atilde;o (total ou parcial) da passagem do ar.</p>
+
+                <table class="word-table">
+                    <tr>
+                        <th>Crit&eacute;rio</th>
+                        <th>Tipos</th>
+                        <th>Exemplos</th>
+                    </tr>
+                    <tr>
+                        <td>Modo de articula&ccedil;&atilde;o</td>
+                        <td>Oclusivas (bloqueio total)</td>
+                        <td>/p/, /b/, /t/, /d/, /k/, /g/</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Fricativas (fric&ccedil;&atilde;o)</td>
+                        <td>/f/, /v/, /s/, /z/, /&Integral;/, /&THORN;/</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Nasais</td>
+                        <td>/m/, /n/, /&ntilde;/</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Laterais</td>
+                        <td>/l/, /&lambda;/</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Vibrantes</td>
+                        <td>/r/, /R/</td>
+                    </tr>
+                    <tr>
+                        <td>Vozeamento</td>
+                        <td>Surdas (sem vibra&ccedil;&atilde;o das cordas vocais)</td>
+                        <td>/p/, /t/, /k/, /f/, /s/</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Sonoras (com vibra&ccedil;&atilde;o)</td>
+                        <td>/b/, /d/, /g/, /v/, /z/</td>
+                    </tr>
+                </table>
+
+                <h4>3. Semivogais</h4>
+                <p>
+                    S&atilde;o os fonemas /y/ (i) e /w/ (u) quando aparecem junto a uma vogal na mesma s&iacute;laba, formando ditongos. N&atilde;o s&atilde;o o n&uacute;cleo da s&iacute;laba.
+                </p>
+                <div class="example-box">
+                    <div class="label">Exemplos</div>
+                    <div class="en">&ldquo;pai&rdquo; &mdash; /pa<strong>y</strong>/ &bull; &ldquo;meu&rdquo; &mdash; /me<strong>w</strong>/ &bull; &ldquo;s&aacute;bio&rdquo; &mdash; /sa.b<strong>y</strong>u/</div>
+                </div>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 2.4 -->
+            <div class="section">
+                <h3><span class="icon">&#129728;</span> Produ&ccedil;&atilde;o dos Sons</h3>
+
+                <p>Os sons da fala s&atilde;o produzidos pelo <strong>aparelho fonador</strong>, que inclui pulm&otilde;es, laringe (cordas vocais), faringe, cavidade bucal e cavidade nasal.</p>
+
+                <h4>Pontos de Articula&ccedil;&atilde;o</h4>
+                <p>Referem-se ao local onde ocorre a obstru&ccedil;&atilde;o do ar:</p>
+
+                <table class="word-table">
+                    <tr>
+                        <th>Ponto</th>
+                        <th>Local</th>
+                        <th>Fonemas</th>
+                        <th>Exemplos</th>
+                    </tr>
+                    <tr>
+                        <td>Bilabial</td>
+                        <td>L&aacute;bios se tocam</td>
+                        <td>/p/, /b/, /m/</td>
+                        <td><strong>p</strong>ai, <strong>b</strong>&ecirc;n&ccedil;&atilde;o, <strong>m</strong>inist&eacute;rio</td>
+                    </tr>
+                    <tr>
+                        <td>Labiodental</td>
+                        <td>L&aacute;bio inferior + dentes superiores</td>
+                        <td>/f/, /v/</td>
+                        <td><strong>f</strong>&eacute;, <strong>v</strong>erdade</td>
+                    </tr>
+                    <tr>
+                        <td>Dental/Alveolar</td>
+                        <td>L&iacute;ngua + dentes/alv&eacute;olos</td>
+                        <td>/t/, /d/, /s/, /z/, /n/, /l/, /r/</td>
+                        <td><strong>t</strong>emplo, <strong>d</strong>oce, <strong>s</strong>anto</td>
+                    </tr>
+                    <tr>
+                        <td>Palatal</td>
+                        <td>L&iacute;ngua + palato duro</td>
+                        <td>/&Integral;/, /&THORN;/, /&ntilde;/, /&lambda;/</td>
+                        <td><strong>ch</strong>uva, bra<strong>nh</strong>a, pa<strong>lh</strong>a</td>
+                    </tr>
+                    <tr>
+                        <td>Velar</td>
+                        <td>L&iacute;ngua + v&eacute;u palatino</td>
+                        <td>/k/, /g/, /R/</td>
+                        <td><strong>c</strong>risto, <strong>g</strong>ra&ccedil;a</td>
+                    </tr>
+                </table>
+
+                <div class="tip-box">
+                    <span class="tip-icon">&#128161;</span>
+                    <p>Para identificar se uma consoante &eacute; surda ou sonora, coloque a m&atilde;o na garganta e pronuncie o som: se sentir vibra&ccedil;&atilde;o, &eacute; sonora; se n&atilde;o, &eacute; surda. Compare /f/ (surda) com /v/ (sonora).</p>
+                </div>
+            </div>
+
+            <!-- V&iacute;deos -->
+            <div class="video-section">
+                <h3><span class="icon">&#127909;</span> V&iacute;deos Complementares</h3>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <h4>Fonema e Letra</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/V3oA1MrZvaE?cc_load_policy=1" allowfullscreen></iframe>
+                        </div>
+                        <p class="video-caption">Professor Noslen &mdash; Fonema e Letra</p>
+                    </div>
+                    <div class="video-item">
+                        <h4>Encontros Voc&aacute;licos e Consonantais</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/6qNXs7DBHXM?cc_load_policy=1" allowfullscreen></iframe>
+                        </div>
+                        <p class="video-caption">Professor Noslen &mdash; Encontros Voc&aacute;licos</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exerc&iacute;cios Unidade 2 -->
+            <div class="exercise-area">
+                <h3>&#9998; Exerc&iacute;cios &mdash; Unidade 2</h3>
+
+                <div class="exercise-item" id="ex2-q1">
+                    <div class="question"><span class="q-num">1</span> Quantos fonemas h&aacute; na palavra &ldquo;chuva&rdquo;?</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex2-q1')">a) 5 fonemas</button>
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex2-q1')">b) 4 fonemas</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex2-q1')">c) 3 fonemas</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex2-q1')">d) 6 fonemas</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex2-q1"></div>
+                </div>
+
+                <div class="exercise-item" id="ex2-q2">
+                    <div class="question"><span class="q-num">2</span> Em &ldquo;pai&rdquo;, o &ldquo;i&rdquo; funciona como:</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex2-q2')">a) Vogal</button>
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex2-q2')">b) Semivogal</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex2-q2')">c) Consoante</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex2-q2')">d) Fonema nasal</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex2-q2"></div>
+                </div>
+
+                <div class="exercise-item" id="ex2-q3">
+                    <div class="question"><span class="q-num">3</span> As consoantes /p/ e /b/ se distinguem pelo crit&eacute;rio de:</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex2-q3')">a) Ponto de articula&ccedil;&atilde;o</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex2-q3')">b) Modo de articula&ccedil;&atilde;o</button>
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex2-q3')">c) Vozeamento (surda vs. sonora)</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex2-q3')">d) Nasalidade</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex2-q3"></div>
+                </div>
+
+                <div class="exercise-item" id="ex2-q4">
+                    <div class="question"><span class="q-num">4</span> Um par m&iacute;nimo &eacute;:</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex2-q4')">a) Duas palavras com o mesmo significado</button>
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex2-q4')">b) Duas palavras que diferem em apenas um fonema</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex2-q4')">c) Duas s&iacute;labas dentro de uma mesma palavra</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex2-q4')">d) Dois sons que nunca ocorrem em portugu&ecirc;s</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex2-q4"></div>
+                </div>
+
+                <div class="exercise-item" id="ex2-q5">
+                    <div class="question"><span class="q-num">5</span> A fon&eacute;tica estuda __________, enquanto a fonologia estuda __________.</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex2-q5')">a) os sons da fala (fones); o sistema de sons (fonemas)</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex2-q5')">b) as letras; os fonemas</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex2-q5')">c) a escrita; a fala</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex2-q5')">d) o significante; o significado</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex2-q5"></div>
+                </div>
+
+                <div class="score-display" id="score-ex2">
+                    <div class="score-number" id="score-ex2-num"></div>
+                    <div class="score-text" id="score-ex2-text"></div>
+                </div>
+            </div>
+
+            <div class="motivation-box">
+                <div class="emoji">&#127925;</div>
+                <p>&ldquo;Conhecer os sons da nossa l&iacute;ngua &eacute; o primeiro passo para us&aacute;-la com excel&ecirc;ncia na proclama&ccedil;&atilde;o da Palavra.&rdquo;</p>
+            </div>
+
+            <div class="exam-btn-area" id="exam-area-2">
+                <button class="btn-exam" onclick="ExamEngine.start(2)" disabled>Prova bloqueada</button>
+                <p class="exam-status" id="exam-status-2"></p>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn" onclick="showUnit(1)">&#9664; Unidade 1</button>
+                <button class="nav-btn primary" onclick="showUnit(3)">Unidade 3: Morfologia &#9654;</button>
+            </div>
+        </div>
+
+        <!-- ==================== UNIT 3: Introdu&ccedil;&atilde;o &agrave; Morfologia ==================== -->
+        <div id="unit3" class="unit-view">
+            <div class="unit-header">
+                <span class="unit-badge">UNIDADE 3</span>
+                <h2>Introdu&ccedil;&atilde;o &agrave; Morfologia</h2>
+                <p>Descubra como as palavras s&atilde;o constru&iacute;das internamente: morfemas, estrutura e processos de forma&ccedil;&atilde;o de palavras.</p>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 3.1 -->
+            <div class="section">
+                <h3><span class="icon">&#128300;</span> O Morfema</h3>
+
+                <p>
+                    O <strong>morfema</strong> &eacute; a <em>menor unidade significativa</em> da l&iacute;ngua. Enquanto o fonema distingue significados, o morfema <em>carrega</em> significado.
+                </p>
+
+                <div class="example-box">
+                    <div class="label">Exemplo</div>
+                    <div class="en">Palavra: &ldquo;infelizmente&rdquo;</div>
+                    <div class="pt">Morfemas: <span class="highlight-red">in</span> (nega&ccedil;&atilde;o) + <span class="highlight-green">feliz</span> (radical) + <span class="highlight-blue">mente</span> (modo) = 3 morfemas</div>
+                </div>
+
+                <div class="example-box theological">
+                    <div class="label">Contexto Teol&oacute;gico</div>
+                    <div class="en">Palavra: &ldquo;predestina&ccedil;&atilde;o&rdquo;</div>
+                    <div class="pt"><span class="highlight-red">pre</span> (antes) + <span class="highlight-green">destin</span> (destino) + <span class="highlight">a&ccedil;&atilde;o</span> (processo) &mdash; A pr&oacute;pria estrutura da palavra revela seu significado teol&oacute;gico: &ldquo;a&ccedil;&atilde;o de destinar antes&rdquo;.</div>
+                </div>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 3.2 -->
+            <div class="section">
+                <h3><span class="icon">&#128296;</span> Classifica&ccedil;&atilde;o dos Morfemas</h3>
+
+                <table class="word-table">
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Defini&ccedil;&atilde;o</th>
+                        <th>Exemplo</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Radical (Raiz)</strong></td>
+                        <td>N&uacute;cleo significativo da palavra; elemento irredut&iacute;vel</td>
+                        <td><span class="highlight-green">livr</span>- (em livro, livraria, livreiro)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prefixo</strong></td>
+                        <td>Afixo colocado antes do radical</td>
+                        <td><span class="highlight-red">re</span>fazer, <span class="highlight-red">des</span>fazer, <span class="highlight-red">in</span>feliz</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sufixo</strong></td>
+                        <td>Afixo colocado ap&oacute;s o radical</td>
+                        <td>feliz<span class="highlight-blue">mente</span>, preg<span class="highlight-blue">ador</span>, sant<span class="highlight-blue">idade</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Desin&ecirc;ncia nominal</strong></td>
+                        <td>Indica g&ecirc;nero e n&uacute;mero</td>
+                        <td>menin<strong>o</strong>/<strong>a</strong> (g&ecirc;nero); livro<strong>s</strong> (n&uacute;mero)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Desin&ecirc;ncia verbal</strong></td>
+                        <td>Indica modo, tempo, pessoa e n&uacute;mero</td>
+                        <td>cant<strong>&aacute;vamos</strong> (pret. imp., 1&ordf; p. pl.)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vogal tem&aacute;tica</strong></td>
+                        <td>Liga o radical &agrave; desin&ecirc;ncia; indica a conjuga&ccedil;&atilde;o</td>
+                        <td>cant<strong>a</strong>r (1&ordf;), vend<strong>e</strong>r (2&ordf;), part<strong>i</strong>r (3&ordf;)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tema</strong></td>
+                        <td>Radical + vogal tem&aacute;tica</td>
+                        <td>canta-, vende-, parti-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vogal de liga&ccedil;&atilde;o</strong></td>
+                        <td>Facilita a pron&uacute;ncia entre morfemas</td>
+                        <td>gas<strong>o</strong>metro, cafe<strong>i</strong>cultura</td>
+                    </tr>
+                </table>
+
+                <div class="tip-box">
+                    <span class="tip-icon">&#128161;</span>
+                    <p>Para encontrar o radical de uma palavra, reuna palavras da mesma fam&iacute;lia e identifique a parte comum: <strong>pregador, pregação, pregar</strong> &rarr; radical: <strong>preg</strong>-.</p>
+                </div>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 3.3 -->
+            <div class="section">
+                <h3><span class="icon">&#128270;</span> Estrutura das Palavras</h3>
+
+                <p>Analisar a estrutura de uma palavra significa decompor seus morfemas:</p>
+
+                <div class="example-box">
+                    <div class="label">An&aacute;lise Morf&eacute;mica</div>
+                    <div class="en">Palavra: &ldquo;evangelizadores&rdquo;</div>
+                    <div class="pt">
+                        <span class="highlight-green">evangel</span> (radical) +
+                        <span class="highlight">iz</span> (sufixo verbalizador) +
+                        <span class="highlight-blue">ador</span> (sufixo &mdash; agente) +
+                        <strong>es</strong> (desin&ecirc;ncia de plural)
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <div class="label">An&aacute;lise</div>
+                    <div class="en">Palavra: &ldquo;incrédulos&rdquo;</div>
+                    <div class="pt">
+                        <span class="highlight-red">in</span> (prefixo &mdash; nega&ccedil;&atilde;o) +
+                        <span class="highlight-green">cr&eacute;d</span> (radical &mdash; crer) +
+                        <span class="highlight-blue">ulo</span> (sufixo) +
+                        <strong>s</strong> (desin&ecirc;ncia de plural)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 3.4 -->
+            <div class="section">
+                <h3><span class="icon">&#128736;</span> Forma&ccedil;&atilde;o de Palavras</h3>
+
+                <h4>1. Deriva&ccedil;&atilde;o</h4>
+                <p>Processo que forma palavras a partir de um radical, usando afixos:</p>
+
+                <table class="word-table">
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Descri&ccedil;&atilde;o</th>
+                        <th>Exemplo</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Prefixal</strong></td>
+                        <td>Acr&eacute;scimo de prefixo</td>
+                        <td><span class="highlight-red">des</span>crer, <span class="highlight-red">re</span>nascer</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sufixal</strong></td>
+                        <td>Acr&eacute;scimo de sufixo</td>
+                        <td>pecad<span class="highlight-blue">or</span>, sant<span class="highlight-blue">ifica&ccedil;&atilde;o</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prefixal e Sufixal</strong></td>
+                        <td>Prefixo + Sufixo (podem ser retirados separadamente)</td>
+                        <td><span class="highlight-red">in</span>feliz<span class="highlight-blue">mente</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Parassint&eacute;tica</strong></td>
+                        <td>Prefixo + Sufixo simult&acirc;neos (n&atilde;o podem ser separados)</td>
+                        <td><span class="highlight-red">em</span>pobr<span class="highlight-blue">ecer</span>, <span class="highlight-red">a</span>noitec<span class="highlight-blue">er</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Regressiva</strong></td>
+                        <td>Redu&ccedil;&atilde;o da palavra original</td>
+                        <td>atacar &rarr; ataque; chorar &rarr; choro</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Impr&oacute;pria</strong></td>
+                        <td>Mudan&ccedil;a de classe gramatical sem alterar a forma</td>
+                        <td>&ldquo;O <strong>saber</strong>&rdquo; (verbo usado como substantivo)</td>
+                    </tr>
+                </table>
+
+                <h4>2. Composi&ccedil;&atilde;o</h4>
+                <p>Processo que forma palavras pela uni&atilde;o de dois ou mais radicais:</p>
+
+                <table class="word-table">
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Descri&ccedil;&atilde;o</th>
+                        <th>Exemplo</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Justaposi&ccedil;&atilde;o</strong></td>
+                        <td>Radicais se unem sem altera&ccedil;&atilde;o</td>
+                        <td>passa + tempo = passatempo; gira + sol = girassol</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Aglutina&ccedil;&atilde;o</strong></td>
+                        <td>Radicais se unem com altera&ccedil;&atilde;o fon&eacute;tica</td>
+                        <td>plano + alto = planalto; &aacute;gua + ardente = aguardente</td>
+                    </tr>
+                </table>
+
+                <h4>3. Outros Processos</h4>
+                <ul>
+                    <li><strong>Hibridismo:</strong> uni&atilde;o de radicais de l&iacute;nguas diferentes. Ex.: &ldquo;automóvel&rdquo; (grego + latim).</li>
+                    <li><strong>Abrevia&ccedil;&atilde;o:</strong> redu&ccedil;&atilde;o da palavra. Ex.: fotografia &rarr; foto; telefone &rarr; fone.</li>
+                    <li><strong>Onomatopeia:</strong> palavra que imita sons. Ex.: tique-taque, miar, zunir.</li>
+                    <li><strong>Sigla:</strong> letras iniciais. Ex.: IPB (Igreja Presbiteriana do Brasil), APMT (Ag&ecirc;ncia Presbiteriana de Miss&otilde;es Transculturais).</li>
+                </ul>
+            </div>
+
+            <!-- V&iacute;deos -->
+            <div class="video-section">
+                <h3><span class="icon">&#127909;</span> V&iacute;deos Complementares</h3>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <h4>Estrutura e Forma&ccedil;&atilde;o das Palavras</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/OGJQOVBmz-E?cc_load_policy=1" allowfullscreen></iframe>
+                        </div>
+                        <p class="video-caption">Professor Noslen &mdash; Estrutura das Palavras</p>
+                    </div>
+                    <div class="video-item">
+                        <h4>Processos de Forma&ccedil;&atilde;o de Palavras</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/8y-JrF63WD4?cc_load_policy=1" allowfullscreen></iframe>
+                        </div>
+                        <p class="video-caption">Professor Noslen &mdash; Forma&ccedil;&atilde;o de Palavras</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exerc&iacute;cios Unidade 3 -->
+            <div class="exercise-area">
+                <h3>&#9998; Exerc&iacute;cios &mdash; Unidade 3</h3>
+
+                <div class="exercise-item" id="ex3-q1">
+                    <div class="question"><span class="q-num">1</span> O morfema &eacute; definido como:</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q1')">a) A menor unidade sonora da l&iacute;ngua</button>
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex3-q1')">b) A menor unidade significativa da l&iacute;ngua</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q1')">c) A s&iacute;laba t&ocirc;nica de uma palavra</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q1')">d) O radical de qualquer palavra</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex3-q1"></div>
+                </div>
+
+                <div class="exercise-item" id="ex3-q2">
+                    <div class="question"><span class="q-num">2</span> Na palavra &ldquo;infelizmente&rdquo;, o morfema &ldquo;in-&rdquo; &eacute;:</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q2')">a) Sufixo</button>
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex3-q2')">b) Prefixo</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q2')">c) Radical</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q2')">d) Desin&ecirc;ncia</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex3-q2"></div>
+                </div>
+
+                <div class="exercise-item" id="ex3-q3">
+                    <div class="question"><span class="q-num">3</span> &ldquo;Empobrecer&rdquo; &eacute; um exemplo de:</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q3')">a) Deriva&ccedil;&atilde;o prefixal</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q3')">b) Composi&ccedil;&atilde;o por aglutina&ccedil;&atilde;o</button>
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex3-q3')">c) Deriva&ccedil;&atilde;o parassint&eacute;tica</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q3')">d) Deriva&ccedil;&atilde;o regressiva</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex3-q3"></div>
+                </div>
+
+                <div class="exercise-item" id="ex3-q4">
+                    <div class="question"><span class="q-num">4</span> &ldquo;Planalto&rdquo; (plano + alto) &eacute; formado por:</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q4')">a) Composi&ccedil;&atilde;o por justaposi&ccedil;&atilde;o</button>
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex3-q4')">b) Composi&ccedil;&atilde;o por aglutina&ccedil;&atilde;o</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q4')">c) Deriva&ccedil;&atilde;o prefixal e sufixal</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q4')">d) Derivação impr&oacute;pria</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex3-q4"></div>
+                </div>
+
+                <div class="exercise-item" id="ex3-q5">
+                    <div class="question"><span class="q-num">5</span> A vogal tem&aacute;tica da palavra &ldquo;vender&rdquo; &eacute;:</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q5')">a) -a- (1&ordf; conjuga&ccedil;&atilde;o)</button>
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex3-q5')">b) -e- (2&ordf; conjuga&ccedil;&atilde;o)</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q5')">c) -i- (3&ordf; conjuga&ccedil;&atilde;o)</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q5')">d) N&atilde;o possui vogal tem&aacute;tica</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex3-q5"></div>
+                </div>
+
+                <div class="score-display" id="score-ex3">
+                    <div class="score-number" id="score-ex3-num"></div>
+                    <div class="score-text" id="score-ex3-text"></div>
+                </div>
+            </div>
+
+            <div class="motivation-box">
+                <div class="emoji">&#128297;</div>
+                <p>&ldquo;Assim como um edif&iacute;cio &eacute; constru&iacute;do tijolo a tijolo, cada palavra &eacute; constru&iacute;da morfema a morfema. Conhecer essa constru&ccedil;&atilde;o &eacute; dominar a l&iacute;ngua!&rdquo;</p>
+            </div>
+
+            <div class="exam-btn-area" id="exam-area-3">
+                <button class="btn-exam" onclick="ExamEngine.start(3)" disabled>Prova bloqueada</button>
+                <p class="exam-status" id="exam-status-3"></p>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn" onclick="showUnit(2)">&#9664; Unidade 2</button>
+                <button class="nav-btn primary" onclick="showUnit(4)">Unidade 4: Classes de Palavras &#9654;</button>
+            </div>
+        </div>
+
+        <!-- ==================== UNIT 4: Classes de Palavras ==================== -->
+        <div id="unit4" class="unit-view">
+            <div class="unit-header">
+                <span class="unit-badge">UNIDADE 4</span>
+                <h2>Classes de Palavras</h2>
+                <p>Estude as dez classes gramaticais da l&iacute;ngua portuguesa: substantivo, adjetivo, verbo, adv&eacute;rbio, pronome, preposi&ccedil;&atilde;o, conjun&ccedil;&atilde;o, interjeição, numeral e artigo.</p>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 4.1: Substantivo -->
+            <div class="section">
+                <h3><span class="icon">&#128196;</span> Substantivo</h3>
+
+                <p>
+                    O <strong>substantivo</strong> &eacute; a palavra que d&aacute; nome aos seres, objetos, sentimentos, lugares, a&ccedil;&otilde;es e fen&ocirc;menos.
+                </p>
+
+                <h4>Classifica&ccedil;&atilde;o dos Substantivos</h4>
+
+                <table class="word-table">
+                    <tr>
+                        <th>Classifica&ccedil;&atilde;o</th>
+                        <th>Defini&ccedil;&atilde;o</th>
+                        <th>Exemplos</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Comum / Pr&oacute;prio</strong></td>
+                        <td>Gen&eacute;rico / Espec&iacute;fico</td>
+                        <td>cidade / Jerusal&eacute;m; profeta / Isa&iacute;as</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Concreto / Abstrato</strong></td>
+                        <td>Exist&ecirc;ncia pr&oacute;pria / Depende de outro ser</td>
+                        <td>altar, p&atilde;o / f&eacute;, esperan&ccedil;a, amor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Simples / Composto</strong></td>
+                        <td>Um radical / Mais de um radical</td>
+                        <td>chuva / guarda-chuva; flor / couve-flor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Primitivo / Derivado</strong></td>
+                        <td>Origem / Formado de outro</td>
+                        <td>pedra / pedreiro; terra / terreno</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Coletivo</strong></td>
+                        <td>Designa um conjunto</td>
+                        <td>rebanho (ovelhas), congrega&ccedil;&atilde;o (fi&eacute;is)</td>
+                    </tr>
+                </table>
+
+                <h4>Flex&atilde;o dos Substantivos</h4>
+                <ul>
+                    <li><strong>G&ecirc;nero:</strong> masculino / feminino &mdash; profeta / profetisa; di&aacute;cono / diaconisa</li>
+                    <li><strong>N&uacute;mero:</strong> singular / plural &mdash; disc&iacute;pulo / disc&iacute;pulos; cru<strong>z</strong> / cru<strong>zes</strong></li>
+                    <li><strong>Grau:</strong> aumentativo / diminutivo &mdash; homem / homenzzarr&atilde;o; livro / livrinho</li>
+                </ul>
+
+                <div class="example-box theological">
+                    <div class="label">Contexto B&iacute;blico</div>
+                    <div class="en">&ldquo;Ora, a <strong>f&eacute;</strong> &eacute; o firme <strong>fundamento</strong> das coisas que se esperam e a <strong>prova</strong> das coisas que se n&atilde;o v&ecirc;em.&rdquo; (Hb 11:1)</div>
+                    <div class="pt">Neste vers&iacute;culo, &ldquo;f&eacute;&rdquo;, &ldquo;fundamento&rdquo; e &ldquo;prova&rdquo; s&atilde;o substantivos abstratos &mdash; nomeiam conceitos que n&atilde;o existem por si s&oacute;.</div>
+                </div>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 4.2: Adjetivo -->
+            <div class="section">
+                <h3><span class="icon">&#127912;</span> Adjetivo</h3>
+
+                <p>
+                    O <strong>adjetivo</strong> &eacute; a palavra que caracteriza, qualifica ou modifica o substantivo, atribuindo-lhe propriedades.
+                </p>
+
+                <h4>Locu&ccedil;&atilde;o Adjetiva</h4>
+                <p>Express&atilde;o (preposi&ccedil;&atilde;o + substantivo) com valor de adjetivo:</p>
+                <ul>
+                    <li>amor <strong>de m&atilde;e</strong> = amor <strong>materno</strong></li>
+                    <li>luz <strong>do sol</strong> = luz <strong>solar</strong></li>
+                    <li>gra&ccedil;a <strong>de Deus</strong> = gra&ccedil;a <strong>divina</strong></li>
+                </ul>
+
+                <h4>Graus do Adjetivo</h4>
+
+                <table class="word-table">
+                    <tr>
+                        <th>Grau</th>
+                        <th>Tipo</th>
+                        <th>Exemplo</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Comparativo</strong></td>
+                        <td>Superioridade</td>
+                        <td>Davi foi <strong>mais</strong> corajoso <strong>do que</strong> Saul.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Igualdade</td>
+                        <td>Pedro era <strong>t&atilde;o</strong> dedicado <strong>quanto</strong> Jo&atilde;o.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Inferioridade</td>
+                        <td>O servo foi <strong>menos</strong> fiel <strong>do que</strong> o senhor esperava.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Superlativo</strong></td>
+                        <td>Absoluto sint&eacute;tico</td>
+                        <td>Deus &eacute; <strong>sant&iacute;ssimo</strong>.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Absoluto anal&iacute;tico</td>
+                        <td>Deus &eacute; <strong>muito santo</strong>.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Relativo</td>
+                        <td>Jesus &eacute; <strong>o mais</strong> justo <strong>de todos</strong>.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 4.3: Verbo -->
+            <div class="section">
+                <h3><span class="icon">&#9889;</span> Verbo</h3>
+
+                <p>
+                    O <strong>verbo</strong> &eacute; a palavra que exprime a&ccedil;&atilde;o, estado, mudan&ccedil;a de estado ou fen&ocirc;meno da natureza, situando-os no tempo.
+                </p>
+
+                <h4>As Tr&ecirc;s Conjuga&ccedil;&otilde;es</h4>
+                <table class="word-table">
+                    <tr>
+                        <th>Conjuga&ccedil;&atilde;o</th>
+                        <th>Termina&ccedil;&atilde;o</th>
+                        <th>Exemplos</th>
+                    </tr>
+                    <tr>
+                        <td>1&ordf;</td>
+                        <td>-AR</td>
+                        <td>amar, pregar, orar, louvar</td>
+                    </tr>
+                    <tr>
+                        <td>2&ordf;</td>
+                        <td>-ER</td>
+                        <td>crer, viver, conhecer, escrever</td>
+                    </tr>
+                    <tr>
+                        <td>3&ordf;</td>
+                        <td>-IR</td>
+                        <td>servir, partir, assistir, seguir</td>
+                    </tr>
+                </table>
+
+                <h4>Modos Verbais</h4>
+                <ul>
+                    <li><strong>Indicativo:</strong> expressa certeza, fato real. &mdash; &ldquo;Deus <strong>criou</strong> os c&eacute;us e a terra.&rdquo;</li>
+                    <li><strong>Subjuntivo:</strong> expressa d&uacute;vida, desejo, possibilidade. &mdash; &ldquo;Que Deus <strong>aben&ccedil;oe</strong> esta fam&iacute;lia.&rdquo;</li>
+                    <li><strong>Imperativo:</strong> expressa ordem, pedido. &mdash; &ldquo;<strong>Ide</strong> e fazei disc&iacute;pulos de todas as na&ccedil;&otilde;es.&rdquo;</li>
+                </ul>
+
+                <h4>Tempos do Indicativo</h4>
+
+                <table class="word-table">
+                    <tr>
+                        <th>Tempo</th>
+                        <th>Uso</th>
+                        <th>Exemplo (verbo PREGAR)</th>
+                    </tr>
+                    <tr>
+                        <td>Presente</td>
+                        <td>Fato atual ou habitual</td>
+                        <td>Eu <strong>prego</strong> todo domingo.</td>
+                    </tr>
+                    <tr>
+                        <td>Pret&eacute;rito Perfeito</td>
+                        <td>A&ccedil;&atilde;o conclu&iacute;da no passado</td>
+                        <td>Eu <strong>preguei</strong> ontem.</td>
+                    </tr>
+                    <tr>
+                        <td>Pret&eacute;rito Imperfeito</td>
+                        <td>A&ccedil;&atilde;o cont&iacute;nua ou habitual no passado</td>
+                        <td>Eu <strong>pregava</strong> todas as noites.</td>
+                    </tr>
+                    <tr>
+                        <td>Pret&eacute;rito Mais-que-perfeito</td>
+                        <td>A&ccedil;&atilde;o anterior a outra no passado</td>
+                        <td>Eu j&aacute; <strong>pregara</strong> quando ele chegou.</td>
+                    </tr>
+                    <tr>
+                        <td>Futuro do Presente</td>
+                        <td>A&ccedil;&atilde;o futura certa</td>
+                        <td>Eu <strong>pregarei</strong> amanh&atilde;.</td>
+                    </tr>
+                    <tr>
+                        <td>Futuro do Pret&eacute;rito</td>
+                        <td>A&ccedil;&atilde;o futura condicionada</td>
+                        <td>Eu <strong>pregaria</strong> se me convidassem.</td>
+                    </tr>
+                </table>
+
+                <h4>Formas Nominais</h4>
+                <ul>
+                    <li><strong>Infinitivo:</strong> pregar, crer, servir (forma &ldquo;nome&rdquo; do verbo)</li>
+                    <li><strong>Ger&uacute;ndio:</strong> pregando, crendo, servindo (a&ccedil;&atilde;o em andamento)</li>
+                    <li><strong>Partic&iacute;pio:</strong> pregado, crido, servido (a&ccedil;&atilde;o conclu&iacute;da)</li>
+                </ul>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 4.4: Adv&eacute;rbio -->
+            <div class="section">
+                <h3><span class="icon">&#128204;</span> Adv&eacute;rbio</h3>
+
+                <p>
+                    O <strong>adv&eacute;rbio</strong> modifica o verbo, o adjetivo ou outro adv&eacute;rbio, expressando circunst&acirc;ncias.
+                </p>
+
+                <table class="word-table">
+                    <tr>
+                        <th>Classifica&ccedil;&atilde;o</th>
+                        <th>Indica</th>
+                        <th>Exemplos</th>
+                    </tr>
+                    <tr>
+                        <td>Modo</td>
+                        <td>Como a a&ccedil;&atilde;o acontece</td>
+                        <td>bem, mal, assim, fielmente, humildemente</td>
+                    </tr>
+                    <tr>
+                        <td>Tempo</td>
+                        <td>Quando</td>
+                        <td>hoje, ontem, sempre, nunca, j&aacute;, ainda</td>
+                    </tr>
+                    <tr>
+                        <td>Lugar</td>
+                        <td>Onde</td>
+                        <td>aqui, l&aacute;, dentro, fora, perto, longe</td>
+                    </tr>
+                    <tr>
+                        <td>Intensidade</td>
+                        <td>Quanto, em que grau</td>
+                        <td>muito, pouco, bastante, demais, t&atilde;o</td>
+                    </tr>
+                    <tr>
+                        <td>Nega&ccedil;&atilde;o</td>
+                        <td>Nega a a&ccedil;&atilde;o</td>
+                        <td>n&atilde;o, nunca, jamais, tampouco</td>
+                    </tr>
+                    <tr>
+                        <td>Afirma&ccedil;&atilde;o</td>
+                        <td>Confirma</td>
+                        <td>sim, certamente, realmente, deveras</td>
+                    </tr>
+                    <tr>
+                        <td>D&uacute;vida</td>
+                        <td>Incerteza</td>
+                        <td>talvez, possivelmente, quiçá, provavelmente</td>
+                    </tr>
+                </table>
+
+                <div class="example-box theological">
+                    <div class="label">Exemplo B&iacute;blico</div>
+                    <div class="en">&ldquo;Jesus chorou.&rdquo; (Jo 11:35) &mdash; O menor vers&iacute;culo da B&iacute;blia. Sem adv&eacute;rbio.</div>
+                    <div class="pt">&ldquo;Jesus chorou <strong>amargamente</strong>.&rdquo; &mdash; Com o adv&eacute;rbio de modo, o sentido se aprofunda.</div>
+                </div>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 4.5: Pronome -->
+            <div class="section">
+                <h3><span class="icon">&#128100;</span> Pronome</h3>
+
+                <p>
+                    O <strong>pronome</strong> &eacute; a palavra que substitui ou acompanha o substantivo, indicando pessoa, posse, posi&ccedil;&atilde;o ou refer&ecirc;ncia.
+                </p>
+
+                <table class="word-table">
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Fun&ccedil;&atilde;o</th>
+                        <th>Exemplos</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Pessoal</strong></td>
+                        <td>Indica as pessoas do discurso</td>
+                        <td>eu, tu, ele/ela, n&oacute;s, v&oacute;s, eles/elas; me, te, se, nos, vos</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Possessivo</strong></td>
+                        <td>Indica posse</td>
+                        <td>meu, teu, seu, nosso, vosso</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Demonstrativo</strong></td>
+                        <td>Indica posi&ccedil;&atilde;o no espa&ccedil;o/tempo</td>
+                        <td>este (perto), esse (m&eacute;dio), aquele (longe)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Relativo</strong></td>
+                        <td>Retoma um termo anterior</td>
+                        <td>que, o qual, cujo, onde, quem</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Indefinido</strong></td>
+                        <td>Refere-se de modo vago</td>
+                        <td>algu&eacute;m, ningu&eacute;m, tudo, nada, cada, outro</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Interrogativo</strong></td>
+                        <td>Usado em perguntas</td>
+                        <td>que, quem, qual, quanto</td>
+                    </tr>
+                </table>
+
+                <div class="example-box theological">
+                    <div class="label">Exemplo B&iacute;blico</div>
+                    <div class="en">&ldquo;<strong>Eu</strong> sou o caminho, a verdade e a vida; ningu&eacute;m vem ao Pai sen&atilde;o por <strong>mim</strong>.&rdquo; (Jo 14:6)</div>
+                    <div class="pt">&ldquo;Eu&rdquo; &eacute; pronome pessoal do caso reto (sujeito); &ldquo;mim&rdquo; &eacute; pronome pessoal do caso obl&iacute;quo (complemento).</div>
+                </div>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 4.6: Coloca&ccedil;&atilde;o Pronominal -->
+            <div class="section">
+                <h3><span class="icon">&#128260;</span> Coloca&ccedil;&atilde;o Pronominal</h3>
+
+                <p>
+                    A <strong>coloca&ccedil;&atilde;o pronominal</strong> diz respeito &agrave; posi&ccedil;&atilde;o dos pronomes obl&iacute;quos &aacute;tonos (me, te, se, lhe, o, a, nos, vos) em rela&ccedil;&atilde;o ao verbo.
+                </p>
+
+                <table class="word-table">
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Posi&ccedil;&atilde;o</th>
+                        <th>Exemplo</th>
+                        <th>Regra</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Pr&oacute;clise</strong></td>
+                        <td>Pronome <strong>antes</strong> do verbo</td>
+                        <td>N&atilde;o <strong>me</strong> abandones.</td>
+                        <td>Usada com palavras negativas, pronomes relativos, conjun&ccedil;&otilde;es subordinativas, adv&eacute;rbios</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&Ecirc;nclise</strong></td>
+                        <td>Pronome <strong>depois</strong> do verbo</td>
+                        <td>Entregue<strong>-me</strong> o livro.</td>
+                        <td>Usada no in&iacute;cio de ora&ccedil;&otilde;es, com verbos no imperativo afirmativo, infinitivo, ger&uacute;ndio</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mes&oacute;clise</strong></td>
+                        <td>Pronome <strong>no meio</strong> do verbo</td>
+                        <td>Dir<strong>-lhe-</strong>ei a verdade.</td>
+                        <td>Usada apenas com futuro do presente e futuro do pret&eacute;rito</td>
+                    </tr>
+                </table>
+
+                <div class="example-box warning">
+                    <div class="label">Erro Comum</div>
+                    <div class="en">Incorreto: &ldquo;<strong>Me</strong> entrega o hinário.&rdquo; (Pronome no in&iacute;cio da frase)</div>
+                    <div class="pt">Correto: &ldquo;Entrega<strong>-me</strong> o hin&aacute;rio.&rdquo; (Ênclise no imperativo afirmativo)</div>
+                </div>
+            </div>
+
+            <!-- Se&ccedil;&atilde;o 4.7: Preposi&ccedil;&atilde;o, Conjun&ccedil;&atilde;o, Interjeição -->
+            <div class="section">
+                <h3><span class="icon">&#128279;</span> Preposi&ccedil;&atilde;o, Conjun&ccedil;&atilde;o e Interjeição</h3>
+
+                <h4>Preposi&ccedil;&atilde;o</h4>
+                <p>
+                    Palavra invariável que liga dois termos, estabelecendo rela&ccedil;&atilde;o entre eles.
+                </p>
+                <p><strong>Preposições essenciais:</strong> a, ante, ap&oacute;s, at&eacute;, com, contra, de, desde, em, entre, para, perante, por, sem, sob, sobre, tr&aacute;s.</p>
+
+                <div class="example-box theological">
+                    <div class="label">Exemplo</div>
+                    <div class="en">&ldquo;Caminharei <strong>com</strong> Deus <strong>por</strong> todos os dias <strong>da</strong> minha vida.&rdquo;</div>
+                    <div class="pt">&ldquo;Com&rdquo;, &ldquo;por&rdquo; e &ldquo;da&rdquo; (de + a) s&atilde;o preposições que ligam os termos da ora&ccedil;&atilde;o.</div>
+                </div>
+
+                <h4>Conjun&ccedil;&atilde;o</h4>
+                <p>
+                    Palavra invariável que liga ora&ccedil;&otilde;es ou termos de mesma fun&ccedil;&atilde;o:
+                </p>
+                <ul>
+                    <li><strong>Coordenativas:</strong> e, mas, ou, nem, porém, todavia, portanto, logo</li>
+                    <li><strong>Subordinativas:</strong> que, se, quando, embora, porque, conforme, enquanto</li>
+                </ul>
+
+                <div class="example-box">
+                    <div class="label">Exemplo</div>
+                    <div class="en">&ldquo;Deus &eacute; justo <strong>e</strong> misericordioso.&rdquo; (aditiva)</div>
+                    <div class="pt">&ldquo;Orai <strong>para que</strong> n&atilde;o entreis em tenta&ccedil;&atilde;o.&rdquo; (subordinativa final)</div>
+                </div>
+
+                <h4>Interjeição</h4>
+                <p>
+                    Palavra ou express&atilde;o que traduz emo&ccedil;&otilde;es ou rea&ccedil;&otilde;es:
+                </p>
+                <ul>
+                    <li><strong>Alegria:</strong> Aleluia! Viva!</li>
+                    <li><strong>Dor:</strong> Ai! Ui!</li>
+                    <li><strong>Espanto:</strong> Oh! Caramba!</li>
+                    <li><strong>Invoca&ccedil;&atilde;o:</strong> &Oacute; Deus! Senhor!</li>
+                </ul>
+            </div>
+
+            <!-- V&iacute;deos -->
+            <div class="video-section">
+                <h3><span class="icon">&#127909;</span> V&iacute;deos Complementares</h3>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <h4>Classes de Palavras (Panorama)</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/LOhJfCAMfkI?cc_load_policy=1" allowfullscreen></iframe>
+                        </div>
+                        <p class="video-caption">Professor Noslen &mdash; Classes de Palavras</p>
+                    </div>
+                    <div class="video-item">
+                        <h4>Coloca&ccedil;&atilde;o Pronominal</h4>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/5-dLeZfRjG4?cc_load_policy=1" allowfullscreen></iframe>
+                        </div>
+                        <p class="video-caption">Professor Noslen &mdash; Coloca&ccedil;&atilde;o Pronominal</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exerc&iacute;cios Unidade 4 -->
+            <div class="exercise-area">
+                <h3>&#9998; Exerc&iacute;cios &mdash; Unidade 4</h3>
+
+                <div class="exercise-item" id="ex4-q1">
+                    <div class="question"><span class="q-num">1</span> Na frase &ldquo;A <strong>f&eacute;</strong> move montanhas&rdquo;, o substantivo &ldquo;f&eacute;&rdquo; &eacute; classificado como:</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q1')">a) Concreto, comum, simples</button>
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex4-q1')">b) Abstrato, comum, simples</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q1')">c) Pr&oacute;prio, abstrato, derivado</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q1')">d) Concreto, pr&oacute;prio, primitivo</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex4-q1"></div>
+                </div>
+
+                <div class="exercise-item" id="ex4-q2">
+                    <div class="question"><span class="q-num">2</span> Em &ldquo;Deus &eacute; sant&iacute;ssimo&rdquo;, o adjetivo est&aacute; no grau:</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q2')">a) Comparativo de superioridade</button>
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex4-q2')">b) Superlativo absoluto sint&eacute;tico</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q2')">c) Superlativo relativo de superioridade</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q2')">d) Superlativo absoluto anal&iacute;tico</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex4-q2"></div>
+                </div>
+
+                <div class="exercise-item" id="ex4-q3">
+                    <div class="question"><span class="q-num">3</span> O verbo &ldquo;pregar&rdquo; pertence &agrave;:</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex4-q3')">a) 1&ordf; conjuga&ccedil;&atilde;o (-ar)</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q3')">b) 2&ordf; conjuga&ccedil;&atilde;o (-er)</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q3')">c) 3&ordf; conjuga&ccedil;&atilde;o (-ir)</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q3')">d) Conjuga&ccedil;&atilde;o irregular</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex4-q3"></div>
+                </div>
+
+                <div class="exercise-item" id="ex4-q4">
+                    <div class="question"><span class="q-num">4</span> A coloca&ccedil;&atilde;o pronominal em &ldquo;Dir-lhe-ei a verdade&rdquo; &eacute; chamada de:</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q4')">a) Pr&oacute;clise</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q4')">b) &Ecirc;nclise</button>
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex4-q4')">c) Mes&oacute;clise</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q4')">d) An&aacute;clise</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex4-q4"></div>
+                </div>
+
+                <div class="exercise-item" id="ex4-q5">
+                    <div class="question"><span class="q-num">5</span> Em &ldquo;Eu sou o caminho&rdquo;, a palavra &ldquo;Eu&rdquo; &eacute; um pronome:</div>
+                    <div class="options-group">
+                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex4-q5')">a) Pessoal do caso reto</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q5')">b) Pessoal do caso obl&iacute;quo</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q5')">c) Demonstrativo</button>
+                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q5')">d) Possessivo</button>
+                    </div>
+                    <div class="feedback-msg" id="fb-ex4-q5"></div>
+                </div>
+
+                <div class="score-display" id="score-ex4">
+                    <div class="score-number" id="score-ex4-num"></div>
+                    <div class="score-text" id="score-ex4-text"></div>
+                </div>
+            </div>
+
+            <div class="motivation-box">
+                <div class="emoji">&#127891;</div>
+                <p>&ldquo;Parab&eacute;ns por completar todas as unidades! Que o dom&iacute;nio da l&iacute;ngua portuguesa seja uma ferramenta poderosa no seu minist&eacute;rio pastoral.&rdquo;</p>
+            </div>
+
+            <div class="exam-btn-area" id="exam-area-4">
+                <button class="btn-exam" onclick="ExamEngine.start(4)" disabled>Prova bloqueada</button>
+                <p class="exam-status" id="exam-status-4"></p>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn" onclick="showUnit(3)">&#9664; Unidade 3</button>
+                <button class="nav-btn primary" onclick="showView('welcome')">&#127968; Voltar ao In&iacute;cio</button>
+            </div>
+        </div>
+
+        <!-- ==================== EXAM CONTAINER ==================== -->
+        <div id="examContainer" class="unit-view">
+            <div class="exam-top-bar">
+                <div class="exam-top-info">
+                    <h3 id="examTitle"></h3>
+                    <small id="examModuleNum"></small>
+                </div>
+                <div id="examTimer">30:00</div>
+            </div>
+            <div class="exam-progress-bar-container">
+                <div id="examProgressBar" style="width:0%"></div>
+            </div>
+            <div class="exam-meta">
+                <span id="examProgress">Questao 1 de 10</span>
+                <span id="examAnswered">0 respondidas</span>
+            </div>
+            <div id="examDots"></div>
+            <div id="examQuestionArea"></div>
+            <div id="examNav">
+                <button id="examPrevBtn" onclick="ExamEngine.prevQuestion()">&#9664; Anterior</button>
+                <button id="examFinishBtn" onclick="ExamEngine.showReview()">Finalizar Prova</button>
+                <button id="examNextBtn" onclick="ExamEngine.nextQuestion()">Proxima &#9654;</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        Portugu&ecirc;s 1 &bull; Semin&aacute;rio Presbiteriano da Amaz&ocirc;nia &bull; CG01 &bull; Ferramenta de Ensino Interativo
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/courses.js"></script>
+    <script src="js/exams.js"></script>
+    <script>
+        // ===================== STATE =====================
+        const state = {
+            currentView: 'welcome',
+            completedUnits: new Set(),
+            scores: {},
+            presenterMode: false
+        };
+
+        // ===================== NAVIGATION =====================
+        function showView(viewId) {
+            document.querySelectorAll('.unit-view').forEach(v => v.classList.remove('active'));
+            const view = document.getElementById(viewId);
+            if (view) {
+                view.classList.add('active');
+                state.currentView = viewId;
+                updateNav();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function showUnit(num) {
+            // Verificar se modulo esta liberado
+            if (Auth.isLoggedIn && Auth.accessConfig && !Auth.isModuleAccessible(num)) {
+                document.querySelectorAll('.unit-view').forEach(v => v.classList.remove('active'));
+                const view = document.getElementById('unit' + num);
+                if (view) {
+                    view.classList.add('active');
+                    state.currentView = 'unit' + num;
+                    updateNav();
+                    alert('Este modulo ainda nao foi liberado pelo professor.');
+                    showView('welcome');
+                    return;
+                }
+            }
+            showView('unit' + num);
+        }
+
+        function updateNav() {
+            document.querySelectorAll('.nav-item').forEach((item, i) => {
+                item.classList.remove('active');
+                if (i === 0 && state.currentView === 'welcome') {
+                    item.classList.add('active');
+                } else if (i > 0 && state.currentView === 'unit' + i) {
+                    item.classList.add('active');
+                }
+                // Mark completed
+                if (i > 0 && state.completedUnits.has(i)) {
+                    item.classList.add('completed');
+                }
+            });
+            document.getElementById('progressText').textContent =
+                state.completedUnits.size + ' de 4 unidades';
+        }
+
+        // ===================== EXERCISES =====================
+        const exerciseTracker = {};
+
+        function checkAnswer(btn, isCorrect, groupId) {
+            const group = document.getElementById(groupId);
+            const buttons = group.querySelectorAll('.option-btn');
+            const feedbackEl = document.getElementById('fb-' + groupId);
+
+            // Prevent re-answering
+            if (group.dataset.answered) return;
+            group.dataset.answered = 'true';
+
+            buttons.forEach(b => {
+                b.classList.add('disabled');
+                if (b === btn) {
+                    b.classList.add(isCorrect ? 'correct' : 'incorrect');
+                }
+                // Show correct answer
+                if (!isCorrect) {
+                    const onclickAttr = b.getAttribute('onclick');
+                    if (onclickAttr && onclickAttr.includes('true')) {
+                        b.classList.add('correct');
+                    }
+                }
+            });
+
+            if (feedbackEl) {
+                feedbackEl.classList.add('show', isCorrect ? 'correct' : 'incorrect');
+                feedbackEl.textContent = isCorrect ?
+                    'Correto! Muito bem!' :
+                    'Incorreto. Veja a resposta correta destacada em verde.';
+            }
+
+            // Track scores
+            const exGroup = groupId.split('-')[0];
+            if (!exerciseTracker[exGroup]) {
+                exerciseTracker[exGroup] = { total: 0, correct: 0, answered: 0 };
+            }
+            const allGroups = document.querySelectorAll('[id^="' + exGroup + '-"]');
+            if (exerciseTracker[exGroup].total === 0) {
+                exerciseTracker[exGroup].total = allGroups.length;
+            }
+
+            exerciseTracker[exGroup].answered++;
+            if (isCorrect) exerciseTracker[exGroup].correct++;
+
+            // Show score when all answered
+            if (exerciseTracker[exGroup].answered >= exerciseTracker[exGroup].total) {
+                showScore(exGroup);
+            }
+        }
+
+        function showScore(exGroup) {
+            const tracker = exerciseTracker[exGroup];
+            const scoreEl = document.getElementById('score-' + exGroup);
+            const numEl = document.getElementById('score-' + exGroup + '-num');
+            const textEl = document.getElementById('score-' + exGroup + '-text');
+
+            if (!scoreEl || !numEl || !textEl) return;
+
+            const pct = Math.round((tracker.correct / tracker.total) * 100);
+            numEl.textContent = tracker.correct + '/' + tracker.total;
+
+            let msg = '';
+            if (pct === 100) msg = 'Perfeito! Voce dominou este conteudo!';
+            else if (pct >= 70) msg = 'Otimo trabalho! Continue assim!';
+            else if (pct >= 50) msg = 'Bom esforco! Revise os pontos que errou.';
+            else msg = 'Nao desanime! Revise o conteudo e tente novamente.';
+
+            textEl.innerHTML = msg;
+            scoreEl.classList.add('show');
+
+            // Mark unit as completed
+            const unitNum = parseInt(exGroup.replace('ex', ''));
+            if (!isNaN(unitNum)) {
+                state.completedUnits.add(unitNum);
+                updateNav();
+            }
+        }
+
+        // ===================== COLLAPSIBLE =====================
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.collapsible-header')) {
+                const header = e.target.closest('.collapsible-header');
+                const content = header.nextElementSibling;
+                header.classList.toggle('open');
+                content.classList.toggle('open');
+            }
+        });
+
+        // ===================== PRESENTER MODE =====================
+        function togglePresenterMode() {
+            state.presenterMode = !state.presenterMode;
+            document.body.classList.toggle('presenter-mode', state.presenterMode);
+            const btn = document.querySelector('.btn-presenter');
+            btn.textContent = state.presenterMode ?
+                '\u{1F4FA} Modo Normal' : '\u{1F4FA} Modo Apresenta\u00E7\u00E3o';
+        }
+
+        // ===================== KEYBOARD NAV =====================
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                const currentNum = parseInt(state.currentView.replace('unit', ''));
+                if (!isNaN(currentNum) && currentNum < 4) {
+                    showUnit(currentNum + 1);
+                }
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                const currentNum = parseInt(state.currentView.replace('unit', ''));
+                if (!isNaN(currentNum) && currentNum > 1) {
+                    showUnit(currentNum - 1);
+                } else if (!isNaN(currentNum) && currentNum === 1) {
+                    showView('welcome');
+                }
+            } else if (e.key === 'Home') {
+                showView('welcome');
+            }
+        });
+
+        // ===================== YOUTUBE FALLBACK =====================
+        function fixYouTubeEmbeds() {
+            const isFileProtocol = window.location.protocol === 'file:';
+            if (!isFileProtocol) return;
+
+            document.querySelectorAll('.video-wrapper iframe').forEach(iframe => {
+                const src = iframe.getAttribute('src') || '';
+                const match = src.match(/youtube\.com\/embed\/([^?&"]+)/);
+                if (!match) return;
+
+                const videoId = match[1];
+                const youtubeUrl = 'https://www.youtube.com/watch?v=' + videoId;
+                const thumbUrl = 'https://img.youtube.com/vi/' + videoId + '/hqdefault.jpg';
+
+                const link = document.createElement('a');
+                link.href = youtubeUrl;
+                link.target = '_blank';
+                link.rel = 'noopener';
+                link.className = 'video-thumb-link';
+                link.title = 'Clique para assistir no YouTube';
+                link.innerHTML =
+                    '<img src="' + thumbUrl + '" alt="Thumbnail do v\u00eddeo" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">' +
+                    '<div class="video-play-overlay">' +
+                        '<div class="video-play-btn">&#9654;</div>' +
+                        '<div class="video-play-text">Assistir no YouTube</div>' +
+                    '</div>';
+
+                iframe.parentNode.replaceChild(link, iframe);
+            });
+        }
+
+        // Fix YouTube embeds for file:// protocol
+        setTimeout(fixYouTubeEmbeds, 100);
+
+        // Initialize
+        updateNav();
+
+        // Definir curso atual
+        localStorage.setItem('cursoId', 'portugues1');
+        if (typeof Courses !== 'undefined') Courses.setCursoId('portugues1');
+
+        // Initialize Auth (check session, show login if needed)
+        if (typeof Auth !== 'undefined' && API.BASE_URL !== 'COLE_A_URL_DO_DEPLOY_AQUI') {
+            Auth.init();
+        } else {
+            // Modo offline / sem backend configurado - esconder overlay
+            const overlay = document.getElementById('authOverlay');
+            if (overlay) overlay.style.display = 'none';
+            console.log('Modo offline: backend nao configurado. Auth desabilitado.');
+        }
+    </script>
+</body>
+</html>
