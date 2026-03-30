@@ -12,16 +12,18 @@ const ExamEngine = {
   timeLimit: 1800, // 30 min padrao
 
   async start(modulo) {
+    var cursoId = (typeof Courses !== 'undefined' && Courses.getCursoId()) || localStorage.getItem('cursoId') || 'ingles';
+
     // Verificar no servidor se pode iniciar
-    const check = await API.startExam(modulo);
+    const check = await API.startExam(modulo, cursoId);
     if (!check.success) {
       alert(check.error || 'Nao foi possivel iniciar a prova.');
       return;
     }
 
-    // Carregar JSON da prova
+    // Carregar JSON da prova (caminho: exams/{cursoId}/exam{N}.json)
     try {
-      const resp = await fetch('exams/exam' + modulo + '.json');
+      const resp = await fetch('exams/' + cursoId + '/exam' + modulo + '.json');
       if (!resp.ok) throw new Error('Prova nao encontrada');
       this.currentExam = await resp.json();
     } catch (err) {
@@ -796,10 +798,12 @@ const ExamEngine = {
         <p>Enviando suas respostas...</p>
       </div>`;
 
+    var cursoId = (typeof Courses !== 'undefined' && Courses.getCursoId()) || localStorage.getItem('cursoId') || 'ingles';
     const result = await API.submitExam(
       this.currentExam.module,
       this.answers,
-      tempoGasto
+      tempoGasto,
+      cursoId
     );
 
     if (result.success) {
@@ -823,10 +827,12 @@ const ExamEngine = {
         <p>Enviando suas respostas...</p>
       </div>`;
 
+    var cursoId = (typeof Courses !== 'undefined' && Courses.getCursoId()) || localStorage.getItem('cursoId') || 'ingles';
     const result = await API.submitExam(
       this.currentExam.module,
       this.answers,
-      tempoGasto
+      tempoGasto,
+      cursoId
     );
 
     if (result.success) {

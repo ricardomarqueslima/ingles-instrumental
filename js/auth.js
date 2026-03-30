@@ -48,17 +48,22 @@ const Auth = {
   },
 
   async loadAccess() {
-    const result = await API.getAccess();
+    var cursoId = localStorage.getItem('cursoId');
+    const result = await API.getAccess(cursoId);
     if (result.success) {
       this.accessConfig = result.data.access;
       this.userGrades = result.data.grades || {};
+      this.numModulos = result.data.courseInfo ? result.data.courseInfo.numModulos : 8;
       this.updateModuleStates();
     }
   },
 
+  numModulos: 8,
+
   updateModuleStates() {
     if (!this.accessConfig) return;
-    for (let m = 1; m <= 8; m++) {
+    var maxMod = this.numModulos || 8;
+    for (let m = 1; m <= maxMod; m++) {
       const examArea = document.getElementById('exam-area-' + m);
       if (!examArea) continue;
       const examUnlocked = this.accessConfig['modulo' + m + '_prova'];

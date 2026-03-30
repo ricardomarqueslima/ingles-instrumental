@@ -1,0 +1,168 @@
+{
+  "module": 4,
+  "title": "Prova - Classe de Palavras",
+  "timeLimit": 5400,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "prompt": "Na frase \u201cA igreja presbiteriana celebrou um culto solene\u201d, os termos \u201cpresbiteriana\u201d e \u201csolene\u201d exercem a fun\u00e7\u00e3o de:",
+      "options": [
+        "a) Substantivos, pois nomeiam qualidades da igreja e do culto.",
+        "b) Adjetivos, pois caracterizam os substantivos \u201cigreja\u201d e \u201cculto\u201d.",
+        "c) Adv\u00e9rbios, pois modificam os verbos da ora\u00e7\u00e3o.",
+        "d) Pronomes, pois substituem nomes na ora\u00e7\u00e3o."
+      ]
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "prompt": "Na ora\u00e7\u00e3o \u201cEle lhes falaria sobre a gra\u00e7a, se pudesse\u201d, a forma verbal \u201cfalaria\u201d est\u00e1 no:",
+      "options": [
+        "a) Modo indicativo, futuro do presente",
+        "b) Modo subjuntivo, pret\u00e9rito imperfeito",
+        "c) Modo indicativo, futuro do pret\u00e9rito",
+        "d) Modo indicativo, pret\u00e9rito mais-que-perfeito"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "prompt": "Assinale a alternativa que apresenta a coloca\u00e7\u00e3o pronominal correta, de acordo com a norma culta.",
+      "options": [
+        "a) \u201cMe disseram que o presb\u00edtero viria.\u201d",
+        "b) \u201cNingu\u00e9m disse-me a verdade.\u201d",
+        "c) \u201cN\u00e3o se esque\u00e7am de orar.\u201d",
+        "d) \u201cFar-se-\u00eda o batismo, se houvesse-se \u00e1gua.\u201d"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "true_false",
+      "prompt": "Analise as afirma\u00e7\u00f5es sobre classes de palavras e indique verdadeiro (V) ou falso (F).",
+      "statements": [
+        {
+          "id": "4a",
+          "text": "Substantivos abstratos designam seres que existem independentemente de outros, como \u201cmesa\u201d e \u201clivro\u201d."
+        },
+        {
+          "id": "4b",
+          "text": "Locu\u00e7\u00e3o adjetiva \u00e9 a express\u00e3o formada por preposi\u00e7\u00e3o + substantivo com valor de adjetivo, como \u201cde Deus\u201d (= divino)."
+        },
+        {
+          "id": "4c",
+          "text": "O verbo no modo subjuntivo expressa certeza e fatos concretos."
+        },
+        {
+          "id": "4d",
+          "text": "Preposi\u00e7\u00f5es s\u00e3o palavras invariantes que estabelecem rela\u00e7\u00f5es de depend\u00eancia entre termos da ora\u00e7\u00e3o."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "drag_match",
+      "prompt": "Classifique cada pronome destacado quanto ao seu tipo.",
+      "items": [
+        "\u201cEle\u201d pregou o serm\u00e3o.",
+        "\u201cNossa\u201d f\u00e9 \u00e9 inabal\u00e1vel.",
+        "\u201cIsso\u201d foi dito no culto.",
+        "\u201cQuem\u201d participar\u00e1 da ceia?",
+        "O texto \u201cque\u201d lemos \u00e9 de Paulo."
+      ],
+      "targets": [
+        "Pronome pessoal do caso reto",
+        "Pronome possessivo",
+        "Pronome demonstrativo",
+        "Pronome interrogativo",
+        "Pronome relativo"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "fill_blank",
+      "prompt": "Complete as lacunas sobre as formas nominais do verbo.",
+      "sentence": "As tr\u00eas formas nominais do verbo s\u00e3o: o ___, que pode exercer fun\u00e7\u00e3o de substantivo; o ___, que pode exercer fun\u00e7\u00e3o de adjetivo; e o ___, que pode exercer fun\u00e7\u00e3o de adv\u00e9rbio.",
+      "wordBank": [
+        "infinitivo",
+        "partic\u00edpio",
+        "ger\u00fandio",
+        "imperativo",
+        "subjuntivo"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "column_match",
+      "prompt": "Relacione cada classe de palavra com o exemplo correspondente extra\u00eddo de contexto b\u00edblico-eclesi\u00e1stico.",
+      "leftColumn": [
+        "Interjeicao",
+        "Conjun\u00e7\u00e3o",
+        "Adv\u00e9rbio",
+        "Preposi\u00e7\u00e3o",
+        "Substantivo coletivo"
+      ],
+      "rightColumn": [
+        "\u201cAm\u00e9m!\u201d",
+        "\u201cOrai, porque o tempo est\u00e1 pr\u00f3ximo.\u201d (porque)",
+        "\u201cO pastor pregou eloquentemente.\u201d (eloquentemente)",
+        "\u201cO livro de Romanos\u201d (de)",
+        "\u201cO rebanho seguia o pastor.\u201d (rebanho)"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "true_false",
+      "prompt": "Julgue as afirma\u00e7\u00f5es sobre coloca\u00e7\u00e3o pronominal e classes de palavras.",
+      "statements": [
+        {
+          "id": "8a",
+          "text": "A mes\u00f3clise s\u00f3 ocorre com verbos no futuro do presente ou futuro do pret\u00e9rito do indicativo."
+        },
+        {
+          "id": "8b",
+          "text": "Palavras negativas (n\u00e3o, nunca, jamais) atraem o pronome obl\u00edquo, exigindo pr\u00f3clise."
+        },
+        {
+          "id": "8c",
+          "text": "O adjetivo no grau superlativo relativo compara a qualidade de um ser com a de todos os demais de um grupo."
+        },
+        {
+          "id": "8d",
+          "text": "Conjun\u00e7\u00f5es coordenativas e subordinativas exercem a mesma fun\u00e7\u00e3o sint\u00e1tica na ora\u00e7\u00e3o."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "prompt": "Na frase \u201cOs fi\u00e9is cantavam alegremente os salmos antigos durante a liturgia\u201d, quantas classes gramaticais diferentes est\u00e3o representadas?",
+      "text": "Os (artigo) fi\u00e9is (substantivo) cantavam (verbo) alegremente (adv\u00e9rbio) os (artigo) salmos (substantivo) antigos (adjetivo) durante (preposi\u00e7\u00e3o) a (artigo) liturgia (substantivo).",
+      "options": [
+        "a) Quatro: substantivo, verbo, adjetivo e artigo.",
+        "b) Cinco: artigo, substantivo, verbo, adv\u00e9rbio e adjetivo.",
+        "c) Seis: artigo, substantivo, verbo, adv\u00e9rbio, adjetivo e preposi\u00e7\u00e3o.",
+        "d) Sete: artigo, substantivo, verbo, adv\u00e9rbio, adjetivo, preposi\u00e7\u00e3o e pronome."
+      ]
+    },
+    {
+      "id": 10,
+      "type": "drag_match",
+      "prompt": "Classifique cada substantivo destacado quanto \u00e0 sua classifica\u00e7\u00e3o.",
+      "items": [
+        "f\u00e9",
+        "Presbit\u00e9rio",
+        "Calv\u00ednismo",
+        "Jerusal\u00e9m",
+        "rebanho"
+      ],
+      "targets": [
+        "Substantivo abstrato",
+        "Substantivo comum concreto",
+        "Substantivo comum abstrato (doutrina)",
+        "Substantivo pr\u00f3prio",
+        "Substantivo coletivo"
+      ]
+    }
+  ]
+}

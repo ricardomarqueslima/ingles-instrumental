@@ -1,0 +1,168 @@
+{
+  "module": 2,
+  "title": "Prova - Introdu\u00e7\u00e3o \u00e0 Fon\u00e9tica",
+  "timeLimit": 5400,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "prompt": "Qual \u00e9 a diferen\u00e7a fundamental entre fon\u00e9tica e fonologia?",
+      "options": [
+        "a) A fon\u00e9tica estuda os sons da fala em seus aspectos f\u00edsicos e articulat\u00f3rios, enquanto a fonologia estuda a fun\u00e7\u00e3o dos sons no sistema da l\u00edngua.",
+        "b) A fon\u00e9tica estuda a escrita e a fonologia estuda a fala.",
+        "c) A fon\u00e9tica e a fonologia s\u00e3o sin\u00f4nimos usados em contextos diferentes.",
+        "d) A fonologia estuda os sons individuais e a fon\u00e9tica estuda as combina\u00e7\u00f5es de sons."
+      ]
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "prompt": "Considere as palavras \u201cmala\u201d e \u201cmola\u201d. Por que esse par \u00e9 considerado um par m\u00ednimo?",
+      "options": [
+        "a) Porque ambas possuem o mesmo n\u00famero de letras e s\u00edlabas.",
+        "b) Porque a troca de um \u00fanico fonema (/a/ por /o/) gera mudan\u00e7a de significado, provando que esses fonemas s\u00e3o distintivos.",
+        "c) Porque as duas palavras pertencem \u00e0 mesma classe gramatical.",
+        "d) Porque as consoantes iniciais s\u00e3o id\u00eanticas e as vogais finais tamb\u00e9m."
+      ]
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "prompt": "Na palavra \u201cbatismo\u201d, quantos fonemas e quantas letras existem, respectivamente?",
+      "options": [
+        "a) 7 fonemas e 7 letras",
+        "b) 6 fonemas e 7 letras",
+        "c) 7 fonemas e 6 letras",
+        "d) 8 fonemas e 7 letras"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "true_false",
+      "prompt": "Analise as afirma\u00e7\u00f5es sobre fon\u00e9tica e fonologia e indique se s\u00e3o verdadeiras (V) ou falsas (F).",
+      "statements": [
+        {
+          "id": "4a",
+          "text": "O fonema \u00e9 a menor unidade sonora capaz de estabelecer distin\u00e7\u00e3o de significado entre palavras."
+        },
+        {
+          "id": "4b",
+          "text": "Na palavra \u201cchave\u201d, o d\u00edgrafo \u201cch\u201d representa dois fonemas distintos."
+        },
+        {
+          "id": "4c",
+          "text": "Um ditongo ocorre quando duas vogais est\u00e3o na mesma s\u00edlaba, sendo uma vogal e uma semivogal."
+        },
+        {
+          "id": "4d",
+          "text": "O encontro consonantal em \u201cpregador\u201d \u00e9 formado pela sequ\u00eancia \u201cpr\u201d, em que ambas as consoantes s\u00e3o pronunciadas."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "drag_match",
+      "prompt": "Classifique cada encontro voc\u00e1lico destacado quanto ao seu tipo.",
+      "items": [
+        "sa\u00fa-de (a-\u00fa)",
+        "pai (a-i)",
+        "Pa-ra-guai (u-a-i)",
+        "i-gre-ja (e-ja)",
+        "cau-sa (a-u)"
+      ],
+      "targets": [
+        "Hiato",
+        "Ditongo decrescente oral",
+        "Tritongo",
+        "Ditongo crescente oral",
+        "Ditongo decrescente oral"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "fill_blank",
+      "prompt": "Complete as lacunas sobre classifica\u00e7\u00e3o de consoantes usando o banco de palavras.",
+      "sentence": "Quanto ao modo de articula\u00e7\u00e3o, o fonema /f/ \u00e9 classificado como ___, e quanto ao ponto de articula\u00e7\u00e3o, como ___. J\u00e1 o fonema /m/ \u00e9 classificado como ___ quanto ao modo.",
+      "wordBank": [
+        "fricativo",
+        "labiodental",
+        "nasal",
+        "oclusivo",
+        "alveolar",
+        "lateral"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "column_match",
+      "prompt": "Relacione cada palavra da coluna esquerda com o fen\u00f4meno fon\u00e9tico presente nela.",
+      "leftColumn": [
+        "carro (rr)",
+        "guerra (gu)",
+        "flor (fl)",
+        "pneu (pn)",
+        "nascimento (sc)"
+      ],
+      "rightColumn": [
+        "D\u00edgrafo consonantal",
+        "D\u00edgrafo consonantal",
+        "Encontro consonantal",
+        "Encontro consonantal",
+        "D\u00edgrafo consonantal"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "prompt": "Sobre a classifica\u00e7\u00e3o das vogais, assinale a alternativa correta.",
+      "options": [
+        "a) As vogais s\u00e3o classificadas apenas pelo ponto de articula\u00e7\u00e3o (anterior, central, posterior).",
+        "b) As vogais podem ser classificadas por tr\u00eas crit\u00e9rios: altura da l\u00edngua (abertura), posi\u00e7\u00e3o da l\u00edngua (anterior/central/posterior) e papel das cavidades (oral/nasal).",
+        "c) Todas as vogais do portugu\u00eas s\u00e3o orais; n\u00e3o existem vogais nasais.",
+        "d) A altura da l\u00edngua n\u00e3o interfere na produ\u00e7\u00e3o das vogais portuguesas."
+      ]
+    },
+    {
+      "id": 9,
+      "type": "true_false",
+      "prompt": "Julgue as afirma\u00e7\u00f5es abaixo sobre encontros voc\u00e1licos, consonantais e d\u00edgrafos.",
+      "statements": [
+        {
+          "id": "9a",
+          "text": "Na palavra \u201cqueiro\u201d (de \u201cqueirosiano\u201d), o \u201cqu\u201d \u00e9 um d\u00edgrafo porque a letra \u201cu\u201d n\u00e3o \u00e9 pronunciada."
+        },
+        {
+          "id": "9b",
+          "text": "O hiato se caracteriza por duas vogais adjacentes que pertencem a s\u00edlabas diferentes."
+        },
+        {
+          "id": "9c",
+          "text": "Em \u201csalmo\u201d, o grupo \u201clm\u201d constitui um d\u00edgrafo."
+        },
+        {
+          "id": "9d",
+          "text": "O tritongo \u00e9 o encontro de tr\u00eas vogais na mesma s\u00edlaba: semivogal + vogal + semivogal."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "drag_match",
+      "prompt": "Associe cada fonema consonantal ao seu ponto de articula\u00e7\u00e3o correto.",
+      "items": [
+        "/p/ e /b/",
+        "/f/ e /v/",
+        "/t/ e /d/",
+        "/k/ e /g/",
+        "/s/ e /z/"
+      ],
+      "targets": [
+        "Bilabial",
+        "Labiodental",
+        "Alveolar (ou dental)",
+        "Velar",
+        "Alveolar"
+      ]
+    }
+  ]
+}

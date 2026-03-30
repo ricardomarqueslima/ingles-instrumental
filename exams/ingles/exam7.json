@@ -1,0 +1,179 @@
+{
+  "module": 7,
+  "title": "Prova - Coesao Textual",
+  "timeLimit": 5400,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "prompt": "Leia o trecho abaixo e identifique a que se refere o pronome 'they' na segunda frase.",
+      "text": "The Pharisees questioned Jesus about the law. They believed that strict observance of rituals was the only path to righteousness.",
+      "options": [
+        "a) Jesus e os discipulos",
+        "b) Os fariseus",
+        "c) As leis e os rituais",
+        "d) Os caminhos para a justica"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "prompt": "Qual conector adverbial melhor completa o trecho abaixo, mantendo a coesao logica do argumento teologico?",
+      "text": "Calvin emphasized the sovereignty of God in salvation. ___, he also affirmed the responsibility of human beings to respond to the gospel.",
+      "options": [
+        "a) Therefore",
+        "b) Nevertheless",
+        "c) Furthermore",
+        "d) Consequently"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "true_false",
+      "prompt": "Leia o paragrafo e avalie as afirmacoes sobre os elementos de coesao textual utilizados.",
+      "text": "The early church faced severe persecution. However, this suffering did not diminish their faith. On the contrary, it strengthened the believers' resolve. Moreover, the scattering of Christians led to the spread of the gospel throughout the Roman Empire.",
+      "statements": [
+        {
+          "id": "3a",
+          "text": "O conector 'However' indica uma relacao de contraste com a frase anterior."
+        },
+        {
+          "id": "3b",
+          "text": "O pronome 'their' na segunda frase refere-se a 'severe persecution'."
+        },
+        {
+          "id": "3c",
+          "text": "A expressao 'On the contrary' reafirma a mesma ideia da frase anterior."
+        },
+        {
+          "id": "3d",
+          "text": "O conector 'Moreover' adiciona uma informacao complementar ao argumento."
+        },
+        {
+          "id": "3e",
+          "text": "O pronome 'it' na terceira frase refere-se a 'suffering' (sofrimento)."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "drag_match",
+      "prompt": "Associe cada conector com sua funcao na coesao textual.",
+      "items": [
+        "therefore",
+        "however",
+        "for instance",
+        "in addition",
+        "as a result"
+      ],
+      "targets": [
+        "conclusao/consequencia logica",
+        "contraste/oposicao",
+        "exemplificacao",
+        "adicao de informacao",
+        "resultado/efeito"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "fill_blank",
+      "prompt": "Complete o texto teologico com os conectores adequados para garantir a coesao textual.",
+      "sentence": "The doctrine of the Trinity is central to Christian faith. ___, many believers find it difficult to explain. ___, theologians have developed various analogies to illustrate this mystery. ___, no analogy perfectly captures the nature of the triune God.",
+      "wordBank": [
+        "However",
+        "Therefore",
+        "Moreover",
+        "Nevertheless",
+        "For this reason",
+        "In conclusion"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "column_match",
+      "prompt": "Associe cada pronome ou expressao referencial do texto com o termo a que se refere.",
+      "text": "Paul wrote his letter to the Romans while in Corinth. In it, he explained the doctrine of justification by faith. This teaching would become foundational for Protestant theology. Luther later rediscovered its significance during the Reformation.",
+      "leftColumn": [
+        "his (primeira frase)",
+        "it (segunda frase)",
+        "he (segunda frase)",
+        "This teaching (terceira frase)",
+        "its (quarta frase)"
+      ],
+      "rightColumn": [
+        "a carta (the letter)",
+        "Paulo (Paul)",
+        "a doutrina da justificacao (the doctrine of justification)",
+        "de Paulo (Paul's)",
+        "da doutrina/do ensino (of this teaching)"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "prompt": "Qual tipo de coesao lexical e utilizado no trecho abaixo? Observe as palavras destacadas.",
+      "text": "The PASTOR delivered a powerful sermon. The MINISTER spoke about forgiveness and grace. The CLERGYMAN emphasized that God's love is unconditional.",
+      "options": [
+        "a) Repeticao - as mesmas palavras sao repetidas",
+        "b) Sinonimia - palavras diferentes com significados semelhantes substituem o mesmo referente",
+        "c) Antonimia - palavras com significados opostos criam contraste",
+        "d) Hiponimia - palavras especificas substituem um termo geral"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "fill_blank",
+      "prompt": "Complete o texto com os pronomes referenciais corretos para manter a coesao.",
+      "sentence": "The apostles received the Holy Spirit at Pentecost. ___ empowered ___ to preach boldly. The people who heard ___ message were deeply moved, and many of ___ accepted the gospel that day.",
+      "wordBank": [
+        "He",
+        "It",
+        "them",
+        "they",
+        "their",
+        "his",
+        "those"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "true_false",
+      "prompt": "Analise o uso dos conectores nas frases teologicas abaixo e indique se estao empregados corretamente.",
+      "statements": [
+        {
+          "id": "9a",
+          "text": "'Jesus performed many miracles. Furthermore, He healed the sick and raised the dead.' - O conector 'Furthermore' esta usado corretamente para adicionar informacao."
+        },
+        {
+          "id": "9b",
+          "text": "'The Reformers rejected papal authority. Therefore, they embraced it fully.' - O conector 'Therefore' esta usado corretamente para indicar consequencia."
+        },
+        {
+          "id": "9c",
+          "text": "'Augustine wrote extensively about grace. Similarly, Calvin also emphasized divine grace in his theology.' - O conector 'Similarly' esta usado corretamente para indicar semelhanca."
+        },
+        {
+          "id": "9d",
+          "text": "'The Bible teaches love for enemies. In contrast, many Christians practice this teaching daily.' - O conector 'In contrast' esta usado corretamente para indicar oposicao."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "drag_match",
+      "prompt": "Organize os conectores de acordo com a categoria de relacao logica que estabelecem no texto.",
+      "items": [
+        "consequently",
+        "although",
+        "likewise",
+        "in other words"
+      ],
+      "targets": [
+        "causa e efeito",
+        "concessao/contraste",
+        "comparacao/semelhanca",
+        "reformulacao/explicacao"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "module": 1,
+  "title": "Prova - L\u00edngua, Linguagem e Comunica\u00e7\u00e3o",
+  "timeLimit": 5400,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "prompt": "Considere a seguinte situa\u00e7\u00e3o: um pastor, ao preparar um serm\u00e3o, escolhe palavras e constru\u00e7\u00f5es sint\u00e1ticas adequadas ao seu p\u00fablico. Qual conceito lingu\u00edstico melhor explica essa adapta\u00e7\u00e3o?",
+      "options": [
+        "a) Fun\u00e7\u00e3o metalingu\u00edstica da linguagem",
+        "b) Variedade lingu\u00edstica e adequa\u00e7\u00e3o ao contexto comunicativo",
+        "c) Diferen\u00e7a entre l\u00edngua escrita e l\u00edngua oral",
+        "d) Comunica\u00e7\u00e3o n\u00e3o verbal do emissor"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "prompt": "Em uma prega\u00e7\u00e3o, o pastor utiliza gestos enf\u00e1ticos, varia\u00e7\u00f5es de tom de voz e express\u00f5es faciais para refor\u00e7ar a mensagem b\u00edblica. Assinale a alternativa que analisa corretamente esse fen\u00f4meno.",
+      "options": [
+        "a) Trata-se exclusivamente de comunica\u00e7\u00e3o verbal, pois acompanha a fala.",
+        "b) Os gestos e express\u00f5es constituem comunica\u00e7\u00e3o n\u00e3o verbal, que complementa e refor\u00e7a a comunica\u00e7\u00e3o verbal.",
+        "c) A comunica\u00e7\u00e3o n\u00e3o verbal substitui integralmente a verbal nesse contexto.",
+        "d) Varia\u00e7\u00f5es de tom de voz n\u00e3o fazem parte de nenhum tipo de comunica\u00e7\u00e3o classificada pela lingu\u00edstica."
+      ]
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "prompt": "Leia o trecho: \u201cA l\u00edngua \u00e9 um sistema de signos compartilhado por uma comunidade, enquanto a linguagem \u00e9 a capacidade humana de se comunicar por meio de s\u00edmbolos.\u201d Com base nessa distin\u00e7\u00e3o, qual afirma\u00e7\u00e3o \u00e9 correta?",
+      "options": [
+        "a) L\u00edngua e linguagem s\u00e3o sin\u00f4nimos usados indistintamente na lingu\u00edstica.",
+        "b) A linguagem \u00e9 um conceito mais amplo que abrange a l\u00edngua como uma de suas manifesta\u00e7\u00f5es.",
+        "c) A l\u00edngua \u00e9 inata, enquanto a linguagem \u00e9 adquirida socialmente.",
+        "d) A linguagem se restringe \u00e0 comunica\u00e7\u00e3o verbal escrita."
+      ]
+    },
+    {
+      "id": 4,
+      "type": "true_false",
+      "prompt": "Analise as afirma\u00e7\u00f5es abaixo sobre variedade lingu\u00edstica e comunica\u00e7\u00e3o. Indique se cada uma \u00e9 verdadeira (V) ou falsa (F).",
+      "statements": [
+        {
+          "id": "4a",
+          "text": "A norma culta \u00e9 a \u00fanica forma correta de uma l\u00edngua; todas as demais variedades s\u00e3o erros gramaticais."
+        },
+        {
+          "id": "4b",
+          "text": "Socioletos s\u00e3o varia\u00e7\u00f5es lingu\u00edsticas associadas a grupos sociais espec\u00edficos, como faixa et\u00e1ria, profiss\u00e3o ou classe social."
+        },
+        {
+          "id": "4c",
+          "text": "A oralidade se caracteriza por maior planejamento e formalidade em compara\u00e7\u00e3o com a escrita."
+        },
+        {
+          "id": "4d",
+          "text": "O referente, no esquema da comunica\u00e7\u00e3o, \u00e9 o assunto ou contexto sobre o qual a mensagem trata."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "drag_match",
+      "prompt": "Associe cada fun\u00e7\u00e3o da linguagem ao exemplo correspondente, considerando o contexto de comunica\u00e7\u00e3o eclesi\u00e1stica.",
+      "items": [
+        "Fun\u00e7\u00e3o emotiva",
+        "Fun\u00e7\u00e3o conativa",
+        "Fun\u00e7\u00e3o referencial",
+        "Fun\u00e7\u00e3o metalingu\u00edstica",
+        "Fun\u00e7\u00e3o f\u00e1tica"
+      ],
+      "targets": [
+        "\u201cSenhor, como \u00e9 grande o meu amor por Ti!\u201d",
+        "\u201cIrm\u00e3os, abram suas B\u00edblias no livro de Salmos.\u201d",
+        "\u201cO Conc\u00edlio de Niceias ocorreu em 325 d.C.\u201d",
+        "\u201cA palavra \u2018gra\u00e7a\u2019, no grego, \u00e9 \u2018ch\u00e1ris\u2019.\u201d",
+        "\u201cBoa noite, irm\u00e3os! Todos est\u00e3o me ouvindo bem?\u201d"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "fill_blank",
+      "prompt": "Complete as lacunas com as palavras adequadas do banco de palavras.",
+      "sentence": "No esquema da comunica\u00e7\u00e3o, o ___ \u00e9 quem produz a mensagem, o ___ \u00e9 quem a recebe, e o ___ \u00e9 o meio f\u00edsico pelo qual a mensagem \u00e9 transmitida.",
+      "wordBank": [
+        "emissor",
+        "receptor",
+        "canal",
+        "c\u00f3digo",
+        "referente"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "column_match",
+      "prompt": "Relacione cada conceito da coluna esquerda com sua defini\u00e7\u00e3o na coluna direita.",
+      "leftColumn": [
+        "Dialeto",
+        "Socioleto",
+        "Registro",
+        "Norma culta"
+      ],
+      "rightColumn": [
+        "Varia\u00e7\u00e3o associada a uma regi\u00e3o geogr\u00e1fica",
+        "Varia\u00e7\u00e3o associada a um grupo social",
+        "Adapta\u00e7\u00e3o da fala conforme a situa\u00e7\u00e3o comunicativa",
+        "Variedade de prest\u00edgio social, usada em contextos formais"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "prompt": "Considere o seguinte texto de um boletim eclesi\u00e1stico: \u201cConvidamos todos os membros para o culto de a\u00e7\u00e3o de gra\u00e7as neste domingo.\u201d Qual fun\u00e7\u00e3o da linguagem predomina nesse enunciado?",
+      "options": [
+        "a) Fun\u00e7\u00e3o po\u00e9tica, pois h\u00e1 cuidado est\u00e9tico na constru\u00e7\u00e3o.",
+        "b) Fun\u00e7\u00e3o referencial, pois apenas informa um fato.",
+        "c) Fun\u00e7\u00e3o conativa, pois busca influenciar o comportamento do destinat\u00e1rio.",
+        "d) Fun\u00e7\u00e3o f\u00e1tica, pois testa o canal de comunica\u00e7\u00e3o."
+      ]
+    },
+    {
+      "id": 9,
+      "type": "true_false",
+      "prompt": "Julgue as afirma\u00e7\u00f5es a seguir sobre oralidade, escrita e fun\u00e7\u00f5es da linguagem.",
+      "statements": [
+        {
+          "id": "9a",
+          "text": "A escrita sempre reproduz fielmente a fala, sendo apenas uma transcri\u00e7\u00e3o da oralidade."
+        },
+        {
+          "id": "9b",
+          "text": "Na fun\u00e7\u00e3o po\u00e9tica, a \u00eanfase recai sobre a pr\u00f3pria mensagem e sua elabora\u00e7\u00e3o est\u00e9tica."
+        },
+        {
+          "id": "9c",
+          "text": "Um serm\u00e3o pode combinar simultaneamente m\u00faltiplas fun\u00e7\u00f5es da linguagem."
+        },
+        {
+          "id": "9d",
+          "text": "O c\u00f3digo, no processo comunicativo, refere-se exclusivamente \u00e0 l\u00edngua portuguesa."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "drag_match",
+      "prompt": "Associe cada elemento do processo comunicativo ao seu papel no seguinte cen\u00e1rio: um professor de teologia envia um e-mail em portugu\u00eas aos alunos explicando o conte\u00fado da pr\u00f3xima aula sobre eclesiologia.",
+      "items": [
+        "Professor de teologia",
+        "Alunos",
+        "E-mail (internet)",
+        "L\u00edngua portuguesa escrita",
+        "Eclesiologia"
+      ],
+      "targets": [
+        "Emissor",
+        "Receptor",
+        "Canal",
+        "C\u00f3digo",
+        "Referente"
+      ]
+    }
+  ]
+}

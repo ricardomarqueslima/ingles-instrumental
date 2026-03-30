@@ -1,36 +1,28 @@
 /**
- * admin.js - Logica do Painel Administrativo
- * Ingles Instrumental - Seminario Presbiteriano da Amazonia
+ * admin.js - Logica do Painel Administrativo (Multi-Curso)
  */
 
-const Admin = {
+var Admin = {
   token: null,
   config: null,
   students: [],
   grades: [],
+  courses: [],
+  selectedCourse: 'all',
 
-  init() {
+  init: function() {
     this.token = localStorage.getItem('adminToken');
-    if (this.token) {
-      this.loadDashboard();
-    }
+    if (this.token) this.loadDashboard();
   },
 
-  // ===== LOGIN =====
   async handleLogin(e) {
     e.preventDefault();
-    const email = document.getElementById('adminEmail').value.trim();
-    const password = document.getElementById('adminPassword').value;
-    const errorEl = document.getElementById('adminLoginError');
-
-    if (!email || !password) {
-      errorEl.textContent = 'Preencha todos os campos.';
-      return;
-    }
-
+    var email = document.getElementById('adminEmail').value.trim();
+    var password = document.getElementById('adminPassword').value;
+    var errorEl = document.getElementById('adminLoginError');
+    if (!email || !password) { errorEl.textContent = 'Preencha todos os campos.'; return; }
     errorEl.textContent = '';
-    const result = await API.adminLogin(email, password);
-
+    var result = await API.adminLogin(email, password);
     if (result.success) {
       this.token = result.data.token;
       localStorage.setItem('adminToken', this.token);
@@ -40,24 +32,20 @@ const Admin = {
     }
   },
 
-  handleLogout() {
+  handleLogout: function() {
     localStorage.removeItem('adminToken');
     this.token = null;
     document.getElementById('loginScreen').style.display = 'flex';
     document.getElementById('dashboard').style.display = 'none';
   },
 
-  // ===== DASHBOARD =====
   async loadDashboard() {
     document.getElementById('loginScreen').style.display = 'none';
     document.getElementById('dashboard').style.display = 'block';
 
-    // Carregar tudo em paralelo
-    const [configRes, studentsRes, gradesRes] = await Promise.all([
-      API.getConfig(),
-      API.getStudents(),
-      API.getAllGrades()
-    ]);
+    var configRes = await API.getConfig();
+    var studentsRes = await API.getStudents();
+    var gradesRes = await API.getAllGrades();
 
     if (!configRes.success) {
       alert('Sessao expirada. Faca login novamente.');
@@ -66,9 +54,11 @@ const Admin = {
     }
 
     this.config = configRes.data;
+    this.courses = configRes.data.courses || [];
     this.students = studentsRes.success ? studentsRes.data : [];
     this.grades = gradesRes.success ? gradesRes.data : [];
 
+    this.renderCourseSelector();
     this.renderStats();
     this.renderModuleGrid();
     this.renderStudentsTable();
@@ -76,217 +66,216 @@ const Admin = {
     this.renderSettings();
   },
 
-  // ===== STATS =====
-  renderStats() {
+  renderCourseSelector: function() {
+    var selector = document.getElementById('courseSelector');
+    if (!selector) return;
+    selector.innerHTML = '<option value="all">Todos os Cursos</option>';
+    for (var i = 0; i < this.courses.length; i++) {
+      var c = this.courses[i];
+      selector.innerHTML += '<option value="' + c.cursoId + '"' + (this.selectedCourse === c.cursoId ? ' selected' : '') + '>' + c.nome + ' (' + c.codigo + ')</option>';
+    }
+  },
+
+  selectCourse: function(cursoId) {
+    this.selectedCourse = cursoId;
+    this.renderStats();
+    this.renderModuleGrid();
+    this.renderGradesTable();
+    this.renderSettings();
+  },
+
+  renderStats: function() {
     document.getElementById('statStudents').textContent = this.students.length;
-    document.getElementById('statExams').textContent = this.grades.length;
 
-    const pending = this.grades.filter(g => !g.validada).length;
+    var filteredGrades = this.selectedCourse === 'all' ? this.grades : this.grades.filter(function(g) { return g.cursoId === Admin.selectedCourse; });
+
+    document.getElementById('statExams').textContent = filteredGrades.length;
+    var pending = filteredGrades.filter(function(g) { return !g.validada; }).length;
     document.getElementById('statPending').textContent = pending;
-
-    const avg = this.grades.length > 0
-      ? Math.round(this.grades.reduce((sum, g) => sum + (g.nota || 0), 0) / this.grades.length)
+    var avg = filteredGrades.length > 0
+      ? Math.round(filteredGrades.reduce(function(sum, g) { return sum + (g.nota || 0); }, 0) / filteredGrades.length)
       : 0;
     document.getElementById('statAverage').textContent = avg + '%';
   },
 
-  // ===== MODULE GRID =====
-  renderModuleGrid() {
-    const moduleNames = {
-      1: 'Inferencia Contextual',
-      2: 'Cognatos',
-      3: 'Afixacao',
-      4: 'Sinonimia e Antonimia',
-      5: 'Morfossintaxe',
-      6: 'Ordem das Palavras',
-      7: 'Coesao Textual',
-      8: 'Reconhecimento Gramatical'
-    };
-
-    const grid = document.getElementById('moduleGrid');
+  renderModuleGrid: function() {
+    var grid = document.getElementById('moduleGrid');
+    if (!grid) return;
     grid.innerHTML = '';
 
-    for (let m = 1; m <= 8; m++) {
-      const contentOn = this.config['modulo' + m + '_conteudo'];
-      const provaOn = this.config['modulo' + m + '_prova'];
-      const examsForModule = this.grades.filter(g => g.modulo == m);
-      const completed = examsForModule.length;
+    var coursesToRender = this.selectedCourse === 'all' ? this.courses : this.courses.filter(function(c) { return c.cursoId === Admin.selectedCourse; });
 
-      const card = document.createElement('div');
-      card.className = 'module-card';
-      card.innerHTML = `
-        <div class="module-card-header">
-          <span class="module-num">${m}</span>
-          <span class="module-name">${moduleNames[m]}</span>
-        </div>
-        <div class="module-card-body">
-          <div class="toggle-row">
-            <span>Conteudo</span>
-            <label class="toggle">
-              <input type="checkbox" ${contentOn ? 'checked' : ''} onchange="Admin.toggleModule(${m}, 'conteudo', this.checked)">
-              <span class="toggle-slider"></span>
-            </label>
-          </div>
-          <div class="toggle-row">
-            <span>Prova</span>
-            <label class="toggle">
-              <input type="checkbox" ${provaOn ? 'checked' : ''} onchange="Admin.toggleModule(${m}, 'prova', this.checked)">
-              <span class="toggle-slider"></span>
-            </label>
-          </div>
-          <div class="module-stat">${completed} prova${completed !== 1 ? 's' : ''} realizada${completed !== 1 ? 's' : ''}</div>
-        </div>
-      `;
-      grid.appendChild(card);
+    for (var ci = 0; ci < coursesToRender.length; ci++) {
+      var course = coursesToRender[ci];
+      var cid = course.cursoId;
+      var courseConfig = this.config[cid] || {};
+
+      if (coursesToRender.length > 1) {
+        var header = document.createElement('h3');
+        header.style.cssText = 'grid-column:1/-1;color:var(--primary);margin-top:20px;padding-bottom:8px;border-bottom:2px solid var(--border);';
+        header.textContent = course.nome + ' (' + course.codigo + ')';
+        grid.appendChild(header);
+      }
+
+      for (var m = 1; m <= course.numModulos; m++) {
+        var contentOn = courseConfig['modulo' + m + '_conteudo'] || false;
+        var provaOn = courseConfig['modulo' + m + '_prova'] || false;
+        var examsForModule = this.grades.filter(function(g) { return g.cursoId === cid && g.modulo == m; });
+
+        var card = document.createElement('div');
+        card.className = 'module-card';
+        card.innerHTML =
+          '<div class="module-card-header">' +
+            '<span class="module-num">' + m + '</span>' +
+            '<span class="module-name">M\u00f3dulo ' + m + '</span>' +
+          '</div>' +
+          '<div class="module-card-body">' +
+            '<div class="toggle-row"><span>Conte\u00fado</span><label class="toggle"><input type="checkbox" ' + (contentOn ? 'checked' : '') + ' onchange="Admin.toggleModule(\'' + cid + '\',' + m + ',\'conteudo\',this.checked)"><span class="toggle-slider"></span></label></div>' +
+            '<div class="toggle-row"><span>Prova</span><label class="toggle"><input type="checkbox" ' + (provaOn ? 'checked' : '') + ' onchange="Admin.toggleModule(\'' + cid + '\',' + m + ',\'prova\',this.checked)"><span class="toggle-slider"></span></label></div>' +
+            '<div class="module-stat">' + examsForModule.length + ' prova(s) realizada(s)</div>' +
+          '</div>';
+        grid.appendChild(card);
+      }
     }
   },
 
-  async toggleModule(modulo, tipo, habilitado) {
-    const result = await API.toggleModule(modulo, tipo, habilitado);
+  async toggleModule(cursoId, modulo, tipo, habilitado) {
+    var result = await API.toggleModule(cursoId, modulo, tipo, habilitado);
     if (result.success) {
-      // Atualizar estado local
-      this.config['modulo' + modulo + '_' + tipo] = habilitado;
+      if (this.config[cursoId]) {
+        this.config[cursoId]['modulo' + modulo + '_' + tipo] = habilitado;
+      }
     } else {
       alert(result.error || 'Erro ao alterar modulo.');
       this.loadDashboard();
     }
   },
 
-  // ===== STUDENTS TABLE =====
-  renderStudentsTable() {
-    const tbody = document.getElementById('studentsBody');
+  renderStudentsTable: function() {
+    var tbody = document.getElementById('studentsBody');
+    if (!tbody) return;
     tbody.innerHTML = '';
-
     if (this.students.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="5" class="empty-msg">Nenhum aluno cadastrado ainda.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="6" class="empty-msg">Nenhum aluno cadastrado.</td></tr>';
       return;
     }
-
-    this.students.forEach(s => {
-      const date = s.dataRegistro ? new Date(s.dataRegistro).toLocaleDateString('pt-BR') : '-';
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td>${s.nome}</td>
-        <td>${s.email}</td>
-        <td>${s.turma || '-'}</td>
-        <td>${date}</td>
-        <td>${s.provasFeitas}/8</td>
-      `;
+    for (var i = 0; i < this.students.length; i++) {
+      var s = this.students[i];
+      var date = s.dataRegistro ? new Date(s.dataRegistro).toLocaleDateString('pt-BR') : '-';
+      var cursos = (s.cursos || []).join(', ') || '-';
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + s.nome + '</td><td>' + s.email + '</td><td>' + cursos + '</td><td>' + date + '</td><td>' + s.provasFeitas + '</td>';
       tbody.appendChild(tr);
-    });
+    }
   },
 
-  // ===== GRADES TABLE =====
-  renderGradesTable() {
-    const tbody = document.getElementById('gradesBody');
+  renderGradesTable: function() {
+    var tbody = document.getElementById('gradesBody');
+    if (!tbody) return;
     tbody.innerHTML = '';
 
-    const filterModule = document.getElementById('filterModule')?.value || 'all';
-    const filterStatus = document.getElementById('filterStatus')?.value || 'all';
+    var filterModule = document.getElementById('filterModule');
+    var filterStatus = document.getElementById('filterStatus');
+    var fMod = filterModule ? filterModule.value : 'all';
+    var fStat = filterStatus ? filterStatus.value : 'all';
 
-    let filtered = [...this.grades];
-
-    if (filterModule !== 'all') {
-      filtered = filtered.filter(g => g.modulo == filterModule);
-    }
-    if (filterStatus === 'pending') {
-      filtered = filtered.filter(g => !g.validada);
-    } else if (filterStatus === 'validated') {
-      filtered = filtered.filter(g => g.validada);
-    }
+    var filtered = this.grades.slice();
+    if (this.selectedCourse !== 'all') filtered = filtered.filter(function(g) { return g.cursoId === Admin.selectedCourse; });
+    if (fMod !== 'all') filtered = filtered.filter(function(g) { return g.modulo == fMod; });
+    if (fStat === 'pending') filtered = filtered.filter(function(g) { return !g.validada; });
+    else if (fStat === 'validated') filtered = filtered.filter(function(g) { return g.validada; });
 
     if (filtered.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="7" class="empty-msg">Nenhuma nota encontrada.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="8" class="empty-msg">Nenhuma nota encontrada.</td></tr>';
       return;
     }
 
-    // Ordenar: pendentes primeiro, depois por data
-    filtered.sort((a, b) => {
-      if (a.validada !== b.validada) return a.validada ? 1 : -1;
-      return new Date(b.data) - new Date(a.data);
-    });
+    filtered.sort(function(a, b) { return a.validada === b.validada ? 0 : a.validada ? 1 : -1; });
 
-    filtered.forEach(g => {
-      const date = g.data ? new Date(g.data).toLocaleDateString('pt-BR') : '-';
-      const tempo = g.tempoGasto ? Math.floor(g.tempoGasto / 60) + 'min' : '-';
-      const notaClass = g.nota >= 70 ? 'nota-good' : g.nota >= 50 ? 'nota-avg' : 'nota-bad';
-
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td>${g.nome}</td>
-        <td>Modulo ${g.modulo}</td>
-        <td class="${notaClass}">${g.nota}%</td>
-        <td>${date}</td>
-        <td>${tempo}</td>
-        <td>${g.validada
-          ? '<span class="badge-validated">Validada</span>'
-          : '<span class="badge-pending">Pendente</span>'}</td>
-        <td>${g.validada
+    for (var i = 0; i < filtered.length; i++) {
+      var g = filtered[i];
+      var date = g.data ? new Date(g.data).toLocaleDateString('pt-BR') : '-';
+      var tempo = g.tempoGasto ? Math.floor(g.tempoGasto / 60) + 'min' : '-';
+      var notaClass = g.nota >= 70 ? 'nota-good' : g.nota >= 50 ? 'nota-avg' : 'nota-bad';
+      var tr = document.createElement('tr');
+      tr.innerHTML =
+        '<td>' + g.nome + '</td>' +
+        '<td>' + (g.cursoId || 'ingles') + ' - M' + g.modulo + '</td>' +
+        '<td class="' + notaClass + '">' + g.nota + '%</td>' +
+        '<td>' + date + '</td>' +
+        '<td>' + tempo + '</td>' +
+        '<td>' + (g.validada ? '<span class="badge-validated">Validada</span>' : '<span class="badge-pending">Pendente</span>') + '</td>' +
+        '<td>' + (g.validada
           ? (g.emailEnviado ? '<span class="badge-sent">Email enviado</span>' : '<span class="badge-pending">Email pendente</span>')
-          : `<button class="btn-validate" onclick="Admin.validateGrade('${g.email}', ${g.modulo})">Validar e Enviar</button>`}</td>
-      `;
+          : '<button class="btn-validate" onclick="Admin.validateGrade(\'' + (g.cursoId || 'ingles') + '\',\'' + g.email + '\',' + g.modulo + ')">Validar</button>') + '</td>';
       tbody.appendChild(tr);
-    });
+    }
   },
 
-  async validateGrade(email, modulo) {
-    if (!confirm(`Confirma a validacao da nota do modulo ${modulo} para ${email}?\n\nUm email com a prova corrigida sera enviado ao aluno.`)) {
-      return;
-    }
-
-    const result = await API.validateGrade(email, modulo);
+  async validateGrade(cursoId, email, modulo) {
+    if (!confirm('Validar nota do m\u00f3dulo ' + modulo + ' (' + cursoId + ') para ' + email + '?\nUm email ser\u00e1 enviado ao aluno.')) return;
+    var result = await API.validateGrade(cursoId, email, modulo);
     if (result.success) {
-      alert(`Nota validada com sucesso!\nEmail ${result.data.emailEnviado ? 'enviado' : 'pendente'} para ${email}`);
+      alert('Nota validada! Email ' + (result.data.emailEnviado ? 'enviado' : 'pendente'));
       this.loadDashboard();
     } else {
-      alert(result.error || 'Erro ao validar nota.');
+      alert(result.error || 'Erro ao validar.');
     }
   },
 
-  // ===== SETTINGS =====
-  renderSettings() {
-    document.getElementById('settingsInviteCode').value = this.config.inviteCode || '';
+  renderSettings: function() {
+    var container = document.getElementById('settingsContainer');
+    if (!container) return;
+    container.innerHTML = '';
+
+    // Codigo convite por curso
+    for (var i = 0; i < this.courses.length; i++) {
+      var c = this.courses[i];
+      var cConfig = this.config[c.cursoId] || {};
+      container.innerHTML +=
+        '<div class="settings-card">' +
+          '<h3>C\u00f3digo de Convite - ' + c.nome + '</h3>' +
+          '<div class="settings-row">' +
+            '<input type="text" id="inviteCode-' + c.cursoId + '" value="' + (cConfig.inviteCode || '') + '">' +
+            '<button class="btn-save" onclick="Admin.updateInviteCode(\'' + c.cursoId + '\')">Salvar</button>' +
+          '</div>' +
+        '</div>';
+    }
+
+    // Senha admin
+    container.innerHTML +=
+      '<div class="settings-card">' +
+        '<h3>Alterar Senha do Admin</h3>' +
+        '<div class="settings-row">' +
+          '<input type="password" id="settingsNewPassword" placeholder="Nova senha (min. 6 caracteres)">' +
+          '<button class="btn-save" onclick="Admin.updatePassword()">Alterar</button>' +
+        '</div>' +
+      '</div>';
   },
 
-  async updateInviteCode() {
-    const newCode = document.getElementById('settingsInviteCode').value.trim();
-    if (!newCode) { alert('Codigo nao pode ser vazio.'); return; }
-
-    const result = await API.updateInviteCode(newCode);
-    if (result.success) {
-      alert('Codigo de convite atualizado!');
-    } else {
-      alert(result.error || 'Erro ao atualizar codigo.');
-    }
+  async updateInviteCode(cursoId) {
+    var input = document.getElementById('inviteCode-' + cursoId);
+    if (!input || !input.value.trim()) { alert('C\u00f3digo n\u00e3o pode ser vazio.'); return; }
+    var result = await API.updateInviteCode(cursoId, input.value.trim());
+    if (result.success) alert('C\u00f3digo atualizado!');
+    else alert(result.error || 'Erro.');
   },
 
   async updatePassword() {
-    const newPass = document.getElementById('settingsNewPassword').value;
-    if (!newPass || newPass.length < 6) {
-      alert('Senha deve ter pelo menos 6 caracteres.');
-      return;
-    }
-
-    const result = await API.updateAdminPassword(newPass);
-    if (result.success) {
-      alert('Senha atualizada com sucesso!');
-      document.getElementById('settingsNewPassword').value = '';
-    } else {
-      alert(result.error || 'Erro ao atualizar senha.');
-    }
+    var input = document.getElementById('settingsNewPassword');
+    if (!input || input.value.length < 6) { alert('Senha deve ter pelo menos 6 caracteres.'); return; }
+    var result = await API.updateAdminPassword(input.value);
+    if (result.success) { alert('Senha atualizada!'); input.value = ''; }
+    else alert(result.error || 'Erro.');
   },
 
-  // ===== NAVIGATION =====
-  showSection(sectionId) {
-    document.querySelectorAll('.admin-section').forEach(s => s.classList.remove('active'));
-    document.querySelectorAll('.sidebar-item').forEach(s => s.classList.remove('active'));
-
-    document.getElementById(sectionId).classList.add('active');
-    event.currentTarget?.classList.add('active');
+  showSection: function(sectionId) {
+    document.querySelectorAll('.admin-section').forEach(function(s) { s.classList.remove('active'); });
+    document.querySelectorAll('.sidebar-item').forEach(function(s) { s.classList.remove('active'); });
+    var section = document.getElementById(sectionId);
+    if (section) section.classList.add('active');
+    if (event && event.currentTarget) event.currentTarget.classList.add('active');
   }
 };
 
-// Initialize on load
-document.addEventListener('DOMContentLoaded', () => {
-  Admin.init();
-});
+document.addEventListener('DOMContentLoaded', function() { Admin.init(); });
