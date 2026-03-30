@@ -120,6 +120,12 @@ const Auth = {
     }
     if (logoutBtn) logoutBtn.style.display = 'inline-flex';
 
+    // Mostrar link admin para o professor
+    const adminLink = document.getElementById('adminLink');
+    if (adminLink && this.userEmail === 'ricardo.marqueslima@gmail.com') {
+      adminLink.style.display = 'inline-flex';
+    }
+
     // Atualizar foto no header
     if (photoContainer) {
       if (this.userPhoto) {
