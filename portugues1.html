@@ -1743,6 +1743,38 @@
             .exam-top-bar { flex-direction: column; text-align: center; }
             .auth-form { padding: 20px; }
         }
+
+        /* ===================== PRACTICE MODULE (Unit 5) ===================== */
+        .practice-section-header { padding: 16px 20px; border-radius: 12px; color: white; font-weight: 700; font-size: 1.1rem; margin: 30px 0 20px; }
+        .practice-section-header.basic { background: linear-gradient(135deg, #27ae60, #2ecc71); }
+        .practice-section-header.intermediate { background: linear-gradient(135deg, #d4a017, #f4d03f); color: #1a1a1a; }
+        .practice-section-header.advanced { background: linear-gradient(135deg, #c0392b, #e74c3c); }
+
+        .practice-question { background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #e8e0d8; }
+        .practice-question.answered-correct { border-left-color: #27ae60; }
+        .practice-question.answered-wrong { border-left-color: #c0392b; }
+
+        .pq-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+        .pq-number { width: 32px; height: 32px; border-radius: 50%; background: #1a5632; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
+        .pq-level { padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; }
+        .pq-level.basic { background: #e8f5e9; color: #27ae60; }
+        .pq-level.intermediate { background: #fff8e1; color: #f39c12; }
+        .pq-level.advanced { background: #ffebee; color: #c0392b; }
+
+        .pq-prompt { font-size: 0.95rem; color: #2c3e50; margin-bottom: 14px; line-height: 1.6; }
+        .pq-options { display: flex; flex-direction: column; gap: 8px; }
+        .pq-option { text-align: left; padding: 12px 16px; border: 2px solid #e8e0d8; border-radius: 8px; cursor: pointer; font-size: 0.9rem; background: white; transition: all 0.2s; font-family: 'Open Sans', sans-serif; }
+        .pq-option:hover:not(:disabled) { border-color: #1a5632; background: #f0faf4; }
+        .pq-option:disabled { cursor: default; opacity: 0.7; }
+        .pq-option.correct { border-color: #27ae60; background: #e8f5e9; color: #27ae60; font-weight: 600; }
+        .pq-option.wrong { border-color: #c0392b; background: #ffebee; color: #c0392b; }
+
+        .pq-feedback { margin-top: 12px; padding: 14px 16px; border-radius: 8px; font-size: 0.88rem; line-height: 1.6; }
+        .pq-feedback.correct-fb { background: #e8f5e9; border-left: 4px solid #27ae60; }
+        .pq-feedback.wrong-fb { background: #fff3cd; border-left: 4px solid #f39c12; }
+
+        .practice-score { text-align: center; padding: 30px; background: linear-gradient(135deg, #1a5632, #2d8a4e); color: white; border-radius: 16px; margin: 30px 0; }
+        .practice-score h3 { font-size: 2rem; margin: 0; }
     </style>
 </head>
 <body>
@@ -1847,7 +1879,7 @@
                 <a id="adminLink" href="admin.html" style="display:none;align-items:center;background:rgba(212,160,23,0.9);color:#1a1a1a;padding:6px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;text-decoration:none;">Painel Admin</a>
                 <button id="logoutBtn" onclick="Auth.handleLogout()">Sair</button>
                 <div class="progress-badge">
-                    &#9733; <span id="progressText">0 de 4 unidades</span>
+                    &#9733; <span id="progressText">0 de 5 unidades</span>
                 </div>
                 <button class="btn-presenter" onclick="togglePresenterMode()">
                     &#128250; Modo Apresenta&ccedil;&atilde;o
@@ -1870,6 +1902,9 @@
                 </a>
                 <a class="nav-item" onclick="showUnit(4)">
                     <span class="nav-num">4</span> Classes
+                </a>
+                <a class="nav-item" onclick="showUnit(5)">
+                    <span class="nav-num">5</span> Exerc&iacute;cios
                 </a>
             </div>
         </nav>
@@ -1913,6 +1948,12 @@
                         <div class="unit-num">4</div>
                         <h3>Classes de Palavras</h3>
                         <p>Substantivo, adjetivo, verbo, adv&eacute;rbio, pronome, preposi&ccedil;&atilde;o e mais.</p>
+                    </div>
+                    <div class="unit-card" onclick="showUnit(5)">
+                        <div class="card-icon">&#9997;</div>
+                        <div class="unit-num">5</div>
+                        <h3>Exerc&iacute;cios de Fixa&ccedil;&atilde;o</h3>
+                        <p>50 quest&otilde;es interativas com feedback imediato para consolidar seu aprendizado.</p>
                     </div>
                 </div>
             </div>
@@ -3381,6 +3422,892 @@
 
             <div class="nav-buttons">
                 <button class="nav-btn" onclick="showUnit(3)">&#9664; Unidade 3</button>
+                <button class="nav-btn primary" onclick="showUnit(5)">Unidade 5 &#9654;</button>
+            </div>
+        </div>
+
+        <!-- ==================== UNIT 5: Exerc&iacute;cios de Fixa&ccedil;&atilde;o ==================== -->
+        <div id="unit5" class="unit-view">
+            <div class="content-area">
+                <div class="section-header">
+                    <h2>&#9997; Unidade 5: Exerc&iacute;cios de Fixa&ccedil;&atilde;o</h2>
+                    <p>50 quest&otilde;es interativas com feedback imediato para consolidar seu aprendizado</p>
+                </div>
+
+                <div class="practice-score">
+                    <h3 id="practiceScoreText">0 de 0 corretas (50 total)</h3>
+                    <p>Clique em uma alternativa para ver o resultado imediatamente</p>
+                </div>
+
+                <!-- ====== N&Iacute;VEL B&Aacute;SICO ====== -->
+                <div class="practice-section-header basic">N&Iacute;VEL B&Aacute;SICO &mdash; Quest&otilde;es 1 a 15</div>
+
+                <div class="practice-question" id="pq1">
+                    <div class="pq-header"><span class="pq-number">1</span><span class="pq-level basic">B&aacute;sico</span></div>
+                    <div class="pq-prompt">Qual &eacute; a diferen&ccedil;a fundamental entre <strong>fonema</strong> e <strong>letra</strong>?</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq1')">a) Fonema e letra s&atilde;o sin&ocirc;nimos usados em contextos diferentes.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq1')">b) Fonema &eacute; a unidade sonora; letra &eacute; a representa&ccedil;&atilde;o gr&aacute;fica do fonema.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq1')">c) Letra &eacute; a unidade sonora; fonema &eacute; a representa&ccedil;&atilde;o gr&aacute;fica.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq1')">d) Fonema s&oacute; existe nas l&iacute;nguas escritas, enquanto letra existe em todas.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq1-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            O fonema &eacute; a menor unidade sonora distintiva de uma l&iacute;ngua (pertence &agrave; fala), enquanto a letra &eacute; o sinal gr&aacute;fico que representa o fonema na escrita. Uma mesma letra pode representar fonemas diferentes (ex.: o &ldquo;x&rdquo; em &ldquo;exame&rdquo; e &ldquo;xarope&rdquo;), e um fonema pode ser representado por letras diferentes.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq2">
+                    <div class="pq-header"><span class="pq-number">2</span><span class="pq-level basic">B&aacute;sico</span></div>
+                    <div class="pq-prompt">Quantos fonemas e quantas letras tem a palavra <strong>&ldquo;t&aacute;xi&rdquo;</strong>?</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq2')">a) 4 fonemas e 4 letras.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq2')">b) 5 fonemas e 4 letras.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq2')">c) 4 fonemas e 5 letras.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq2')">d) 3 fonemas e 4 letras.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq2-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            A palavra &ldquo;t&aacute;xi&rdquo; possui 4 letras (t-&aacute;-x-i), mas 5 fonemas (/t/-/a/-/k/-/s/-/i/), pois a letra &ldquo;x&rdquo; representa dois fonemas (/ks/).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq3">
+                    <div class="pq-header"><span class="pq-number">3</span><span class="pq-level basic">B&aacute;sico</span></div>
+                    <div class="pq-prompt">Na palavra <strong>&ldquo;sauda&ccedil;&atilde;o&rdquo;</strong>, o encontro voc&aacute;lico &ldquo;au&rdquo; classifica-se como:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq3')">a) Hiato.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq3')">b) Ditongo decrescente oral.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq3')">c) Tritongo.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq3')">d) Ditongo crescente nasal.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq3-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            Em &ldquo;sau-da-&ccedil;&atilde;o&rdquo;, o &ldquo;au&rdquo; &eacute; um ditongo decrescente oral, pois a vogal &ldquo;a&rdquo; (base) vem antes da semivogal &ldquo;u&rdquo;, e n&atilde;o h&aacute; nasalidade. N&atilde;o &eacute; hiato porque &ldquo;a&rdquo; e &ldquo;u&rdquo; est&atilde;o na mesma s&iacute;laba.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq4">
+                    <div class="pq-header"><span class="pq-number">4</span><span class="pq-level basic">B&aacute;sico</span></div>
+                    <div class="pq-prompt">Qual das palavras abaixo cont&eacute;m um <strong>tritongo</strong>?</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq4')">a) Leite</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq4')">b) Sa&uacute;de</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq4')">c) Uruguai</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq4')">d) Caos</button>
+                    </div>
+                    <div class="pq-feedback" id="pq4-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: c)</strong><br>
+                            Em &ldquo;Uruguai&rdquo;, a sequ&ecirc;ncia &ldquo;uai&rdquo; forma um tritongo (semivogal + vogal + semivogal na mesma s&iacute;laba). &ldquo;Leite&rdquo; tem ditongo; &ldquo;sa&uacute;de&rdquo; tem hiato; &ldquo;caos&rdquo; tem hiato.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq5">
+                    <div class="pq-header"><span class="pq-number">5</span><span class="pq-level basic">B&aacute;sico</span></div>
+                    <div class="pq-prompt">Qual das alternativas apresenta um <strong>d&iacute;grafo</strong>?</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq5')">a) Prato (pr)</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq5')">b) Blusa (bl)</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq5')">c) Chuva (ch)</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq5')">d) Cravo (cr)</button>
+                    </div>
+                    <div class="pq-feedback" id="pq5-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: c)</strong><br>
+                            D&iacute;grafo &eacute; o encontro de duas letras que representam um &uacute;nico fonema. Em &ldquo;chuva&rdquo;, &ldquo;ch&rdquo; representa o fonema /&#643;/. As demais op&ccedil;&otilde;es (pr, bl, cr) s&atilde;o encontros consonantais, pois cada letra mant&eacute;m seu pr&oacute;prio fonema.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq6">
+                    <div class="pq-header"><span class="pq-number">6</span><span class="pq-level basic">B&aacute;sico</span></div>
+                    <div class="pq-prompt">A separa&ccedil;&atilde;o sil&aacute;bica correta de <strong>&ldquo;passarinho&rdquo;</strong> &eacute;:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq6')">a) pa-ssa-ri-nho</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq6')">b) pas-sa-ri-nho</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq6')">c) pass-a-ri-nho</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq6')">d) pas-sa-rin-ho</button>
+                    </div>
+                    <div class="pq-feedback" id="pq6-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            O d&iacute;grafo &ldquo;ss&rdquo; se separa na divis&atilde;o sil&aacute;bica (pas-sa), diferente dos d&iacute;grafos &ldquo;ch&rdquo;, &ldquo;lh&rdquo;, &ldquo;nh&rdquo;, &ldquo;gu&rdquo;, &ldquo;qu&rdquo; que n&atilde;o se separam. J&aacute; &ldquo;nh&rdquo; em &ldquo;nho&rdquo; permanece junto.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq7">
+                    <div class="pq-header"><span class="pq-number">7</span><span class="pq-level basic">B&aacute;sico</span></div>
+                    <div class="pq-prompt">Os monoss&iacute;labos t&ocirc;nicos s&atilde;o acentuados quando terminam em:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq7')">a) &ldquo;a(s)&rdquo;, &ldquo;e(s)&rdquo;, &ldquo;o(s)&rdquo;.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq7')">b) Qualquer consoante.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq7')">c) &ldquo;i(s)&rdquo; e &ldquo;u(s)&rdquo; apenas.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq7')">d) Todos os monoss&iacute;labos t&ocirc;nicos s&atilde;o acentuados.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq7-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: a)</strong><br>
+                            Acentuam-se os monoss&iacute;labos t&ocirc;nicos terminados em &ldquo;a(s)&rdquo;, &ldquo;e(s)&rdquo;, &ldquo;o(s)&rdquo;: p&aacute;, p&eacute;s, p&ocirc;. Monoss&iacute;labos como &ldquo;luz&rdquo;, &ldquo;mar&rdquo;, &ldquo;sol&rdquo; n&atilde;o recebem acento.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq8">
+                    <div class="pq-header"><span class="pq-number">8</span><span class="pq-level basic">B&aacute;sico</span></div>
+                    <div class="pq-prompt">A palavra <strong>&ldquo;caf&eacute;&rdquo;</strong> &eacute; acentuada por ser:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq8')">a) Ox&iacute;tona terminada em &ldquo;e&rdquo;.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq8')">b) Parox&iacute;tona terminada em &ldquo;e&rdquo;.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq8')">c) Monoss&iacute;labo t&ocirc;nico.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq8')">d) Proparox&iacute;tona.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq8-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: a)</strong><br>
+                            &ldquo;Ca-f&eacute;&rdquo; tem a s&iacute;laba t&ocirc;nica na &uacute;ltima posi&ccedil;&atilde;o (ox&iacute;tona). Ox&iacute;tonas terminadas em &ldquo;a(s)&rdquo;, &ldquo;e(s)&rdquo;, &ldquo;o(s)&rdquo;, &ldquo;em&rdquo;, &ldquo;ens&rdquo; recebem acento gr&aacute;fico.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq9">
+                    <div class="pq-header"><span class="pq-number">9</span><span class="pq-level basic">B&aacute;sico</span></div>
+                    <div class="pq-prompt">Todas as proparox&iacute;tonas s&atilde;o acentuadas. Qual das palavras abaixo &eacute; proparox&iacute;tona?</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq9')">a) Sof&aacute;</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq9')">b) F&aacute;cil</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq9')">c) L&acirc;mpada</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq9')">d) Sap&ecirc;</button>
+                    </div>
+                    <div class="pq-feedback" id="pq9-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: c)</strong><br>
+                            &ldquo;L&acirc;m-pa-da&rdquo; tem a s&iacute;laba t&ocirc;nica na antepen&uacute;ltima posi&ccedil;&atilde;o, sendo proparox&iacute;tona. &ldquo;Sof&aacute;&rdquo; e &ldquo;sap&ecirc;&rdquo; s&atilde;o ox&iacute;tonas; &ldquo;f&aacute;cil&rdquo; &eacute; parox&iacute;tona.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq10">
+                    <div class="pq-header"><span class="pq-number">10</span><span class="pq-level basic">B&aacute;sico</span></div>
+                    <div class="pq-prompt">Na palavra <strong>&ldquo;infelizmente&rdquo;</strong>, o elemento <strong>&ldquo;in-&rdquo;</strong> classifica-se como:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq10')">a) Sufixo.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq10')">b) Prefixo.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq10')">c) Radical.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq10')">d) Vogal tem&aacute;tica.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq10-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            O prefixo &ldquo;in-&rdquo; (nega&ccedil;&atilde;o) &eacute; acrescentado antes do radical &ldquo;feliz&rdquo;. Prefixo &eacute; o morfema que antecede o radical, modificando seu sentido. &ldquo;-mente&rdquo; &eacute; o sufixo.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq11">
+                    <div class="pq-header"><span class="pq-number">11</span><span class="pq-level basic">B&aacute;sico</span></div>
+                    <div class="pq-prompt">O <strong>radical</strong> da palavra <strong>&ldquo;livraria&rdquo;</strong> &eacute;:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq11')">a) livra</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq11')">b) livr</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq11')">c) livraria</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq11')">d) livrar</button>
+                    </div>
+                    <div class="pq-feedback" id="pq11-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            O radical &eacute; o n&uacute;cleo de significado comum a palavras da mesma fam&iacute;lia. Em livro, livreiro, livraria, o radical &eacute; &ldquo;livr-&rdquo;. Os elementos &ldquo;-aria&rdquo; s&atilde;o sufixos.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq12">
+                    <div class="pq-header"><span class="pq-number">12</span><span class="pq-level basic">B&aacute;sico</span></div>
+                    <div class="pq-prompt">A palavra <strong>&ldquo;guarda-chuva&rdquo;</strong> foi formada por qual processo?</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq12')">a) Deriva&ccedil;&atilde;o prefixal.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq12')">b) Deriva&ccedil;&atilde;o sufixal.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq12')">c) Composi&ccedil;&atilde;o por justaposi&ccedil;&atilde;o.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq12')">d) Composi&ccedil;&atilde;o por aglutina&ccedil;&atilde;o.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq12-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: c)</strong><br>
+                            Na composi&ccedil;&atilde;o por justaposi&ccedil;&atilde;o, os radicais se unem sem perda de elementos f&ocirc;nicos: guarda + chuva = guarda-chuva. Na aglutina&ccedil;&atilde;o, h&aacute; perda (ex.: &aacute;gua + ardente = aguardente).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq13">
+                    <div class="pq-header"><span class="pq-number">13</span><span class="pq-level basic">B&aacute;sico</span></div>
+                    <div class="pq-prompt">Na palavra <strong>&ldquo;sa&uacute;de&rdquo;</strong>, o encontro voc&aacute;lico &ldquo;a&uacute;&rdquo; classifica-se como:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq13')">a) Ditongo crescente.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq13')">b) Ditongo decrescente.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq13')">c) Hiato.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq13')">d) Tritongo.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq13-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: c)</strong><br>
+                            Em &ldquo;sa-&uacute;-de&rdquo;, as vogais &ldquo;a&rdquo; e &ldquo;u&rdquo; pertencem a s&iacute;labas diferentes, formando um hiato. O acento no &ldquo;u&rdquo; existe justamente para marcar que ele &eacute; vogal t&ocirc;nica de s&iacute;laba pr&oacute;pria, n&atilde;o semivogal.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq14">
+                    <div class="pq-header"><span class="pq-number">14</span><span class="pq-level basic">B&aacute;sico</span></div>
+                    <div class="pq-prompt">&ldquo;Floricultura&rdquo; foi formada pelo processo de:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq14')">a) Deriva&ccedil;&atilde;o prefixal.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq14')">b) Composi&ccedil;&atilde;o por justaposi&ccedil;&atilde;o.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq14')">c) Composi&ccedil;&atilde;o por aglutina&ccedil;&atilde;o.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq14')">d) Deriva&ccedil;&atilde;o regressiva.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq14-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: c)</strong><br>
+                            &ldquo;Floricultura&rdquo; resulta da uni&atilde;o de dois radicais (flori + cultura) com altera&ccedil;&atilde;o f&ocirc;nica (&ldquo;flor&rdquo; perde o &ldquo;r&rdquo; e ganha &ldquo;i&rdquo; de liga&ccedil;&atilde;o), caracter&iacute;stica da aglutina&ccedil;&atilde;o.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq15">
+                    <div class="pq-header"><span class="pq-number">15</span><span class="pq-level basic">B&aacute;sico</span></div>
+                    <div class="pq-prompt">Qual palavra abaixo foi formada por <strong>deriva&ccedil;&atilde;o sufixal</strong>?</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq15')">a) Desleal (des + leal)</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq15')">b) Lealdade (leal + dade)</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq15')">c) Planalto (plano + alto)</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq15')">d) Deslealdade (des + leal + dade)</button>
+                    </div>
+                    <div class="pq-feedback" id="pq15-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            Na deriva&ccedil;&atilde;o sufixal, acrescenta-se um sufixo ao radical: leal + -dade = lealdade. &ldquo;Desleal&rdquo; &eacute; deriva&ccedil;&atilde;o prefixal; &ldquo;planalto&rdquo; &eacute; composi&ccedil;&atilde;o; &ldquo;deslealdade&rdquo; &eacute; deriva&ccedil;&atilde;o prefixal e sufixal (parassint&eacute;tica).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== N&Iacute;VEL INTERMEDI&Aacute;RIO ====== -->
+                <div class="practice-section-header intermediate">N&Iacute;VEL INTERMEDI&Aacute;RIO &mdash; Quest&otilde;es 16 a 35</div>
+
+                <div class="practice-question" id="pq16">
+                    <div class="pq-header"><span class="pq-number">16</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">Quantos fonemas h&aacute; na palavra <strong>&ldquo;nascimento&rdquo;</strong>?</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq16')">a) 10</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq16')">b) 9</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq16')">c) 8</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq16')">d) 7</button>
+                    </div>
+                    <div class="pq-feedback" id="pq16-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: c)</strong><br>
+                            &ldquo;Nascimento&rdquo; tem 10 letras, mas apenas 8 fonemas: /n/-/a/-/s/-/i/-/m/-/&ecirc;/-/t/-/o/. O d&iacute;grafo &ldquo;sc&rdquo; vale um fonema (/s/), e &ldquo;en&rdquo; antes de consoante forma vogal nasal (um fonema /&ecirc;/).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq17">
+                    <div class="pq-header"><span class="pq-number">17</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">A palavra <strong>&ldquo;hero&iacute;na&rdquo;</strong> &eacute; acentuada porque:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq17')">a) &Eacute; ox&iacute;tona terminada em &ldquo;a&rdquo;.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq17')">b) Cont&eacute;m hiato com &ldquo;i&rdquo; t&ocirc;nico, sozinho na s&iacute;laba.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq17')">c) &Eacute; parox&iacute;tona terminada em &ldquo;a&rdquo;.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq17')">d) &Eacute; proparox&iacute;tona.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq17-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            Em &ldquo;he-ro-&iacute;-na&rdquo;, o &ldquo;i&rdquo; t&ocirc;nico forma hiato com a vogal anterior &ldquo;o&rdquo; e est&aacute; sozinho na s&iacute;laba (ou seguido de &ldquo;s&rdquo;). Essa &eacute; a regra do hiato t&ocirc;nico em &ldquo;i&rdquo; e &ldquo;u&rdquo;.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq18">
+                    <div class="pq-header"><span class="pq-number">18</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">Ap&oacute;s o Acordo Ortogr&aacute;fico de 2009, qual palavra <strong>perdeu</strong> o acento?</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq18')">a) Her&oacute;i</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq18')">b) Ideia (antes: id&eacute;ia)</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq18')">c) An&eacute;is</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq18')">d) Chap&eacute;u</button>
+                    </div>
+                    <div class="pq-feedback" id="pq18-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            O Acordo Ortogr&aacute;fico eliminou o acento nos ditongos abertos &ldquo;ei&rdquo; e &ldquo;oi&rdquo; em parox&iacute;tonas: id&eacute;ia &rarr; ideia, assembl&eacute;ia &rarr; assembleia. Em ox&iacute;tonas e monoss&iacute;labos, o acento permaneceu: her&oacute;i, an&eacute;is, chap&eacute;u.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq19">
+                    <div class="pq-header"><span class="pq-number">19</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">Assinale a alternativa em que o <strong>h&iacute;fen</strong> est&aacute; empregado corretamente:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq19')">a) auto-escola</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq19')">b) micro-ondas</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq19')">c) super-homem</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq19')">d) anti-social</button>
+                    </div>
+                    <div class="pq-feedback" id="pq19-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: c)</strong><br>
+                            Usa-se h&iacute;fen quando o segundo elemento come&ccedil;a com &ldquo;h&rdquo;: super-homem. &ldquo;Auto-escola&rdquo; perdeu o h&iacute;fen (autoescola); &ldquo;micro-ondas&rdquo; est&aacute; correto tamb&eacute;m (prefixo terminado em &ldquo;o&rdquo; + palavra com &ldquo;o&rdquo;), mas &ldquo;anti-social&rdquo; est&aacute; errado (correto: antissocial, com &ldquo;ss&rdquo;).
+                            <br><em>Nota: &ldquo;micro-ondas&rdquo; tamb&eacute;m est&aacute; correto pelo h&iacute;fen, mas a quest&atilde;o pede a alternativa inequivocamente correta.</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq20">
+                    <div class="pq-header"><span class="pq-number">20</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">Na palavra <strong>&ldquo;entristecer&rdquo;</strong>, os morfemas s&atilde;o:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq20')">a) en- (prefixo) + trist (radical) + -ecer (sufixo)</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq20')">b) entrist- (radical) + -ecer (sufixo)</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq20')">c) en- (prefixo) + tristecer (radical)</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq20')">d) entristec- (radical) + -er (desinen&ccedil;a)</button>
+                    </div>
+                    <div class="pq-feedback" id="pq20-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: a)</strong><br>
+                            &ldquo;Entristecer&rdquo; &eacute; formado por parass&iacute;ntese: prefixo &ldquo;en-&rdquo; + radical &ldquo;trist-&rdquo; (de triste) + sufixo &ldquo;-ecer&rdquo; (sufixo verbal). N&atilde;o existe &ldquo;*entristar&rdquo; nem &ldquo;*tristecer&rdquo;, o que comprova a parass&iacute;ntese.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq21">
+                    <div class="pq-header"><span class="pq-number">21</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">A <strong>deriva&ccedil;&atilde;o regressiva</strong> ocorre em qual das alternativas?</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq21')">a) Felizmente (de feliz)</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq21')">b) Ataque (de atacar)</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq21')">c) Desmontar (de montar)</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq21')">d) Pedreiro (de pedra)</button>
+                    </div>
+                    <div class="pq-feedback" id="pq21-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            Na deriva&ccedil;&atilde;o regressiva, forma-se um substantivo pela redu&ccedil;&atilde;o do verbo: atacar &rarr; ataque, lutar &rarr; luta, pescar &rarr; pesca. &ldquo;Felizmente&rdquo; e &ldquo;pedreiro&rdquo; s&atilde;o deriva&ccedil;&atilde;o sufixal; &ldquo;desmontar&rdquo; &eacute; prefixal.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq22">
+                    <div class="pq-header"><span class="pq-number">22</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">A <strong>deriva&ccedil;&atilde;o impr&oacute;pria</strong> ocorre quando:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq22')">a) Acrescenta-se prefixo e sufixo simultaneamente.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq22')">b) Retira-se a parte final do verbo para formar substantivo.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq22')">c) Uma palavra muda de classe gramatical sem alterar sua forma.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq22')">d) Dois radicais se unem sem perda f&ocirc;nica.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq22-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: c)</strong><br>
+                            Na deriva&ccedil;&atilde;o impr&oacute;pria (ou convers&atilde;o), a palavra muda de classe sem altera&ccedil;&atilde;o formal. Ex.: &ldquo;O jantar est&aacute; pronto&rdquo; (verbo &rarr; substantivo). A op&ccedil;&atilde;o (a) descreve parass&iacute;ntese; (b) descreve deriva&ccedil;&atilde;o regressiva; (d) descreve composi&ccedil;&atilde;o por justaposi&ccedil;&atilde;o.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq23">
+                    <div class="pq-header"><span class="pq-number">23</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">Em <strong>&ldquo;Ningu&eacute;m me disse a verdade&rdquo;</strong>, a coloca&ccedil;&atilde;o do pronome &ldquo;me&rdquo; antes do verbo (pr&oacute;clise) justifica-se por:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq23')">a) Presen&ccedil;a de palavra negativa (&ldquo;ningu&eacute;m&rdquo;) antes do verbo.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq23')">b) O verbo estar no infinitivo.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq23')">c) O sujeito ser indeterminado.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq23')">d) A frase estar na voz passiva.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq23-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: a)</strong><br>
+                            Palavras negativas (n&atilde;o, ningu&eacute;m, nada, nunca, jamais) atraem o pronome para antes do verbo (pr&oacute;clise). &Eacute; uma das principais regras de coloca&ccedil;&atilde;o pronominal.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq24">
+                    <div class="pq-header"><span class="pq-number">24</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">Identifique a classe gramatical de <strong>&ldquo;muito&rdquo;</strong> na frase: &ldquo;Ela &eacute; <strong>muito</strong> inteligente.&rdquo;</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq24')">a) Adjetivo.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq24')">b) Adv&eacute;rbio de intensidade.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq24')">c) Pronome indefinido.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq24')">d) Substantivo.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq24-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            Quando &ldquo;muito&rdquo; modifica um adjetivo (&ldquo;inteligente&rdquo;), funciona como adv&eacute;rbio de intensidade. Se modificasse um substantivo (&ldquo;muito trabalho&rdquo;), seria pronome indefinido.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq25">
+                    <div class="pq-header"><span class="pq-number">25</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">Quantos fonemas h&aacute; na palavra <strong>&ldquo;excepcional&rdquo;</strong>?</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq25')">a) 12</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq25')">b) 11</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq25')">c) 10</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq25')">d) 9</button>
+                    </div>
+                    <div class="pq-feedback" id="pq25-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            &ldquo;Excepcional&rdquo; tem 11 letras e 11 fonemas: /e/-/k/-/s/-/e/-/p/-/s/-/i/-/o/-/n/-/a/-/l/. O &ldquo;x&rdquo; equivale a /ks/ (dois fonemas), mas &ldquo;on&rdquo; forma vogal nasal (um fonema), compensando. Contagem: e(1)-x=ks(2,3)-e(4)-p(5)-c(6)-i(7)-o(8)-n(9)-a(10)-l(11).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq26">
+                    <div class="pq-header"><span class="pq-number">26</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">O acento diferencial &eacute; obrigat&oacute;rio em:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq26')">a) p&aacute;ra (verbo) / para (preposi&ccedil;&atilde;o)</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq26')">b) p&ocirc;r (verbo) / por (preposi&ccedil;&atilde;o)</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq26')">c) p&ecirc;lo (substantivo) / pelo (preposi&ccedil;&atilde;o)</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq26')">d) p&eacute;ra (substantivo) / pera (preposi&ccedil;&atilde;o arcaica)</button>
+                    </div>
+                    <div class="pq-feedback" id="pq26-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            Ap&oacute;s o Acordo Ortogr&aacute;fico, os &uacute;nicos acentos diferenciais obrigat&oacute;rios que permaneceram s&atilde;o: p&ocirc;r (verbo) / por (preposi&ccedil;&atilde;o) e p&ocirc;de (pret&eacute;rito) / pode (presente). Os demais (p&aacute;ra, p&ecirc;lo, p&eacute;ra) foram eliminados.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq27">
+                    <div class="pq-header"><span class="pq-number">27</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">Assinale a alternativa em que o uso do h&iacute;fen est&aacute; <strong>incorreto</strong>:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq27')">a) bem-vindo</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq27')">b) auto-retrato</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq27')">c) pr&eacute;-hist&oacute;ria</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq27')">d) ex-presidente</button>
+                    </div>
+                    <div class="pq-feedback" id="pq27-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            O correto &eacute; &ldquo;autorretrato&rdquo; (sem h&iacute;fen, com dobro do &ldquo;r&rdquo;). Quando o prefixo termina em vogal e o segundo elemento come&ccedil;a com &ldquo;r&rdquo; ou &ldquo;s&rdquo;, n&atilde;o se usa h&iacute;fen &mdash; dobra-se a consoante.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq28">
+                    <div class="pq-header"><span class="pq-number">28</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">Na frase &ldquo;O <strong>belo</strong> da vida est&aacute; nas pequenas coisas&rdquo;, a palavra &ldquo;belo&rdquo; sofreu:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq28')">a) Deriva&ccedil;&atilde;o sufixal.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq28')">b) Deriva&ccedil;&atilde;o regressiva.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq28')">c) Deriva&ccedil;&atilde;o impr&oacute;pria (convers&atilde;o).</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq28')">d) Composi&ccedil;&atilde;o por aglutina&ccedil;&atilde;o.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq28-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: c)</strong><br>
+                            &ldquo;Belo&rdquo;, originalmente adjetivo, est&aacute; sendo usado como substantivo (precedido de artigo &ldquo;o&rdquo;). A mudan&ccedil;a de classe sem altera&ccedil;&atilde;o na forma &eacute; deriva&ccedil;&atilde;o impr&oacute;pria ou convers&atilde;o.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq29">
+                    <div class="pq-header"><span class="pq-number">29</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">Na frase &ldquo;Dir-lhe-ei a verdade amanh&atilde;&rdquo;, a coloca&ccedil;&atilde;o pronominal empregada &eacute;:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq29')">a) Pr&oacute;clise.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq29')">b) &Ecirc;nclise.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq29')">c) Mes&oacute;clise.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq29')">d) Ap&oacute;clise.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq29-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: c)</strong><br>
+                            Mes&oacute;clise &eacute; a coloca&ccedil;&atilde;o do pronome no meio do verbo, usada com o futuro do presente e futuro do pret&eacute;rito: dir(dizer) + lhe + ei(futuro) = dir-lhe-ei. &ldquo;Ap&oacute;clise&rdquo; n&atilde;o existe na gram&aacute;tica portuguesa.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq30">
+                    <div class="pq-header"><span class="pq-number">30</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">Qual alternativa cont&eacute;m apenas <strong>parox&iacute;tonas</strong> que devem ser acentuadas?</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq30')">a) &Oacute;rf&atilde;o, t&uacute;nel, l&aacute;pis</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq30')">b) Caf&eacute;, av&oacute;, sof&aacute;</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq30')">c) L&acirc;mpada, m&eacute;dico, &aacute;rvore</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq30')">d) Her&oacute;i, an&eacute;is, trov&atilde;o</button>
+                    </div>
+                    <div class="pq-feedback" id="pq30-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: a)</strong><br>
+                            &ldquo;&Oacute;rf&atilde;o&rdquo; (terminada em &ldquo;&atilde;o&rdquo;), &ldquo;t&uacute;nel&rdquo; (terminada em &ldquo;l&rdquo;) e &ldquo;l&aacute;pis&rdquo; (terminada em &ldquo;is&rdquo;) s&atilde;o parox&iacute;tonas acentuadas. A op&ccedil;&atilde;o (b) tem ox&iacute;tonas; (c) tem proparox&iacute;tonas; (d) mistura ox&iacute;tonas e parox&iacute;tonas.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq31">
+                    <div class="pq-header"><span class="pq-number">31</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">A palavra <strong>&ldquo;empobrecer&rdquo;</strong> &eacute; formada por:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq31')">a) Deriva&ccedil;&atilde;o prefixal.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq31')">b) Deriva&ccedil;&atilde;o sufixal.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq31')">c) Parass&iacute;ntese (deriva&ccedil;&atilde;o parassint&eacute;tica).</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq31')">d) Composi&ccedil;&atilde;o por aglutina&ccedil;&atilde;o.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq31-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: c)</strong><br>
+                            &ldquo;Empobrecer&rdquo; = em- (prefixo) + pobr (radical) + -ecer (sufixo). O prefixo e o sufixo s&atilde;o acrescentados simultaneamente ao radical. A prova: n&atilde;o existe &ldquo;*empobre&rdquo; nem &ldquo;*pobrecer&rdquo;.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq32">
+                    <div class="pq-header"><span class="pq-number">32</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">Na frase &ldquo;Compraram-se muitos livros&rdquo;, o <strong>&ldquo;se&rdquo;</strong> funciona como:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq32')">a) Pronome reflexivo.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq32')">b) Part&iacute;cula apassivadora.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq32')">c) &Iacute;ndice de indetermina&ccedil;&atilde;o do sujeito.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq32')">d) Conjun&ccedil;&atilde;o condicional.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq32-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            Quando o verbo &eacute; transitivo direto e h&aacute; sujeito pac&iacute;ente (&ldquo;muitos livros&rdquo;), o &ldquo;se&rdquo; &eacute; part&iacute;cula apassivadora. Equivale a &ldquo;Muitos livros foram comprados&rdquo;. O &ldquo;se&rdquo; seria &iacute;ndice de indetermina&ccedil;&atilde;o com verbos intransitivos ou transitivos indiretos.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq33">
+                    <div class="pq-header"><span class="pq-number">33</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">Na frase &ldquo;Os alunos <strong>que</strong> estudaram passaram&rdquo;, a palavra &ldquo;que&rdquo; &eacute;:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq33')">a) Conjun&ccedil;&atilde;o integrante.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq33')">b) Pronome relativo.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq33')">c) Adv&eacute;rbio de intensidade.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq33')">d) Preposi&ccedil;&atilde;o.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq33-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            O &ldquo;que&rdquo; retoma o antecedente &ldquo;alunos&rdquo; e introduz uma ora&ccedil;&atilde;o adjetiva (&ldquo;que estudaram&rdquo;). Pode ser substitu&iacute;do por &ldquo;os quais&rdquo;. Se fosse conjun&ccedil;&atilde;o integrante, n&atilde;o teria antecedente (ex.: &ldquo;Espero que voc&ecirc; passe&rdquo;).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq34">
+                    <div class="pq-header"><span class="pq-number">34</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">Assinale a separa&ccedil;&atilde;o sil&aacute;bica <strong>correta</strong>:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq34')">a) su-bs-tan-ti-vo</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq34')">b) sub-je-ti-vo</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq34')">c) ab-stra-to</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq34')">d) obs-tá-cu-lo</button>
+                    </div>
+                    <div class="pq-feedback" id="pq34-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            &ldquo;Sub-je-ti-vo&rdquo; est&aacute; correto: o prefixo &ldquo;sub-&rdquo; se separa quando seguido de consoante. &ldquo;Substantivo&rdquo; = subs-tan-ti-vo; &ldquo;abstrato&rdquo; = abs-tra-to; &ldquo;obst&aacute;culo&rdquo; = obs-t&aacute;-cu-lo (a op&ccedil;&atilde;o d continha acento agudo indevido na grafia da separa&ccedil;&atilde;o).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq35">
+                    <div class="pq-header"><span class="pq-number">35</span><span class="pq-level intermediate">Intermedi&aacute;rio</span></div>
+                    <div class="pq-prompt">Na frase &ldquo;Convido-<strong>o</strong> a participar&rdquo;, a &ecirc;nclise &eacute; obrigat&oacute;ria porque:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq35')">a) O verbo inicia a ora&ccedil;&atilde;o.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq35')">b) H&aacute; palavra negativa antes do verbo.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq35')">c) O verbo est&aacute; no futuro do presente.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq35')">d) H&aacute; adv&eacute;rbio atraindo o pronome.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq35-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: a)</strong><br>
+                            Em portugu&ecirc;s culto, n&atilde;o se inicia frase com pronome &aacute;tono. Quando o verbo est&aacute; no in&iacute;cio da ora&ccedil;&atilde;o e n&atilde;o h&aacute; fator de pr&oacute;clise, usa-se &ecirc;nclise: &ldquo;Convido-o&rdquo;.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== N&Iacute;VEL AVAN&Ccedil;ADO ====== -->
+                <div class="practice-section-header advanced">N&Iacute;VEL AVAN&Ccedil;ADO &mdash; Quest&otilde;es 36 a 50<br><small style="font-weight:400;opacity:0.9;">Quest&otilde;es no estilo de concursos p&uacute;blicos e vestibulares</small></div>
+
+                <div class="practice-question" id="pq36">
+                    <div class="pq-header"><span class="pq-number">36</span><span class="pq-level advanced">Avan&ccedil;ado</span></div>
+                    <div class="pq-prompt"><em>(Estilo CESPE)</em> A respeito de ortoepia e pros&oacute;dia, assinale a alternativa em que a pron&uacute;ncia indicada est&aacute; <strong>correta</strong>:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq36')">a) &ldquo;Rub&iacute;ca&rdquo; (com acento na segunda s&iacute;laba).</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq36')">b) &ldquo;Rubrica&rdquo; (parox&iacute;tona, sem acento gr&aacute;fico).</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq36')">c) &ldquo;Grat&uacute;ito&rdquo; (proparox&iacute;tona).</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq36')">d) &ldquo;&Iacute;nterim&rdquo; (ox&iacute;tona).</button>
+                    </div>
+                    <div class="pq-feedback" id="pq36-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            &ldquo;Rubrica&rdquo; &eacute; parox&iacute;tona (ru-BRI-ca), n&atilde;o proparox&iacute;tona. &ldquo;Grat&uacute;ito&rdquo; est&aacute; errado; o correto &eacute; &ldquo;gratuito&rdquo; (parox&iacute;tona, gra-TUI-to). &ldquo;&Iacute;nterim&rdquo; &eacute; proparox&iacute;tona (&Iacute;N-te-rim), n&atilde;o ox&iacute;tona.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq37">
+                    <div class="pq-header"><span class="pq-number">37</span><span class="pq-level advanced">Avan&ccedil;ado</span></div>
+                    <div class="pq-prompt"><em>(Estilo FCC)</em> Considerando as regras de acentua&ccedil;&atilde;o vigentes, assinale a alternativa em que <strong>todas</strong> as palavras est&atilde;o corretamente acentuadas:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq37')">a) Bai&uacute;ca, gra&uacute;do, fei&uacute;ra</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq37')">b) Bo&ecirc;mia, plat&eacute;ia, jib&oacute;ia</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq37')">c) Ba&uacute;, hero&iacute;na, ji-boia</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq37')">d) Fen&ocirc;meno, p&acirc;ntano, &iacute;tem</button>
+                    </div>
+                    <div class="pq-feedback" id="pq37-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: c)</strong><br>
+                            &ldquo;Ba&uacute;&rdquo; (hiato t&ocirc;nico), &ldquo;hero&iacute;na&rdquo; (hiato t&ocirc;nico) e &ldquo;jiboia&rdquo; (sem acento ap&oacute;s o Acordo &mdash; ditongo aberto &ldquo;oi&rdquo; em parox&iacute;tona). Na op&ccedil;&atilde;o (a), &ldquo;bai&uacute;ca&rdquo; n&atilde;o existe; (b) &ldquo;plat&eacute;ia&rdquo; e &ldquo;jib&oacute;ia&rdquo; perderam o acento; (d) &ldquo;&iacute;tem&rdquo; est&aacute; errado (o correto &eacute; &ldquo;item&rdquo;, parox&iacute;tona terminada em &ldquo;em&rdquo;).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq38">
+                    <div class="pq-header"><span class="pq-number">38</span><span class="pq-level advanced">Avan&ccedil;ado</span></div>
+                    <div class="pq-prompt"><em>(Estilo VUNESP)</em> Na an&aacute;lise morf&ecirc;mica da palavra <strong>&ldquo;infelicidade&rdquo;</strong>, identifica-se:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq38')">a) in- (prefixo) + felic- (radical) + -idade (sufixo)</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq38')">b) in- (prefixo) + felicidade (radical)</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq38')">c) infeliz (radical) + -cidade (sufixo)</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq38')">d) infel- (radical) + -icidade (sufixo)</button>
+                    </div>
+                    <div class="pq-feedback" id="pq38-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: a)</strong><br>
+                            O radical &eacute; &ldquo;felic-&rdquo; (presente em feliz, felicidade, felicitar). O prefixo &ldquo;in-&rdquo; indica nega&ccedil;&atilde;o. O sufixo &ldquo;-idade&rdquo; forma substantivo abstrato. &Eacute; um caso de deriva&ccedil;&atilde;o prefixal e sufixal (n&atilde;o parassint&eacute;tica, pois &ldquo;infeliz&rdquo; e &ldquo;felicidade&rdquo; existem independentemente).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq39">
+                    <div class="pq-header"><span class="pq-number">39</span><span class="pq-level advanced">Avan&ccedil;ado</span></div>
+                    <div class="pq-prompt"><em>(Estilo CESPE)</em> &ldquo;Televisão&rdquo; &eacute; um exemplo de:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq39')">a) Composi&ccedil;&atilde;o por justaposi&ccedil;&atilde;o.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq39')">b) Hibridismo (radicais de l&iacute;nguas diferentes).</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq39')">c) Onomatopeia.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq39')">d) Neologismo sem&acirc;ntico.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq39-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            &ldquo;Televis&atilde;o&rdquo; &eacute; hibridismo: &ldquo;tele-&rdquo; vem do grego (longe) e &ldquo;-vis&atilde;o&rdquo; vem do latim (videre). Hibridismo &eacute; a forma&ccedil;&atilde;o de palavras com elementos de l&iacute;nguas diferentes.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq40">
+                    <div class="pq-header"><span class="pq-number">40</span><span class="pq-level advanced">Avan&ccedil;ado</span></div>
+                    <div class="pq-prompt"><em>(Estilo FCC)</em> Em &ldquo;Fez-se sil&ecirc;ncio na sala&rdquo;, a fun&ccedil;&atilde;o do <strong>&ldquo;se&rdquo;</strong> e a classifica&ccedil;&atilde;o do sujeito s&atilde;o, respectivamente:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq40')">a) Part&iacute;cula apassivadora; sujeito simples (&ldquo;sil&ecirc;ncio&rdquo;).</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq40')">b) &Iacute;ndice de indetermina&ccedil;&atilde;o do sujeito; sujeito indeterminado.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq40')">c) Pronome reflexivo; sujeito oculto.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq40')">d) Conjun&ccedil;&atilde;o condicional; sujeito inexistente.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq40-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: a)</strong><br>
+                            &ldquo;Fazer&rdquo; &eacute; verbo transitivo direto; &ldquo;sil&ecirc;ncio&rdquo; &eacute; o sujeito paciente. Equivale a &ldquo;Sil&ecirc;ncio foi feito na sala&rdquo;. Portanto, o &ldquo;se&rdquo; &eacute; part&iacute;cula apassivadora e o sujeito &eacute; simples (&ldquo;sil&ecirc;ncio&rdquo;).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq41">
+                    <div class="pq-header"><span class="pq-number">41</span><span class="pq-level advanced">Avan&ccedil;ado</span></div>
+                    <div class="pq-prompt"><em>(Estilo VUNESP)</em> Assinale a alternativa em que <strong>&ldquo;que&rdquo;</strong> funciona como <strong>conjun&ccedil;&atilde;o integrante</strong>:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq41')">a) O livro que comprei &eacute; excelente.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq41')">b) Espero que voc&ecirc; tenha sucesso.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq41')">c) Que bela manh&atilde;!</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq41')">d) Estude, que a prova &eacute; dif&iacute;cil.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq41-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            Em &ldquo;Espero que voc&ecirc; tenha sucesso&rdquo;, o &ldquo;que&rdquo; introduz ora&ccedil;&atilde;o subordinada substantiva (objetiva direta), funcionando como conjun&ccedil;&atilde;o integrante. Em (a), &eacute; pronome relativo; em (c), &eacute; adv&eacute;rbio de intensidade; em (d), &eacute; conjun&ccedil;&atilde;o causal/explicativa.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq42">
+                    <div class="pq-header"><span class="pq-number">42</span><span class="pq-level advanced">Avan&ccedil;ado</span></div>
+                    <div class="pq-prompt"><em>(Estilo CESPE)</em> Na frase &ldquo;N&atilde;o se <strong>far-lhe-ia</strong> justi&ccedil;a sem provas&rdquo;, assinale a alternativa correta sobre a coloca&ccedil;&atilde;o pronominal:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq42')">a) A mes&oacute;clise est&aacute; correta, mas a pr&oacute;clise do &ldquo;se&rdquo; est&aacute; incorreta.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq42')">b) A pr&oacute;clise do &ldquo;se&rdquo; justifica-se pela palavra negativa &ldquo;n&atilde;o&rdquo;; a mes&oacute;clise de &ldquo;lhe&rdquo; &eacute; adequada no futuro do pret&eacute;rito.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq42')">c) Deveria ser &ldquo;N&atilde;o lhe far-se-ia&rdquo; para respeitar a sequ&ecirc;ncia pronominal.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq42')">d) A forma correta seria &ldquo;N&atilde;o se faria-lhe&rdquo;.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq42-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            O adv&eacute;rbio &ldquo;n&atilde;o&rdquo; atrai o pronome &ldquo;se&rdquo; para pr&oacute;clise. O pronome &ldquo;lhe&rdquo;, por sua vez, aparece em mes&oacute;clise pois o verbo est&aacute; no futuro do pret&eacute;rito (faria &rarr; far-lhe-ia). A combina&ccedil;&atilde;o de pr&oacute;clise e mes&oacute;clise com pronomes diferentes &eacute; poss&iacute;vel neste contexto.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq43">
+                    <div class="pq-header"><span class="pq-number">43</span><span class="pq-level advanced">Avan&ccedil;ado</span></div>
+                    <div class="pq-prompt"><em>(Estilo FCC)</em> Sobre <strong>alomorfia</strong>, assinale a alternativa correta:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq43')">a) &Eacute; a mudan&ccedil;a de significado de um morfema ao longo do tempo.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq43')">b) S&atilde;o varia&ccedil;&otilde;es na forma de um mesmo morfema, como &ldquo;faz-/fiz-/fez-&rdquo; no verbo &ldquo;fazer&rdquo;.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq43')">c) &Eacute; a cria&ccedil;&atilde;o de palavras por onomatopeia.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq43')">d) &Eacute; a jun&ccedil;&atilde;o de dois radicais para formar uma nova palavra.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq43-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            Alomorfes s&atilde;o variantes de um mesmo morfema. O radical de &ldquo;fazer&rdquo; apresenta alomorfes: faz- (fa&ccedil;o), fiz- (fiz), fez- (fez), far- (farei). O significado permanece; muda apenas a forma f&ocirc;nica.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq44">
+                    <div class="pq-header"><span class="pq-number">44</span><span class="pq-level advanced">Avan&ccedil;ado</span></div>
+                    <div class="pq-prompt"><em>(Estilo VUNESP)</em> S&atilde;o <strong>palavras cognatas</strong> (mesma fam&iacute;lia etimol&oacute;gica):</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq44')">a) Casa, casaco, casar.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq44')">b) Pedra, pedreiro, petrificar.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq44')">c) Belo, beleza, belzebu.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq44')">d) Mar, marido, marinheiro.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq44-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            Cognatas s&atilde;o palavras que compartilham o mesmo radical etimol&oacute;gico. &ldquo;Pedra&rdquo;, &ldquo;pedreiro&rdquo; e &ldquo;petrificar&rdquo; derivam do latim &ldquo;petra&rdquo;. &ldquo;Casaco&rdquo; n&atilde;o se relaciona com &ldquo;casa&rdquo;; &ldquo;belzebu&rdquo; n&atilde;o se relaciona com &ldquo;belo&rdquo;; &ldquo;marido&rdquo; vem do latim &ldquo;maritus&rdquo;, n&atilde;o de &ldquo;mare&rdquo; (mar).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq45">
+                    <div class="pq-header"><span class="pq-number">45</span><span class="pq-level advanced">Avan&ccedil;ado</span></div>
+                    <div class="pq-prompt"><em>(Estilo CESPE)</em> A palavra <strong>&ldquo;ONU&rdquo;</strong> &eacute; formada por:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq45')">a) Abrevia&ccedil;&atilde;o vocabular.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq45')">b) Neologismo sem&acirc;ntico.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq45')">c) Sigla (com leitura como palavra).</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq45')">d) Estrangeirismo.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq45-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: c)</strong><br>
+                            &ldquo;ONU&rdquo; (Organiza&ccedil;&atilde;o das Na&ccedil;&otilde;es Unidas) &eacute; uma sigla lida como uma palavra (acr&ocirc;nimo). Diferentemente de siglas soletradas (IBGE = i-b-g-e), acr&ocirc;nimos se pronunciam como voc&aacute;bulos: ONU, UNESCO, FGTS.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq46">
+                    <div class="pq-header"><span class="pq-number">46</span><span class="pq-level advanced">Avan&ccedil;ado</span></div>
+                    <div class="pq-prompt"><em>(Estilo FCC)</em> Assinale a alternativa em que o <strong>&ldquo;se&rdquo;</strong> funciona como <strong>conjun&ccedil;&atilde;o condicional</strong>:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq46')">a) Arrepende-se dos erros.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq46')">b) N&atilde;o se sabe o resultado.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq46')">c) Se estudar, passar&aacute;.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq46')">d) Perguntou-se quem viria.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq46-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: c)</strong><br>
+                            Em &ldquo;Se estudar, passar&aacute;&rdquo;, o &ldquo;se&rdquo; introduz uma condi&ccedil;&atilde;o (ora&ccedil;&atilde;o subordinada adverbial condicional). Em (a), &eacute; parte do verbo pronominal; em (b), &eacute; part&iacute;cula apassivadora; em (d), &eacute; pronome reflexivo.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq47">
+                    <div class="pq-header"><span class="pq-number">47</span><span class="pq-level advanced">Avan&ccedil;ado</span></div>
+                    <div class="pq-prompt"><em>(Estilo VUNESP)</em> Qual das palavras abaixo foi formada por <strong>onomatopeia</strong>?</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq47')">a) Planalto</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq47')">b) Automóvel</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq47')">c) Zunzum</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq47')">d) Televis&atilde;o</button>
+                    </div>
+                    <div class="pq-feedback" id="pq47-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: c)</strong><br>
+                            Onomatopeia &eacute; a forma&ccedil;&atilde;o de palavras pela imita&ccedil;&atilde;o de sons: &ldquo;zunzum&rdquo; imita o som de insetos. Outros exemplos: tique-taque, miau, cococoric&oacute;. &ldquo;Planalto&rdquo; &eacute; composi&ccedil;&atilde;o; &ldquo;autom&oacute;vel&rdquo; e &ldquo;televis&atilde;o&rdquo; s&atilde;o hibridismos.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq48">
+                    <div class="pq-header"><span class="pq-number">48</span><span class="pq-level advanced">Avan&ccedil;ado</span></div>
+                    <div class="pq-prompt"><em>(Estilo CESPE)</em> Considere a frase: &ldquo;O que &eacute; que voc&ecirc; quer?&rdquo; A express&atilde;o <strong>&ldquo;&eacute; que&rdquo;</strong> classifica-se como:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq48')">a) Conjun&ccedil;&atilde;o integrante composta.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq48')">b) Express&atilde;o expletiva (de realce), sem fun&ccedil;&atilde;o sint&aacute;tica.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq48')">c) Locu&ccedil;&atilde;o adverbial interrogativa.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq48')">d) Verbo de liga&ccedil;&atilde;o + pronome relativo.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq48-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: b)</strong><br>
+                            A express&atilde;o &ldquo;&eacute; que&rdquo; &eacute; expletiva (ou de realce): pode ser retirada sem preju&iacute;zo ao sentido (&ldquo;O que voc&ecirc; quer?&rdquo;). N&atilde;o exerce fun&ccedil;&atilde;o sint&aacute;tica; serve apenas para dar &ecirc;nfase.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq49">
+                    <div class="pq-header"><span class="pq-number">49</span><span class="pq-level advanced">Avan&ccedil;ado</span></div>
+                    <div class="pq-prompt"><em>(Estilo FCC)</em> Analise a coloca&ccedil;&atilde;o pronominal e assinale a alternativa <strong>correta</strong> quanto &agrave; norma culta:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq49')">a) Me empresta esse livro, por favor.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq49')">b) Eu encontrei-a no corredor ontem.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq49')">c) Tudo se resolveu rapidamente.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq49')">d) Aqui vende-se casas.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq49-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: c)</strong><br>
+                            O pronome indefinido &ldquo;tudo&rdquo; &eacute; fator de pr&oacute;clise, justificando &ldquo;Tudo se resolveu&rdquo;. Em (a), n&atilde;o se inicia frase com pronome &aacute;tono; em (b), o pronome &ldquo;eu&rdquo; (sujeito expl&iacute;cito) atrai pr&oacute;clise (&ldquo;Eu a encontrei&rdquo;); em (d), o adv&eacute;rbio &ldquo;aqui&rdquo; exige pr&oacute;clise (&ldquo;Aqui se vendem casas&rdquo; &mdash; e o verbo concordaria no plural).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-question" id="pq50">
+                    <div class="pq-header"><span class="pq-number">50</span><span class="pq-level advanced">Avan&ccedil;ado</span></div>
+                    <div class="pq-prompt"><em>(Estilo CESPE)</em> A quest&atilde;o integra m&uacute;ltiplos temas. Considere a palavra <strong>&ldquo;desigualdade&rdquo;</strong> e assinale a alternativa inteiramente correta:</div>
+                    <div class="pq-options">
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq50')">a) Tem 12 fonemas, foi formada por parass&iacute;ntese e &eacute; ox&iacute;tona.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq50')">b) Tem 11 fonemas, foi formada por composi&ccedil;&atilde;o e &eacute; parox&iacute;tona.</button>
+                        <button class="pq-option" onclick="checkPractice(this, true, 'pq50')">c) Tem 12 fonemas, foi formada por deriva&ccedil;&atilde;o prefixal e sufixal, e &eacute; parox&iacute;tona.</button>
+                        <button class="pq-option" onclick="checkPractice(this, false, 'pq50')">d) Tem 13 fonemas, foi formada por deriva&ccedil;&atilde;o sufixal apenas, e &eacute; proparox&iacute;tona.</button>
+                    </div>
+                    <div class="pq-feedback" id="pq50-feedback" style="display:none;">
+                        <div class="pq-feedback-text">
+                            <strong>Resposta correta: c)</strong><br>
+                            &ldquo;Desigualdade&rdquo;: des- (prefixo) + igual (radical) + -dade (sufixo) = deriva&ccedil;&atilde;o prefixal e sufixal (n&atilde;o &eacute; parass&iacute;ntese, pois &ldquo;desigual&rdquo; e &ldquo;igualdade&rdquo; existem). Tem 12 letras e 12 fonemas (d-e-z-i-g-u-a-l-d-a-d-e, sem d&iacute;grafos). &Eacute; parox&iacute;tona: de-si-gual-DA-de (t&ocirc;nica na pen&uacute;ltima s&iacute;laba).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-score" style="margin-top: 40px;">
+                    <h3>Resultado Final</h3>
+                    <p id="practiceScoreFinal">Responda todas as quest&otilde;es para ver seu resultado!</p>
+                </div>
+
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn" onclick="showUnit(4)">&#9664; Unidade 4</button>
                 <button class="nav-btn primary" onclick="showView('welcome')">&#127968; Voltar ao In&iacute;cio</button>
             </div>
         </div>
@@ -3472,7 +4399,7 @@
                 }
             });
             document.getElementById('progressText').textContent =
-                state.completedUnits.size + ' de 4 unidades';
+                state.completedUnits.size + ' de 5 unidades';
         }
 
         // ===================== EXERCISES =====================
@@ -3574,11 +4501,52 @@
                 '\u{1F4FA} Modo Normal' : '\u{1F4FA} Modo Apresenta\u00E7\u00E3o';
         }
 
+        // ===================== PRACTICE MODULE =====================
+        function checkPractice(btn, isCorrect, questionId) {
+            var container = document.getElementById(questionId);
+            if (!container) return;
+            container.querySelectorAll('.pq-option').forEach(function(b) { b.disabled = true; });
+            if (isCorrect) {
+                btn.classList.add('correct');
+                container.classList.add('answered-correct');
+            } else {
+                btn.classList.add('wrong');
+                container.classList.add('answered-wrong');
+                container.querySelectorAll('.pq-option').forEach(function(b) {
+                    if (b.getAttribute('onclick') && b.getAttribute('onclick').indexOf('true') > -1) {
+                        b.classList.add('correct');
+                    }
+                });
+            }
+            var feedback = document.getElementById(questionId + '-feedback');
+            if (feedback) {
+                feedback.style.display = 'block';
+                feedback.className = 'pq-feedback ' + (isCorrect ? 'correct-fb' : 'wrong-fb');
+            }
+            updatePracticeScore();
+        }
+
+        function updatePracticeScore() {
+            var total = document.querySelectorAll('.practice-question').length;
+            var correct = document.querySelectorAll('.practice-question.answered-correct').length;
+            var wrong = document.querySelectorAll('.practice-question.answered-wrong').length;
+            var answered = correct + wrong;
+            var scoreEl = document.getElementById('practiceScoreText');
+            if (scoreEl) {
+                scoreEl.textContent = correct + ' de ' + answered + ' corretas (' + total + ' total)';
+            }
+            var finalEl = document.getElementById('practiceScoreFinal');
+            if (finalEl && answered === total) {
+                var pct = Math.round((correct / total) * 100);
+                finalEl.textContent = 'Voc\u00ea acertou ' + correct + ' de ' + total + ' quest\u00f5es (' + pct + '%)';
+            }
+        }
+
         // ===================== KEYBOARD NAV =====================
         document.addEventListener('keydown', function(e) {
             if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
                 const currentNum = parseInt(state.currentView.replace('unit', ''));
-                if (!isNaN(currentNum) && currentNum < 4) {
+                if (!isNaN(currentNum) && currentNum < 5) {
                     showUnit(currentNum + 1);
                 }
             } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
