@@ -309,12 +309,12 @@
 
         /* ===================== UNIT VIEWS ===================== */
         .unit-view {
-            display: none !important;
+            display: none;
             animation: fadeIn 0.4s ease;
         }
 
         .unit-view.active {
-            display: block !important;
+            display: block;
         }
 
         @keyframes fadeIn {
@@ -1027,8 +1027,8 @@
                 display: none;
             }
             .unit-view.active {
-            display: block !important;
-        }
+                display: block;
+            }
         }
 
         /* ===================== FOOTER ===================== */
@@ -1859,6 +1859,23 @@
         .token-word { display: block; font-weight: 700; font-size: 1rem; padding: 6px 12px; border-radius: 6px 6px 0 0; border: 2px solid; border-bottom: none; }
         .token-class { display: block; font-size: 0.7rem; text-transform: uppercase; padding: 2px 8px; border-radius: 0 0 6px 6px; border: 2px solid; border-top: none; font-weight: 700; }
 
+        
+        /* ── Unit Visibility ── */
+        .unit-view          { display: none !important; }
+        .unit-view.active   { display: block !important; animation: fadeIn 0.3s ease; }
+        @keyframes fadeIn   { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+        /* ── IPA ── */
+        .ipa-section{margin:22px 0}.ipa-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.87rem}.ipa-table th{background:var(--primary);color:white;padding:7px 11px;text-align:left;font-weight:600}.ipa-table td{padding:7px 11px;border-bottom:1px solid var(--border);vertical-align:middle}.ipa-table tr:nth-child(even) td{background:var(--bg-alt)}.ipa-symbol{font-size:1.1rem;color:var(--primary);font-weight:700}.ipa-highlight{color:var(--primary);font-weight:800}.ipa-example{font-weight:600}.ipa-group-header td{background:var(--primary-dark)!important;color:white!important;font-size:.74rem;text-transform:uppercase;padding:4px 11px!important;font-weight:700}.btn-phoneme{background:var(--primary);color:white;border:none;border-radius:50%;width:26px;height:26px;cursor:pointer;font-size:.77rem;display:inline-flex;align-items:center;justify-content:center;transition:.17s;flex-shrink:0}.btn-phoneme:hover{background:var(--primary-dark);transform:scale(1.12)}
+        /* ── Inline Quiz ── */
+        .inline-quiz{background:#f0f9f4;border:1px solid #b2dfdb;border-radius:10px;padding:16px 20px;margin:17px 0}.inline-quiz .quiz-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--primary);margin-bottom:5px}.inline-quiz .quiz-question{font-weight:600;margin-bottom:10px}.inline-quiz .quiz-options{display:flex;flex-direction:column;gap:6px}.inline-quiz .quiz-btn{background:white;border:1.5px solid var(--border);border-radius:7px;padding:8px 12px;text-align:left;cursor:pointer;font-size:.85rem;transition:.17s;color:var(--text)}.inline-quiz .quiz-btn:hover:not([disabled]){border-color:var(--primary)}.inline-quiz .quiz-btn.iq-correct{background:#d4edda;border-color:#28a745;color:#155724;font-weight:600}.inline-quiz .quiz-btn.iq-wrong{background:#f8d7da;border-color:#dc3545;color:#721c24}.inline-quiz .quiz-feedback{margin-top:9px;padding:8px 12px;border-radius:7px;font-size:.84rem;display:none}.inline-quiz .quiz-feedback.show{display:block}.inline-quiz .quiz-feedback.correct{background:#d4edda;color:#155724;border-left:4px solid #28a745}.inline-quiz .quiz-feedback.wrong{background:#f8d7da;color:#721c24;border-left:4px solid #dc3545}
+        /* ── Misc ── */
+        .info-box{background:#e8f4fd;border-left:4px solid #2196f3;border-radius:0 8px 8px 0;padding:11px 15px;margin:13px 0;font-size:.89rem}.info-box.warning{background:#fff8e1;border-color:#ff9800}.info-box.success{background:#e8f5e9;border-color:#4caf50}.info-box strong{display:block;margin-bottom:3px;font-size:.79rem;text-transform:uppercase;letter-spacing:.4px}
+        .accent-rule{background:white;border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin:15px 0;box-shadow:0 2px 5px rgba(0,0,0,.05)}.accent-rule .rule-title{font-size:.97rem;font-weight:700;color:var(--primary);border-bottom:2px solid var(--primary-light);padding-bottom:6px;margin-bottom:9px}.accent-rule .examples{background:var(--bg-alt);border-radius:7px;padding:8px 12px;margin-top:8px;font-size:.85rem}.word-accent{display:inline-block;background:var(--primary);color:white;border-radius:4px;padding:1px 6px;font-weight:700;margin:2px;font-size:.83rem}.tonic{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px;font-weight:700;color:var(--primary-dark)}
+        .morpheme-box{display:flex;flex-wrap:wrap;gap:4px;align-items:center;margin:9px 0}.morpheme{display:inline-block;padding:5px 10px;border-radius:6px;font-weight:700;font-size:.89rem;text-align:center}.morpheme.radical{background:#e8f5e9;border:2px solid #4caf50;color:#2e7d32}.morpheme.prefixo{background:#e3f2fd;border:2px solid #2196f3;color:#1565c0}.morpheme.sufixo{background:#fff3e0;border:2px solid #ff9800;color:#e65100}.morpheme.desinencia{background:#fce4ec;border:2px solid #e91e63;color:#880e4f}.morpheme.vogtem{background:#f3e5f5;border:2px solid #9c27b0;color:#4a148c}.morpheme-label{font-size:.62rem;display:block;font-weight:600;text-transform:uppercase;text-align:center}
+        .class-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.75rem;font-weight:700;text-transform:uppercase}.class-badge.substantivo{background:#e3f2fd;color:#1565c0}.class-badge.adjetivo{background:#e8f5e9;color:#2e7d32}.class-badge.verbo{background:#fff3e0;color:#e65100}.class-badge.adverbio{background:#f3e5f5;color:#6a1b9a}.class-badge.pronome{background:#fce4ec;color:#880e4f}.class-badge.preposicao{background:#e0f7fa;color:#006064}.class-badge.conjuncao{background:#fff8e1;color:#f57f17}.class-badge.interjeicao{background:#fbe9e7;color:#bf360c}.class-badge.numeral{background:#e8eaf6;color:#283593}.class-badge.artigo{background:#f1f8e9;color:#33691e}
+        .sentence-analysis{background:white;border:1px solid var(--border);border-radius:9px;padding:15px;margin:13px 0}.sentence-text{font-size:1.01rem;font-weight:600;margin-bottom:13px;padding:8px;background:var(--bg-alt);border-radius:7px;text-align:center}.word-tokens{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}.word-token{text-align:center}.token-word{display:block;font-weight:700;font-size:.92rem;padding:5px 10px;border-radius:6px 6px 0 0;border:2px solid;border-bottom:none}.token-class{display:block;font-size:.62rem;text-transform:uppercase;padding:2px 7px;border-radius:0 0 6px 6px;border:2px solid;border-top:none;font-weight:700}
+        .unit-card .unit-icon{font-size:1.45rem;margin-bottom:6px;display:block}
+
         </style>
 </head>
 <body>
@@ -2004,22 +2021,19 @@
         <div class="welcome-icon">&#128214;</div>
         <h2>Bem-vindo ao Portugu&ecirc;s 1!</h2>
         <p class="subtitle">Um curso interativo de gram&aacute;tica da l&iacute;ngua portuguesa, com fundamentos essenciais para a forma&ccedil;&atilde;o teol&oacute;gica e pastoral.</p>
-        <div class="welcome-verse">
-            <p>&ldquo;Toda a Escritura &eacute; divinamente inspirada, e proveitosa para ensinar, para redarguir, para corrigir, para instruir em justi&ccedil;a.&rdquo;</p>
-            <small>&mdash; 2 Tim&oacute;teo 3:16 (ARC)</small>
-        </div>
+        <div class="welcome-verse"><p>&ldquo;Toda a Escritura &eacute; divinamente inspirada, e proveitosa para ensinar, para redarguir, para corrigir, para instruir em justi&ccedil;a.&rdquo;</p><small>&mdash; 2 Tim&oacute;teo 3:16 (ARC)</small></div>
         <div class="units-grid" style="grid-template-columns:repeat(3,1fr);max-width:860px;">
             <div class="unit-card" onclick="showUnit(1)"><div class="unit-num">1</div><div class="unit-icon">&#128172;</div><h3>L&iacute;ngua, Linguagem e Comunica&ccedil;&atilde;o</h3><p>Conceitos fundamentais de l&iacute;ngua, variedade lingu&iacute;stica e comunica&ccedil;&atilde;o.</p></div>
-            <div class="unit-card" onclick="showUnit(2)"><div class="unit-num">2</div><div class="unit-icon">&#128264;</div><h3>Fonologia e AFI</h3><p>Fonemas, s&iacute;labas, encontros voc&aacute;licos e Alfabeto Fon&eacute;tico Internacional com &aacute;udio.</p></div>
-            <div class="unit-card" onclick="showUnit(3)"><div class="unit-num">3</div><div class="unit-icon">&#9998;</div><h3>Acentua&ccedil;&atilde;o Gr&aacute;fica</h3><p>Todas as regras do Novo Acordo Ortogr&aacute;fico, com exemplos e quizzes interativos.</p></div>
-            <div class="unit-card" onclick="showUnit(4)"><div class="unit-num">4</div><div class="unit-icon">&#128297;</div><h3>Morfologia</h3><p>Morfemas, derivação, composi&ccedil;&atilde;o e outros processos de forma&ccedil;&atilde;o de palavras.</p></div>
+            <div class="unit-card" onclick="showUnit(2)"><div class="unit-num">2</div><div class="unit-icon">&#128264;</div><h3>Fonologia e AFI</h3><p>Fonemas, s&iacute;labas, encontros voc&aacute;licos e AFI com &aacute;udio interativo.</p></div>
+            <div class="unit-card" onclick="showUnit(3)"><div class="unit-num">3</div><div class="unit-icon">&#9998;</div><h3>Acentua&ccedil;&atilde;o Gr&aacute;fica</h3><p>Todas as regras do Novo Acordo com quizzes interativos.</p></div>
+            <div class="unit-card" onclick="showUnit(4)"><div class="unit-num">4</div><div class="unit-icon">&#128297;</div><h3>Morfologia</h3><p>Morfemas, deriva&ccedil;&atilde;o, composi&ccedil;&atilde;o e outros processos.</p></div>
             <div class="unit-card" onclick="showUnit(5)"><div class="unit-num">5</div><div class="unit-icon">&#128218;</div><h3>Classes de Palavras</h3><p>As dez classes gramaticais com an&aacute;lise morfol&oacute;gica pr&aacute;tica.</p></div>
-            <div class="unit-card" onclick="showUnit(6)"><div class="unit-num">6</div><div class="unit-icon">&#128203;</div><h3>Exerc&iacute;cios de Fixa&ccedil;&atilde;o</h3><p>50 quest&otilde;es com 3 n&iacute;veis de dificuldade cobrindo todos os m&oacute;dulos.</p></div>
+            <div class="unit-card" onclick="showUnit(6)"><div class="unit-num">6</div><div class="unit-icon">&#128203;</div><h3>Exerc&iacute;cios de Fixa&ccedil;&atilde;o</h3><p>50 quest&otilde;es com 3 n&iacute;veis cobrindo todos os m&oacute;dulos.</p></div>
         </div>
     </div>
 </div>
-<div id="unit1" class="unit-view" style="display:none">
-            <div class="unit-header">
+<div class="unit-view" id="unit1" style="display:none">
+<div class="unit-header">
                 <span class="unit-badge">UNIDADE 1</span>
                 <h2>L&iacute;ngua, Linguagem e Comunica&ccedil;&atilde;o</h2>
                 <p>Compreenda os conceitos fundamentais sobre l&iacute;ngua, linguagem, variedades lingu&iacute;sticas e os elementos da comunica&ccedil;&atilde;o humana.</p>
@@ -2345,8 +2359,9 @@
         </div>
 
         <!-- ==================== UNIT 2: Introdu&ccedil;&atilde;o &agrave; Fon&eacute;tica ==================== -->
-        <div class="unit-view" id="unit2" style="display:none">
-    <div class="unit-header">
+        <div
+<div class="unit-view" id="unit2" style="display:none">
+<div class="unit-header">
         <h2>Fonologia e Fonética</h2>
         <p>Explore o sistema sonoro do português: fonemas, letras, sílabas, encontros vocálicos e o Alfabeto Fonético Internacional.</p>
     </div>
@@ -2354,24 +2369,50 @@
     <!-- VIDEO INTRO -->
     <div class="content-section">
         <div class="section-icon">🎬</div>
-        <h3>Videoaulas</h3>
+        <h3>Videoaula de Introdução</h3>
         <div class="video-grid">
             <div class="video-item">
-                <h4>Fonética e Fonologia — Aula 1 [Prof. Noslen]</h4>
+                <h4>O que é Fonologia?</h4>
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/BOj2xCwIo8M?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/BOj2xCwIo8M?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen loading="lazy" loading="lazy"></iframe>
                 </div>
-                <p class="video-caption">Fonemas, vogais, semivogais, consoantes e a diferença entre letra e fonema.</p>
+                <p class="video-caption">Introdução à fonologia e aos sons da língua portuguesa.</p>
             </div>
             <div class="video-item">
-                <h4>Encontros Vocálicos e Consonantais [Prof. Noslen]</h4>
+                <h4>Fonemas do Português</h4>
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/Ucjv4LT8CSg?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/Ucjv4LT8CSg?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen></iframe>
                 </div>
-                <p class="video-caption">Ditongo, tritongo, hiato, encontros consonantais e dígrafos.</p>
+                <p class="video-caption">Classificação dos fonemas: vogais, semivogais e consoantes.</p>
             </div>
         </div>
     </div>
+
+    <!-- 1. FONÉTICA VS FONOLOGIA -->
+    <div class="content-section">
+        <div class="section-icon">🔬</div>
+        <h3>1. Fonética e Fonologia — Qual a Diferença?</h3>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Spectrogram_-iua-.png/320px-Spectrogram_-iua-.png"
+             alt="Espectrograma de sons da fala" class="unit-illustration">
+        <p class="illus-caption">Representação visual (espectrograma) dos sons da fala humana.</p>
+
+        <p>Embora frequentemente confundidas, <strong>Fonética</strong> e <strong>Fonologia</strong> estudam aspectos bem distintos dos sons da língua:</p>
+
+        <div class="table-wrapper">
+            <table class="data-table">
+                <thead><tr><th>Disciplina</th><th>O que estuda</th><th>Foco</th><th>Para concursos?</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Fonética</strong></td><td>Os sons em si: como são produzidos fisicamente pelo aparelho fonador</td><td>Articulação, acústica, percepção</td><td>⚠️ Menos cobrada</td></tr>
+                    <tr><td><strong>Fonologia</strong></td><td>A função dos sons na língua: como distinguem palavras e formam significados</td><td>Fonemas, sílabas, tonicidade</td><td>✅ Muito cobrada</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="info-box">
+            <strong>💡 Pestana explica:</strong>
+            "A Fonologia é a parte da gramática que estuda os sons da língua, sua capacidade de combinação e sua capacidade de distinção. Ela se ocupa da <em>função</em> dos sons dentro da língua." (Fernando Pestana)
+        </div>
     </div>
 
     <!-- 2. FONEMA E LETRA -->
@@ -2457,6 +2498,10 @@
     <div class="content-section">
         <div class="section-icon">🎯</div>
         <h3>4. Classificação dos Fonemas</h3>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Illu_head_neck.jpg/280px-Illu_head_neck.jpg"
+             alt="Aparelho fonador" class="unit-illustration" style="max-width:280px">
+        <p class="illus-caption">O aparelho fonador: o instrumento que produz os fonemas.</p>
 
         <div class="collapsible">
             <div class="collapsible-header">
@@ -2592,6 +2637,10 @@
 
         <p>O <strong>Alfabeto Fonético Internacional (AFI)</strong> — ou IPA, do inglês <em>International Phonetic Alphabet</em> — é um sistema padronizado de símbolos para representar os sons de qualquer língua do mundo. É utilizado em dicionários, estudos de linguística e ensino de idiomas.</p>
 
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/IPA_chart_2018.pdf/page1-800px-IPA_chart_2018.pdf.jpg"
+             alt="Tabela completa do IPA" class="unit-illustration">
+        <p class="illus-caption">Tabela completa do IPA (International Phonetic Association, 2018).</p>
+
         <div class="info-box">
             <strong>📌 Por que estudar IPA?</strong>
             O IPA nos permite representar com precisão os sons de qualquer língua. Para o português do Brasil, conhecer os símbolos fonéticos ajuda a compreender a diferença entre letras e sons, a pronúncia correta e a análise fonológica.
@@ -2606,11 +2655,11 @@
                 <thead><tr><th>Símbolo IPA</th><th>Letra(s)</th><th>Exemplo</th><th>Transcrição</th><th>Ouça</th></tr></thead>
                 <tbody>
                     <tr><td class="ipa-symbol">/a/</td><td>a</td><td><span class="ipa-example">c<span class="ipa-highlight">a</span>sa</span></td><td>[ˈkaza]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('a')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/e/</td><td>e (fechado)</td><td><span class="ipa-example">m<span class="ipa-highlight">ê</span>s</span></td><td>[mes]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('e')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/ɛ/</td><td>e (aberto)</td><td><span class="ipa-example">p<span class="ipa-highlight">é</span></span></td><td>[pɛ]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('ɛ')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/e/</td><td>e (fechado)</td><td><span class="ipa-example">m<span class="ipa-highlight">ê</span>s</span></td><td>[mes]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('ê')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/ɛ/</td><td>e (aberto)</td><td><span class="ipa-example">p<span class="ipa-highlight">é</span></span></td><td>[pɛ]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('é')">▶</button></td></tr>
                     <tr><td class="ipa-symbol">/i/</td><td>i, e (fim de palavra)</td><td><span class="ipa-example">v<span class="ipa-highlight">i</span>da</span></td><td>[ˈvida]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('i')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/o/</td><td>o (fechado)</td><td><span class="ipa-example">av<span class="ipa-highlight">ô</span></span></td><td>[aˈvo]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('o')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/ɔ/</td><td>o (aberto)</td><td><span class="ipa-example">p<span class="ipa-highlight">ó</span></span></td><td>[pɔ]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('ɔ')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/o/</td><td>o (fechado)</td><td><span class="ipa-example">av<span class="ipa-highlight">ô</span></span></td><td>[aˈvo]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('ô')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/ɔ/</td><td>o (aberto)</td><td><span class="ipa-example">p<span class="ipa-highlight">ó</span></span></td><td>[pɔ]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('ó')">▶</button></td></tr>
                     <tr><td class="ipa-symbol">/u/</td><td>u, o (fim de palavra)</td><td><span class="ipa-example">l<span class="ipa-highlight">u</span>a</span></td><td>[ˈlua]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('u')">▶</button></td></tr>
                 </tbody>
             </table>
@@ -2619,11 +2668,11 @@
             <table class="ipa-table">
                 <thead><tr><th>Símbolo IPA</th><th>Representação</th><th>Exemplo</th><th>Transcrição</th><th>Ouça</th></tr></thead>
                 <tbody>
-                    <tr><td class="ipa-symbol">/ã/</td><td>ã, an, am</td><td><span class="ipa-example">m<span class="ipa-highlight">ã</span>o</span></td><td>[mãw̃]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('ã')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/ẽ/</td><td>en, em, ên</td><td><span class="ipa-example">t<span class="ipa-highlight">em</span>po</span></td><td>[ˈtẽpu]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('ẽ')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/ĩ/</td><td>in, im</td><td><span class="ipa-example">s<span class="ipa-highlight">im</span></span></td><td>[sĩ]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('ĩ')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/õ/</td><td>on, om, ão</td><td><span class="ipa-example">b<span class="ipa-highlight">om</span></span></td><td>[bõ]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('õ')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/ũ/</td><td>un, um</td><td><span class="ipa-example">al<span class="ipa-highlight">um</span></span></td><td>[aˈlũ]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('ũ')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/ã/</td><td>ã, an, am</td><td><span class="ipa-example">m<span class="ipa-highlight">ã</span>o</span></td><td>[mãw̃]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('mão')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/ẽ/</td><td>en, em, ên</td><td><span class="ipa-example">t<span class="ipa-highlight">em</span>po</span></td><td>[ˈtẽpu]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('tempo')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/ĩ/</td><td>in, im</td><td><span class="ipa-example">s<span class="ipa-highlight">im</span></span></td><td>[sĩ]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('sim')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/õ/</td><td>on, om, ão</td><td><span class="ipa-example">b<span class="ipa-highlight">om</span></span></td><td>[bõ]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('bom')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/ũ/</td><td>un, um</td><td><span class="ipa-example">al<span class="ipa-highlight">um</span></span></td><td>[aˈlũ]</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('alum')">▶</button></td></tr>
                 </tbody>
             </table>
 
@@ -2632,27 +2681,27 @@
                 <thead><tr><th>Símbolo IPA</th><th>Letra(s)</th><th>Exemplo</th><th>Modo/Ponto</th><th>Ouça</th></tr></thead>
                 <tbody>
                     <tr class="ipa-group-header"><td colspan="5">Oclusivas (ar interrompido completamente)</td></tr>
-                    <tr><td class="ipa-symbol">/p/</td><td>p</td><td><span class="ipa-example"><span class="ipa-highlight">p</span>ai</span></td><td>Bilabial surda</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('p')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/b/</td><td>b</td><td><span class="ipa-example"><span class="ipa-highlight">b</span>ola</span></td><td>Bilabial sonora</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('b')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/t/</td><td>t</td><td><span class="ipa-example"><span class="ipa-highlight">t</span>ato</span></td><td>Alveolar surda</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('t')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/d/</td><td>d</td><td><span class="ipa-example"><span class="ipa-highlight">d</span>ado</span></td><td>Alveolar sonora</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('d')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/k/</td><td>c, qu, k</td><td><span class="ipa-example"><span class="ipa-highlight">c</span>asa</span></td><td>Velar surda</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('k')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/g/</td><td>g, gu</td><td><span class="ipa-example"><span class="ipa-highlight">g</span>ato</span></td><td>Velar sonora</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('g')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/p/</td><td>p</td><td><span class="ipa-example"><span class="ipa-highlight">p</span>ai</span></td><td>Bilabial surda</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('pê')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/b/</td><td>b</td><td><span class="ipa-example"><span class="ipa-highlight">b</span>ola</span></td><td>Bilabial sonora</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('bê')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/t/</td><td>t</td><td><span class="ipa-example"><span class="ipa-highlight">t</span>ato</span></td><td>Alveolar surda</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('tê')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/d/</td><td>d</td><td><span class="ipa-example"><span class="ipa-highlight">d</span>ado</span></td><td>Alveolar sonora</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('dê')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/k/</td><td>c, qu, k</td><td><span class="ipa-example"><span class="ipa-highlight">c</span>asa</span></td><td>Velar surda</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('cá')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/g/</td><td>g, gu</td><td><span class="ipa-example"><span class="ipa-highlight">g</span>ato</span></td><td>Velar sonora</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('gá')">▶</button></td></tr>
                     <tr class="ipa-group-header"><td colspan="5">Fricativas (ar passa com atrito)</td></tr>
-                    <tr><td class="ipa-symbol">/f/</td><td>f</td><td><span class="ipa-example"><span class="ipa-highlight">f</span>aca</span></td><td>Labiodental surda</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('f')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/v/</td><td>v</td><td><span class="ipa-example"><span class="ipa-highlight">v</span>aca</span></td><td>Labiodental sonora</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('v')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/s/</td><td>s, ss, c, ç, x, z</td><td><span class="ipa-example"><span class="ipa-highlight">s</span>aci</span></td><td>Alveolar surda</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('s')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/z/</td><td>z, s (entre vogais)</td><td><span class="ipa-example">ca<span class="ipa-highlight">z</span>a</span></td><td>Alveolar sonora</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('z')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/ʃ/</td><td>x, ch, s</td><td><span class="ipa-example">en<span class="ipa-highlight">x</span>ame</span></td><td>Palatal surda</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('ʃ')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/ʒ/</td><td>j, g (e,i)</td><td><span class="ipa-example"><span class="ipa-highlight">j</span>ogo</span></td><td>Palatal sonora</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('ʒ')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/f/</td><td>f</td><td><span class="ipa-example"><span class="ipa-highlight">f</span>aca</span></td><td>Labiodental surda</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('fê')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/v/</td><td>v</td><td><span class="ipa-example"><span class="ipa-highlight">v</span>aca</span></td><td>Labiodental sonora</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('vê')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/s/</td><td>s, ss, c, ç, x, z</td><td><span class="ipa-example"><span class="ipa-highlight">s</span>aci</span></td><td>Alveolar surda</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('sê')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/z/</td><td>z, s (entre vogais)</td><td><span class="ipa-example">ca<span class="ipa-highlight">z</span>a</span></td><td>Alveolar sonora</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('zê')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/ʃ/</td><td>x, ch, s</td><td><span class="ipa-example">en<span class="ipa-highlight">x</span>ame</span></td><td>Palatal surda</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('xê')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/ʒ/</td><td>j, g (e,i)</td><td><span class="ipa-example"><span class="ipa-highlight">j</span>ogo</span></td><td>Palatal sonora</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('jê')">▶</button></td></tr>
                     <tr class="ipa-group-header"><td colspan="5">Nasais, Laterais e Vibrantes</td></tr>
-                    <tr><td class="ipa-symbol">/m/</td><td>m</td><td><span class="ipa-example"><span class="ipa-highlight">m</span>ata</span></td><td>Bilabial nasal</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('m')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/n/</td><td>n</td><td><span class="ipa-example"><span class="ipa-highlight">n</span>ata</span></td><td>Alveolar nasal</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('n')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/ɲ/</td><td>nh</td><td><span class="ipa-example">ni<span class="ipa-highlight">nh</span>o</span></td><td>Palatal nasal</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('ɲ')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/l/</td><td>l</td><td><span class="ipa-example"><span class="ipa-highlight">l</span>ua</span></td><td>Lateral alveolar</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('l')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/ʎ/</td><td>lh</td><td><span class="ipa-example">fi<span class="ipa-highlight">lh</span>o</span></td><td>Lateral palatal</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('ʎ')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/r/</td><td>r (simples)</td><td><span class="ipa-example">ca<span class="ipa-highlight">r</span>o</span></td><td>Vibrante simples</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('r')">▶</button></td></tr>
-                    <tr><td class="ipa-symbol">/ʁ/</td><td>r, rr (forte)</td><td><span class="ipa-example"><span class="ipa-highlight">r</span>ato / car<span class="ipa-highlight">r</span>o</span></td><td>Velar/uvular</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('ʁ')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/m/</td><td>m</td><td><span class="ipa-example"><span class="ipa-highlight">m</span>ata</span></td><td>Bilabial nasal</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('mê')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/n/</td><td>n</td><td><span class="ipa-example"><span class="ipa-highlight">n</span>ata</span></td><td>Alveolar nasal</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('nê')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/ɲ/</td><td>nh</td><td><span class="ipa-example">ni<span class="ipa-highlight">nh</span>o</span></td><td>Palatal nasal</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('nhô')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/l/</td><td>l</td><td><span class="ipa-example"><span class="ipa-highlight">l</span>ua</span></td><td>Lateral alveolar</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('lê')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/ʎ/</td><td>lh</td><td><span class="ipa-example">fi<span class="ipa-highlight">lh</span>o</span></td><td>Lateral palatal</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('lhô')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/r/</td><td>r (simples)</td><td><span class="ipa-example">ca<span class="ipa-highlight">r</span>o</span></td><td>Vibrante simples</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('caro')">▶</button></td></tr>
+                    <tr><td class="ipa-symbol">/ʁ/</td><td>r, rr (forte)</td><td><span class="ipa-example"><span class="ipa-highlight">r</span>ato / car<span class="ipa-highlight">r</span>o</span></td><td>Velar/uvular</td><td><button class="btn-phoneme" onclick="pronouncePhoneme('rato')">▶</button></td></tr>
                 </tbody>
             </table>
         </div>
@@ -2713,7 +2762,7 @@
     </div>
 </div>
 <div class="unit-view" id="unit3" style="display:none">
-    <div class="unit-header">
+<div class="unit-header">
         <h2>Acentuação Gráfica</h2>
         <p>Domine as regras de acentuação do português — um dos temas mais cobrados em concursos públicos.</p>
     </div>
@@ -2721,24 +2770,48 @@
     <!-- VIDEO -->
     <div class="content-section">
         <div class="section-icon">🎬</div>
-        <h3>Videoaulas</h3>
+        <h3>Videoaula</h3>
         <div class="video-grid">
             <div class="video-item">
-                <h4>Acentuação — Ditongos Abertos [Prof. Noslen]</h4>
+                <h4>Acentuação Gráfica — Regras Gerais</h4>
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/CCiVp0Mmmwk?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/CCiVp0Mmmwk?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen loading="lazy" loading="lazy"></iframe>
                 </div>
-                <p class="video-caption">Regra dos ditongos abertos éi, éu, ói e as mudanças do Novo Acordo Ortográfico.</p>
+                <p class="video-caption">Visão geral das regras de acentuação gráfica em português.</p>
             </div>
             <div class="video-item">
-                <h4>Ortoépia e Prosódia [Prof. Noslen]</h4>
+                <h4>Novo Acordo Ortográfico — Acentuação</h4>
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/1OBYBRBEsKI?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/1OBYBRBEsKI?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen></iframe>
                 </div>
-                <p class="video-caption">Pronúncia correta das palavras e tonicidade na língua portuguesa.</p>
+                <p class="video-caption">Mudanças trazidas pelo Novo Acordo Ortográfico na acentuação.</p>
             </div>
         </div>
     </div>
+
+    <!-- SINAIS DIACRÍTICOS -->
+    <div class="content-section">
+        <div class="section-icon">✏️</div>
+        <h3>1. Sinais Diacríticos</h3>
+        <p>Os <strong>sinais diacríticos</strong> (também chamados de <em>notações léxicas</em>) são sinais gráficos que indicam a pronúncia correta das palavras:</p>
+        <div class="table-wrapper">
+            <table class="data-table">
+                <thead><tr><th>Sinal</th><th>Nome</th><th>Função</th><th>Exemplo</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>´</strong></td><td>Acento agudo</td><td>Marca sílaba tônica + timbre <strong>aberto</strong></td><td>história, pé, avó</td></tr>
+                    <tr><td><strong>^</strong></td><td>Acento circunflexo</td><td>Marca sílaba tônica + timbre <strong>fechado</strong></td><td>avô, mês, você</td></tr>
+                    <tr><td><strong>`</strong></td><td>Acento grave</td><td>Marca o fenômeno da <strong>crase</strong></td><td>à, às, àquele</td></tr>
+                    <tr><td><strong>~</strong></td><td>Til</td><td>Marca a <strong>nasalização</strong> de A e O</td><td>mão, irmã, limões</td></tr>
+                    <tr><td><strong>ç</strong></td><td>Cedilha</td><td>Indica que C tem som de SS</td><td>ação, açúcar, praça</td></tr>
+                    <tr><td><strong>-</strong></td><td>Hífen</td><td>União de vocábulos, ênclise, mesóclise, separação silábica</td><td>água-de-colônia, vê-lo</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="info-box warning">
+            <strong>⚠️ Acento prosódico ≠ Acento gráfico!</strong><br>
+            O <em>acento prosódico</em> (ou tônico) é a força com que se pronuncia a sílaba tônica — existe na <strong>fala</strong>.<br>
+            O <em>acento gráfico</em> existe apenas na <strong>escrita</strong>. Toda palavra tem acento prosódico, mas nem toda palavra recebe acento gráfico!
+        </div>
     </div>
 
     <!-- REGRA 1: MONOSSÍLABAS -->
@@ -2949,31 +3022,56 @@
     </div>
 </div>
 <div class="unit-view" id="unit4" style="display:none">
-    <div class="unit-header">
+<div class="unit-header">
         <h2>Morfologia — Estrutura e Formação de Palavras</h2>
         <p>Descubra como as palavras são construídas: morfemas, radical, afixos e os processos de formação de vocabulário em português.</p>
     </div>
 
     <div class="content-section">
         <div class="section-icon">🎬</div>
-        <h3>Videoaulas</h3>
+        <h3>Videoaula</h3>
         <div class="video-grid">
             <div class="video-item">
-                <h4>Morfologia para Concursos [Prof. Noslen]</h4>
+                <h4>Estrutura das Palavras</h4>
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/bWtHILzAMUk?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/bWtHILzAMUk?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen loading="lazy" loading="lazy"></iframe>
                 </div>
-                <p class="video-caption">Morfemas, radical, afixos, derivação e composição — tudo que cai em prova.</p>
+                <p class="video-caption">Morfemas, radical, afixos e desinências.</p>
             </div>
             <div class="video-item">
-                <h4>Formação de Palavras por Derivação [Prof. Noslen]</h4>
+                <h4>Formação de Palavras</h4>
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/kxRZt6apJZY?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/kxRZt6apJZY?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen></iframe>
                 </div>
-                <p class="video-caption">Derivação prefixal, sufixal, parassintética, regressiva e imprópria.</p>
+                <p class="video-caption">Derivação, composição e outros processos.</p>
             </div>
         </div>
     </div>
+
+    <!-- 1. MORFEMA -->
+    <div class="content-section">
+        <div class="section-icon">🔬</div>
+        <h3>1. O Morfema — A Menor Unidade Significativa</h3>
+
+        <p><strong>Morfema</strong> é a menor unidade dotada de significado que compõe uma palavra. Enquanto o <em>fonema</em> apenas distingue sons, o morfema <em>carrega significado</em>.</p>
+
+        <div class="info-box">
+            <strong>💡 Exemplo clássico:</strong><br>
+            <strong>in + constitu + cion + al + íssim + a + mente</strong> → 7 morfemas em uma única palavra!<br>
+            <strong>super + valor + iza + ção</strong> → 4 morfemas em "supervalorização".
+        </div>
+
+        <h4 style="margin:18px 0 10px; color:var(--primary)">Tipos de Morfema</h4>
+        <div class="table-wrapper">
+            <table class="data-table">
+                <thead><tr><th>Tipo</th><th>Função</th><th>Exemplos</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Lexical (Radical)</strong></td><td>Carrega o significado principal</td><td>cas- (casa, casarão), mar- (mar, marinha)</td></tr>
+                    <tr><td><strong>Derivacional</strong></td><td>Forma novas palavras (afixos: prefixo e sufixo)</td><td>in- (infeliz), -mente (felizmente)</td></tr>
+                    <tr><td><strong>Flexional</strong></td><td>Indica flexões (gênero, número, tempo, modo, pessoa)</td><td>-s (casas), -va (amava), -o/-a (garoto/garota)</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <!-- 2. ESTRUTURA DAS PALAVRAS -->
@@ -3188,6 +3286,10 @@
             <p>O elemento comum a todas é <strong>cas-</strong> → radical!</p>
         </div>
 
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Morphology_tree.svg/400px-Morphology_tree.svg.png"
+             alt="Árvore morfológica" class="unit-illustration" style="max-width:340px">
+        <p class="illus-caption">Representação em árvore da estrutura morfológica de uma palavra.</p>
+
         <div class="info-box warning">
             <strong>⚠️ Raiz ≠ Radical!</strong><br>
             A <em>raiz</em> é o elemento mais antigo, de origem latina/grega (análise diacrônica — estuda a história da língua).<br>
@@ -3246,7 +3348,7 @@
     </div>
 </div>
 <div class="unit-view" id="unit5" style="display:none">
-    <div class="unit-header">
+<div class="unit-header">
         <h2>Classes de Palavras e Análise Morfológica</h2>
         <p>Estude as dez classes gramaticais do português com profundidade e aprenda a realizar a análise morfológica completa de frases.</p>
     </div>
@@ -3256,21 +3358,35 @@
         <h3>Videoaulas</h3>
         <div class="video-grid">
             <div class="video-item">
-                <h4>Substantivo [Prof. Noslen]</h4>
+                <h4>Classes Gramaticais — Visão Geral</h4>
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/8iXiBgCnGv4?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/8iXiBgCnGv4?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen loading="lazy" loading="lazy"></iframe>
                 </div>
-                <p class="video-caption">Conceito e classificação do substantivo. 1ª aula da série Classes de Palavras.</p>
+                <p class="video-caption">As 10 classes de palavras do português.</p>
             </div>
             <div class="video-item">
-                <h4>Pronomes — Aula 1 [Prof. Noslen]</h4>
+                <h4>Análise Morfológica na Prática</h4>
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/PQRdgiIutrE?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/PQRdgiIutrE?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen></iframe>
                 </div>
-                <p class="video-caption">Pronomes pessoais do caso reto e oblíquo — conceito e emprego.</p>
+                <p class="video-caption">Como identificar e analisar cada classe em contexto.</p>
             </div>
         </div>
     </div>
+
+    <!-- ANÁLISE MORFOLÓGICA INTRODUÇÃO -->
+    <div class="content-section">
+        <div class="section-icon">🔍</div>
+        <h3>1. O Que é Análise Morfológica?</h3>
+        <p>Analisar morfologicamente uma palavra significa apontar sua <strong>classe gramatical</strong> no contexto em que ela aparece.</p>
+
+        <div class="sentence-analysis">
+            <div class="sentence-text">Caramba! Os meus cinco sensacionais professores vieram do RJ e palestraram aqui.</div>
+            <div class="word-tokens">
+                <div class="word-token">
+                    <span class="token-word" style="background:#fbe9e7;border-color:#f44336;color:#c62828">Caramba!</span>
+                    <span class="token-class" style="background:#f44336;border-color:#f44336;color:white">Interjeição</span>
+                </div>
                 <div class="word-token">
                     <span class="token-word" style="background:#f1f8e9;border-color:#8bc34a;color:#33691e">Os</span>
                     <span class="token-class" style="background:#8bc34a;border-color:#8bc34a;color:white">Artigo</span>
@@ -3606,11 +3722,11 @@
         <button class="btn-nav btn-next" onclick="showUnit(6)">Unidade 6: Exercícios &#9654;</button>
     </div>
 </div>
-<div id="unit6" class="unit-view" style="display:none">
-            <div class="content-area">
+<div class="unit-view" id="unit6" style="display:none">
+<div class="content-area">
                 <div class="section-header">
                     <h2>&#9997; Unidade 6: Exerc&iacute;cios de Fixa&ccedil;&atilde;o</h2>
-                    <p>50 quest&otilde;es interativas cobrindo todos os 5 m&oacute;dulos, com 3 n&iacute;veis de dificuldade</p>
+                    <p>50 quest&otilde;es interativas com feedback imediato para consolidar seu aprendizado</p>
                 </div>
 
                 <div class="practice-score">
@@ -4489,7 +4605,6 @@
                 <button class="nav-btn" onclick="showUnit(5)">&#9664; Unidade 5</button>
                 <button class="nav-btn primary" onclick="showView('welcome')">&#127968; Voltar ao In&iacute;cio</button>
             </div>
-        </div>
 
         <!-- ==================== EXAM CONTAINER ==================== -->
         <div id="examContainer" class="unit-view">
@@ -4515,119 +4630,30 @@
                 <button id="examNextBtn" onclick="ExamEngine.nextQuestion()">Proxima &#9654;</button>
             </div>
         </div>
-
-    </main>
-
-    <footer>
-        Portugu&ecirc;s 1 &bull; Semin&aacute;rio Presbiteriano da Amaz&ocirc;nia &bull; CG01 &bull; Ferramenta de Ensino Interativo
-    </footer>
+</div>
     <script src="js/api.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/courses.js"></script>
     <script src="js/exams.js"></script>
     <script>
-        const state={currentView:'welcome',completedUnits:new Set(),presenterMode:false};
-        function showView(id){
-            document.querySelectorAll('.unit-view').forEach(function(v){
-                v.classList.remove('active');
-                v.style.display='none';
-            });
-            var v=document.getElementById(id);
-            if(v){
-                v.classList.add('active');
-                v.style.display='block';
-                state.currentView=id;
-                updateNav();
-                window.scrollTo({top:0,behavior:'smooth'});
-            }
-        }
-        function showUnit(num){
-            if(typeof Auth!=='undefined'&&Auth.isLoggedIn&&Auth.accessConfig&&!Auth.isModuleAccessible(num)){
-                alert('Este módulo ainda não foi liberado pelo professor.');
-                return;
-            }
-            showView('unit'+num);
-        }
-        function updateNav(){document.querySelectorAll('.nav-item').forEach((item,i)=>{item.classList.remove('active');if(i===0&&state.currentView==='welcome')item.classList.add('active');else if(i>0&&state.currentView==='unit'+i)item.classList.add('active');if(i>0&&state.completedUnits.has(i))item.classList.add('completed');});const pt=document.getElementById('progressText');if(pt)pt.textContent=state.completedUnits.size+' de 6 unidades';}
-        const exerciseTracker={};
-        function checkAnswer(btn,isCorrect,groupId){const group=document.getElementById(groupId);if(!group||group.dataset.answered)return;group.dataset.answered='true';group.querySelectorAll('.option-btn').forEach(b=>{b.classList.add('disabled');if(b===btn)b.classList.add(isCorrect?'correct':'incorrect');if(!isCorrect&&b.getAttribute('onclick')&&b.getAttribute('onclick').includes('true'))b.classList.add('correct');});const fb=document.getElementById('fb-'+groupId);if(fb){fb.classList.add('show',isCorrect?'correct':'incorrect');fb.textContent=isCorrect?'Correto! Muito bem!':'Incorreto. Veja a resposta em verde.';}const eg=groupId.split('-')[0];if(!exerciseTracker[eg])exerciseTracker[eg]={total:0,correct:0,answered:0};if(!exerciseTracker[eg].total)exerciseTracker[eg].total=document.querySelectorAll('[id^="'+eg+'-"]').length;exerciseTracker[eg].answered++;if(isCorrect)exerciseTracker[eg].correct++;if(exerciseTracker[eg].answered>=exerciseTracker[eg].total)showScore(eg);}
-        function showScore(eg){const t=exerciseTracker[eg];const se=document.getElementById('score-'+eg);if(!se)return;const pct=Math.round((t.correct/t.total)*100);const ne=document.getElementById('score-'+eg+'-num');const te=document.getElementById('score-'+eg+'-text');if(ne)ne.textContent=t.correct+'/'+t.total;if(te)te.innerHTML=pct===100?'Perfeito!':pct>=70?'Ótimo!':pct>=50?'Bom esforço! Revise.':'Revise o conteúdo.';se.classList.add('show');const un=parseInt(eg.replace('ex',''));if(!isNaN(un)){state.completedUnits.add(un);updateNav();}}
-        function inlineQuiz(btn,qid,ok,exp){const c=btn.closest('.inline-quiz');if(!c||c.dataset.answered)return;c.dataset.answered='true';c.querySelectorAll('.quiz-btn').forEach(b=>{b.disabled=true;if(b===btn)b.classList.add(ok?'iq-correct':'iq-wrong');});const fb=document.getElementById(qid);if(fb){fb.textContent=exp;fb.classList.add('show',ok?'correct':'wrong');}}
-                // Mapa IPA → sílaba representativa em pt-BR
-        // Cada valor é [texto para TTS, velocidade, língua]
-        var PHONEME_MAP = {
-            // Vogais orais
-            'a':  ['a', 0.45, 'pt-BR'],
-            'e':  ['e', 0.45, 'pt-BR'],
-            'ɛ':  ['é', 0.45, 'pt-BR'],
-            'i':  ['i', 0.45, 'pt-BR'],
-            'o':  ['o', 0.45, 'pt-BR'],
-            'ɔ':  ['ó', 0.45, 'pt-BR'],
-            'u':  ['u', 0.45, 'pt-BR'],
-            // Vogais nasais — usar sílaba nasal simples
-            'ã':  ['ã',  0.45, 'pt-BR'],
-            'ẽ':  ['em', 0.45, 'pt-BR'],
-            'ĩ':  ['im', 0.45, 'pt-BR'],
-            'õ':  ['om', 0.45, 'pt-BR'],
-            'ũ':  ['um', 0.45, 'pt-BR'],
-            // Oclusivas — sílaba CV curta
-            'p':  ['pa', 0.5, 'pt-BR'],
-            'b':  ['ba', 0.5, 'pt-BR'],
-            't':  ['ta', 0.5, 'pt-BR'],
-            'd':  ['da', 0.5, 'pt-BR'],
-            'k':  ['ca', 0.5, 'pt-BR'],
-            'g':  ['ga', 0.5, 'pt-BR'],
-            // Fricativas
-            'f':  ['fa', 0.5, 'pt-BR'],
-            'v':  ['va', 0.5, 'pt-BR'],
-            's':  ['sa', 0.5, 'pt-BR'],
-            'z':  ['za', 0.5, 'pt-BR'],
-            'ʃ':  ['xa', 0.5, 'pt-BR'],
-            'ʒ':  ['ja', 0.5, 'pt-BR'],
-            // Nasais
-            'm':  ['ma', 0.5, 'pt-BR'],
-            'n':  ['na', 0.5, 'pt-BR'],
-            'ɲ':  ['nha',0.5, 'pt-BR'],
-            // Laterais
-            'l':  ['la', 0.5, 'pt-BR'],
-            'ʎ':  ['lha',0.5, 'pt-BR'],
-            // Vibrantes
-            'r':  ['ara',0.5, 'pt-BR'],
-            'ʁ':  ['ra', 0.5, 'pt-BR']
-        };
-
-        function pronouncePhoneme(ipa, lang) {
-            window.speechSynthesis.cancel();
-            var mapped = PHONEME_MAP[ipa];
-            var text, rate, language;
-            if (mapped) {
-                text = mapped[0];
-                rate = mapped[1];
-                language = mapped[2];
-            } else {
-                // fallback: usa o texto diretamente
-                text = ipa;
-                rate = 0.5;
-                language = lang || 'pt-BR';
-            }
-            var u = new SpeechSynthesisUtterance(text);
-            u.lang = language;
-            u.rate = rate;
-            u.pitch = 1.0;
-            window.speechSynthesis.speak(u);
-        }
-        document.addEventListener('click',function(e){const h=e.target.closest('.collapsible-header');if(h){h.classList.toggle('open');const c=h.nextElementSibling;if(c)c.classList.toggle('open');}});
-        function togglePresenterMode(){state.presenterMode=!state.presenterMode;document.body.classList.toggle('presenter-mode',state.presenterMode);const btn=document.querySelector('.btn-presenter');if(btn)btn.textContent=state.presenterMode?'&#128250; Modo Normal':'&#128250; Modo Apresentação';}
-        function checkPractice(btn,ok,qid){const c=document.getElementById(qid);if(!c)return;c.querySelectorAll('.pq-option').forEach(b=>{b.disabled=true;});if(ok){btn.classList.add('correct');c.classList.add('answered-correct');}else{btn.classList.add('wrong');c.classList.add('answered-wrong');c.querySelectorAll('.pq-option').forEach(b=>{if(b.getAttribute('onclick')&&b.getAttribute('onclick').indexOf('true')>-1)b.classList.add('correct');});}const fb=document.getElementById(qid+'-feedback');if(fb){fb.style.display='block';fb.className='pq-feedback '+(ok?'correct-fb':'wrong-fb');}updatePracticeScore();}
-        function updatePracticeScore(){const total=document.querySelectorAll('.practice-question').length;const correct=document.querySelectorAll('.practice-question.answered-correct').length;const ans=correct+document.querySelectorAll('.practice-question.answered-wrong').length;const se=document.getElementById('practiceScoreText');if(se)se.textContent=correct+' de '+ans+' corretas ('+total+' total)';const fe=document.getElementById('practiceScoreFinal');if(fe&&ans===total)fe.textContent='Você acertou '+correct+' de '+total+' ('+Math.round((correct/total)*100)+'%)';}
-        document.addEventListener('keydown',function(e){const n=parseInt(state.currentView.replace('unit',''));if(e.key==='ArrowRight'&&!isNaN(n)&&n<6)showUnit(n+1);else if(e.key==='ArrowLeft'){if(!isNaN(n)&&n>1)showUnit(n-1);else if(n===1)showView('welcome');}else if(e.key==='Home')showView('welcome');});
-        // Garante que apenas a unidade ativa seja visível na inicialização
-        document.querySelectorAll('.unit-view').forEach(function(v){
-            if(!v.classList.contains('active')) v.style.display='none';
-        });
+        var state={currentView:'welcome',completedUnits:new Set(),presenterMode:false};
+        function showView(id){document.querySelectorAll('.unit-view').forEach(function(v){v.classList.remove('active');});var el=document.getElementById(id);if(el){el.classList.add('active');state.currentView=id;updateNav();window.scrollTo({top:0,behavior:'smooth'});}}
+        function showUnit(num){if(typeof Auth!=='undefined'&&Auth.isLoggedIn&&Auth.accessConfig&&!Auth.isModuleAccessible(num)){alert('Este módulo ainda não foi liberado pelo professor.');return;}showView('unit'+num);}
+        function updateNav(){document.querySelectorAll('.nav-item').forEach(function(item,i){item.classList.remove('active');if(i===0&&state.currentView==='welcome')item.classList.add('active');else if(i>0&&state.currentView==='unit'+i)item.classList.add('active');if(i>0&&state.completedUnits.has(i))item.classList.add('completed');});var pt=document.getElementById('progressText');if(pt)pt.textContent=state.completedUnits.size+' de 6 unidades';}
+        var ET={};
+        function checkAnswer(btn,ok,gid){var g=document.getElementById(gid);if(!g||g.dataset.answered)return;g.dataset.answered='true';g.querySelectorAll('.option-btn').forEach(function(b){b.classList.add('disabled');if(b===btn)b.classList.add(ok?'correct':'incorrect');if(!ok&&b.getAttribute('onclick')&&b.getAttribute('onclick').includes('true'))b.classList.add('correct');});var fb=document.getElementById('fb-'+gid);if(fb){fb.classList.add('show',ok?'correct':'incorrect');fb.textContent=ok?'Correto! Muito bem!':'Incorreto. Veja a resposta em verde.';}var eg=gid.split('-')[0];if(!ET[eg])ET[eg]={total:0,correct:0,answered:0};if(!ET[eg].total)ET[eg].total=document.querySelectorAll('[id^="'+eg+'-"]').length;ET[eg].answered++;if(ok)ET[eg].correct++;if(ET[eg].answered>=ET[eg].total)showScore(eg);}
+        function showScore(eg){var t=ET[eg];var se=document.getElementById('score-'+eg);if(!se)return;var pct=Math.round((t.correct/t.total)*100);var ne=document.getElementById('score-'+eg+'-num');var te=document.getElementById('score-'+eg+'-text');if(ne)ne.textContent=t.correct+'/'+t.total;if(te)te.textContent=pct===100?'Perfeito!':pct>=70?'Ótimo!':pct>=50?'Bom esforço!':'Revise o conteúdo.';se.classList.add('show');var un=parseInt(eg.replace('ex',''));if(!isNaN(un)){state.completedUnits.add(un);updateNav();}}
+        function inlineQuiz(btn,qid,ok,exp){var c=btn.closest('.inline-quiz');if(!c||c.dataset.answered)return;c.dataset.answered='true';c.querySelectorAll('.quiz-btn').forEach(function(b){b.disabled=true;if(b===btn)b.classList.add(ok?'iq-correct':'iq-wrong');});var fb=document.getElementById(qid);if(fb){fb.textContent=exp;fb.classList.add('show',ok?'correct':'wrong');}}
+        var PM={'a':['a',.45],'e':['e',.45],'ɛ':['é',.45],'i':['i',.45],'o':['o',.45],'ɔ':['ó',.45],'u':['u',.45],'ã':['ã',.45],'ẽ':['em',.45],'ĩ':['im',.45],'õ':['om',.45],'ũ':['um',.45],'p':['pa',.5],'b':['ba',.5],'t':['ta',.5],'d':['da',.5],'k':['ca',.5],'g':['ga',.5],'f':['fa',.5],'v':['va',.5],'s':['sa',.5],'z':['za',.5],'ʃ':['xa',.5],'ʒ':['ja',.5],'m':['ma',.5],'n':['na',.5],'ɲ':['nha',.5],'l':['la',.5],'ʎ':['lha',.5],'r':['ara',.5],'ʁ':['ra',.5]};
+        function pronouncePhoneme(ipa){window.speechSynthesis.cancel();var m=PM[ipa];var u=new SpeechSynthesisUtterance(m?m[0]:ipa);u.lang='pt-BR';u.rate=m?m[1]:.5;u.pitch=1;window.speechSynthesis.speak(u);}
+        document.addEventListener('click',function(e){var h=e.target.closest('.collapsible-header');if(h){h.classList.toggle('open');var c=h.nextElementSibling;if(c)c.classList.toggle('open');}});
+        function togglePresenterMode(){state.presenterMode=!state.presenterMode;document.body.classList.toggle('presenter-mode',state.presenterMode);var btn=document.querySelector('.btn-presenter');if(btn)btn.textContent=state.presenterMode?'&#128250; Modo Normal':'&#128250; Modo Apresentação';}
+        function checkPractice(btn,ok,qid){var c=document.getElementById(qid);if(!c)return;c.querySelectorAll('.pq-option').forEach(function(b){b.disabled=true;});if(ok){btn.classList.add('correct');c.classList.add('answered-correct');}else{btn.classList.add('wrong');c.classList.add('answered-wrong');c.querySelectorAll('.pq-option').forEach(function(b){if(b.getAttribute('onclick')&&b.getAttribute('onclick').indexOf('true')>-1)b.classList.add('correct');});}var fb=document.getElementById(qid+'-feedback');if(fb){fb.style.display='block';fb.className='pq-feedback '+(ok?'correct-fb':'wrong-fb');}updatePracticeScore();}
+        function updatePracticeScore(){var tot=document.querySelectorAll('.practice-question').length;var cor=document.querySelectorAll('.practice-question.answered-correct').length;var ans=cor+document.querySelectorAll('.practice-question.answered-wrong').length;var se=document.getElementById('practiceScoreText');if(se)se.textContent=cor+' de '+ans+' corretas ('+tot+' total)';}
+        document.addEventListener('keydown',function(e){var n=parseInt(state.currentView.replace('unit',''));if(e.key==='ArrowRight'&&!isNaN(n)&&n<6)showUnit(n+1);else if(e.key==='ArrowLeft'){if(!isNaN(n)&&n>1)showUnit(n-1);else if(n===1)showView('welcome');}else if(e.key==='Home')showView('welcome');});
         updateNav();
         localStorage.setItem('cursoId','portugues1');
         if(typeof Courses!=='undefined')Courses.setCursoId('portugues1');
-        if(typeof Auth!=='undefined'&&API.BASE_URL!=='COLE_A_URL_DO_DEPLOY_AQUI'){Auth.init();}else{const ov=document.getElementById('authOverlay');if(ov)ov.style.display='none';}
+        if(typeof Auth!=='undefined'&&API.BASE_URL!=='COLE_A_URL_DO_DEPLOY_AQUI'){Auth.init();}else{var ov=document.getElementById('authOverlay');if(ov)ov.style.display='none';}
     </script>
 </body>
