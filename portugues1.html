@@ -309,12 +309,12 @@
 
         /* ===================== UNIT VIEWS ===================== */
         .unit-view {
-            display: none;
+            display: none !important;
             animation: fadeIn 0.4s ease;
         }
 
         .unit-view.active {
-            display: block;
+            display: block !important;
         }
 
         @keyframes fadeIn {
@@ -1027,8 +1027,8 @@
                 display: none;
             }
             .unit-view.active {
-                display: block;
-            }
+            display: block !important;
+        }
         }
 
         /* ===================== FOOTER ===================== */
@@ -2018,7 +2018,7 @@
         </div>
     </div>
 </div>
-<div id="unit1" class="unit-view">
+<div id="unit1" class="unit-view" style="display:none">
             <div class="unit-header">
                 <span class="unit-badge">UNIDADE 1</span>
                 <h2>L&iacute;ngua, Linguagem e Comunica&ccedil;&atilde;o</h2>
@@ -2345,7 +2345,7 @@
         </div>
 
         <!-- ==================== UNIT 2: Introdu&ccedil;&atilde;o &agrave; Fon&eacute;tica ==================== -->
-        <div class="unit-view" id="unit2">
+        <div class="unit-view" id="unit2" style="display:none">
     <div class="unit-header">
         <h2>Fonologia e Fonética</h2>
         <p>Explore o sistema sonoro do português: fonemas, letras, sílabas, encontros vocálicos e o Alfabeto Fonético Internacional.</p>
@@ -2712,7 +2712,7 @@
         <button class="btn-nav btn-next" onclick="showUnit(3)">Unidade 3: Acentuação &#9654;</button>
     </div>
 </div>
-<div class="unit-view" id="unit3">
+<div class="unit-view" id="unit3" style="display:none">
     <div class="unit-header">
         <h2>Acentuação Gráfica</h2>
         <p>Domine as regras de acentuação do português — um dos temas mais cobrados em concursos públicos.</p>
@@ -2948,7 +2948,7 @@
         <button class="btn-nav btn-next" onclick="showUnit(4)">Unidade 4: Morfologia &#9654;</button>
     </div>
 </div>
-<div class="unit-view" id="unit4">
+<div class="unit-view" id="unit4" style="display:none">
     <div class="unit-header">
         <h2>Morfologia — Estrutura e Formação de Palavras</h2>
         <p>Descubra como as palavras são construídas: morfemas, radical, afixos e os processos de formação de vocabulário em português.</p>
@@ -3245,7 +3245,7 @@
         <button class="btn-nav btn-next" onclick="showUnit(5)">Unidade 5: Classes de Palavras &#9654;</button>
     </div>
 </div>
-<div class="unit-view" id="unit5">
+<div class="unit-view" id="unit5" style="display:none">
     <div class="unit-header">
         <h2>Classes de Palavras e Análise Morfológica</h2>
         <p>Estude as dez classes gramaticais do português com profundidade e aprenda a realizar a análise morfológica completa de frases.</p>
@@ -3606,7 +3606,7 @@
         <button class="btn-nav btn-next" onclick="showUnit(6)">Unidade 6: Exercícios &#9654;</button>
     </div>
 </div>
-<div id="unit6" class="unit-view">
+<div id="unit6" class="unit-view" style="display:none">
             <div class="content-area">
                 <div class="section-header">
                     <h2>&#9997; Unidade 6: Exerc&iacute;cios de Fixa&ccedil;&atilde;o</h2>
