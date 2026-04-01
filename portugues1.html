@@ -286,6 +286,12 @@
             margin-bottom: 10px;
         }
 
+
+        .unit-card .unit-icon {
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+            display: block;
+        }
         .unit-card h3 {
             font-size: 0.95rem;
             color: var(--primary-dark);
@@ -2000,22 +2006,53 @@
     <main>
         <!-- ==================== WELCOME ==================== -->
 <div id="welcome" class="unit-view active">
-    <div class="welcome-content">
-        <div class="welcome-header">
-            <h2>&#128214; Bem-vindo ao Portugu&ecirc;s 1!</h2>
-            <p>Um curso interativo de gram&aacute;tica da l&iacute;ngua portuguesa, com fundamentos essenciais para a forma&ccedil;&atilde;o teol&oacute;gica e pastoral.</p>
-        </div>
-        <div class="welcome-quote">
+    <div class="welcome-screen">
+        <div class="welcome-icon">&#128214;</div>
+        <h2>Bem-vindo ao Portugu&ecirc;s 1!</h2>
+        <p class="subtitle">Um curso interativo de gram&aacute;tica da l&iacute;ngua portuguesa, com fundamentos essenciais para a forma&ccedil;&atilde;o teol&oacute;gica e pastoral.</p>
+
+        <div class="welcome-verse">
             <p>&ldquo;Toda a Escritura &eacute; divinamente inspirada, e proveitosa para ensinar, para redarguir, para corrigir, para instruir em justi&ccedil;a.&rdquo;</p>
-            <span>&mdash; 2 Tim&oacute;teo 3:16 (ARC)</span>
+            <small>&mdash; 2 Tim&oacute;teo 3:16 (ARC)</small>
         </div>
-        <div class="modules-grid">
-            <div class="module-card" onclick="showUnit(1)"><div class="module-num">1</div><div class="module-icon">&#128172;</div><h4>L&iacute;ngua, Linguagem e Comunica&ccedil;&atilde;o</h4><p>Conceitos fundamentais de l&iacute;ngua, variedade lingu&iacute;stica e comunica&ccedil;&atilde;o.</p></div>
-            <div class="module-card" onclick="showUnit(2)"><div class="module-num">2</div><div class="module-icon">&#128264;</div><h4>Fonologia e AFI</h4><p>Fonemas, s&iacute;labas, encontros voc&aacute;licos e Alfabeto Fon&eacute;tico Internacional com &aacute;udio interativo.</p></div>
-            <div class="module-card" onclick="showUnit(3)"><div class="module-num">3</div><div class="module-icon">&#9998;</div><h4>Acentua&ccedil;&atilde;o Gr&aacute;fica</h4><p>Todas as regras do Novo Acordo Ortogr&aacute;fico, com exemplos e quizzes interativos.</p></div>
-            <div class="module-card" onclick="showUnit(4)"><div class="module-num">4</div><div class="module-icon">&#128297;</div><h4>Morfologia</h4><p>Estrutura e forma&ccedil;&atilde;o de palavras: morfemas, deriva&ccedil;&atilde;o, composi&ccedil;&atilde;o e outros processos.</p></div>
-            <div class="module-card" onclick="showUnit(5)"><div class="module-num">5</div><div class="module-icon">&#128218;</div><h4>Classes de Palavras</h4><p>As dez classes gramaticais com an&aacute;lise morfol&oacute;gica pr&aacute;tica e exemplos contextuais.</p></div>
-            <div class="module-card" onclick="showUnit(6)"><div class="module-num">6</div><div class="module-icon">&#128203;</div><h4>Exerc&iacute;cios de Fixa&ccedil;&atilde;o</h4><p>50 quest&otilde;es interativas com 3 n&iacute;veis de dificuldade cobrindo todos os m&oacute;dulos.</p></div>
+
+        <div class="units-grid" style="grid-template-columns: repeat(3, 1fr); max-width: 820px;">
+            <div class="unit-card" onclick="showUnit(1)">
+                <div class="unit-num">1</div>
+                <div class="unit-icon">&#128172;</div>
+                <h3>L&iacute;ngua, Linguagem e Comunica&ccedil;&atilde;o</h3>
+                <p>Conceitos fundamentais de l&iacute;ngua, variedade lingu&iacute;stica e comunica&ccedil;&atilde;o.</p>
+            </div>
+            <div class="unit-card" onclick="showUnit(2)">
+                <div class="unit-num">2</div>
+                <div class="unit-icon">&#128264;</div>
+                <h3>Fonologia e AFI</h3>
+                <p>Fonemas, s&iacute;labas, encontros voc&aacute;licos e Alfabeto Fon&eacute;tico Internacional com &aacute;udio.</p>
+            </div>
+            <div class="unit-card" onclick="showUnit(3)">
+                <div class="unit-num">3</div>
+                <div class="unit-icon">&#9998;</div>
+                <h3>Acentua&ccedil;&atilde;o Gr&aacute;fica</h3>
+                <p>Todas as regras do Novo Acordo Ortogr&aacute;fico, com exemplos e quizzes interativos.</p>
+            </div>
+            <div class="unit-card" onclick="showUnit(4)">
+                <div class="unit-num">4</div>
+                <div class="unit-icon">&#128297;</div>
+                <h3>Morfologia</h3>
+                <p>Estrutura e forma&ccedil;&atilde;o de palavras: morfemas, deriva&ccedil;&atilde;o e composi&ccedil;&atilde;o.</p>
+            </div>
+            <div class="unit-card" onclick="showUnit(5)">
+                <div class="unit-num">5</div>
+                <div class="unit-icon">&#128218;</div>
+                <h3>Classes de Palavras</h3>
+                <p>As dez classes gramaticais com an&aacute;lise morfol&oacute;gica pr&aacute;tica.</p>
+            </div>
+            <div class="unit-card" onclick="showUnit(6)">
+                <div class="unit-num">6</div>
+                <div class="unit-icon">&#128203;</div>
+                <h3>Exerc&iacute;cios de Fixa&ccedil;&atilde;o</h3>
+                <p>50 quest&otilde;es com 3 n&iacute;veis de dificuldade cobrindo todos os m&oacute;dulos.</p>
+            </div>
         </div>
     </div>
 </div>
