@@ -1963,7 +1963,7 @@
                 <a id="adminLink" href="admin.html" style="display:none;align-items:center;background:rgba(212,160,23,0.9);color:#1a1a1a;padding:6px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;text-decoration:none;">Painel Admin</a>
                 <button id="logoutBtn" onclick="Auth.handleLogout()">Sair</button>
                 <div class="progress-badge">
-                    &#9733; <span id="progressText">0 de 5 unidades</span>
+                    &#9733; <span id="progressText">0 de 6 unidades</span>
                 </div>
                 <button class="btn-presenter" onclick="togglePresenterMode()">
                     &#128250; Modo Apresenta&ccedil;&atilde;o
@@ -1999,104 +1999,25 @@
 
     <main>
         <!-- ==================== WELCOME ==================== -->
-        <div id="welcome" class="unit-view active">
-            <div class="welcome-screen">
-                <div class="welcome-icon">&#128214;</div>
-                <h2>Bem-vindo ao Portugu&ecirc;s 1!</h2>
-                <p class="subtitle">
-                    Um curso interativo de gram&aacute;tica da l&iacute;ngua portuguesa, com fundamentos essenciais para a forma&ccedil;&atilde;o teol&oacute;gica e pastoral.
-                </p>
-                <div class="welcome-verse">
-                    &ldquo;Toda a Escritura &eacute; divinamente inspirada, e proveitosa para ensinar, para redarguir, para corrigir, para instruir em justi&ccedil;a.&rdquo;
-                    <span class="ref">&mdash; 2 Tim&oacute;teo 3:16 (ARC)</span>
-                </div>
-
-                <div class="units-grid">
-                    <div class="unit-card" onclick="showUnit(1)">
-                        <div class="card-icon">&#128172;</div>
-                        <div class="unit-num">1</div>
-                        <h3>L&iacute;ngua, Linguagem e Comunica&ccedil;&atilde;o</h3>
-                        <p>Conceitos fundamentais de l&iacute;ngua, variedade lingu&iacute;stica e comunica&ccedil;&atilde;o.</p>
-                    </div>
-                    <div class="unit-card" onclick="showUnit(2)">
-                        <div class="card-icon">&#128264;</div>
-                        <div class="unit-num">2</div>
-                        <h3>Introdu&ccedil;&atilde;o &agrave; Fon&eacute;tica</h3>
-                        <p>Os sons da l&iacute;ngua portuguesa: fonemas, classifica&ccedil;&atilde;o e produ&ccedil;&atilde;o.</p>
-                    </div>
-                    <div class="unit-card" onclick="showUnit(3)">
-                        <div class="card-icon">&#128297;</div>
-                        <div class="unit-num">3</div>
-                        <h3>Introdu&ccedil;&atilde;o &agrave; Morfologia</h3>
-                        <p>Estrutura e forma&ccedil;&atilde;o de palavras: morfemas, deriva&ccedil;&atilde;o e composi&ccedil;&atilde;o.</p>
-                    </div>
-                    <div class="unit-card" onclick="showUnit(4)">
-                        <div class="card-icon">&#128218;</div>
-                        <div class="unit-num">4</div>
-                        <h3>Classes de Palavras</h3>
-                        <p>Substantivo, adjetivo, verbo, adv&eacute;rbio, pronome, preposi&ccedil;&atilde;o e mais.</p>
-                    </div>
-                    <div class="unit-card" onclick="showUnit(5)">
-                        <div class="card-icon">&#9997;</div>
-                        <div class="unit-num">5</div>
-                        <h3>Exerc&iacute;cios de Fixa&ccedil;&atilde;o</h3>
-                        <p>50 quest&otilde;es interativas cobrindo todos os 5 m&oacute;dulos: L&iacute;ngua, Fonologia, Acentua&ccedil;&atilde;o, Morfologia e Classes de Palavras.</p>
-                    </div>
-                </div>
-            </div>
+<div id="welcome" class="unit-view active">
+    <div class="welcome-content">
+        <div class="welcome-header">
+            <h2>&#128214; Bem-vindo ao Portugu&ecirc;s 1!</h2>
+            <p>Um curso interativo de gram&aacute;tica da l&iacute;ngua portuguesa, com fundamentos essenciais para a forma&ccedil;&atilde;o teol&oacute;gica e pastoral.</p>
         </div>
-
-        <!-- ==================== UNIT 1: L&iacute;ngua, Linguagem e Comunica&ccedil;&atilde;o ==================== -->
-        <div <div id="welcome" class="unit-view active">
-id="welcome" class="unit-view active">
-            <div class="welcome-screen">
-                <div class="welcome-icon">&#128214;</div>
-                <h2>Bem-vindo ao Portugu&ecirc;s 1!</h2>
-                <p class="subtitle">
-                    Um curso interativo de gram&aacute;tica da l&iacute;ngua portuguesa, com fundamentos essenciais para a forma&ccedil;&atilde;o teol&oacute;gica e pastoral.
-                </p>
-                <div class="welcome-verse">
-                    &ldquo;Toda a Escritura &eacute; divinamente inspirada, e proveitosa para ensinar, para redarguir, para corrigir, para instruir em justi&ccedil;a.&rdquo;
-                    <span class="ref">&mdash; 2 Tim&oacute;teo 3:16 (ARC)</span>
-                </div>
-
-                <div class="units-grid">
-                    <div class="unit-card" onclick="showUnit(1)">
-                        <div class="card-icon">&#128172;</div>
-                        <div class="unit-num">1</div>
-                        <h3>L&iacute;ngua, Linguagem e Comunica&ccedil;&atilde;o</h3>
-                        <p>Conceitos fundamentais de l&iacute;ngua, variedade lingu&iacute;stica e comunica&ccedil;&atilde;o.</p>
-                    </div>
-                    <div class="unit-card" onclick="showUnit(2)">
-                        <div class="card-icon">&#128264;</div>
-                        <div class="unit-num">2</div>
-                        <h3>Introdu&ccedil;&atilde;o &agrave; Fon&eacute;tica</h3>
-                        <p>Os sons da l&iacute;ngua portuguesa: fonemas, classifica&ccedil;&atilde;o e produ&ccedil;&atilde;o.</p>
-                    </div>
-                    <div class="unit-card" onclick="showUnit(3)">
-                        <div class="card-icon">&#128297;</div>
-                        <div class="unit-num">3</div>
-                        <h3>Introdu&ccedil;&atilde;o &agrave; Morfologia</h3>
-                        <p>Estrutura e forma&ccedil;&atilde;o de palavras: morfemas, deriva&ccedil;&atilde;o e composi&ccedil;&atilde;o.</p>
-                    </div>
-                    <div class="unit-card" onclick="showUnit(4)">
-                        <div class="card-icon">&#128218;</div>
-                        <div class="unit-num">4</div>
-                        <h3>Classes de Palavras</h3>
-                        <p>Substantivo, adjetivo, verbo, adv&eacute;rbio, pronome, preposi&ccedil;&atilde;o e mais.</p>
-                    </div>
-                    <div class="unit-card" onclick="showUnit(5)">
-                        <div class="card-icon">&#9997;</div>
-                        <div class="unit-num">5</div>
-                        <h3>Exerc&iacute;cios de Fixa&ccedil;&atilde;o</h3>
-                        <p>50 quest&otilde;es interativas cobrindo todos os 5 m&oacute;dulos: L&iacute;ngua, Fonologia, Acentua&ccedil;&atilde;o, Morfologia e Classes de Palavras.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="welcome-quote">
+            <p>&ldquo;Toda a Escritura &eacute; divinamente inspirada, e proveitosa para ensinar, para redarguir, para corrigir, para instruir em justi&ccedil;a.&rdquo;</p>
+            <span>&mdash; 2 Tim&oacute;teo 3:16 (ARC)</span>
         </div>
-
-        <!-- ==================== UNIT 1: L&iacute;ngua, Linguagem e Comunica&ccedil;&atilde;o ==================== -->
-        <div 
+        <div class="modules-grid">
+            <div class="module-card" onclick="showUnit(1)"><div class="module-num">1</div><div class="module-icon">&#128172;</div><h4>L&iacute;ngua, Linguagem e Comunica&ccedil;&atilde;o</h4><p>Conceitos fundamentais de l&iacute;ngua, variedade lingu&iacute;stica e comunica&ccedil;&atilde;o.</p></div>
+            <div class="module-card" onclick="showUnit(2)"><div class="module-num">2</div><div class="module-icon">&#128264;</div><h4>Fonologia e AFI</h4><p>Fonemas, s&iacute;labas, encontros voc&aacute;licos e Alfabeto Fon&eacute;tico Internacional com &aacute;udio interativo.</p></div>
+            <div class="module-card" onclick="showUnit(3)"><div class="module-num">3</div><div class="module-icon">&#9998;</div><h4>Acentua&ccedil;&atilde;o Gr&aacute;fica</h4><p>Todas as regras do Novo Acordo Ortogr&aacute;fico, com exemplos e quizzes interativos.</p></div>
+            <div class="module-card" onclick="showUnit(4)"><div class="module-num">4</div><div class="module-icon">&#128297;</div><h4>Morfologia</h4><p>Estrutura e forma&ccedil;&atilde;o de palavras: morfemas, deriva&ccedil;&atilde;o, composi&ccedil;&atilde;o e outros processos.</p></div>
+            <div class="module-card" onclick="showUnit(5)"><div class="module-num">5</div><div class="module-icon">&#128218;</div><h4>Classes de Palavras</h4><p>As dez classes gramaticais com an&aacute;lise morfol&oacute;gica pr&aacute;tica e exemplos contextuais.</p></div>
+            <div class="module-card" onclick="showUnit(6)"><div class="module-num">6</div><div class="module-icon">&#128203;</div><h4>Exerc&iacute;cios de Fixa&ccedil;&atilde;o</h4><p>50 quest&otilde;es interativas com 3 n&iacute;veis de dificuldade cobrindo todos os m&oacute;dulos.</p></div>
+        </div>
+    </div>
 </div>
 id="unit1" class="unit-view">
             <div class="unit-header">
@@ -2425,7 +2346,7 @@ id="unit1" class="unit-view">
         </div>
 
         <!-- ==================== UNIT 2: Introdu&ccedil;&atilde;o &agrave; Fon&eacute;tica ==================== -->
-        <div 
+        <div
 <div class="unit-view" id="unit2">
     <div class="unit-header">
         <h2>Fonologia e Fonética</h2>
@@ -2827,7 +2748,6 @@ id="unit1" class="unit-view">
         <button class="btn-nav btn-next" onclick="showUnit(3)">Unidade 3: Acentuação &#9654;</button>
     </div>
 </div>
-
 <div class="unit-view" id="unit3">
     <div class="unit-header">
         <h2>Acentuação Gráfica</h2>
@@ -3088,814 +3008,712 @@ id="unit1" class="unit-view">
         <button class="btn-nav btn-next" onclick="showUnit(4)">Unidade 4: Morfologia &#9654;</button>
     </div>
 </div>
+<div class="unit-view" id="unit4">
+    <div class="unit-header">
+        <h2>Morfologia — Estrutura e Formação de Palavras</h2>
+        <p>Descubra como as palavras são construídas: morfemas, radical, afixos e os processos de formação de vocabulário em português.</p>
+    </div>
 
-id="unit4" class="unit-view">
-            <div class="unit-header">
-                <span class="unit-badge">UNIDADE 3</span>
-                <h2>Introdu&ccedil;&atilde;o &agrave; Morfologia</h2>
-                <p>Descubra como as palavras s&atilde;o constru&iacute;das internamente: morfemas, estrutura e processos de forma&ccedil;&atilde;o de palavras.</p>
+    <div class="content-section">
+        <div class="section-icon">🎬</div>
+        <h3>Videoaula</h3>
+        <div class="video-grid">
+            <div class="video-item">
+                <h4>Estrutura das Palavras</h4>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/9cMhRiXEAFM?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen></iframe>
+                </div>
+                <p class="video-caption">Morfemas, radical, afixos e desinências.</p>
             </div>
-
-            <!-- Se&ccedil;&atilde;o 3.1 -->
-            <div class="section">
-                <h3><span class="icon">&#128300;</span> O Morfema</h3>
-
-                <p>
-                    O <strong>morfema</strong> &eacute; a <em>menor unidade significativa</em> da l&iacute;ngua. Enquanto o fonema distingue significados, o morfema <em>carrega</em> significado.
-                </p>
-
-                <div class="example-box">
-                    <div class="label">Exemplo</div>
-                    <div class="en">Palavra: &ldquo;infelizmente&rdquo;</div>
-                    <div class="pt">Morfemas: <span class="highlight-red">in</span> (nega&ccedil;&atilde;o) + <span class="highlight-green">feliz</span> (radical) + <span class="highlight-blue">mente</span> (modo) = 3 morfemas</div>
+            <div class="video-item">
+                <h4>Formação de Palavras</h4>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/IgFsGPBfHh4?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen></iframe>
                 </div>
-
-                <div class="example-box theological">
-                    <div class="label">Contexto Teol&oacute;gico</div>
-                    <div class="en">Palavra: &ldquo;predestina&ccedil;&atilde;o&rdquo;</div>
-                    <div class="pt"><span class="highlight-red">pre</span> (antes) + <span class="highlight-green">destin</span> (destino) + <span class="highlight">a&ccedil;&atilde;o</span> (processo) &mdash; A pr&oacute;pria estrutura da palavra revela seu significado teol&oacute;gico: &ldquo;a&ccedil;&atilde;o de destinar antes&rdquo;.</div>
-                </div>
+                <p class="video-caption">Derivação, composição e outros processos.</p>
             </div>
+        </div>
+    </div>
 
-            <!-- Se&ccedil;&atilde;o 3.2 -->
-            <div class="section">
-                <h3><span class="icon">&#128296;</span> Classifica&ccedil;&atilde;o dos Morfemas</h3>
+    <!-- 1. MORFEMA -->
+    <div class="content-section">
+        <div class="section-icon">🔬</div>
+        <h3>1. O Morfema — A Menor Unidade Significativa</h3>
 
-                <table class="word-table">
-                    <tr>
-                        <th>Tipo</th>
-                        <th>Defini&ccedil;&atilde;o</th>
-                        <th>Exemplo</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Radical (Raiz)</strong></td>
-                        <td>N&uacute;cleo significativo da palavra; elemento irredut&iacute;vel</td>
-                        <td><span class="highlight-green">livr</span>- (em livro, livraria, livreiro)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Prefixo</strong></td>
-                        <td>Afixo colocado antes do radical</td>
-                        <td><span class="highlight-red">re</span>fazer, <span class="highlight-red">des</span>fazer, <span class="highlight-red">in</span>feliz</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Sufixo</strong></td>
-                        <td>Afixo colocado ap&oacute;s o radical</td>
-                        <td>feliz<span class="highlight-blue">mente</span>, preg<span class="highlight-blue">ador</span>, sant<span class="highlight-blue">idade</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Desin&ecirc;ncia nominal</strong></td>
-                        <td>Indica g&ecirc;nero e n&uacute;mero</td>
-                        <td>menin<strong>o</strong>/<strong>a</strong> (g&ecirc;nero); livro<strong>s</strong> (n&uacute;mero)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Desin&ecirc;ncia verbal</strong></td>
-                        <td>Indica modo, tempo, pessoa e n&uacute;mero</td>
-                        <td>cant<strong>&aacute;vamos</strong> (pret. imp., 1&ordf; p. pl.)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Vogal tem&aacute;tica</strong></td>
-                        <td>Liga o radical &agrave; desin&ecirc;ncia; indica a conjuga&ccedil;&atilde;o</td>
-                        <td>cant<strong>a</strong>r (1&ordf;), vend<strong>e</strong>r (2&ordf;), part<strong>i</strong>r (3&ordf;)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Tema</strong></td>
-                        <td>Radical + vogal tem&aacute;tica</td>
-                        <td>canta-, vende-, parti-</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Vogal de liga&ccedil;&atilde;o</strong></td>
-                        <td>Facilita a pron&uacute;ncia entre morfemas</td>
-                        <td>gas<strong>o</strong>metro, cafe<strong>i</strong>cultura</td>
-                    </tr>
-                </table>
+        <p><strong>Morfema</strong> é a menor unidade dotada de significado que compõe uma palavra. Enquanto o <em>fonema</em> apenas distingue sons, o morfema <em>carrega significado</em>.</p>
 
-                <div class="tip-box">
-                    <span class="tip-icon">&#128161;</span>
-                    <p>Para encontrar o radical de uma palavra, reuna palavras da mesma fam&iacute;lia e identifique a parte comum: <strong>pregador, pregação, pregar</strong> &rarr; radical: <strong>preg</strong>-.</p>
+        <div class="info-box">
+            <strong>💡 Exemplo clássico:</strong><br>
+            <strong>in + constitu + cion + al + íssim + a + mente</strong> → 7 morfemas em uma única palavra!<br>
+            <strong>super + valor + iza + ção</strong> → 4 morfemas em "supervalorização".
+        </div>
+
+        <h4 style="margin:18px 0 10px; color:var(--primary)">Tipos de Morfema</h4>
+        <div class="table-wrapper">
+            <table class="data-table">
+                <thead><tr><th>Tipo</th><th>Função</th><th>Exemplos</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Lexical (Radical)</strong></td><td>Carrega o significado principal</td><td>cas- (casa, casarão), mar- (mar, marinha)</td></tr>
+                    <tr><td><strong>Derivacional</strong></td><td>Forma novas palavras (afixos: prefixo e sufixo)</td><td>in- (infeliz), -mente (felizmente)</td></tr>
+                    <tr><td><strong>Flexional</strong></td><td>Indica flexões (gênero, número, tempo, modo, pessoa)</td><td>-s (casas), -va (amava), -o/-a (garoto/garota)</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 2. ESTRUTURA DAS PALAVRAS -->
+    <div class="content-section">
+        <div class="section-icon">🧩</div>
+        <h3>2. Estrutura das Palavras — Os Constituintes</h3>
+
+        <div class="morpheme-legend">
+            <div class="leg-item"><div class="leg-dot" style="background:#4caf50;border:2px solid #4caf50"></div> Radical</div>
+            <div class="leg-item"><div class="leg-dot" style="background:#2196f3;border:2px solid #2196f3"></div> Prefixo</div>
+            <div class="leg-item"><div class="leg-dot" style="background:#ff9800;border:2px solid #ff9800"></div> Sufixo</div>
+            <div class="leg-item"><div class="leg-dot" style="background:#e91e63;border:2px solid #e91e63"></div> Desinência</div>
+            <div class="leg-item"><div class="leg-dot" style="background:#9c27b0;border:2px solid #9c27b0"></div> Vogal Temática</div>
+        </div>
+
+        <!-- infelizmente -->
+        <p style="margin:16px 0 6px; font-weight:600">Análise de <em>"infelizmente"</em>:</p>
+        <div class="morpheme-box">
+            <div class="morpheme prefixo">in-<span class="morpheme-label">prefixo</span></div>
+            <span style="font-size:1.3rem; margin:0 4px">+</span>
+            <div class="morpheme radical">feliz<span class="morpheme-label">radical</span></div>
+            <span style="font-size:1.3rem; margin:0 4px">+</span>
+            <div class="morpheme sufixo">-mente<span class="morpheme-label">sufixo</span></div>
+        </div>
+
+        <!-- infelizes -->
+        <p style="margin:16px 0 6px; font-weight:600">Análise de <em>"infelizes"</em>:</p>
+        <div class="morpheme-box">
+            <div class="morpheme prefixo">in-<span class="morpheme-label">prefixo</span></div>
+            <span style="font-size:1.3rem; margin:0 4px">+</span>
+            <div class="morpheme radical">feliz<span class="morpheme-label">radical</span></div>
+            <span style="font-size:1.3rem; margin:0 4px">+</span>
+            <div class="morpheme desinencia">-es<span class="morpheme-label">desин. número</span></div>
+        </div>
+
+        <!-- amavam -->
+        <p style="margin:16px 0 6px; font-weight:600">Análise de <em>"amavam"</em> (3ª p. plural do imperfeito):</p>
+        <div class="morpheme-box">
+            <div class="morpheme radical">am-<span class="morpheme-label">radical</span></div>
+            <span style="font-size:1.3rem; margin:0 4px">+</span>
+            <div class="morpheme vogtem">-a-<span class="morpheme-label">vogal temática</span></div>
+            <span style="font-size:1.3rem; margin:0 4px">+</span>
+            <div class="morpheme desinencia">-va-<span class="morpheme-label">desин. temporal</span></div>
+            <span style="font-size:1.3rem; margin:0 4px">+</span>
+            <div class="morpheme desinencia">-m<span class="morpheme-label">desин. pessoal</span></div>
+        </div>
+
+        <div class="collapsible" style="margin-top:20px">
+            <div class="collapsible-header"><span>📌 Vogal Temática e Desinências — detalhe</span><span class="collapsible-arrow">▼</span></div>
+            <div class="collapsible-content">
+                <div class="table-wrapper">
+                    <table class="data-table" style="font-size:0.88rem">
+                        <thead><tr><th>Elemento</th><th>Função</th><th>Exemplos</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Vogal Temática (VT)</strong></td><td>Liga radical ao restante da palavra. Nas conjugações, indica a classe verbal (1ª, 2ª, 3ª conj.)</td><td>am<strong>a</strong>r (VT=a), com<strong>e</strong>r (VT=e), part<strong>i</strong>r (VT=i)</td></tr>
+                            <tr><td><strong>Desinência Nominal</strong></td><td>Indica gênero (DN gênero) e número (DN número)</td><td>menin<strong>o</strong>/menin<strong>a</strong> (gênero); cas<strong>a</strong>/cas<strong>as</strong> (número)</td></tr>
+                            <tr><td><strong>Desinência Verbal</strong></td><td>Indica modo/tempo (DMT) e número/pessoa (DNP)</td><td>am<strong>a</strong>+<strong>va</strong>+<strong>mos</strong> (imperf.+1ªpess.pl.)</td></tr>
+                            <tr><td><strong>Vogal/Consoante de Ligação</strong></td><td>Facilitam a pronúncia, sem valor semântico</td><td>gas<strong>ô</strong>metro, cafe<strong>t</strong>eira, infeli<strong>z</strong>mente</td></tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-
-            <!-- Se&ccedil;&atilde;o 3.3 -->
-            <div class="section">
-                <h3><span class="icon">&#128270;</span> Estrutura das Palavras</h3>
-
-                <p>Analisar a estrutura de uma palavra significa decompor seus morfemas:</p>
-
-                <div class="example-box">
-                    <div class="label">An&aacute;lise Morf&eacute;mica</div>
-                    <div class="en">Palavra: &ldquo;evangelizadores&rdquo;</div>
-                    <div class="pt">
-                        <span class="highlight-green">evangel</span> (radical) +
-                        <span class="highlight">iz</span> (sufixo verbalizador) +
-                        <span class="highlight-blue">ador</span> (sufixo &mdash; agente) +
-                        <strong>es</strong> (desin&ecirc;ncia de plural)
-                    </div>
-                </div>
-
-                <div class="example-box">
-                    <div class="label">An&aacute;lise</div>
-                    <div class="en">Palavra: &ldquo;incrédulos&rdquo;</div>
-                    <div class="pt">
-                        <span class="highlight-red">in</span> (prefixo &mdash; nega&ccedil;&atilde;o) +
-                        <span class="highlight-green">cr&eacute;d</span> (radical &mdash; crer) +
-                        <span class="highlight-blue">ulo</span> (sufixo) +
-                        <strong>s</strong> (desin&ecirc;ncia de plural)
-                    </div>
-                </div>
-            </div>
-
-            <!-- Se&ccedil;&atilde;o 3.4 -->
-            <div class="section">
-                <h3><span class="icon">&#128736;</span> Forma&ccedil;&atilde;o de Palavras</h3>
-
-                <h4>1. Deriva&ccedil;&atilde;o</h4>
-                <p>Processo que forma palavras a partir de um radical, usando afixos:</p>
-
-                <table class="word-table">
-                    <tr>
-                        <th>Tipo</th>
-                        <th>Descri&ccedil;&atilde;o</th>
-                        <th>Exemplo</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Prefixal</strong></td>
-                        <td>Acr&eacute;scimo de prefixo</td>
-                        <td><span class="highlight-red">des</span>crer, <span class="highlight-red">re</span>nascer</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Sufixal</strong></td>
-                        <td>Acr&eacute;scimo de sufixo</td>
-                        <td>pecad<span class="highlight-blue">or</span>, sant<span class="highlight-blue">ifica&ccedil;&atilde;o</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Prefixal e Sufixal</strong></td>
-                        <td>Prefixo + Sufixo (podem ser retirados separadamente)</td>
-                        <td><span class="highlight-red">in</span>feliz<span class="highlight-blue">mente</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Parassint&eacute;tica</strong></td>
-                        <td>Prefixo + Sufixo simult&acirc;neos (n&atilde;o podem ser separados)</td>
-                        <td><span class="highlight-red">em</span>pobr<span class="highlight-blue">ecer</span>, <span class="highlight-red">a</span>noitec<span class="highlight-blue">er</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Regressiva</strong></td>
-                        <td>Redu&ccedil;&atilde;o da palavra original</td>
-                        <td>atacar &rarr; ataque; chorar &rarr; choro</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Impr&oacute;pria</strong></td>
-                        <td>Mudan&ccedil;a de classe gramatical sem alterar a forma</td>
-                        <td>&ldquo;O <strong>saber</strong>&rdquo; (verbo usado como substantivo)</td>
-                    </tr>
-                </table>
-
-                <h4>2. Composi&ccedil;&atilde;o</h4>
-                <p>Processo que forma palavras pela uni&atilde;o de dois ou mais radicais:</p>
-
-                <table class="word-table">
-                    <tr>
-                        <th>Tipo</th>
-                        <th>Descri&ccedil;&atilde;o</th>
-                        <th>Exemplo</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Justaposi&ccedil;&atilde;o</strong></td>
-                        <td>Radicais se unem sem altera&ccedil;&atilde;o</td>
-                        <td>passa + tempo = passatempo; gira + sol = girassol</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Aglutina&ccedil;&atilde;o</strong></td>
-                        <td>Radicais se unem com altera&ccedil;&atilde;o fon&eacute;tica</td>
-                        <td>plano + alto = planalto; &aacute;gua + ardente = aguardente</td>
-                    </tr>
-                </table>
-
-                <h4>3. Outros Processos</h4>
-                <ul>
-                    <li><strong>Hibridismo:</strong> uni&atilde;o de radicais de l&iacute;nguas diferentes. Ex.: &ldquo;automóvel&rdquo; (grego + latim).</li>
-                    <li><strong>Abrevia&ccedil;&atilde;o:</strong> redu&ccedil;&atilde;o da palavra. Ex.: fotografia &rarr; foto; telefone &rarr; fone.</li>
-                    <li><strong>Onomatopeia:</strong> palavra que imita sons. Ex.: tique-taque, miar, zunir.</li>
-                    <li><strong>Sigla:</strong> letras iniciais. Ex.: IPB (Igreja Presbiteriana do Brasil), APMT (Ag&ecirc;ncia Presbiteriana de Miss&otilde;es Transculturais).</li>
-                </ul>
-            </div>
-
-            <!-- V&iacute;deos -->
-            <div class="video-section">
-                <h3><span class="icon">&#127909;</span> V&iacute;deos Complementares</h3>
-                <div class="video-grid">
-                    <div class="video-item">
-                        <h4>Estrutura e Forma&ccedil;&atilde;o das Palavras</h4>
-                        <div class="video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/bWtHILzAMUk?cc_load_policy=1" allowfullscreen></iframe>
-                        </div>
-                        <p class="video-caption">Professor Noslen &mdash; Estrutura das Palavras</p>
-                    </div>
-                    <div class="video-item">
-                        <h4>Processos de Forma&ccedil;&atilde;o de Palavras</h4>
-                        <div class="video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/_kzTFOzf-_w?cc_load_policy=1" allowfullscreen></iframe>
-                        </div>
-                        <p class="video-caption">Professor Noslen &mdash; Forma&ccedil;&atilde;o de Palavras</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Exerc&iacute;cios Unidade 3 -->
-            <div class="exercise-area">
-                <h3>&#9998; Exerc&iacute;cios &mdash; Unidade 3</h3>
-
-                <div class="exercise-item" id="ex3-q1">
-                    <div class="question"><span class="q-num">1</span> O morfema &eacute; definido como:</div>
-                    <div class="options-group">
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q1')">a) A menor unidade sonora da l&iacute;ngua</button>
-                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex3-q1')">b) A menor unidade significativa da l&iacute;ngua</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q1')">c) A s&iacute;laba t&ocirc;nica de uma palavra</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q1')">d) O radical de qualquer palavra</button>
-                    </div>
-                    <div class="feedback-msg" id="fb-ex3-q1"></div>
-                </div>
-
-                <div class="exercise-item" id="ex3-q2">
-                    <div class="question"><span class="q-num">2</span> Na palavra &ldquo;infelizmente&rdquo;, o morfema &ldquo;in-&rdquo; &eacute;:</div>
-                    <div class="options-group">
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q2')">a) Sufixo</button>
-                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex3-q2')">b) Prefixo</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q2')">c) Radical</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q2')">d) Desin&ecirc;ncia</button>
-                    </div>
-                    <div class="feedback-msg" id="fb-ex3-q2"></div>
-                </div>
-
-                <div class="exercise-item" id="ex3-q3">
-                    <div class="question"><span class="q-num">3</span> &ldquo;Empobrecer&rdquo; &eacute; um exemplo de:</div>
-                    <div class="options-group">
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q3')">a) Deriva&ccedil;&atilde;o prefixal</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q3')">b) Composi&ccedil;&atilde;o por aglutina&ccedil;&atilde;o</button>
-                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex3-q3')">c) Deriva&ccedil;&atilde;o parassint&eacute;tica</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q3')">d) Deriva&ccedil;&atilde;o regressiva</button>
-                    </div>
-                    <div class="feedback-msg" id="fb-ex3-q3"></div>
-                </div>
-
-                <div class="exercise-item" id="ex3-q4">
-                    <div class="question"><span class="q-num">4</span> &ldquo;Planalto&rdquo; (plano + alto) &eacute; formado por:</div>
-                    <div class="options-group">
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q4')">a) Composi&ccedil;&atilde;o por justaposi&ccedil;&atilde;o</button>
-                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex3-q4')">b) Composi&ccedil;&atilde;o por aglutina&ccedil;&atilde;o</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q4')">c) Deriva&ccedil;&atilde;o prefixal e sufixal</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q4')">d) Derivação impr&oacute;pria</button>
-                    </div>
-                    <div class="feedback-msg" id="fb-ex3-q4"></div>
-                </div>
-
-                <div class="exercise-item" id="ex3-q5">
-                    <div class="question"><span class="q-num">5</span> A vogal tem&aacute;tica da palavra &ldquo;vender&rdquo; &eacute;:</div>
-                    <div class="options-group">
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q5')">a) -a- (1&ordf; conjuga&ccedil;&atilde;o)</button>
-                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex3-q5')">b) -e- (2&ordf; conjuga&ccedil;&atilde;o)</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q5')">c) -i- (3&ordf; conjuga&ccedil;&atilde;o)</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex3-q5')">d) N&atilde;o possui vogal tem&aacute;tica</button>
-                    </div>
-                    <div class="feedback-msg" id="fb-ex3-q5"></div>
-                </div>
-
-                <div class="score-display" id="score-ex3">
-                    <div class="score-number" id="score-ex3-num"></div>
-                    <div class="score-text" id="score-ex3-text"></div>
-                </div>
-            </div>
-
-            <div class="motivation-box">
-                <div class="emoji">&#128297;</div>
-                <p>&ldquo;Assim como um edif&iacute;cio &eacute; constru&iacute;do tijolo a tijolo, cada palavra &eacute; constru&iacute;da morfema a morfema. Conhecer essa constru&ccedil;&atilde;o &eacute; dominar a l&iacute;ngua!&rdquo;</p>
-            </div>
-
-            <div class="exam-btn-area" id="exam-area-3">
-                <button class="btn-exam" onclick="ExamEngine.start(3)" disabled>Prova bloqueada</button>
-                <p class="exam-status" id="exam-status-3"></p>
-            </div>
-
-            <div class="nav-buttons">
-                <button class="nav-btn" onclick="showUnit(3)">&#9664; Unidade 3</button>
-                <button class="nav-btn primary" onclick="showUnit(5)">Unidade 5: Classes de Palavras &#9654;</button>
             </div>
         </div>
 
-        <!-- ==================== UNIT 4: Classes de Palavras ==================== -->
-        <div 
-id="unit5" class="unit-view">
-            <div class="unit-header">
-                <span class="unit-badge">UNIDADE 4</span>
-                <h2>Classes de Palavras</h2>
-                <p>Estude as dez classes gramaticais da l&iacute;ngua portuguesa: substantivo, adjetivo, verbo, adv&eacute;rbio, pronome, preposi&ccedil;&atilde;o, conjun&ccedil;&atilde;o, interjeição, numeral e artigo.</p>
+        <div class="inline-quiz">
+            <div class="quiz-label">🧠 Teste rápido</div>
+            <div class="quiz-question">Em <strong>"deslealdade"</strong>, qual é o radical?</div>
+            <div class="quiz-options">
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-1',false,'Não! "des-" é prefixo (nega). Tente identificar o núcleo semântico da palavra.')">a) des-</button>
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-1',false,'Quase! "leal" está no coração da palavra, mas o radical morfológico é ainda mais preciso.')">b) leal</button>
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-1',true,'Correto! O radical é "leal" (de "lealdade"). Temos: des + leal + dade → prefixo + radical + sufixo.')">c) leal (com des- = prefixo e -dade = sufixo)</button>
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-1',false,'Não! "-dade" é sufixo que forma substantivos abstratos.')">d) -dade</button>
             </div>
+            <div class="quiz-feedback" id="iq4-1"></div>
+        </div>
+    </div>
 
-            <!-- Se&ccedil;&atilde;o 4.1: Substantivo -->
-            <div class="section">
-                <h3><span class="icon">&#128196;</span> Substantivo</h3>
+    <!-- 3. PROCESSO DE FORMAÇÃO -->
+    <div class="content-section">
+        <div class="section-icon">⚙️</div>
+        <h3>3. Processo de Formação de Palavras</h3>
 
-                <p>
-                    O <strong>substantivo</strong> &eacute; a palavra que d&aacute; nome aos seres, objetos, sentimentos, lugares, a&ccedil;&otilde;es e fen&ocirc;menos.
-                </p>
+        <div class="info-box success">
+            <strong>✅ O que mais cai em prova (Pestana):</strong> Derivação e Composição são os dois processos mais cobrados em concursos. Foque especialmente neles!
+        </div>
 
-                <h4>Classifica&ccedil;&atilde;o dos Substantivos</h4>
+        <!-- DERIVAÇÃO -->
+        <div class="collapsible" style="margin-top:14px">
+            <div class="collapsible-header"><span>📌 Derivação — 5 tipos</span><span class="collapsible-arrow">▼</span></div>
+            <div class="collapsible-content">
+                <p><strong>Derivação</strong> é o processo de formar novas palavras pelo acréscimo de prefixos e/ou sufixos a uma palavra já existente.</p>
 
-                <table class="word-table">
-                    <tr>
-                        <th>Classifica&ccedil;&atilde;o</th>
-                        <th>Defini&ccedil;&atilde;o</th>
-                        <th>Exemplos</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Comum / Pr&oacute;prio</strong></td>
-                        <td>Gen&eacute;rico / Espec&iacute;fico</td>
-                        <td>cidade / Jerusal&eacute;m; profeta / Isa&iacute;as</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Concreto / Abstrato</strong></td>
-                        <td>Exist&ecirc;ncia pr&oacute;pria / Depende de outro ser</td>
-                        <td>altar, p&atilde;o / f&eacute;, esperan&ccedil;a, amor</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Simples / Composto</strong></td>
-                        <td>Um radical / Mais de um radical</td>
-                        <td>chuva / guarda-chuva; flor / couve-flor</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Primitivo / Derivado</strong></td>
-                        <td>Origem / Formado de outro</td>
-                        <td>pedra / pedreiro; terra / terreno</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Coletivo</strong></td>
-                        <td>Designa um conjunto</td>
-                        <td>rebanho (ovelhas), congrega&ccedil;&atilde;o (fi&eacute;is)</td>
-                    </tr>
-                </table>
-
-                <h4>Flex&atilde;o dos Substantivos</h4>
-                <ul>
-                    <li><strong>G&ecirc;nero:</strong> masculino / feminino &mdash; profeta / profetisa; di&aacute;cono / diaconisa</li>
-                    <li><strong>N&uacute;mero:</strong> singular / plural &mdash; disc&iacute;pulo / disc&iacute;pulos; cru<strong>z</strong> / cru<strong>zes</strong></li>
-                    <li><strong>Grau:</strong> aumentativo / diminutivo &mdash; homem / homenzzarr&atilde;o; livro / livrinho</li>
-                </ul>
-
-                <div class="example-box theological">
-                    <div class="label">Contexto B&iacute;blico</div>
-                    <div class="en">&ldquo;Ora, a <strong>f&eacute;</strong> &eacute; o firme <strong>fundamento</strong> das coisas que se esperam e a <strong>prova</strong> das coisas que se n&atilde;o v&ecirc;em.&rdquo; (Hb 11:1)</div>
-                    <div class="pt">Neste vers&iacute;culo, &ldquo;f&eacute;&rdquo;, &ldquo;fundamento&rdquo; e &ldquo;prova&rdquo; s&atilde;o substantivos abstratos &mdash; nomeiam conceitos que n&atilde;o existem por si s&oacute;.</div>
-                </div>
-            </div>
-
-            <!-- Se&ccedil;&atilde;o 4.2: Adjetivo -->
-            <div class="section">
-                <h3><span class="icon">&#127912;</span> Adjetivo</h3>
-
-                <p>
-                    O <strong>adjetivo</strong> &eacute; a palavra que caracteriza, qualifica ou modifica o substantivo, atribuindo-lhe propriedades.
-                </p>
-
-                <h4>Locu&ccedil;&atilde;o Adjetiva</h4>
-                <p>Express&atilde;o (preposi&ccedil;&atilde;o + substantivo) com valor de adjetivo:</p>
-                <ul>
-                    <li>amor <strong>de m&atilde;e</strong> = amor <strong>materno</strong></li>
-                    <li>luz <strong>do sol</strong> = luz <strong>solar</strong></li>
-                    <li>gra&ccedil;a <strong>de Deus</strong> = gra&ccedil;a <strong>divina</strong></li>
-                </ul>
-
-                <h4>Graus do Adjetivo</h4>
-
-                <table class="word-table">
-                    <tr>
-                        <th>Grau</th>
-                        <th>Tipo</th>
-                        <th>Exemplo</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Comparativo</strong></td>
-                        <td>Superioridade</td>
-                        <td>Davi foi <strong>mais</strong> corajoso <strong>do que</strong> Saul.</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Igualdade</td>
-                        <td>Pedro era <strong>t&atilde;o</strong> dedicado <strong>quanto</strong> Jo&atilde;o.</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Inferioridade</td>
-                        <td>O servo foi <strong>menos</strong> fiel <strong>do que</strong> o senhor esperava.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Superlativo</strong></td>
-                        <td>Absoluto sint&eacute;tico</td>
-                        <td>Deus &eacute; <strong>sant&iacute;ssimo</strong>.</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Absoluto anal&iacute;tico</td>
-                        <td>Deus &eacute; <strong>muito santo</strong>.</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Relativo</td>
-                        <td>Jesus &eacute; <strong>o mais</strong> justo <strong>de todos</strong>.</td>
-                    </tr>
-                </table>
-            </div>
-
-            <!-- Se&ccedil;&atilde;o 4.3: Verbo -->
-            <div class="section">
-                <h3><span class="icon">&#9889;</span> Verbo</h3>
-
-                <p>
-                    O <strong>verbo</strong> &eacute; a palavra que exprime a&ccedil;&atilde;o, estado, mudan&ccedil;a de estado ou fen&ocirc;meno da natureza, situando-os no tempo.
-                </p>
-
-                <h4>As Tr&ecirc;s Conjuga&ccedil;&otilde;es</h4>
-                <table class="word-table">
-                    <tr>
-                        <th>Conjuga&ccedil;&atilde;o</th>
-                        <th>Termina&ccedil;&atilde;o</th>
-                        <th>Exemplos</th>
-                    </tr>
-                    <tr>
-                        <td>1&ordf;</td>
-                        <td>-AR</td>
-                        <td>amar, pregar, orar, louvar</td>
-                    </tr>
-                    <tr>
-                        <td>2&ordf;</td>
-                        <td>-ER</td>
-                        <td>crer, viver, conhecer, escrever</td>
-                    </tr>
-                    <tr>
-                        <td>3&ordf;</td>
-                        <td>-IR</td>
-                        <td>servir, partir, assistir, seguir</td>
-                    </tr>
-                </table>
-
-                <h4>Modos Verbais</h4>
-                <ul>
-                    <li><strong>Indicativo:</strong> expressa certeza, fato real. &mdash; &ldquo;Deus <strong>criou</strong> os c&eacute;us e a terra.&rdquo;</li>
-                    <li><strong>Subjuntivo:</strong> expressa d&uacute;vida, desejo, possibilidade. &mdash; &ldquo;Que Deus <strong>aben&ccedil;oe</strong> esta fam&iacute;lia.&rdquo;</li>
-                    <li><strong>Imperativo:</strong> expressa ordem, pedido. &mdash; &ldquo;<strong>Ide</strong> e fazei disc&iacute;pulos de todas as na&ccedil;&otilde;es.&rdquo;</li>
-                </ul>
-
-                <h4>Tempos do Indicativo</h4>
-
-                <table class="word-table">
-                    <tr>
-                        <th>Tempo</th>
-                        <th>Uso</th>
-                        <th>Exemplo (verbo PREGAR)</th>
-                    </tr>
-                    <tr>
-                        <td>Presente</td>
-                        <td>Fato atual ou habitual</td>
-                        <td>Eu <strong>prego</strong> todo domingo.</td>
-                    </tr>
-                    <tr>
-                        <td>Pret&eacute;rito Perfeito</td>
-                        <td>A&ccedil;&atilde;o conclu&iacute;da no passado</td>
-                        <td>Eu <strong>preguei</strong> ontem.</td>
-                    </tr>
-                    <tr>
-                        <td>Pret&eacute;rito Imperfeito</td>
-                        <td>A&ccedil;&atilde;o cont&iacute;nua ou habitual no passado</td>
-                        <td>Eu <strong>pregava</strong> todas as noites.</td>
-                    </tr>
-                    <tr>
-                        <td>Pret&eacute;rito Mais-que-perfeito</td>
-                        <td>A&ccedil;&atilde;o anterior a outra no passado</td>
-                        <td>Eu j&aacute; <strong>pregara</strong> quando ele chegou.</td>
-                    </tr>
-                    <tr>
-                        <td>Futuro do Presente</td>
-                        <td>A&ccedil;&atilde;o futura certa</td>
-                        <td>Eu <strong>pregarei</strong> amanh&atilde;.</td>
-                    </tr>
-                    <tr>
-                        <td>Futuro do Pret&eacute;rito</td>
-                        <td>A&ccedil;&atilde;o futura condicionada</td>
-                        <td>Eu <strong>pregaria</strong> se me convidassem.</td>
-                    </tr>
-                </table>
-
-                <h4>Formas Nominais</h4>
-                <ul>
-                    <li><strong>Infinitivo:</strong> pregar, crer, servir (forma &ldquo;nome&rdquo; do verbo)</li>
-                    <li><strong>Ger&uacute;ndio:</strong> pregando, crendo, servindo (a&ccedil;&atilde;o em andamento)</li>
-                    <li><strong>Partic&iacute;pio:</strong> pregado, crido, servido (a&ccedil;&atilde;o conclu&iacute;da)</li>
-                </ul>
-            </div>
-
-            <!-- Se&ccedil;&atilde;o 4.4: Adv&eacute;rbio -->
-            <div class="section">
-                <h3><span class="icon">&#128204;</span> Adv&eacute;rbio</h3>
-
-                <p>
-                    O <strong>adv&eacute;rbio</strong> modifica o verbo, o adjetivo ou outro adv&eacute;rbio, expressando circunst&acirc;ncias.
-                </p>
-
-                <table class="word-table">
-                    <tr>
-                        <th>Classifica&ccedil;&atilde;o</th>
-                        <th>Indica</th>
-                        <th>Exemplos</th>
-                    </tr>
-                    <tr>
-                        <td>Modo</td>
-                        <td>Como a a&ccedil;&atilde;o acontece</td>
-                        <td>bem, mal, assim, fielmente, humildemente</td>
-                    </tr>
-                    <tr>
-                        <td>Tempo</td>
-                        <td>Quando</td>
-                        <td>hoje, ontem, sempre, nunca, j&aacute;, ainda</td>
-                    </tr>
-                    <tr>
-                        <td>Lugar</td>
-                        <td>Onde</td>
-                        <td>aqui, l&aacute;, dentro, fora, perto, longe</td>
-                    </tr>
-                    <tr>
-                        <td>Intensidade</td>
-                        <td>Quanto, em que grau</td>
-                        <td>muito, pouco, bastante, demais, t&atilde;o</td>
-                    </tr>
-                    <tr>
-                        <td>Nega&ccedil;&atilde;o</td>
-                        <td>Nega a a&ccedil;&atilde;o</td>
-                        <td>n&atilde;o, nunca, jamais, tampouco</td>
-                    </tr>
-                    <tr>
-                        <td>Afirma&ccedil;&atilde;o</td>
-                        <td>Confirma</td>
-                        <td>sim, certamente, realmente, deveras</td>
-                    </tr>
-                    <tr>
-                        <td>D&uacute;vida</td>
-                        <td>Incerteza</td>
-                        <td>talvez, possivelmente, quiçá, provavelmente</td>
-                    </tr>
-                </table>
-
-                <div class="example-box theological">
-                    <div class="label">Exemplo B&iacute;blico</div>
-                    <div class="en">&ldquo;Jesus chorou.&rdquo; (Jo 11:35) &mdash; O menor vers&iacute;culo da B&iacute;blia. Sem adv&eacute;rbio.</div>
-                    <div class="pt">&ldquo;Jesus chorou <strong>amargamente</strong>.&rdquo; &mdash; Com o adv&eacute;rbio de modo, o sentido se aprofunda.</div>
-                </div>
-            </div>
-
-            <!-- Se&ccedil;&atilde;o 4.5: Pronome -->
-            <div class="section">
-                <h3><span class="icon">&#128100;</span> Pronome</h3>
-
-                <p>
-                    O <strong>pronome</strong> &eacute; a palavra que substitui ou acompanha o substantivo, indicando pessoa, posse, posi&ccedil;&atilde;o ou refer&ecirc;ncia.
-                </p>
-
-                <table class="word-table">
-                    <tr>
-                        <th>Tipo</th>
-                        <th>Fun&ccedil;&atilde;o</th>
-                        <th>Exemplos</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Pessoal</strong></td>
-                        <td>Indica as pessoas do discurso</td>
-                        <td>eu, tu, ele/ela, n&oacute;s, v&oacute;s, eles/elas; me, te, se, nos, vos</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Possessivo</strong></td>
-                        <td>Indica posse</td>
-                        <td>meu, teu, seu, nosso, vosso</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Demonstrativo</strong></td>
-                        <td>Indica posi&ccedil;&atilde;o no espa&ccedil;o/tempo</td>
-                        <td>este (perto), esse (m&eacute;dio), aquele (longe)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Relativo</strong></td>
-                        <td>Retoma um termo anterior</td>
-                        <td>que, o qual, cujo, onde, quem</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Indefinido</strong></td>
-                        <td>Refere-se de modo vago</td>
-                        <td>algu&eacute;m, ningu&eacute;m, tudo, nada, cada, outro</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Interrogativo</strong></td>
-                        <td>Usado em perguntas</td>
-                        <td>que, quem, qual, quanto</td>
-                    </tr>
-                </table>
-
-                <div class="example-box theological">
-                    <div class="label">Exemplo B&iacute;blico</div>
-                    <div class="en">&ldquo;<strong>Eu</strong> sou o caminho, a verdade e a vida; ningu&eacute;m vem ao Pai sen&atilde;o por <strong>mim</strong>.&rdquo; (Jo 14:6)</div>
-                    <div class="pt">&ldquo;Eu&rdquo; &eacute; pronome pessoal do caso reto (sujeito); &ldquo;mim&rdquo; &eacute; pronome pessoal do caso obl&iacute;quo (complemento).</div>
-                </div>
-            </div>
-
-            <!-- Se&ccedil;&atilde;o 4.6: Coloca&ccedil;&atilde;o Pronominal -->
-            <div class="section">
-                <h3><span class="icon">&#128260;</span> Coloca&ccedil;&atilde;o Pronominal</h3>
-
-                <p>
-                    A <strong>coloca&ccedil;&atilde;o pronominal</strong> diz respeito &agrave; posi&ccedil;&atilde;o dos pronomes obl&iacute;quos &aacute;tonos (me, te, se, lhe, o, a, nos, vos) em rela&ccedil;&atilde;o ao verbo.
-                </p>
-
-                <table class="word-table">
-                    <tr>
-                        <th>Tipo</th>
-                        <th>Posi&ccedil;&atilde;o</th>
-                        <th>Exemplo</th>
-                        <th>Regra</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Pr&oacute;clise</strong></td>
-                        <td>Pronome <strong>antes</strong> do verbo</td>
-                        <td>N&atilde;o <strong>me</strong> abandones.</td>
-                        <td>Usada com palavras negativas, pronomes relativos, conjun&ccedil;&otilde;es subordinativas, adv&eacute;rbios</td>
-                    </tr>
-                    <tr>
-                        <td><strong>&Ecirc;nclise</strong></td>
-                        <td>Pronome <strong>depois</strong> do verbo</td>
-                        <td>Entregue<strong>-me</strong> o livro.</td>
-                        <td>Usada no in&iacute;cio de ora&ccedil;&otilde;es, com verbos no imperativo afirmativo, infinitivo, ger&uacute;ndio</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Mes&oacute;clise</strong></td>
-                        <td>Pronome <strong>no meio</strong> do verbo</td>
-                        <td>Dir<strong>-lhe-</strong>ei a verdade.</td>
-                        <td>Usada apenas com futuro do presente e futuro do pret&eacute;rito</td>
-                    </tr>
-                </table>
-
-                <div class="example-box warning">
-                    <div class="label">Erro Comum</div>
-                    <div class="en">Incorreto: &ldquo;<strong>Me</strong> entrega o hinário.&rdquo; (Pronome no in&iacute;cio da frase)</div>
-                    <div class="pt">Correto: &ldquo;Entrega<strong>-me</strong> o hin&aacute;rio.&rdquo; (Ênclise no imperativo afirmativo)</div>
-                </div>
-            </div>
-
-            <!-- Se&ccedil;&atilde;o 4.7: Preposi&ccedil;&atilde;o, Conjun&ccedil;&atilde;o, Interjeição -->
-            <div class="section">
-                <h3><span class="icon">&#128279;</span> Preposi&ccedil;&atilde;o, Conjun&ccedil;&atilde;o e Interjeição</h3>
-
-                <h4>Preposi&ccedil;&atilde;o</h4>
-                <p>
-                    Palavra invariável que liga dois termos, estabelecendo rela&ccedil;&atilde;o entre eles.
-                </p>
-                <p><strong>Preposições essenciais:</strong> a, ante, ap&oacute;s, at&eacute;, com, contra, de, desde, em, entre, para, perante, por, sem, sob, sobre, tr&aacute;s.</p>
-
-                <div class="example-box theological">
-                    <div class="label">Exemplo</div>
-                    <div class="en">&ldquo;Caminharei <strong>com</strong> Deus <strong>por</strong> todos os dias <strong>da</strong> minha vida.&rdquo;</div>
-                    <div class="pt">&ldquo;Com&rdquo;, &ldquo;por&rdquo; e &ldquo;da&rdquo; (de + a) s&atilde;o preposições que ligam os termos da ora&ccedil;&atilde;o.</div>
+                <div class="table-wrapper">
+                    <table class="data-table" style="font-size:0.88rem">
+                        <thead><tr><th>Tipo</th><th>Como ocorre</th><th>Exemplos</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Prefixal</strong></td>
+                                <td>Acréscimo de prefixo à palavra primitiva</td>
+                                <td>super + homem → <em>super-homem</em><br>in + feliz → <em>infeliz</em><br>des + fazer → <em>desfazer</em></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sufixal</strong></td>
+                                <td>Acréscimo de sufixo à palavra primitiva</td>
+                                <td>feliz + -mente → <em>felizmente</em><br>pedra + -eiro → <em>pedreiro</em><br>amor + -oso → <em>amoroso</em></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Parassintética (Circunfixação)</strong></td>
+                                <td>Acréscimo <em>simultâneo</em> de prefixo e sufixo.<br><strong>Teste:</strong> retire um dos afixos — se a palavra deixar de existir, é parassíntese!</td>
+                                <td><em>en</em>velhe<em>cer</em> (en+velho+ecer)<br><em>a</em>terr<em>ar</em> (a+terra+ar)<br><em>em</em>barc<em>ar</em> (em+barco+ar)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Regressiva (Regressão)</strong></td>
+                                <td>A palavra é obtida por <em>redução</em> de outra (geralmente do verbo, formando substantivo)</td>
+                                <td>cortar → <em>corte</em><br>combater → <em>combate</em><br>ajudar → <em>ajuda</em><br>atacar → <em>ataque</em></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Imprópria (Conversão)</strong></td>
+                                <td>A palavra muda de classe gramatical sem mudar a forma</td>
+                                <td><em>o jantar</em> (subst.) ← <em>jantar</em> (verbo)<br><em>o pesar</em> (subst.) ← <em>pesar</em> (verbo)<br><em>falar</em> bonito (adj.) ← bonito (adj.)</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
-                <h4>Conjun&ccedil;&atilde;o</h4>
-                <p>
-                    Palavra invariável que liga ora&ccedil;&otilde;es ou termos de mesma fun&ccedil;&atilde;o:
-                </p>
-                <ul>
-                    <li><strong>Coordenativas:</strong> e, mas, ou, nem, porém, todavia, portanto, logo</li>
-                    <li><strong>Subordinativas:</strong> que, se, quando, embora, porque, conforme, enquanto</li>
-                </ul>
-
-                <div class="example-box">
-                    <div class="label">Exemplo</div>
-                    <div class="en">&ldquo;Deus &eacute; justo <strong>e</strong> misericordioso.&rdquo; (aditiva)</div>
-                    <div class="pt">&ldquo;Orai <strong>para que</strong> n&atilde;o entreis em tenta&ccedil;&atilde;o.&rdquo; (subordinativa final)</div>
+                <div class="info-box warning">
+                    <strong>⚠️ Atenção — Parassíntese:</strong> A derivação parassintética ocorre quando prefixo e sufixo são acrescentados <em>ao mesmo tempo</em>. Retire o prefixo: <em>envelhecer</em> → "velhecer"? Não existe! Retire o sufixo: "envelho"? Não existe! Logo: parassíntese confirmada.
                 </div>
-
-                <h4>Interjeição</h4>
-                <p>
-                    Palavra ou express&atilde;o que traduz emo&ccedil;&otilde;es ou rea&ccedil;&otilde;es:
-                </p>
-                <ul>
-                    <li><strong>Alegria:</strong> Aleluia! Viva!</li>
-                    <li><strong>Dor:</strong> Ai! Ui!</li>
-                    <li><strong>Espanto:</strong> Oh! Caramba!</li>
-                    <li><strong>Invoca&ccedil;&atilde;o:</strong> &Oacute; Deus! Senhor!</li>
-                </ul>
-            </div>
-
-            <!-- V&iacute;deos -->
-            <div class="video-section">
-                <h3><span class="icon">&#127909;</span> V&iacute;deos Complementares</h3>
-                <div class="video-grid">
-                    <div class="video-item">
-                        <h4>Classes de Palavras (Panorama)</h4>
-                        <div class="video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/8iXiBgCnGv4?cc_load_policy=1" allowfullscreen></iframe>
-                        </div>
-                        <p class="video-caption">Professor Noslen &mdash; Classes de Palavras</p>
-                    </div>
-                    <div class="video-item">
-                        <h4>Coloca&ccedil;&atilde;o Pronominal</h4>
-                        <div class="video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/vvXx5hGeqKA?cc_load_policy=1" allowfullscreen></iframe>
-                        </div>
-                        <p class="video-caption">Professor Noslen &mdash; Coloca&ccedil;&atilde;o Pronominal</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Exerc&iacute;cios Unidade 4 -->
-            <div class="exercise-area">
-                <h3>&#9998; Exerc&iacute;cios &mdash; Unidade 4</h3>
-
-                <div class="exercise-item" id="ex4-q1">
-                    <div class="question"><span class="q-num">1</span> Na frase &ldquo;A <strong>f&eacute;</strong> move montanhas&rdquo;, o substantivo &ldquo;f&eacute;&rdquo; &eacute; classificado como:</div>
-                    <div class="options-group">
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q1')">a) Concreto, comum, simples</button>
-                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex4-q1')">b) Abstrato, comum, simples</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q1')">c) Pr&oacute;prio, abstrato, derivado</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q1')">d) Concreto, pr&oacute;prio, primitivo</button>
-                    </div>
-                    <div class="feedback-msg" id="fb-ex4-q1"></div>
-                </div>
-
-                <div class="exercise-item" id="ex4-q2">
-                    <div class="question"><span class="q-num">2</span> Em &ldquo;Deus &eacute; sant&iacute;ssimo&rdquo;, o adjetivo est&aacute; no grau:</div>
-                    <div class="options-group">
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q2')">a) Comparativo de superioridade</button>
-                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex4-q2')">b) Superlativo absoluto sint&eacute;tico</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q2')">c) Superlativo relativo de superioridade</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q2')">d) Superlativo absoluto anal&iacute;tico</button>
-                    </div>
-                    <div class="feedback-msg" id="fb-ex4-q2"></div>
-                </div>
-
-                <div class="exercise-item" id="ex4-q3">
-                    <div class="question"><span class="q-num">3</span> O verbo &ldquo;pregar&rdquo; pertence &agrave;:</div>
-                    <div class="options-group">
-                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex4-q3')">a) 1&ordf; conjuga&ccedil;&atilde;o (-ar)</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q3')">b) 2&ordf; conjuga&ccedil;&atilde;o (-er)</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q3')">c) 3&ordf; conjuga&ccedil;&atilde;o (-ir)</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q3')">d) Conjuga&ccedil;&atilde;o irregular</button>
-                    </div>
-                    <div class="feedback-msg" id="fb-ex4-q3"></div>
-                </div>
-
-                <div class="exercise-item" id="ex4-q4">
-                    <div class="question"><span class="q-num">4</span> A coloca&ccedil;&atilde;o pronominal em &ldquo;Dir-lhe-ei a verdade&rdquo; &eacute; chamada de:</div>
-                    <div class="options-group">
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q4')">a) Pr&oacute;clise</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q4')">b) &Ecirc;nclise</button>
-                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex4-q4')">c) Mes&oacute;clise</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q4')">d) An&aacute;clise</button>
-                    </div>
-                    <div class="feedback-msg" id="fb-ex4-q4"></div>
-                </div>
-
-                <div class="exercise-item" id="ex4-q5">
-                    <div class="question"><span class="q-num">5</span> Em &ldquo;Eu sou o caminho&rdquo;, a palavra &ldquo;Eu&rdquo; &eacute; um pronome:</div>
-                    <div class="options-group">
-                        <button class="option-btn" onclick="checkAnswer(this, true, 'ex4-q5')">a) Pessoal do caso reto</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q5')">b) Pessoal do caso obl&iacute;quo</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q5')">c) Demonstrativo</button>
-                        <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q5')">d) Possessivo</button>
-                    </div>
-                    <div class="feedback-msg" id="fb-ex4-q5"></div>
-                </div>
-
-                <div class="score-display" id="score-ex4">
-                    <div class="score-number" id="score-ex4-num"></div>
-                    <div class="score-text" id="score-ex4-text"></div>
-                </div>
-            </div>
-
-            <div class="motivation-box">
-                <div class="emoji">&#127891;</div>
-                <p>&ldquo;Parab&eacute;ns por completar todas as unidades! Que o dom&iacute;nio da l&iacute;ngua portuguesa seja uma ferramenta poderosa no seu minist&eacute;rio pastoral.&rdquo;</p>
-            </div>
-
-            <div class="exam-btn-area" id="exam-area-4">
-                <button class="btn-exam" onclick="ExamEngine.start(4)" disabled>Prova bloqueada</button>
-                <p class="exam-status" id="exam-status-4"></p>
-            </div>
-
-            <div class="nav-buttons">
-                <button class="nav-btn" onclick="showUnit(4)">&#9664; Unidade 4</button>
-                <button class="nav-btn primary" onclick="showUnit(6)">Unidade 6: Exercícios &#9654;</button>
             </div>
         </div>
 
-        <!-- ==================== UNIT 5: Exerc&iacute;cios de Fixa&ccedil;&atilde;o ==================== -->
-        <div 
+        <!-- COMPOSIÇÃO -->
+        <div class="collapsible" style="margin-top:8px">
+            <div class="collapsible-header"><span>📌 Composição — 2 tipos</span><span class="collapsible-arrow">▼</span></div>
+            <div class="collapsible-content">
+                <p><strong>Composição</strong> é o processo de formar palavras pela união de dois ou mais radicais.</p>
+                <div class="table-wrapper">
+                    <table class="data-table" style="font-size:0.88rem">
+                        <thead><tr><th>Tipo</th><th>Característica</th><th>Exemplos</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Justaposição</strong></td>
+                                <td>Os elementos são unidos <em>sem alteração</em> fonética. Geralmente mantêm seus acentos originais.</td>
+                                <td>girassol, passatempo, couve-flor, beija-flor, salvo-conduto, guarda-chuva</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Aglutinação</strong></td>
+                                <td>Os elementos se fundem com <em>alteração</em> fonética de pelo menos um deles. Um perde seu acento.</td>
+                                <td>planalto (plano+alto), vinagre (vinho+acre), aguardente (água+ardente), embora (em+boa+hora)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- OUTROS PROCESSOS -->
+        <div class="collapsible" style="margin-top:8px">
+            <div class="collapsible-header"><span>📌 Outros Processos de Formação</span><span class="collapsible-arrow">▼</span></div>
+            <div class="collapsible-content">
+                <div class="table-wrapper">
+                    <table class="data-table" style="font-size:0.88rem">
+                        <thead><tr><th>Processo</th><th>Definição</th><th>Exemplos</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Onomatopeia</strong></td><td>Palavra que imita um som natural</td><td>miar, coaxar, zurrar, zunzum, tique-taque</td></tr>
+                            <tr><td><strong>Abreviação/Redução</strong></td><td>Redução de palavra extensa</td><td>foto (fotografia), moto (motocicleta), otorrino (otorrinolaringologista)</td></tr>
+                            <tr><td><strong>Siglonimização</strong></td><td>Formação de siglas</td><td>USP, IBGE, ONU, TRT, STF, FIFA</td></tr>
+                            <tr><td><strong>Hibridismo</strong></td><td>União de elementos de línguas diferentes</td><td>auto+móvel (grego+latim), burocracia (francês+grego), televisão (grego+latim)</td></tr>
+                            <tr><td><strong>Estrangeirismo</strong></td><td>Empréstimo de palavra estrangeira</td><td>show, shopping, outdoor, software, hambúrguer</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- INLINE QUIZ -->
+        <div class="inline-quiz" style="margin-top:20px">
+            <div class="quiz-label">🧠 Teste rápido</div>
+            <div class="quiz-question">A palavra <strong>"emagrecer"</strong> foi formada por qual processo?</div>
+            <div class="quiz-options">
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-2',false,'Não! Derivação prefixal seria apenas prefixo. "Emagrecer" tem prefixo E mais sufixo ECER ao mesmo tempo.')">a) Derivação prefixal</button>
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-2',false,'Não! Derivação sufixal seria apenas sufixo. "Emagrecer" tem prefixo E mais sufixo ECER ao mesmo tempo.')">b) Derivação sufixal</button>
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-2',true,'Correto! E+magro+ecer: retire E → "magrecer" (não existe); retire ECER → "emagro" (não existe). Os afixos foram acrescentados simultaneamente = parassíntese!')">c) Derivação parassintética</button>
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-2',false,'Não! Composição reúne dois radicais. "Emagrecer" deriva de "magro" com afixos.')">d) Composição por aglutinação</button>
+            </div>
+            <div class="quiz-feedback" id="iq4-2"></div>
+        </div>
+
+        <div class="inline-quiz" style="margin-top:14px">
+            <div class="quiz-label">🧠 Teste rápido</div>
+            <div class="quiz-question"><strong>"Planalto"</strong> é formado por qual processo?</div>
+            <div class="quiz-options">
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-3',false,'Justaposição mantém os elementos sem alteração fonética. "Planalto" = plano+alto, com perda do O de "plano". Houve alteração.')">a) Composição por justaposição</button>
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-3',true,'Correto! "Planalto" vem de "plano + alto". O O de "plano" caiu → alteração fonética. É composição por aglutinação.')">b) Composição por aglutinação</button>
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-3',false,'Derivação regressiva forma substantivos a partir de verbos por redução. Não é o caso aqui.')">c) Derivação regressiva</button>
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-3',false,'Hibridismo une elementos de línguas diferentes. "Plano" e "alto" são ambos do latim.')">d) Hibridismo</button>
+            </div>
+            <div class="quiz-feedback" id="iq4-3"></div>
+        </div>
+    </div>
+
+    <!-- 4. RADICAL - DICA PRÁTICA -->
+    <div class="content-section">
+        <div class="section-icon">🌱</div>
+        <h3>4. Como Encontrar o Radical de uma Palavra</h3>
+
+        <p>O <strong>radical</strong> é a base que carrega o significado principal de uma palavra e está presente em todas as palavras da mesma família. Segundo Pestana: <em>"pense na palavra primitiva e em todas as palavras derivadas dela — o elemento que permanece é o radical."</em></p>
+
+        <div class="concept-card">
+            <h4>🔍 Exemplo prático: família de "casa"</h4>
+            <p>casa → casarão, casebre, caseiro, casal, descasado, encasacar...</p>
+            <p>O elemento comum a todas é <strong>cas-</strong> → radical!</p>
+        </div>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Morphology_tree.svg/400px-Morphology_tree.svg.png"
+             alt="Árvore morfológica" class="unit-illustration" style="max-width:340px">
+        <p class="illus-caption">Representação em árvore da estrutura morfológica de uma palavra.</p>
+
+        <div class="info-box warning">
+            <strong>⚠️ Raiz ≠ Radical!</strong><br>
+            A <em>raiz</em> é o elemento mais antigo, de origem latina/grega (análise diacrônica — estuda a história da língua).<br>
+            O <em>radical</em> é o elemento atual, usado na análise sincrónica (estado atual da língua).<br>
+            Exemplo: "amargo" → raiz: <em>amar-</em> (latim <em>amarus</em>); radical atual: <em>amarg-</em>.
+        </div>
+    </div>
+
+    <!-- EXERCÍCIOS -->
+    <div class="exercise-area">
+        <h3>&#127891; Exercícios — Morfologia</h3>
+        <p style="margin-bottom:15px; font-size:0.9rem">Aplique os conceitos de estrutura e formação de palavras.</p>
+
+        <div class="exercise-item">
+            <div class="question"><span class="q-num">1</span> A palavra <strong>"descapitalização"</strong> possui quantos morfemas?</div>
+            <div class="options-group" id="ex4-q1">
+                <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q1')">a) 3 morfemas</button>
+                <button class="option-btn" onclick="checkAnswer(this, true, 'ex4-q1')">b) 4 morfemas</button>
+                <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q1')">c) 5 morfemas</button>
+                <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q1')">d) 2 morfemas</button>
+            </div>
+            <div class="feedback-msg" id="fb-ex4-q1">des + capital + iza + ção = 4 morfemas: prefixo (des-) + radical (capital) + sufixo (-iza-) + sufixo (-ção).</div>
+        </div>
+
+        <div class="exercise-item">
+            <div class="question"><span class="q-num">2</span> A palavra <strong>"aguardente"</strong> foi formada por:</div>
+            <div class="options-group" id="ex4-q2">
+                <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q2')">a) Derivação parassintética</button>
+                <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q2')">b) Composição por justaposição</button>
+                <button class="option-btn" onclick="checkAnswer(this, true, 'ex4-q2')">c) Composição por aglutinação</button>
+                <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q2')">d) Derivação sufixal</button>
+            </div>
+            <div class="feedback-msg" id="fb-ex4-q2">"Aguardente" vem de "água + ardente". O A de "água" caiu (alteração fonética) → aglutinação.</div>
+        </div>
+
+        <div class="exercise-item">
+            <div class="question"><span class="q-num">3</span> Qual palavra abaixo foi formada por <strong>derivação regressiva</strong>?</div>
+            <div class="options-group" id="ex4-q3">
+                <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q3')">a) pedreiro</button>
+                <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q3')">b) deslealdade</button>
+                <button class="option-btn" onclick="checkAnswer(this, true, 'ex4-q3')">c) combate</button>
+                <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q3')">d) televisão</button>
+            </div>
+            <div class="feedback-msg" id="fb-ex4-q3">"Combate" vem de "combater" por redução do verbo → derivação regressiva. "Pedreiro" = derivação sufixal; "deslealdade" = prefixal+sufixal; "televisão" = hibridismo (tele=grego, visão=latim).</div>
+        </div>
+
+        <div class="score-display" id="score-ex4" style="display:none">
+            <span id="score-ex4-num"></span>
+            <div id="score-ex4-text"></div>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <button class="btn-nav btn-prev" onclick="showUnit(3)">&#9664; Unidade 3</button>
+        <button class="btn-nav btn-next" onclick="showUnit(5)">Unidade 5: Classes de Palavras &#9654;</button>
+    </div>
+</div>
+<div class="unit-view" id="unit5">
+    <div class="unit-header">
+        <h2>Classes de Palavras e Análise Morfológica</h2>
+        <p>Estude as dez classes gramaticais do português com profundidade e aprenda a realizar a análise morfológica completa de frases.</p>
+    </div>
+
+    <div class="content-section">
+        <div class="section-icon">🎬</div>
+        <h3>Videoaulas</h3>
+        <div class="video-grid">
+            <div class="video-item">
+                <h4>Classes Gramaticais — Visão Geral</h4>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/Oa4RkNXoXwE?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen></iframe>
+                </div>
+                <p class="video-caption">As 10 classes de palavras do português.</p>
+            </div>
+            <div class="video-item">
+                <h4>Análise Morfológica na Prática</h4>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/m3bEpNz7YKc?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen></iframe>
+                </div>
+                <p class="video-caption">Como identificar e analisar cada classe em contexto.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ANÁLISE MORFOLÓGICA INTRODUÇÃO -->
+    <div class="content-section">
+        <div class="section-icon">🔍</div>
+        <h3>1. O Que é Análise Morfológica?</h3>
+        <p>Analisar morfologicamente uma palavra significa apontar sua <strong>classe gramatical</strong> no contexto em que ela aparece.</p>
+
+        <div class="sentence-analysis">
+            <div class="sentence-text">Caramba! Os meus cinco sensacionais professores vieram do RJ e palestraram aqui.</div>
+            <div class="word-tokens">
+                <div class="word-token">
+                    <span class="token-word" style="background:#fbe9e7;border-color:#f44336;color:#c62828">Caramba!</span>
+                    <span class="token-class" style="background:#f44336;border-color:#f44336;color:white">Interjeição</span>
+                </div>
+                <div class="word-token">
+                    <span class="token-word" style="background:#f1f8e9;border-color:#8bc34a;color:#33691e">Os</span>
+                    <span class="token-class" style="background:#8bc34a;border-color:#8bc34a;color:white">Artigo</span>
+                </div>
+                <div class="word-token">
+                    <span class="token-word" style="background:#fce4ec;border-color:#e91e63;color:#880e4f">meus</span>
+                    <span class="token-class" style="background:#e91e63;border-color:#e91e63;color:white">Pronome</span>
+                </div>
+                <div class="word-token">
+                    <span class="token-word" style="background:#e8eaf6;border-color:#5c6bc0;color:#283593">cinco</span>
+                    <span class="token-class" style="background:#5c6bc0;border-color:#5c6bc0;color:white">Numeral</span>
+                </div>
+                <div class="word-token">
+                    <span class="token-word" style="background:#e8f5e9;border-color:#4caf50;color:#2e7d32">sensacionais</span>
+                    <span class="token-class" style="background:#4caf50;border-color:#4caf50;color:white">Adjetivo</span>
+                </div>
+                <div class="word-token">
+                    <span class="token-word" style="background:#e3f2fd;border-color:#2196f3;color:#1565c0">professores</span>
+                    <span class="token-class" style="background:#2196f3;border-color:#2196f3;color:white">Substantivo</span>
+                </div>
+                <div class="word-token">
+                    <span class="token-word" style="background:#fff3e0;border-color:#ff9800;color:#e65100">vieram</span>
+                    <span class="token-class" style="background:#ff9800;border-color:#ff9800;color:white">Verbo</span>
+                </div>
+                <div class="word-token">
+                    <span class="token-word" style="background:#e0f7fa;border-color:#26c6da;color:#006064">do</span>
+                    <span class="token-class" style="background:#26c6da;border-color:#26c6da;color:white">Prep.+art.</span>
+                </div>
+                <div class="word-token">
+                    <span class="token-word" style="background:#fff8e1;border-color:#ffc107;color:#f57f17">e</span>
+                    <span class="token-class" style="background:#ffc107;border-color:#ffc107;color:white">Conjunção</span>
+                </div>
+                <div class="word-token">
+                    <span class="token-word" style="background:#f3e5f5;border-color:#9c27b0;color:#6a1b9a">aqui</span>
+                    <span class="token-class" style="background:#9c27b0;border-color:#9c27b0;color:white">Advérbio</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <strong>📌 Pestana explica:</strong> Quando o enunciado traz "analise morfologicamente", "quanto à morfologia" ou "do ponto de vista morfológico", ele quer que você <em>aponte a classe gramatical</em> de cada palavra. Isso é diferente de análise sintática!
+        </div>
+
+        <div class="table-wrapper">
+            <table class="data-table" style="font-size:0.85rem">
+                <thead><tr><th>Classe</th><th>Variável?</th><th>O que indica</th></tr></thead>
+                <tbody>
+                    <tr><td><span class="class-badge substantivo">Substantivo</span></td><td>✅ Sim</td><td>Nome de seres, objetos, lugares, sentimentos, ações</td></tr>
+                    <tr><td><span class="class-badge adjetivo">Adjetivo</span></td><td>✅ Sim</td><td>Qualidade, característica, estado de substantivos</td></tr>
+                    <tr><td><span class="class-badge artigo">Artigo</span></td><td>✅ Sim</td><td>Determina e especifica substantivos</td></tr>
+                    <tr><td><span class="class-badge numeral">Numeral</span></td><td>✅ Sim</td><td>Quantidade, ordem, fração, múltiplo</td></tr>
+                    <tr><td><span class="class-badge pronome">Pronome</span></td><td>✅ Sim</td><td>Substitui ou acompanha substantivos</td></tr>
+                    <tr><td><span class="class-badge verbo">Verbo</span></td><td>✅ Sim</td><td>Ação, estado, fenômeno (com tempo, modo, pessoa)</td></tr>
+                    <tr><td><span class="class-badge adverbio">Advérbio</span></td><td>❌ Invariável</td><td>Modifica verbo, adjetivo ou outro advérbio</td></tr>
+                    <tr><td><span class="class-badge preposicao">Preposição</span></td><td>❌ Invariável</td><td>Liga palavras, estabelecendo relação entre elas</td></tr>
+                    <tr><td><span class="class-badge conjuncao">Conjunção</span></td><td>❌ Invariável</td><td>Liga orações ou termos de mesma função</td></tr>
+                    <tr><td><span class="class-badge interjeicao">Interjeição</span></td><td>❌ Invariável</td><td>Expressa emoções e sentimentos de forma exclamativa</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- SUBSTANTIVO -->
+    <div class="content-section">
+        <div class="section-icon">📦</div>
+        <h3>2. Substantivo</h3>
+        <p>O substantivo é a palavra que dá nome aos seres, objetos, sentimentos, lugares, ações e fenômenos.</p>
+        <div class="collapsible"><div class="collapsible-header"><span>Classificação dos Substantivos</span><span class="collapsible-arrow">▼</span></div>
+        <div class="collapsible-content">
+            <div class="table-wrapper"><table class="data-table" style="font-size:0.88rem">
+                <thead><tr><th>Tipo</th><th>Definição</th><th>Exemplos</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Próprio</strong></td><td>Nome específico de um ser</td><td>Brasil, Ricardo, Amazonas, Deus</td></tr>
+                    <tr><td><strong>Comum</strong></td><td>Nome genérico de uma classe de seres</td><td>país, pessoa, rio</td></tr>
+                    <tr><td><strong>Concreto</strong></td><td>Existe por si mesmo (real ou imaginário)</td><td>pedra, anjo, saci, sereia</td></tr>
+                    <tr><td><strong>Abstrato</strong></td><td>Existe como ideia, não tem existência independente</td><td>amor, saudade, coragem, beleza</td></tr>
+                    <tr><td><strong>Primitivo</strong></td><td>Não deriva de outra palavra em português</td><td>pedra, flor, mar, pão</td></tr>
+                    <tr><td><strong>Derivado</strong></td><td>Deriva de outra palavra</td><td>pedreiro, florista, marinha</td></tr>
+                    <tr><td><strong>Simples</strong></td><td>Um único radical</td><td>livro, casa, escola</td></tr>
+                    <tr><td><strong>Composto</strong></td><td>Dois ou mais radicais</td><td>couve-flor, guarda-roupa, beija-flor</td></tr>
+                    <tr><td><strong>Coletivo</strong></td><td>Nome de um conjunto da mesma espécie</td><td>alcateia (lobos), cardume (peixes), manada (gado), penca (bananas)</td></tr>
+                </tbody>
+            </table></div>
+        </div></div>
+    </div>
+
+    <!-- ADJETIVO -->
+    <div class="content-section">
+        <div class="section-icon">🎨</div>
+        <h3>3. Adjetivo</h3>
+        <p>O adjetivo atribui <strong>qualidade, característica ou estado</strong> ao substantivo. Varia em gênero, número e grau.</p>
+        <div class="collapsible"><div class="collapsible-header"><span>Grau dos Adjetivos</span><span class="collapsible-arrow">▼</span></div>
+        <div class="collapsible-content">
+            <div class="table-wrapper"><table class="data-table" style="font-size:0.85rem">
+                <thead><tr><th>Grau</th><th>Analítico</th><th>Sintético (irregular)</th></tr></thead>
+                <tbody>
+                    <tr><td>Comparativo de superioridade</td><td>mais bonito que</td><td>melhor (bom), maior (grande), pior (mau), menor (pequeno)</td></tr>
+                    <tr><td>Superlativo absoluto</td><td>muito bonito / boníssimo</td><td>ótimo, máximo, péssiimo, mínimo</td></tr>
+                    <tr><td>Superlativo relativo</td><td>o mais bonito da turma</td><td>—</td></tr>
+                </tbody>
+            </table></div>
+            <div class="info-box warning"><strong>⚠️ Pestana alerta:</strong> Adjetivos como "ótimo", "péssimo", "máximo" e "mínimo" já são formas do superlativo absoluto sintético de "bom", "mau", "grande" e "pequeno". Nunca diga "muito ótimo"!</div>
+        </div></div>
+    </div>
+
+    <!-- VERBO -->
+    <div class="content-section">
+        <div class="section-icon">⚡</div>
+        <h3>4. Verbo — A Classe Mais Complexa</h3>
+        <p>O verbo expressa <strong>ação, estado, fenômeno ou fato</strong> situado no tempo. É a classe que mais varia: modo, tempo, aspecto, número, pessoa.</p>
+        <div class="collapsible"><div class="collapsible-header"><span>Classificação dos Verbos</span><span class="collapsible-arrow">▼</span></div>
+        <div class="collapsible-content">
+            <div class="table-wrapper"><table class="data-table" style="font-size:0.85rem">
+                <thead><tr><th>Classificação</th><th>Definição</th><th>Exemplos</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Regular</strong></td><td>Radical e desinências não sofrem alterações ao conjugar</td><td>amar, vender, partir</td></tr>
+                    <tr><td><strong>Irregular</strong></td><td>Sofre alterações no radical ou nas desinências</td><td>ser, ter, fazer, ir, vir, poder, querer</td></tr>
+                    <tr><td><strong>Defectivo</strong></td><td>Não possui conjugação completa</td><td>falir, reaver, colorir, abolir, demolir</td></tr>
+                    <tr><td><strong>Abundante</strong></td><td>Possui mais de uma forma para o mesmo tempo/modo</td><td>aceito/aceitado, expresso/expressado, imprimi/imprimido</td></tr>
+                    <tr><td><strong>Impessoal</strong></td><td>Não tem sujeito; usado na 3ª pes. sing.</td><td>chover, nevar, relampejar, amanhecer, haver (existência)</td></tr>
+                    <tr><td><strong>Auxiliar</strong></td><td>Compõe tempos verbais compostos e locuções</td><td>ser, estar, ter, haver + particípio/gerúndio/infinitivo</td></tr>
+                </tbody>
+            </table></div>
+        </div></div>
+
+        <div class="collapsible" style="margin-top:8px"><div class="collapsible-header"><span>Locuções Verbais e Vozes</span><span class="collapsible-arrow">▼</span></div>
+        <div class="collapsible-content">
+            <div class="info-box">
+                <strong>Locução verbal:</strong> verbo auxiliar + verbo principal<br>
+                • <em>Estou estudando</em> (aux. estar + principal estudar)<br>
+                • <em>Havia chegado</em> (aux. haver + principal chegar)<br>
+                • <em>Vou dormir</em> (aux. ir + principal dormir)
+            </div>
+            <div class="table-wrapper"><table class="data-table" style="font-size:0.85rem">
+                <thead><tr><th>Voz</th><th>Sujeito</th><th>Exemplo</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Ativa</strong></td><td>Pratica a ação</td><td>O professor corrigiu as provas.</td></tr>
+                    <tr><td><strong>Passiva</strong></td><td>Recebe a ação</td><td>As provas foram corrigidas pelo professor.</td></tr>
+                    <tr><td><strong>Reflexiva</strong></td><td>Pratica e recebe a ação</td><td>O menino se machucou.</td></tr>
+                </tbody>
+            </table></div>
+        </div></div>
+
+        <div class="inline-quiz">
+            <div class="quiz-label">🧠 Teste rápido</div>
+            <div class="quiz-question">O verbo <strong>"chover"</strong> é classificado como:</div>
+            <div class="quiz-options">
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq5-1',false,'Errado! Verbos regulares conjugam normalmente. "Chover" é impessoal.')">a) Verbo regular</button>
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq5-1',false,'Não! Verbo defectivo não possui todas as formas de conjugação por razão semântica, não por ser impessoal.')">b) Verbo defectivo</button>
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq5-1',true,'Correto! "Chover" é impessoal — fenômeno da natureza sem sujeito. Usa-se apenas na 3ª pessoa do singular: "choveu muito".')">c) Verbo impessoal</button>
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq5-1',false,'Não! Verbo auxiliar compõe locuções verbais (ex.: ter, estar, haver).')">d) Verbo auxiliar</button>
+            </div>
+            <div class="quiz-feedback" id="iq5-1"></div>
+        </div>
+    </div>
+
+    <!-- ADVÉRBIO -->
+    <div class="content-section">
+        <div class="section-icon">📍</div>
+        <h3>5. Advérbio</h3>
+        <p>O advérbio é uma palavra <strong>invariável</strong> que modifica o sentido de um <em>verbo</em>, de um <em>adjetivo</em> ou de outro <em>advérbio</em>. Indica circunstância.</p>
+        <div class="collapsible"><div class="collapsible-header"><span>Classificação dos Advérbios</span><span class="collapsible-arrow">▼</span></div>
+        <div class="collapsible-content">
+            <div class="table-wrapper"><table class="data-table" style="font-size:0.85rem">
+                <thead><tr><th>Circunstância</th><th>Exemplos</th></tr></thead>
+                <tbody>
+                    <tr><td>Lugar</td><td>aqui, ali, lá, acolá, acima, abaixo, perto, longe, dentro, fora</td></tr>
+                    <tr><td>Tempo</td><td>hoje, ontem, amanhã, sempre, nunca, jamais, já, ainda, logo, cedo, tarde</td></tr>
+                    <tr><td>Modo</td><td>bem, mal, assim, depressa, devagar, e todos os -mente: felizmente, lentamente...</td></tr>
+                    <tr><td>Intensidade</td><td>muito, pouco, bastante, demais, tão, mais, menos, quase, apenas</td></tr>
+                    <tr><td>Afirmação</td><td>sim, certamente, efetivamente, realmente, deveras</td></tr>
+                    <tr><td>Negação</td><td>não, nunca, jamais, tampouco, de modo algum</td></tr>
+                    <tr><td>Dúvida</td><td>talvez, quiçá, porventura, provavelmente, possivelmente</td></tr>
+                </tbody>
+            </table></div>
+            <div class="info-box warning"><strong>⚠️ Advérbio × Adjetivo:</strong> "Ela fala <em>bonito</em>" (bonito = advérbio, modifica o verbo, invariável) ≠ "Ela é <em>bonita</em>" (bonita = adjetivo, concorda com o sujeito).</div>
+        </div></div>
+    </div>
+
+    <!-- PRONOME -->
+    <div class="content-section">
+        <div class="section-icon">👤</div>
+        <h3>6. Pronome</h3>
+        <p>O pronome substitui ou acompanha o substantivo, indicando as pessoas do discurso e suas relações.</p>
+        <div class="collapsible"><div class="collapsible-header"><span>Tipos de Pronome</span><span class="collapsible-arrow">▼</span></div>
+        <div class="collapsible-content">
+            <div class="table-wrapper"><table class="data-table" style="font-size:0.85rem">
+                <thead><tr><th>Tipo</th><th>Exemplos</th><th>Função</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Pessoal do caso reto</strong></td><td>eu, tu, ele/ela, nós, vós, eles/elas</td><td>Sujeito</td></tr>
+                    <tr><td><strong>Pessoal oblíquo átono</strong></td><td>me, te, se, o, a, lhe, nos, vos, os, as, lhes</td><td>Complemento verbal</td></tr>
+                    <tr><td><strong>Pessoal oblíquo tônico</strong></td><td>mim, ti, si, ele/ela, nós, vós, eles</td><td>Complemento precedido de preposição</td></tr>
+                    <tr><td><strong>Possessivo</strong></td><td>meu, teu, seu, nosso, vosso, minha, sua...</td><td>Indica posse</td></tr>
+                    <tr><td><strong>Demonstrativo</strong></td><td>este, esse, aquele, isto, isso, aquilo</td><td>Indica posição no espaço/discurso</td></tr>
+                    <tr><td><strong>Relativo</strong></td><td>que, quem, qual, onde, cujo, quanto</td><td>Retoma antecedente; inicia oração adjetiva</td></tr>
+                    <tr><td><strong>Indefinido</strong></td><td>alguém, ninguém, tudo, nada, algo, qualquer</td><td>Referência vaga ou indefinida</td></tr>
+                    <tr><td><strong>Interrogativo</strong></td><td>quem? que? qual? quanto?</td><td>Introduz pergunta</td></tr>
+                </tbody>
+            </table></div>
+        </div></div>
+    </div>
+
+    <!-- PREPOSIÇÃO E CONJUNÇÃO -->
+    <div class="content-section">
+        <div class="section-icon">🔗</div>
+        <h3>7. Preposição, Conjunção e Interjeição</h3>
+
+        <div class="collapsible"><div class="collapsible-header"><span>Preposições Essenciais e Acidentais</span><span class="collapsible-arrow">▼</span></div>
+        <div class="collapsible-content">
+            <p>A <strong>preposição</strong> é palavra invariável que liga termos, estabelecendo relação de dependência entre eles.</p>
+            <div class="info-box">
+                <strong>Preposições essenciais:</strong> a, ante, após, até, com, contra, de, desde, em, entre, para, perante, por, sem, sob, sobre, trás<br>
+                <strong>Preposições acidentais</strong> (outras classes com função de preposição): durante, mediante, exceto, salvo, conforme, segundo, visto...
+            </div>
+            <p><strong>Contração:</strong> preposição + artigo → <em>a + o = ao</em>, <em>de + a = da</em>, <em>em + um = num</em>, <em>por + o = pelo</em></p>
+        </div></div>
+
+        <div class="collapsible" style="margin-top:8px"><div class="collapsible-header"><span>Conjunções Coordenativas e Subordinativas</span><span class="collapsible-arrow">▼</span></div>
+        <div class="collapsible-content">
+            <div class="table-wrapper"><table class="data-table" style="font-size:0.85rem">
+                <thead><tr><th>Tipo</th><th>Subtipo</th><th>Exemplos</th></tr></thead>
+                <tbody>
+                    <tr><td rowspan="5"><strong>Coordenativa</strong></td><td>Aditiva</td><td>e, nem, não só...mas também</td></tr>
+                    <tr><td>Adversativa</td><td>mas, porém, contudo, entretanto, no entanto</td></tr>
+                    <tr><td>Alternativa</td><td>ou, ora...ora, seja...seja</td></tr>
+                    <tr><td>Conclusiva</td><td>logo, portanto, então, por isso, pois (posposto)</td></tr>
+                    <tr><td>Explicativa</td><td>pois (anteposto), porque, que, porquanto</td></tr>
+                    <tr><td rowspan="4"><strong>Subordinativa</strong></td><td>Causal</td><td>porque, pois, já que, visto que, uma vez que</td></tr>
+                    <tr><td>Condicional</td><td>se, caso, desde que, contanto que</td></tr>
+                    <tr><td>Concessiva</td><td>embora, ainda que, mesmo que, por mais que</td></tr>
+                    <tr><td>Temporal</td><td>quando, enquanto, assim que, logo que, depois que</td></tr>
+                </tbody>
+            </table></div>
+        </div></div>
+
+        <div class="inline-quiz" style="margin-top:16px">
+            <div class="quiz-label">🧠 Teste rápido</div>
+            <div class="quiz-question">Em <strong>"Estude muito, pois a prova é amanhã"</strong>, a conjunção <em>"pois"</em> é:</div>
+            <div class="quiz-options">
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq5-2',false,'Não! "Pois" com valor adversativo não existe. Verifique a posição do "pois".')">a) Adversativa</button>
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq5-2',false,'Cuidado! "Pois" conclusivo (=portanto) vem depois do verbo. Aqui ele está antes do verbo "é".')">b) Conclusiva</button>
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq5-2',true,'Correto! "Pois" anteposto ao verbo = conjunção explicativa (apresenta uma justificativa/explicação). "Pois" posposto = conclusiva.')">c) Explicativa</button>
+                <button class="quiz-btn" onclick="inlineQuiz(this,'iq5-2',false,'Errado! Aditivas ligam ideias de adição (e, nem).')">d) Aditiva</button>
+            </div>
+            <div class="quiz-feedback" id="iq5-2"></div>
+        </div>
+    </div>
+
+    <!-- ARTIGO E NUMERAL -->
+    <div class="content-section">
+        <div class="section-icon">🔢</div>
+        <h3>8. Artigo, Numeral e Interjeição</h3>
+        <div class="two-col">
+            <div class="concept-card">
+                <h4>Artigo</h4>
+                <p>Determina o substantivo, indicando gênero e número.</p>
+                <p>• <strong>Definido:</strong> o, a, os, as (ser determinado)<br>
+                   • <strong>Indefinido:</strong> um, uma, uns, umas (ser indeterminado)</p>
+                <div class="info-box" style="margin-top:8px; font-size:0.85rem">O artigo pode substantivar qualquer palavra: <em>o "porém"</em>, <em>o sim e o não</em>.</div>
+            </div>
+            <div class="concept-card">
+                <h4>Numeral</h4>
+                <p>Indica quantidade, ordem, fração ou múltiplo.</p>
+                <p>• <strong>Cardinal:</strong> um, dois, três...<br>
+                   • <strong>Ordinal:</strong> primeiro, segundo, décimo...<br>
+                   • <strong>Fracionário:</strong> metade, terço, décimo...<br>
+                   • <strong>Multiplicativo:</strong> dobro, triplo, quádruplo...<br>
+                   • <strong>Coletivo:</strong> dúzia, dezena, centena...</p>
+            </div>
+        </div>
+        <div class="concept-card" style="margin-top:12px">
+            <h4>Interjeição</h4>
+            <p>Expressa emoções, sentimentos ou reações de forma exclamativa. É invariável e funciona como uma oração por si só.</p>
+            <div class="table-wrapper"><table class="data-table" style="font-size:0.85rem">
+                <thead><tr><th>Sentimento</th><th>Interjeições</th></tr></thead>
+                <tbody>
+                    <tr><td>Alegria</td><td>Viva! Eba! Ótimo!</td></tr>
+                    <tr><td>Surpresa/espanto</td><td>Uau! Puxa! Nossa! Caramba!</td></tr>
+                    <tr><td>Dor/pesar</td><td>Ai! Ui! Oh! Ah!</td></tr>
+                    <tr><td>Silêncio</td><td>Psiu! Silêncio! Sh!</td></tr>
+                    <tr><td>Chamamento</td><td>Ei! Olá! Psst!</td></tr>
+                </tbody>
+            </table></div>
+        </div>
+    </div>
+
+    <!-- EXERCÍCIOS -->
+    <div class="exercise-area">
+        <h3>&#127891; Exercícios — Classes de Palavras</h3>
+        <p style="margin-bottom:15px; font-size:0.9rem">Identifique as classes gramaticais nas frases abaixo.</p>
+
+        <div class="exercise-item">
+            <div class="question"><span class="q-num">1</span> Na frase <strong>"Ela fala muito bonito"</strong>, a palavra <em>bonito</em> é:</div>
+            <div class="options-group" id="ex5-q1">
+                <button class="option-btn" onclick="checkAnswer(this, false, 'ex5-q1')">a) Adjetivo predicativo</button>
+                <button class="option-btn" onclick="checkAnswer(this, true, 'ex5-q1')">b) Advérbio de modo</button>
+                <button class="option-btn" onclick="checkAnswer(this, false, 'ex5-q1')">c) Substantivo</button>
+                <button class="option-btn" onclick="checkAnswer(this, false, 'ex5-q1')">d) Numeral</button>
+            </div>
+            <div class="feedback-msg" id="fb-ex5-q1">Quando "bonito" modifica o verbo "fala" (modo como ela fala) e permanece invariável mesmo que o sujeito seja feminino, funciona como advérbio de modo. Compare: "Ela é bonita" (adjetivo, concorda).</div>
+        </div>
+
+        <div class="exercise-item">
+            <div class="question"><span class="q-num">2</span> Em <strong>"O jantar estava pronto"</strong>, a palavra <em>jantar</em> é:</div>
+            <div class="options-group" id="ex5-q2">
+                <button class="option-btn" onclick="checkAnswer(this, false, 'ex5-q2')">a) Verbo no infinitivo</button>
+                <button class="option-btn" onclick="checkAnswer(this, true, 'ex5-q2')">b) Substantivo (derivação imprópria)</button>
+                <button class="option-btn" onclick="checkAnswer(this, false, 'ex5-q2')">c) Adjetivo</button>
+                <button class="option-btn" onclick="checkAnswer(this, false, 'ex5-q2')">d) Advérbio</button>
+            </div>
+            <div class="feedback-msg" id="fb-ex5-q2">"Jantar" aqui é precedido de artigo "O" e exerce função de sujeito → é substantivo. Trata-se de derivação imprópria: o verbo "jantar" passou a funcionar como substantivo.</div>
+        </div>
+
+        <div class="exercise-item">
+            <div class="question"><span class="q-num">3</span> A palavra <strong>"cujo"</strong> em <em>"O aluno cujo caderno foi perdido ficou triste"</em> é um pronome:</div>
+            <div class="options-group" id="ex5-q3">
+                <button class="option-btn" onclick="checkAnswer(this, false, 'ex5-q3')">a) Demonstrativo</button>
+                <button class="option-btn" onclick="checkAnswer(this, false, 'ex5-q3')">b) Indefinido</button>
+                <button class="option-btn" onclick="checkAnswer(this, true, 'ex5-q3')">c) Relativo (com valor de posse)</button>
+                <button class="option-btn" onclick="checkAnswer(this, false, 'ex5-q3')">d) Interrogativo</button>
+            </div>
+            <div class="feedback-msg" id="fb-ex5-q3">"Cujo" é pronome relativo com valor possessivo — retoma "aluno" e indica posse ("cujo caderno" = o caderno do aluno). Nunca use artigo após "cujo"!</div>
+        </div>
+
+        <div class="score-display" id="score-ex5" style="display:none">
+            <span id="score-ex5-num"></span>
+            <div id="score-ex5-text"></div>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <button class="btn-nav btn-prev" onclick="showUnit(4)">&#9664; Unidade 4</button>
+        <button class="btn-nav btn-next" onclick="showUnit(6)">Unidade 6: Exercícios &#9654;</button>
+    </div>
+</div>
 id="unit6" class="unit-view">
             <div class="content-area">
                 <div class="section-header">
                     <h2>&#9997; Unidade 6: Exerc&iacute;cios de Fixa&ccedil;&atilde;o</h2>
-                    <p>50 quest&otilde;es interativas cobrindo todos os 5 m&oacute;dulos: L&iacute;ngua, Fonologia, Acentua&ccedil;&atilde;o, Morfologia e Classes de Palavras</p>
+                    <p>50 quest&otilde;es interativas cobrindo todos os 5 m&oacute;dulos com 3 n&iacute;veis de dificuldade</p>
                 </div>
 
                 <div class="practice-score">
@@ -4806,925 +4624,30 @@ id="unit6" class="unit-view">
     <footer>
         Portugu&ecirc;s 1 &bull; Semin&aacute;rio Presbiteriano da Amaz&ocirc;nia &bull; CG01 &bull; Ferramenta de Ensino Interativo
     </footer>
-
-
     <script src="js/api.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/courses.js"></script>
     <script src="js/exams.js"></script>
     <script>
-        // ===================== STATE =====================
-        const state = {
-            currentView: 'welcome',
-            completedUnits: new Set(),
-            scores: {},
-            presenterMode: false
-        };
-
-        // ===================== NAVIGATION =====================
-        function showView(viewId) {
-            document.querySelectorAll('.unit-view').forEach(v => v.classList.remove('active'));
-            const view = document.getElementById(viewId);
-            if (view) {
-                view.classList.add('active');
-                state.currentView = viewId;
-                updateNav();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        }
-
-        function showUnit(num) {
-            if (Auth.isLoggedIn && Auth.accessConfig && !Auth.isModuleAccessible(num)) {
-                const view = document.getElementById('unit' + num);
-                if (view) {
-                    view.classList.add('active'); state.currentView = 'unit' + num;
-                    updateNav(); alert('Este módulo ainda não foi liberado pelo professor.');
-                    showView('welcome'); return;
-                }
-            }
-            showView('unit' + num);
-        }
-
-        function updateNav() {
-            document.querySelectorAll('.nav-item').forEach((item, i) => {
-                item.classList.remove('active');
-                if (i === 0 && state.currentView === 'welcome') item.classList.add('active');
-                else if (i > 0 && state.currentView === 'unit' + i) item.classList.add('active');
-                if (i > 0 && state.completedUnits.has(i)) item.classList.add('completed');
-            });
-            document.getElementById('progressText').textContent =
-                state.completedUnits.size + ' de 6 unidades';
-        }
-
-        // ===================== EXERCISES =====================
-        const exerciseTracker = {};
-
-        function checkAnswer(btn, isCorrect, groupId) {
-            const group = document.getElementById(groupId);
-            const buttons = group.querySelectorAll('.option-btn');
-            const feedbackEl = document.getElementById('fb-' + groupId);
-            if (group.dataset.answered) return;
-            group.dataset.answered = 'true';
-            buttons.forEach(b => {
-                b.classList.add('disabled');
-                if (b === btn) b.classList.add(isCorrect ? 'correct' : 'incorrect');
-                if (!isCorrect) {
-                    const attr = b.getAttribute('onclick');
-                    if (attr && attr.includes('true')) b.classList.add('correct');
-                }
-            });
-            if (feedbackEl) {
-                feedbackEl.classList.add('show', isCorrect ? 'correct' : 'incorrect');
-                feedbackEl.textContent = isCorrect ? 'Correto! Muito bem!' : 'Incorreto. Veja a resposta correta em verde.';
-            }
-            const exGroup = groupId.split('-')[0];
-            if (!exerciseTracker[exGroup]) exerciseTracker[exGroup] = { total: 0, correct: 0, answered: 0 };
-            const allGroups = document.querySelectorAll('[id^="' + exGroup + '-"]');
-            if (exerciseTracker[exGroup].total === 0) exerciseTracker[exGroup].total = allGroups.length;
-            exerciseTracker[exGroup].answered++;
-            if (isCorrect) exerciseTracker[exGroup].correct++;
-            if (exerciseTracker[exGroup].answered >= exerciseTracker[exGroup].total) showScore(exGroup);
-        }
-
-        function showScore(exGroup) {
-            const tracker = exerciseTracker[exGroup];
-            const scoreEl = document.getElementById('score-' + exGroup);
-            const numEl = document.getElementById('score-' + exGroup + '-num');
-            const textEl = document.getElementById('score-' + exGroup + '-text');
-            if (!scoreEl || !numEl || !textEl) return;
-            const pct = Math.round((tracker.correct / tracker.total) * 100);
-            numEl.textContent = tracker.correct + '/' + tracker.total;
-            let msg = pct === 100 ? 'Perfeito! Você dominou este conteúdo!' :
-                      pct >= 70 ? 'Ótimo trabalho! Continue assim!' :
-                      pct >= 50 ? 'Bom esforço! Revise os pontos que errou.' :
-                                  'Não desanime! Revise o conteúdo e tente novamente.';
-            textEl.innerHTML = msg;
-            scoreEl.classList.add('show');
-            const unitNum = parseInt(exGroup.replace('ex', ''));
-            if (!isNaN(unitNum)) { state.completedUnits.add(unitNum); updateNav(); }
-        }
-
-        // ===================== INLINE QUIZ =====================
-        function inlineQuiz(btn, quizId, isCorrect, explanation) {
-            const container = btn.closest('.inline-quiz');
-            if (!container || container.dataset.answered) return;
-            container.dataset.answered = 'true';
-            container.querySelectorAll('.quiz-btn').forEach(b => {
-                b.disabled = true;
-                if (b === btn) b.classList.add(isCorrect ? 'iq-correct' : 'iq-wrong');
-            });
-            const fb = document.getElementById(quizId);
-            if (fb) {
-                fb.textContent = explanation;
-                fb.classList.add('show', isCorrect ? 'correct' : 'wrong');
-            }
-        }
-
-        // ===================== IPA / PHONEME TTS =====================
-        function pronouncePhoneme(text, lang) {
-            window.speechSynthesis.cancel();
-            const u = new SpeechSynthesisUtterance(text);
-            u.lang = lang || 'pt-BR';
-            u.rate = 0.55;
-            u.pitch = 1.0;
-            window.speechSynthesis.speak(u);
-        }
-
-        // ===================== COLLAPSIBLE =====================
-        document.addEventListener('click', function(e) {
-            if (e.target.closest('.collapsible-header')) {
-                const header = e.target.closest('.collapsible-header');
-                const content = header.nextElementSibling;
-                header.classList.toggle('open');
-                content.classList.toggle('open');
-            }
-        });
-
-        // ===================== PRESENTER MODE =====================
-        function togglePresenterMode() {
-            state.presenterMode = !state.presenterMode;
-            document.body.classList.toggle('presenter-mode', state.presenterMode);
-            const btn = document.querySelector('.btn-presenter');
-            btn.textContent = state.presenterMode ? '\u{1F4FA} Modo Normal' : '\u{1F4FA} Modo Apresentação';
-        }
-
-        // ===================== PRACTICE MODULE =====================
-        function checkPractice(btn, isCorrect, questionId) {
-            var container = document.getElementById(questionId);
-            if (!container) return;
-            container.querySelectorAll('.pq-option').forEach(function(b) { b.disabled = true; });
-            if (isCorrect) { btn.classList.add('correct'); container.classList.add('answered-correct'); }
-            else {
-                btn.classList.add('wrong'); container.classList.add('answered-wrong');
-                container.querySelectorAll('.pq-option').forEach(function(b) {
-                    if (b.getAttribute('onclick') && b.getAttribute('onclick').indexOf('true') > -1) b.classList.add('correct');
-                });
-            }
-            var feedback = document.getElementById(questionId + '-feedback');
-            if (feedback) {
-                feedback.style.display = 'block';
-                feedback.className = 'pq-feedback ' + (isCorrect ? 'correct-fb' : 'wrong-fb');
-            }
-            updatePracticeScore();
-        }
-
-        function updatePracticeScore() {
-            var total = document.querySelectorAll('.practice-question').length;
-            var correct = document.querySelectorAll('.practice-question.answered-correct').length;
-            var wrong = document.querySelectorAll('.practice-question.answered-wrong').length;
-            var answered = correct + wrong;
-            var scoreEl = document.getElementById('practiceScoreText');
-            if (scoreEl) scoreEl.textContent = correct + ' de ' + answered + ' corretas (' + total + ' total)';
-            var finalEl = document.getElementById('practiceScoreFinal');
-            if (finalEl && answered === total) {
-                var pct = Math.round((correct / total) * 100);
-                finalEl.textContent = 'Você acertou ' + correct + ' de ' + total + ' questões (' + pct + '%)';
-            }
-        }
-
-        // ===================== KEYBOARD NAV =====================
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-                const n = parseInt(state.currentView.replace('unit', ''));
-                if (!isNaN(n) && n < 6) showUnit(n + 1);
-            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-                const n = parseInt(state.currentView.replace('unit', ''));
-                if (!isNaN(n) && n > 1) showUnit(n - 1);
-                else if (!isNaN(n) && n === 1) showView('welcome');
-            } else if (e.key === 'Home') showView('welcome');
-        });
-
-        // ===================== YOUTUBE FALLBACK =====================
-        function fixYouTubeEmbeds() {
-            const isFileProtocol = window.location.protocol === 'file:';
-            if (!isFileProtocol) return;
-            document.querySelectorAll('.video-wrapper iframe').forEach(iframe => {
-                const src = iframe.getAttribute('src') || '';
-                const match = src.match(/youtube\.com\/embed\/([^?&"]+)/);
-                if (!match) return;
-                const videoId = match[1];
-                const link = document.createElement('a');
-                link.href = 'https://www.youtube.com/watch?v=' + videoId;
-                link.target = '_blank'; link.rel = 'noopener'; link.className = 'video-thumb-link';
-                link.innerHTML = '<img src="https://img.youtube.com/vi/' + videoId + '/hqdefault.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">' +
-                    '<div class="video-play-overlay"><div class="video-play-btn">&#9654;</div><div class="video-play-text">Assistir no YouTube</div></div>';
-                iframe.parentNode.replaceChild(link, iframe);
-            });
-        }
-        setTimeout(fixYouTubeEmbeds, 100);
-
-        // Initialize
+        const state={currentView:'welcome',completedUnits:new Set(),presenterMode:false};
+        function showView(id){document.querySelectorAll('.unit-view').forEach(v=>v.classList.remove('active'));const v=document.getElementById(id);if(v){v.classList.add('active');state.currentView=id;updateNav();window.scrollTo({top:0,behavior:'smooth'});}}
+        function showUnit(num){if(typeof Auth!=='undefined'&&Auth.isLoggedIn&&Auth.accessConfig&&!Auth.isModuleAccessible(num)){alert('Este módulo ainda não foi liberado pelo professor.');return;}showView('unit'+num);}
+        function updateNav(){document.querySelectorAll('.nav-item').forEach((item,i)=>{item.classList.remove('active');if(i===0&&state.currentView==='welcome')item.classList.add('active');else if(i>0&&state.currentView==='unit'+i)item.classList.add('active');if(i>0&&state.completedUnits.has(i))item.classList.add('completed');});const pt=document.getElementById('progressText');if(pt)pt.textContent=state.completedUnits.size+' de 6 unidades';}
+        const exerciseTracker={};
+        function checkAnswer(btn,isCorrect,groupId){const group=document.getElementById(groupId);if(!group||group.dataset.answered)return;group.dataset.answered='true';const buttons=group.querySelectorAll('.option-btn');const fb=document.getElementById('fb-'+groupId);buttons.forEach(b=>{b.classList.add('disabled');if(b===btn)b.classList.add(isCorrect?'correct':'incorrect');if(!isCorrect&&b.getAttribute('onclick')&&b.getAttribute('onclick').includes('true'))b.classList.add('correct');});if(fb){fb.classList.add('show',isCorrect?'correct':'incorrect');fb.textContent=isCorrect?'Correto! Muito bem!':'Incorreto. Veja a resposta correta em verde.';}const eg=groupId.split('-')[0];if(!exerciseTracker[eg])exerciseTracker[eg]={total:0,correct:0,answered:0};const ag=document.querySelectorAll('[id^="'+eg+'-"]');if(!exerciseTracker[eg].total)exerciseTracker[eg].total=ag.length;exerciseTracker[eg].answered++;if(isCorrect)exerciseTracker[eg].correct++;if(exerciseTracker[eg].answered>=exerciseTracker[eg].total)showScore(eg);}
+        function showScore(eg){const t=exerciseTracker[eg];const se=document.getElementById('score-'+eg);const ne=document.getElementById('score-'+eg+'-num');const te=document.getElementById('score-'+eg+'-text');if(!se)return;const pct=Math.round((t.correct/t.total)*100);if(ne)ne.textContent=t.correct+'/'+t.total;if(te)te.innerHTML=pct===100?'Perfeito!':pct>=70?'Ótimo trabalho!':pct>=50?'Bom esforço! Revise.':'Não desanime! Revise o conteúdo.';se.classList.add('show');const un=parseInt(eg.replace('ex',''));if(!isNaN(un)){state.completedUnits.add(un);updateNav();}}
+        function inlineQuiz(btn,qid,ok,exp){const c=btn.closest('.inline-quiz');if(!c||c.dataset.answered)return;c.dataset.answered='true';c.querySelectorAll('.quiz-btn').forEach(b=>{b.disabled=true;if(b===btn)b.classList.add(ok?'iq-correct':'iq-wrong');});const fb=document.getElementById(qid);if(fb){fb.textContent=exp;fb.classList.add('show',ok?'correct':'wrong');}}
+        function pronouncePhoneme(text,lang){window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang=lang||'pt-BR';u.rate=0.55;u.pitch=1.0;window.speechSynthesis.speak(u);}
+        document.addEventListener('click',function(e){const h=e.target.closest('.collapsible-header');if(h){h.classList.toggle('open');const c=h.nextElementSibling;if(c)c.classList.toggle('open');}});
+        function togglePresenterMode(){state.presenterMode=!state.presenterMode;document.body.classList.toggle('presenter-mode',state.presenterMode);const btn=document.querySelector('.btn-presenter');if(btn)btn.textContent=state.presenterMode?'&#128250; Modo Normal':'&#128250; Modo Apresentação';}
+        function checkPractice(btn,ok,qid){const c=document.getElementById(qid);if(!c)return;c.querySelectorAll('.pq-option').forEach(b=>{b.disabled=true;});if(ok){btn.classList.add('correct');c.classList.add('answered-correct');}else{btn.classList.add('wrong');c.classList.add('answered-wrong');c.querySelectorAll('.pq-option').forEach(b=>{if(b.getAttribute('onclick')&&b.getAttribute('onclick').indexOf('true')>-1)b.classList.add('correct');});}const fb=document.getElementById(qid+'-feedback');if(fb){fb.style.display='block';fb.className='pq-feedback '+(ok?'correct-fb':'wrong-fb');}updatePracticeScore();}
+        function updatePracticeScore(){const total=document.querySelectorAll('.practice-question').length;const correct=document.querySelectorAll('.practice-question.answered-correct').length;const wrong=document.querySelectorAll('.practice-question.answered-wrong').length;const ans=correct+wrong;const se=document.getElementById('practiceScoreText');if(se)se.textContent=correct+' de '+ans+' corretas ('+total+' total)';const fe=document.getElementById('practiceScoreFinal');if(fe&&ans===total)fe.textContent='Você acertou '+correct+' de '+total+' questões ('+Math.round((correct/total)*100)+'%)';}
+        document.addEventListener('keydown',function(e){const n=parseInt(state.currentView.replace('unit',''));if(e.key==='ArrowRight'&&!isNaN(n)&&n<6)showUnit(n+1);else if(e.key==='ArrowLeft'){if(!isNaN(n)&&n>1)showUnit(n-1);else if(n===1)showView('welcome');}else if(e.key==='Home')showView('welcome');});
+        function fixYouTubeEmbeds(){if(window.location.protocol!=='file:')return;document.querySelectorAll('.video-wrapper iframe').forEach(iframe=>{const src=iframe.getAttribute('src')||'';const match=src.match(/youtube\.com\/embed\/([^?&"]+)/);if(!match)return;const link=document.createElement('a');link.href='https://www.youtube.com/watch?v='+match[1];link.target='_blank';link.rel='noopener';link.className='video-thumb-link';link.innerHTML='<img src="https://img.youtube.com/vi/'+match[1]+'/hqdefault.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"><div class=\"video-play-overlay\"><div class=\"video-play-btn\">&#9654;</div><div class=\"video-play-text\">Assistir no YouTube</div></div>';iframe.parentNode.replaceChild(link,iframe);});}
+        setTimeout(fixYouTubeEmbeds,100);
         updateNav();
-        localStorage.setItem('cursoId', 'portugues1');
-        if (typeof Courses !== 'undefined') Courses.setCursoId('portugues1');
-        if (typeof Auth !== 'undefined' && API.BASE_URL !== 'COLE_A_URL_DO_DEPLOY_AQUI') {
-            Auth.init();
-        } else {
-            const overlay = document.getElementById('authOverlay');
-            if (overlay) overlay.style.display = 'none';
-        }
+        localStorage.setItem('cursoId','portugues1');
+        if(typeof Courses!=='undefined')Courses.setCursoId('portugues1');
+        if(typeof Auth!=='undefined'&&API.BASE_URL!=='COLE_A_URL_DO_DEPLOY_AQUI'){Auth.init();}else{const ov=document.getElementById('authOverlay');if(ov)ov.style.display='none';}
     </script>
-</body<div class="unit-view" id="unit4">
-    <div class="unit-header">
-        <h2>Morfologia — Estrutura e Formação de Palavras</h2>
-        <p>Descubra como as palavras são construídas: morfemas, radical, afixos e os processos de formação de vocabulário em português.</p>
-    </div>
-
-    <div class="content-section">
-        <div class="section-icon">🎬</div>
-        <h3>Videoaula</h3>
-        <div class="video-grid">
-            <div class="video-item">
-                <h4>Estrutura das Palavras</h4>
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/9cMhRiXEAFM?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen></iframe>
-                </div>
-                <p class="video-caption">Morfemas, radical, afixos e desinências.</p>
-            </div>
-            <div class="video-item">
-                <h4>Formação de Palavras</h4>
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/IgFsGPBfHh4?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen></iframe>
-                </div>
-                <p class="video-caption">Derivação, composição e outros processos.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- 1. MORFEMA -->
-    <div class="content-section">
-        <div class="section-icon">🔬</div>
-        <h3>1. O Morfema — A Menor Unidade Significativa</h3>
-
-        <p><strong>Morfema</strong> é a menor unidade dotada de significado que compõe uma palavra. Enquanto o <em>fonema</em> apenas distingue sons, o morfema <em>carrega significado</em>.</p>
-
-        <div class="info-box">
-            <strong>💡 Exemplo clássico:</strong><br>
-            <strong>in + constitu + cion + al + íssim + a + mente</strong> → 7 morfemas em uma única palavra!<br>
-            <strong>super + valor + iza + ção</strong> → 4 morfemas em "supervalorização".
-        </div>
-
-        <h4 style="margin:18px 0 10px; color:var(--primary)">Tipos de Morfema</h4>
-        <div class="table-wrapper">
-            <table class="data-table">
-                <thead><tr><th>Tipo</th><th>Função</th><th>Exemplos</th></tr></thead>
-                <tbody>
-                    <tr><td><strong>Lexical (Radical)</strong></td><td>Carrega o significado principal</td><td>cas- (casa, casarão), mar- (mar, marinha)</td></tr>
-                    <tr><td><strong>Derivacional</strong></td><td>Forma novas palavras (afixos: prefixo e sufixo)</td><td>in- (infeliz), -mente (felizmente)</td></tr>
-                    <tr><td><strong>Flexional</strong></td><td>Indica flexões (gênero, número, tempo, modo, pessoa)</td><td>-s (casas), -va (amava), -o/-a (garoto/garota)</td></tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- 2. ESTRUTURA DAS PALAVRAS -->
-    <div class="content-section">
-        <div class="section-icon">🧩</div>
-        <h3>2. Estrutura das Palavras — Os Constituintes</h3>
-
-        <div class="morpheme-legend">
-            <div class="leg-item"><div class="leg-dot" style="background:#4caf50;border:2px solid #4caf50"></div> Radical</div>
-            <div class="leg-item"><div class="leg-dot" style="background:#2196f3;border:2px solid #2196f3"></div> Prefixo</div>
-            <div class="leg-item"><div class="leg-dot" style="background:#ff9800;border:2px solid #ff9800"></div> Sufixo</div>
-            <div class="leg-item"><div class="leg-dot" style="background:#e91e63;border:2px solid #e91e63"></div> Desinência</div>
-            <div class="leg-item"><div class="leg-dot" style="background:#9c27b0;border:2px solid #9c27b0"></div> Vogal Temática</div>
-        </div>
-
-        <!-- infelizmente -->
-        <p style="margin:16px 0 6px; font-weight:600">Análise de <em>"infelizmente"</em>:</p>
-        <div class="morpheme-box">
-            <div class="morpheme prefixo">in-<span class="morpheme-label">prefixo</span></div>
-            <span style="font-size:1.3rem; margin:0 4px">+</span>
-            <div class="morpheme radical">feliz<span class="morpheme-label">radical</span></div>
-            <span style="font-size:1.3rem; margin:0 4px">+</span>
-            <div class="morpheme sufixo">-mente<span class="morpheme-label">sufixo</span></div>
-        </div>
-
-        <!-- infelizes -->
-        <p style="margin:16px 0 6px; font-weight:600">Análise de <em>"infelizes"</em>:</p>
-        <div class="morpheme-box">
-            <div class="morpheme prefixo">in-<span class="morpheme-label">prefixo</span></div>
-            <span style="font-size:1.3rem; margin:0 4px">+</span>
-            <div class="morpheme radical">feliz<span class="morpheme-label">radical</span></div>
-            <span style="font-size:1.3rem; margin:0 4px">+</span>
-            <div class="morpheme desinencia">-es<span class="morpheme-label">desин. número</span></div>
-        </div>
-
-        <!-- amavam -->
-        <p style="margin:16px 0 6px; font-weight:600">Análise de <em>"amavam"</em> (3ª p. plural do imperfeito):</p>
-        <div class="morpheme-box">
-            <div class="morpheme radical">am-<span class="morpheme-label">radical</span></div>
-            <span style="font-size:1.3rem; margin:0 4px">+</span>
-            <div class="morpheme vogtem">-a-<span class="morpheme-label">vogal temática</span></div>
-            <span style="font-size:1.3rem; margin:0 4px">+</span>
-            <div class="morpheme desinencia">-va-<span class="morpheme-label">desин. temporal</span></div>
-            <span style="font-size:1.3rem; margin:0 4px">+</span>
-            <div class="morpheme desinencia">-m<span class="morpheme-label">desин. pessoal</span></div>
-        </div>
-
-        <div class="collapsible" style="margin-top:20px">
-            <div class="collapsible-header"><span>📌 Vogal Temática e Desinências — detalhe</span><span class="collapsible-arrow">▼</span></div>
-            <div class="collapsible-content">
-                <div class="table-wrapper">
-                    <table class="data-table" style="font-size:0.88rem">
-                        <thead><tr><th>Elemento</th><th>Função</th><th>Exemplos</th></tr></thead>
-                        <tbody>
-                            <tr><td><strong>Vogal Temática (VT)</strong></td><td>Liga radical ao restante da palavra. Nas conjugações, indica a classe verbal (1ª, 2ª, 3ª conj.)</td><td>am<strong>a</strong>r (VT=a), com<strong>e</strong>r (VT=e), part<strong>i</strong>r (VT=i)</td></tr>
-                            <tr><td><strong>Desinência Nominal</strong></td><td>Indica gênero (DN gênero) e número (DN número)</td><td>menin<strong>o</strong>/menin<strong>a</strong> (gênero); cas<strong>a</strong>/cas<strong>as</strong> (número)</td></tr>
-                            <tr><td><strong>Desinência Verbal</strong></td><td>Indica modo/tempo (DMT) e número/pessoa (DNP)</td><td>am<strong>a</strong>+<strong>va</strong>+<strong>mos</strong> (imperf.+1ªpess.pl.)</td></tr>
-                            <tr><td><strong>Vogal/Consoante de Ligação</strong></td><td>Facilitam a pronúncia, sem valor semântico</td><td>gas<strong>ô</strong>metro, cafe<strong>t</strong>eira, infeli<strong>z</strong>mente</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <div class="inline-quiz">
-            <div class="quiz-label">🧠 Teste rápido</div>
-            <div class="quiz-question">Em <strong>"deslealdade"</strong>, qual é o radical?</div>
-            <div class="quiz-options">
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-1',false,'Não! "des-" é prefixo (nega). Tente identificar o núcleo semântico da palavra.')">a) des-</button>
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-1',false,'Quase! "leal" está no coração da palavra, mas o radical morfológico é ainda mais preciso.')">b) leal</button>
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-1',true,'Correto! O radical é "leal" (de "lealdade"). Temos: des + leal + dade → prefixo + radical + sufixo.')">c) leal (com des- = prefixo e -dade = sufixo)</button>
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-1',false,'Não! "-dade" é sufixo que forma substantivos abstratos.')">d) -dade</button>
-            </div>
-            <div class="quiz-feedback" id="iq4-1"></div>
-        </div>
-    </div>
-
-    <!-- 3. PROCESSO DE FORMAÇÃO -->
-    <div class="content-section">
-        <div class="section-icon">⚙️</div>
-        <h3>3. Processo de Formação de Palavras</h3>
-
-        <div class="info-box success">
-            <strong>✅ O que mais cai em prova (Pestana):</strong> Derivação e Composição são os dois processos mais cobrados em concursos. Foque especialmente neles!
-        </div>
-
-        <!-- DERIVAÇÃO -->
-        <div class="collapsible" style="margin-top:14px">
-            <div class="collapsible-header"><span>📌 Derivação — 5 tipos</span><span class="collapsible-arrow">▼</span></div>
-            <div class="collapsible-content">
-                <p><strong>Derivação</strong> é o processo de formar novas palavras pelo acréscimo de prefixos e/ou sufixos a uma palavra já existente.</p>
-
-                <div class="table-wrapper">
-                    <table class="data-table" style="font-size:0.88rem">
-                        <thead><tr><th>Tipo</th><th>Como ocorre</th><th>Exemplos</th></tr></thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Prefixal</strong></td>
-                                <td>Acréscimo de prefixo à palavra primitiva</td>
-                                <td>super + homem → <em>super-homem</em><br>in + feliz → <em>infeliz</em><br>des + fazer → <em>desfazer</em></td>
-                            </tr>
-                            <tr>
-                                <td><strong>Sufixal</strong></td>
-                                <td>Acréscimo de sufixo à palavra primitiva</td>
-                                <td>feliz + -mente → <em>felizmente</em><br>pedra + -eiro → <em>pedreiro</em><br>amor + -oso → <em>amoroso</em></td>
-                            </tr>
-                            <tr>
-                                <td><strong>Parassintética (Circunfixação)</strong></td>
-                                <td>Acréscimo <em>simultâneo</em> de prefixo e sufixo.<br><strong>Teste:</strong> retire um dos afixos — se a palavra deixar de existir, é parassíntese!</td>
-                                <td><em>en</em>velhe<em>cer</em> (en+velho+ecer)<br><em>a</em>terr<em>ar</em> (a+terra+ar)<br><em>em</em>barc<em>ar</em> (em+barco+ar)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Regressiva (Regressão)</strong></td>
-                                <td>A palavra é obtida por <em>redução</em> de outra (geralmente do verbo, formando substantivo)</td>
-                                <td>cortar → <em>corte</em><br>combater → <em>combate</em><br>ajudar → <em>ajuda</em><br>atacar → <em>ataque</em></td>
-                            </tr>
-                            <tr>
-                                <td><strong>Imprópria (Conversão)</strong></td>
-                                <td>A palavra muda de classe gramatical sem mudar a forma</td>
-                                <td><em>o jantar</em> (subst.) ← <em>jantar</em> (verbo)<br><em>o pesar</em> (subst.) ← <em>pesar</em> (verbo)<br><em>falar</em> bonito (adj.) ← bonito (adj.)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="info-box warning">
-                    <strong>⚠️ Atenção — Parassíntese:</strong> A derivação parassintética ocorre quando prefixo e sufixo são acrescentados <em>ao mesmo tempo</em>. Retire o prefixo: <em>envelhecer</em> → "velhecer"? Não existe! Retire o sufixo: "envelho"? Não existe! Logo: parassíntese confirmada.
-                </div>
-            </div>
-        </div>
-
-        <!-- COMPOSIÇÃO -->
-        <div class="collapsible" style="margin-top:8px">
-            <div class="collapsible-header"><span>📌 Composição — 2 tipos</span><span class="collapsible-arrow">▼</span></div>
-            <div class="collapsible-content">
-                <p><strong>Composição</strong> é o processo de formar palavras pela união de dois ou mais radicais.</p>
-                <div class="table-wrapper">
-                    <table class="data-table" style="font-size:0.88rem">
-                        <thead><tr><th>Tipo</th><th>Característica</th><th>Exemplos</th></tr></thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Justaposição</strong></td>
-                                <td>Os elementos são unidos <em>sem alteração</em> fonética. Geralmente mantêm seus acentos originais.</td>
-                                <td>girassol, passatempo, couve-flor, beija-flor, salvo-conduto, guarda-chuva</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Aglutinação</strong></td>
-                                <td>Os elementos se fundem com <em>alteração</em> fonética de pelo menos um deles. Um perde seu acento.</td>
-                                <td>planalto (plano+alto), vinagre (vinho+acre), aguardente (água+ardente), embora (em+boa+hora)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <!-- OUTROS PROCESSOS -->
-        <div class="collapsible" style="margin-top:8px">
-            <div class="collapsible-header"><span>📌 Outros Processos de Formação</span><span class="collapsible-arrow">▼</span></div>
-            <div class="collapsible-content">
-                <div class="table-wrapper">
-                    <table class="data-table" style="font-size:0.88rem">
-                        <thead><tr><th>Processo</th><th>Definição</th><th>Exemplos</th></tr></thead>
-                        <tbody>
-                            <tr><td><strong>Onomatopeia</strong></td><td>Palavra que imita um som natural</td><td>miar, coaxar, zurrar, zunzum, tique-taque</td></tr>
-                            <tr><td><strong>Abreviação/Redução</strong></td><td>Redução de palavra extensa</td><td>foto (fotografia), moto (motocicleta), otorrino (otorrinolaringologista)</td></tr>
-                            <tr><td><strong>Siglonimização</strong></td><td>Formação de siglas</td><td>USP, IBGE, ONU, TRT, STF, FIFA</td></tr>
-                            <tr><td><strong>Hibridismo</strong></td><td>União de elementos de línguas diferentes</td><td>auto+móvel (grego+latim), burocracia (francês+grego), televisão (grego+latim)</td></tr>
-                            <tr><td><strong>Estrangeirismo</strong></td><td>Empréstimo de palavra estrangeira</td><td>show, shopping, outdoor, software, hambúrguer</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <!-- INLINE QUIZ -->
-        <div class="inline-quiz" style="margin-top:20px">
-            <div class="quiz-label">🧠 Teste rápido</div>
-            <div class="quiz-question">A palavra <strong>"emagrecer"</strong> foi formada por qual processo?</div>
-            <div class="quiz-options">
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-2',false,'Não! Derivação prefixal seria apenas prefixo. "Emagrecer" tem prefixo E mais sufixo ECER ao mesmo tempo.')">a) Derivação prefixal</button>
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-2',false,'Não! Derivação sufixal seria apenas sufixo. "Emagrecer" tem prefixo E mais sufixo ECER ao mesmo tempo.')">b) Derivação sufixal</button>
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-2',true,'Correto! E+magro+ecer: retire E → "magrecer" (não existe); retire ECER → "emagro" (não existe). Os afixos foram acrescentados simultaneamente = parassíntese!')">c) Derivação parassintética</button>
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-2',false,'Não! Composição reúne dois radicais. "Emagrecer" deriva de "magro" com afixos.')">d) Composição por aglutinação</button>
-            </div>
-            <div class="quiz-feedback" id="iq4-2"></div>
-        </div>
-
-        <div class="inline-quiz" style="margin-top:14px">
-            <div class="quiz-label">🧠 Teste rápido</div>
-            <div class="quiz-question"><strong>"Planalto"</strong> é formado por qual processo?</div>
-            <div class="quiz-options">
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-3',false,'Justaposição mantém os elementos sem alteração fonética. "Planalto" = plano+alto, com perda do O de "plano". Houve alteração.')">a) Composição por justaposição</button>
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-3',true,'Correto! "Planalto" vem de "plano + alto". O O de "plano" caiu → alteração fonética. É composição por aglutinação.')">b) Composição por aglutinação</button>
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-3',false,'Derivação regressiva forma substantivos a partir de verbos por redução. Não é o caso aqui.')">c) Derivação regressiva</button>
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq4-3',false,'Hibridismo une elementos de línguas diferentes. "Plano" e "alto" são ambos do latim.')">d) Hibridismo</button>
-            </div>
-            <div class="quiz-feedback" id="iq4-3"></div>
-        </div>
-    </div>
-
-    <!-- 4. RADICAL - DICA PRÁTICA -->
-    <div class="content-section">
-        <div class="section-icon">🌱</div>
-        <h3>4. Como Encontrar o Radical de uma Palavra</h3>
-
-        <p>O <strong>radical</strong> é a base que carrega o significado principal de uma palavra e está presente em todas as palavras da mesma família. Segundo Pestana: <em>"pense na palavra primitiva e em todas as palavras derivadas dela — o elemento que permanece é o radical."</em></p>
-
-        <div class="concept-card">
-            <h4>🔍 Exemplo prático: família de "casa"</h4>
-            <p>casa → casarão, casebre, caseiro, casal, descasado, encasacar...</p>
-            <p>O elemento comum a todas é <strong>cas-</strong> → radical!</p>
-        </div>
-
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Morphology_tree.svg/400px-Morphology_tree.svg.png"
-             alt="Árvore morfológica" class="unit-illustration" style="max-width:340px">
-        <p class="illus-caption">Representação em árvore da estrutura morfológica de uma palavra.</p>
-
-        <div class="info-box warning">
-            <strong>⚠️ Raiz ≠ Radical!</strong><br>
-            A <em>raiz</em> é o elemento mais antigo, de origem latina/grega (análise diacrônica — estuda a história da língua).<br>
-            O <em>radical</em> é o elemento atual, usado na análise sincrónica (estado atual da língua).<br>
-            Exemplo: "amargo" → raiz: <em>amar-</em> (latim <em>amarus</em>); radical atual: <em>amarg-</em>.
-        </div>
-    </div>
-
-    <!-- EXERCÍCIOS -->
-    <div class="exercise-area">
-        <h3>&#127891; Exercícios — Morfologia</h3>
-        <p style="margin-bottom:15px; font-size:0.9rem">Aplique os conceitos de estrutura e formação de palavras.</p>
-
-        <div class="exercise-item">
-            <div class="question"><span class="q-num">1</span> A palavra <strong>"descapitalização"</strong> possui quantos morfemas?</div>
-            <div class="options-group" id="ex4-q1">
-                <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q1')">a) 3 morfemas</button>
-                <button class="option-btn" onclick="checkAnswer(this, true, 'ex4-q1')">b) 4 morfemas</button>
-                <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q1')">c) 5 morfemas</button>
-                <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q1')">d) 2 morfemas</button>
-            </div>
-            <div class="feedback-msg" id="fb-ex4-q1">des + capital + iza + ção = 4 morfemas: prefixo (des-) + radical (capital) + sufixo (-iza-) + sufixo (-ção).</div>
-        </div>
-
-        <div class="exercise-item">
-            <div class="question"><span class="q-num">2</span> A palavra <strong>"aguardente"</strong> foi formada por:</div>
-            <div class="options-group" id="ex4-q2">
-                <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q2')">a) Derivação parassintética</button>
-                <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q2')">b) Composição por justaposição</button>
-                <button class="option-btn" onclick="checkAnswer(this, true, 'ex4-q2')">c) Composição por aglutinação</button>
-                <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q2')">d) Derivação sufixal</button>
-            </div>
-            <div class="feedback-msg" id="fb-ex4-q2">"Aguardente" vem de "água + ardente". O A de "água" caiu (alteração fonética) → aglutinação.</div>
-        </div>
-
-        <div class="exercise-item">
-            <div class="question"><span class="q-num">3</span> Qual palavra abaixo foi formada por <strong>derivação regressiva</strong>?</div>
-            <div class="options-group" id="ex4-q3">
-                <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q3')">a) pedreiro</button>
-                <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q3')">b) deslealdade</button>
-                <button class="option-btn" onclick="checkAnswer(this, true, 'ex4-q3')">c) combate</button>
-                <button class="option-btn" onclick="checkAnswer(this, false, 'ex4-q3')">d) televisão</button>
-            </div>
-            <div class="feedback-msg" id="fb-ex4-q3">"Combate" vem de "combater" por redução do verbo → derivação regressiva. "Pedreiro" = derivação sufixal; "deslealdade" = prefixal+sufixal; "televisão" = hibridismo (tele=grego, visão=latim).</div>
-        </div>
-
-        <div class="score-display" id="score-ex4" style="display:none">
-            <span id="score-ex4-num"></span>
-            <div id="score-ex4-text"></div>
-        </div>
-    </div>
-
-    <div class="nav-buttons">
-        <button class="btn-nav btn-prev" onclick="showUnit(3)">&#9664; Unidade 3</button>
-        <button class="btn-nav btn-next" onclick="showUnit(5)">Unidade 5: Classes de Palavras &#9654;</button>
-    </div>
-</div>
-
-<div class="unit-view" id="unit5">
-    <div class="unit-header">
-        <h2>Classes de Palavras e Análise Morfológica</h2>
-        <p>Estude as dez classes gramaticais do português com profundidade e aprenda a realizar a análise morfológica completa de frases.</p>
-    </div>
-
-    <div class="content-section">
-        <div class="section-icon">🎬</div>
-        <h3>Videoaulas</h3>
-        <div class="video-grid">
-            <div class="video-item">
-                <h4>Classes Gramaticais — Visão Geral</h4>
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/Oa4RkNXoXwE?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen></iframe>
-                </div>
-                <p class="video-caption">As 10 classes de palavras do português.</p>
-            </div>
-            <div class="video-item">
-                <h4>Análise Morfológica na Prática</h4>
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/m3bEpNz7YKc?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen></iframe>
-                </div>
-                <p class="video-caption">Como identificar e analisar cada classe em contexto.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ANÁLISE MORFOLÓGICA INTRODUÇÃO -->
-    <div class="content-section">
-        <div class="section-icon">🔍</div>
-        <h3>1. O Que é Análise Morfológica?</h3>
-        <p>Analisar morfologicamente uma palavra significa apontar sua <strong>classe gramatical</strong> no contexto em que ela aparece.</p>
-
-        <div class="sentence-analysis">
-            <div class="sentence-text">Caramba! Os meus cinco sensacionais professores vieram do RJ e palestraram aqui.</div>
-            <div class="word-tokens">
-                <div class="word-token">
-                    <span class="token-word" style="background:#fbe9e7;border-color:#f44336;color:#c62828">Caramba!</span>
-                    <span class="token-class" style="background:#f44336;border-color:#f44336;color:white">Interjeição</span>
-                </div>
-                <div class="word-token">
-                    <span class="token-word" style="background:#f1f8e9;border-color:#8bc34a;color:#33691e">Os</span>
-                    <span class="token-class" style="background:#8bc34a;border-color:#8bc34a;color:white">Artigo</span>
-                </div>
-                <div class="word-token">
-                    <span class="token-word" style="background:#fce4ec;border-color:#e91e63;color:#880e4f">meus</span>
-                    <span class="token-class" style="background:#e91e63;border-color:#e91e63;color:white">Pronome</span>
-                </div>
-                <div class="word-token">
-                    <span class="token-word" style="background:#e8eaf6;border-color:#5c6bc0;color:#283593">cinco</span>
-                    <span class="token-class" style="background:#5c6bc0;border-color:#5c6bc0;color:white">Numeral</span>
-                </div>
-                <div class="word-token">
-                    <span class="token-word" style="background:#e8f5e9;border-color:#4caf50;color:#2e7d32">sensacionais</span>
-                    <span class="token-class" style="background:#4caf50;border-color:#4caf50;color:white">Adjetivo</span>
-                </div>
-                <div class="word-token">
-                    <span class="token-word" style="background:#e3f2fd;border-color:#2196f3;color:#1565c0">professores</span>
-                    <span class="token-class" style="background:#2196f3;border-color:#2196f3;color:white">Substantivo</span>
-                </div>
-                <div class="word-token">
-                    <span class="token-word" style="background:#fff3e0;border-color:#ff9800;color:#e65100">vieram</span>
-                    <span class="token-class" style="background:#ff9800;border-color:#ff9800;color:white">Verbo</span>
-                </div>
-                <div class="word-token">
-                    <span class="token-word" style="background:#e0f7fa;border-color:#26c6da;color:#006064">do</span>
-                    <span class="token-class" style="background:#26c6da;border-color:#26c6da;color:white">Prep.+art.</span>
-                </div>
-                <div class="word-token">
-                    <span class="token-word" style="background:#fff8e1;border-color:#ffc107;color:#f57f17">e</span>
-                    <span class="token-class" style="background:#ffc107;border-color:#ffc107;color:white">Conjunção</span>
-                </div>
-                <div class="word-token">
-                    <span class="token-word" style="background:#f3e5f5;border-color:#9c27b0;color:#6a1b9a">aqui</span>
-                    <span class="token-class" style="background:#9c27b0;border-color:#9c27b0;color:white">Advérbio</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="info-box">
-            <strong>📌 Pestana explica:</strong> Quando o enunciado traz "analise morfologicamente", "quanto à morfologia" ou "do ponto de vista morfológico", ele quer que você <em>aponte a classe gramatical</em> de cada palavra. Isso é diferente de análise sintática!
-        </div>
-
-        <div class="table-wrapper">
-            <table class="data-table" style="font-size:0.85rem">
-                <thead><tr><th>Classe</th><th>Variável?</th><th>O que indica</th></tr></thead>
-                <tbody>
-                    <tr><td><span class="class-badge substantivo">Substantivo</span></td><td>✅ Sim</td><td>Nome de seres, objetos, lugares, sentimentos, ações</td></tr>
-                    <tr><td><span class="class-badge adjetivo">Adjetivo</span></td><td>✅ Sim</td><td>Qualidade, característica, estado de substantivos</td></tr>
-                    <tr><td><span class="class-badge artigo">Artigo</span></td><td>✅ Sim</td><td>Determina e especifica substantivos</td></tr>
-                    <tr><td><span class="class-badge numeral">Numeral</span></td><td>✅ Sim</td><td>Quantidade, ordem, fração, múltiplo</td></tr>
-                    <tr><td><span class="class-badge pronome">Pronome</span></td><td>✅ Sim</td><td>Substitui ou acompanha substantivos</td></tr>
-                    <tr><td><span class="class-badge verbo">Verbo</span></td><td>✅ Sim</td><td>Ação, estado, fenômeno (com tempo, modo, pessoa)</td></tr>
-                    <tr><td><span class="class-badge adverbio">Advérbio</span></td><td>❌ Invariável</td><td>Modifica verbo, adjetivo ou outro advérbio</td></tr>
-                    <tr><td><span class="class-badge preposicao">Preposição</span></td><td>❌ Invariável</td><td>Liga palavras, estabelecendo relação entre elas</td></tr>
-                    <tr><td><span class="class-badge conjuncao">Conjunção</span></td><td>❌ Invariável</td><td>Liga orações ou termos de mesma função</td></tr>
-                    <tr><td><span class="class-badge interjeicao">Interjeição</span></td><td>❌ Invariável</td><td>Expressa emoções e sentimentos de forma exclamativa</td></tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- SUBSTANTIVO -->
-    <div class="content-section">
-        <div class="section-icon">📦</div>
-        <h3>2. Substantivo</h3>
-        <p>O substantivo é a palavra que dá nome aos seres, objetos, sentimentos, lugares, ações e fenômenos.</p>
-        <div class="collapsible"><div class="collapsible-header"><span>Classificação dos Substantivos</span><span class="collapsible-arrow">▼</span></div>
-        <div class="collapsible-content">
-            <div class="table-wrapper"><table class="data-table" style="font-size:0.88rem">
-                <thead><tr><th>Tipo</th><th>Definição</th><th>Exemplos</th></tr></thead>
-                <tbody>
-                    <tr><td><strong>Próprio</strong></td><td>Nome específico de um ser</td><td>Brasil, Ricardo, Amazonas, Deus</td></tr>
-                    <tr><td><strong>Comum</strong></td><td>Nome genérico de uma classe de seres</td><td>país, pessoa, rio</td></tr>
-                    <tr><td><strong>Concreto</strong></td><td>Existe por si mesmo (real ou imaginário)</td><td>pedra, anjo, saci, sereia</td></tr>
-                    <tr><td><strong>Abstrato</strong></td><td>Existe como ideia, não tem existência independente</td><td>amor, saudade, coragem, beleza</td></tr>
-                    <tr><td><strong>Primitivo</strong></td><td>Não deriva de outra palavra em português</td><td>pedra, flor, mar, pão</td></tr>
-                    <tr><td><strong>Derivado</strong></td><td>Deriva de outra palavra</td><td>pedreiro, florista, marinha</td></tr>
-                    <tr><td><strong>Simples</strong></td><td>Um único radical</td><td>livro, casa, escola</td></tr>
-                    <tr><td><strong>Composto</strong></td><td>Dois ou mais radicais</td><td>couve-flor, guarda-roupa, beija-flor</td></tr>
-                    <tr><td><strong>Coletivo</strong></td><td>Nome de um conjunto da mesma espécie</td><td>alcateia (lobos), cardume (peixes), manada (gado), penca (bananas)</td></tr>
-                </tbody>
-            </table></div>
-        </div></div>
-    </div>
-
-    <!-- ADJETIVO -->
-    <div class="content-section">
-        <div class="section-icon">🎨</div>
-        <h3>3. Adjetivo</h3>
-        <p>O adjetivo atribui <strong>qualidade, característica ou estado</strong> ao substantivo. Varia em gênero, número e grau.</p>
-        <div class="collapsible"><div class="collapsible-header"><span>Grau dos Adjetivos</span><span class="collapsible-arrow">▼</span></div>
-        <div class="collapsible-content">
-            <div class="table-wrapper"><table class="data-table" style="font-size:0.85rem">
-                <thead><tr><th>Grau</th><th>Analítico</th><th>Sintético (irregular)</th></tr></thead>
-                <tbody>
-                    <tr><td>Comparativo de superioridade</td><td>mais bonito que</td><td>melhor (bom), maior (grande), pior (mau), menor (pequeno)</td></tr>
-                    <tr><td>Superlativo absoluto</td><td>muito bonito / boníssimo</td><td>ótimo, máximo, péssiimo, mínimo</td></tr>
-                    <tr><td>Superlativo relativo</td><td>o mais bonito da turma</td><td>—</td></tr>
-                </tbody>
-            </table></div>
-            <div class="info-box warning"><strong>⚠️ Pestana alerta:</strong> Adjetivos como "ótimo", "péssimo", "máximo" e "mínimo" já são formas do superlativo absoluto sintético de "bom", "mau", "grande" e "pequeno". Nunca diga "muito ótimo"!</div>
-        </div></div>
-    </div>
-
-    <!-- VERBO -->
-    <div class="content-section">
-        <div class="section-icon">⚡</div>
-        <h3>4. Verbo — A Classe Mais Complexa</h3>
-        <p>O verbo expressa <strong>ação, estado, fenômeno ou fato</strong> situado no tempo. É a classe que mais varia: modo, tempo, aspecto, número, pessoa.</p>
-        <div class="collapsible"><div class="collapsible-header"><span>Classificação dos Verbos</span><span class="collapsible-arrow">▼</span></div>
-        <div class="collapsible-content">
-            <div class="table-wrapper"><table class="data-table" style="font-size:0.85rem">
-                <thead><tr><th>Classificação</th><th>Definição</th><th>Exemplos</th></tr></thead>
-                <tbody>
-                    <tr><td><strong>Regular</strong></td><td>Radical e desinências não sofrem alterações ao conjugar</td><td>amar, vender, partir</td></tr>
-                    <tr><td><strong>Irregular</strong></td><td>Sofre alterações no radical ou nas desinências</td><td>ser, ter, fazer, ir, vir, poder, querer</td></tr>
-                    <tr><td><strong>Defectivo</strong></td><td>Não possui conjugação completa</td><td>falir, reaver, colorir, abolir, demolir</td></tr>
-                    <tr><td><strong>Abundante</strong></td><td>Possui mais de uma forma para o mesmo tempo/modo</td><td>aceito/aceitado, expresso/expressado, imprimi/imprimido</td></tr>
-                    <tr><td><strong>Impessoal</strong></td><td>Não tem sujeito; usado na 3ª pes. sing.</td><td>chover, nevar, relampejar, amanhecer, haver (existência)</td></tr>
-                    <tr><td><strong>Auxiliar</strong></td><td>Compõe tempos verbais compostos e locuções</td><td>ser, estar, ter, haver + particípio/gerúndio/infinitivo</td></tr>
-                </tbody>
-            </table></div>
-        </div></div>
-
-        <div class="collapsible" style="margin-top:8px"><div class="collapsible-header"><span>Locuções Verbais e Vozes</span><span class="collapsible-arrow">▼</span></div>
-        <div class="collapsible-content">
-            <div class="info-box">
-                <strong>Locução verbal:</strong> verbo auxiliar + verbo principal<br>
-                • <em>Estou estudando</em> (aux. estar + principal estudar)<br>
-                • <em>Havia chegado</em> (aux. haver + principal chegar)<br>
-                • <em>Vou dormir</em> (aux. ir + principal dormir)
-            </div>
-            <div class="table-wrapper"><table class="data-table" style="font-size:0.85rem">
-                <thead><tr><th>Voz</th><th>Sujeito</th><th>Exemplo</th></tr></thead>
-                <tbody>
-                    <tr><td><strong>Ativa</strong></td><td>Pratica a ação</td><td>O professor corrigiu as provas.</td></tr>
-                    <tr><td><strong>Passiva</strong></td><td>Recebe a ação</td><td>As provas foram corrigidas pelo professor.</td></tr>
-                    <tr><td><strong>Reflexiva</strong></td><td>Pratica e recebe a ação</td><td>O menino se machucou.</td></tr>
-                </tbody>
-            </table></div>
-        </div></div>
-
-        <div class="inline-quiz">
-            <div class="quiz-label">🧠 Teste rápido</div>
-            <div class="quiz-question">O verbo <strong>"chover"</strong> é classificado como:</div>
-            <div class="quiz-options">
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq5-1',false,'Errado! Verbos regulares conjugam normalmente. "Chover" é impessoal.')">a) Verbo regular</button>
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq5-1',false,'Não! Verbo defectivo não possui todas as formas de conjugação por razão semântica, não por ser impessoal.')">b) Verbo defectivo</button>
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq5-1',true,'Correto! "Chover" é impessoal — fenômeno da natureza sem sujeito. Usa-se apenas na 3ª pessoa do singular: "choveu muito".')">c) Verbo impessoal</button>
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq5-1',false,'Não! Verbo auxiliar compõe locuções verbais (ex.: ter, estar, haver).')">d) Verbo auxiliar</button>
-            </div>
-            <div class="quiz-feedback" id="iq5-1"></div>
-        </div>
-    </div>
-
-    <!-- ADVÉRBIO -->
-    <div class="content-section">
-        <div class="section-icon">📍</div>
-        <h3>5. Advérbio</h3>
-        <p>O advérbio é uma palavra <strong>invariável</strong> que modifica o sentido de um <em>verbo</em>, de um <em>adjetivo</em> ou de outro <em>advérbio</em>. Indica circunstância.</p>
-        <div class="collapsible"><div class="collapsible-header"><span>Classificação dos Advérbios</span><span class="collapsible-arrow">▼</span></div>
-        <div class="collapsible-content">
-            <div class="table-wrapper"><table class="data-table" style="font-size:0.85rem">
-                <thead><tr><th>Circunstância</th><th>Exemplos</th></tr></thead>
-                <tbody>
-                    <tr><td>Lugar</td><td>aqui, ali, lá, acolá, acima, abaixo, perto, longe, dentro, fora</td></tr>
-                    <tr><td>Tempo</td><td>hoje, ontem, amanhã, sempre, nunca, jamais, já, ainda, logo, cedo, tarde</td></tr>
-                    <tr><td>Modo</td><td>bem, mal, assim, depressa, devagar, e todos os -mente: felizmente, lentamente...</td></tr>
-                    <tr><td>Intensidade</td><td>muito, pouco, bastante, demais, tão, mais, menos, quase, apenas</td></tr>
-                    <tr><td>Afirmação</td><td>sim, certamente, efetivamente, realmente, deveras</td></tr>
-                    <tr><td>Negação</td><td>não, nunca, jamais, tampouco, de modo algum</td></tr>
-                    <tr><td>Dúvida</td><td>talvez, quiçá, porventura, provavelmente, possivelmente</td></tr>
-                </tbody>
-            </table></div>
-            <div class="info-box warning"><strong>⚠️ Advérbio × Adjetivo:</strong> "Ela fala <em>bonito</em>" (bonito = advérbio, modifica o verbo, invariável) ≠ "Ela é <em>bonita</em>" (bonita = adjetivo, concorda com o sujeito).</div>
-        </div></div>
-    </div>
-
-    <!-- PRONOME -->
-    <div class="content-section">
-        <div class="section-icon">👤</div>
-        <h3>6. Pronome</h3>
-        <p>O pronome substitui ou acompanha o substantivo, indicando as pessoas do discurso e suas relações.</p>
-        <div class="collapsible"><div class="collapsible-header"><span>Tipos de Pronome</span><span class="collapsible-arrow">▼</span></div>
-        <div class="collapsible-content">
-            <div class="table-wrapper"><table class="data-table" style="font-size:0.85rem">
-                <thead><tr><th>Tipo</th><th>Exemplos</th><th>Função</th></tr></thead>
-                <tbody>
-                    <tr><td><strong>Pessoal do caso reto</strong></td><td>eu, tu, ele/ela, nós, vós, eles/elas</td><td>Sujeito</td></tr>
-                    <tr><td><strong>Pessoal oblíquo átono</strong></td><td>me, te, se, o, a, lhe, nos, vos, os, as, lhes</td><td>Complemento verbal</td></tr>
-                    <tr><td><strong>Pessoal oblíquo tônico</strong></td><td>mim, ti, si, ele/ela, nós, vós, eles</td><td>Complemento precedido de preposição</td></tr>
-                    <tr><td><strong>Possessivo</strong></td><td>meu, teu, seu, nosso, vosso, minha, sua...</td><td>Indica posse</td></tr>
-                    <tr><td><strong>Demonstrativo</strong></td><td>este, esse, aquele, isto, isso, aquilo</td><td>Indica posição no espaço/discurso</td></tr>
-                    <tr><td><strong>Relativo</strong></td><td>que, quem, qual, onde, cujo, quanto</td><td>Retoma antecedente; inicia oração adjetiva</td></tr>
-                    <tr><td><strong>Indefinido</strong></td><td>alguém, ninguém, tudo, nada, algo, qualquer</td><td>Referência vaga ou indefinida</td></tr>
-                    <tr><td><strong>Interrogativo</strong></td><td>quem? que? qual? quanto?</td><td>Introduz pergunta</td></tr>
-                </tbody>
-            </table></div>
-        </div></div>
-    </div>
-
-    <!-- PREPOSIÇÃO E CONJUNÇÃO -->
-    <div class="content-section">
-        <div class="section-icon">🔗</div>
-        <h3>7. Preposição, Conjunção e Interjeição</h3>
-
-        <div class="collapsible"><div class="collapsible-header"><span>Preposições Essenciais e Acidentais</span><span class="collapsible-arrow">▼</span></div>
-        <div class="collapsible-content">
-            <p>A <strong>preposição</strong> é palavra invariável que liga termos, estabelecendo relação de dependência entre eles.</p>
-            <div class="info-box">
-                <strong>Preposições essenciais:</strong> a, ante, após, até, com, contra, de, desde, em, entre, para, perante, por, sem, sob, sobre, trás<br>
-                <strong>Preposições acidentais</strong> (outras classes com função de preposição): durante, mediante, exceto, salvo, conforme, segundo, visto...
-            </div>
-            <p><strong>Contração:</strong> preposição + artigo → <em>a + o = ao</em>, <em>de + a = da</em>, <em>em + um = num</em>, <em>por + o = pelo</em></p>
-        </div></div>
-
-        <div class="collapsible" style="margin-top:8px"><div class="collapsible-header"><span>Conjunções Coordenativas e Subordinativas</span><span class="collapsible-arrow">▼</span></div>
-        <div class="collapsible-content">
-            <div class="table-wrapper"><table class="data-table" style="font-size:0.85rem">
-                <thead><tr><th>Tipo</th><th>Subtipo</th><th>Exemplos</th></tr></thead>
-                <tbody>
-                    <tr><td rowspan="5"><strong>Coordenativa</strong></td><td>Aditiva</td><td>e, nem, não só...mas também</td></tr>
-                    <tr><td>Adversativa</td><td>mas, porém, contudo, entretanto, no entanto</td></tr>
-                    <tr><td>Alternativa</td><td>ou, ora...ora, seja...seja</td></tr>
-                    <tr><td>Conclusiva</td><td>logo, portanto, então, por isso, pois (posposto)</td></tr>
-                    <tr><td>Explicativa</td><td>pois (anteposto), porque, que, porquanto</td></tr>
-                    <tr><td rowspan="4"><strong>Subordinativa</strong></td><td>Causal</td><td>porque, pois, já que, visto que, uma vez que</td></tr>
-                    <tr><td>Condicional</td><td>se, caso, desde que, contanto que</td></tr>
-                    <tr><td>Concessiva</td><td>embora, ainda que, mesmo que, por mais que</td></tr>
-                    <tr><td>Temporal</td><td>quando, enquanto, assim que, logo que, depois que</td></tr>
-                </tbody>
-            </table></div>
-        </div></div>
-
-        <div class="inline-quiz" style="margin-top:16px">
-            <div class="quiz-label">🧠 Teste rápido</div>
-            <div class="quiz-question">Em <strong>"Estude muito, pois a prova é amanhã"</strong>, a conjunção <em>"pois"</em> é:</div>
-            <div class="quiz-options">
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq5-2',false,'Não! "Pois" com valor adversativo não existe. Verifique a posição do "pois".')">a) Adversativa</button>
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq5-2',false,'Cuidado! "Pois" conclusivo (=portanto) vem depois do verbo. Aqui ele está antes do verbo "é".')">b) Conclusiva</button>
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq5-2',true,'Correto! "Pois" anteposto ao verbo = conjunção explicativa (apresenta uma justificativa/explicação). "Pois" posposto = conclusiva.')">c) Explicativa</button>
-                <button class="quiz-btn" onclick="inlineQuiz(this,'iq5-2',false,'Errado! Aditivas ligam ideias de adição (e, nem).')">d) Aditiva</button>
-            </div>
-            <div class="quiz-feedback" id="iq5-2"></div>
-        </div>
-    </div>
-
-    <!-- ARTIGO E NUMERAL -->
-    <div class="content-section">
-        <div class="section-icon">🔢</div>
-        <h3>8. Artigo, Numeral e Interjeição</h3>
-        <div class="two-col">
-            <div class="concept-card">
-                <h4>Artigo</h4>
-                <p>Determina o substantivo, indicando gênero e número.</p>
-                <p>• <strong>Definido:</strong> o, a, os, as (ser determinado)<br>
-                   • <strong>Indefinido:</strong> um, uma, uns, umas (ser indeterminado)</p>
-                <div class="info-box" style="margin-top:8px; font-size:0.85rem">O artigo pode substantivar qualquer palavra: <em>o "porém"</em>, <em>o sim e o não</em>.</div>
-            </div>
-            <div class="concept-card">
-                <h4>Numeral</h4>
-                <p>Indica quantidade, ordem, fração ou múltiplo.</p>
-                <p>• <strong>Cardinal:</strong> um, dois, três...<br>
-                   • <strong>Ordinal:</strong> primeiro, segundo, décimo...<br>
-                   • <strong>Fracionário:</strong> metade, terço, décimo...<br>
-                   • <strong>Multiplicativo:</strong> dobro, triplo, quádruplo...<br>
-                   • <strong>Coletivo:</strong> dúzia, dezena, centena...</p>
-            </div>
-        </div>
-        <div class="concept-card" style="margin-top:12px">
-            <h4>Interjeição</h4>
-            <p>Expressa emoções, sentimentos ou reações de forma exclamativa. É invariável e funciona como uma oração por si só.</p>
-            <div class="table-wrapper"><table class="data-table" style="font-size:0.85rem">
-                <thead><tr><th>Sentimento</th><th>Interjeições</th></tr></thead>
-                <tbody>
-                    <tr><td>Alegria</td><td>Viva! Eba! Ótimo!</td></tr>
-                    <tr><td>Surpresa/espanto</td><td>Uau! Puxa! Nossa! Caramba!</td></tr>
-                    <tr><td>Dor/pesar</td><td>Ai! Ui! Oh! Ah!</td></tr>
-                    <tr><td>Silêncio</td><td>Psiu! Silêncio! Sh!</td></tr>
-                    <tr><td>Chamamento</td><td>Ei! Olá! Psst!</td></tr>
-                </tbody>
-            </table></div>
-        </div>
-    </div>
-
-    <!-- EXERCÍCIOS -->
-    <div class="exercise-area">
-        <h3>&#127891; Exercícios — Classes de Palavras</h3>
-        <p style="margin-bottom:15px; font-size:0.9rem">Identifique as classes gramaticais nas frases abaixo.</p>
-
-        <div class="exercise-item">
-            <div class="question"><span class="q-num">1</span> Na frase <strong>"Ela fala muito bonito"</strong>, a palavra <em>bonito</em> é:</div>
-            <div class="options-group" id="ex5-q1">
-                <button class="option-btn" onclick="checkAnswer(this, false, 'ex5-q1')">a) Adjetivo predicativo</button>
-                <button class="option-btn" onclick="checkAnswer(this, true, 'ex5-q1')">b) Advérbio de modo</button>
-                <button class="option-btn" onclick="checkAnswer(this, false, 'ex5-q1')">c) Substantivo</button>
-                <button class="option-btn" onclick="checkAnswer(this, false, 'ex5-q1')">d) Numeral</button>
-            </div>
-            <div class="feedback-msg" id="fb-ex5-q1">Quando "bonito" modifica o verbo "fala" (modo como ela fala) e permanece invariável mesmo que o sujeito seja feminino, funciona como advérbio de modo. Compare: "Ela é bonita" (adjetivo, concorda).</div>
-        </div>
-
-        <div class="exercise-item">
-            <div class="question"><span class="q-num">2</span> Em <strong>"O jantar estava pronto"</strong>, a palavra <em>jantar</em> é:</div>
-            <div class="options-group" id="ex5-q2">
-                <button class="option-btn" onclick="checkAnswer(this, false, 'ex5-q2')">a) Verbo no infinitivo</button>
-                <button class="option-btn" onclick="checkAnswer(this, true, 'ex5-q2')">b) Substantivo (derivação imprópria)</button>
-                <button class="option-btn" onclick="checkAnswer(this, false, 'ex5-q2')">c) Adjetivo</button>
-                <button class="option-btn" onclick="checkAnswer(this, false, 'ex5-q2')">d) Advérbio</button>
-            </div>
-            <div class="feedback-msg" id="fb-ex5-q2">"Jantar" aqui é precedido de artigo "O" e exerce função de sujeito → é substantivo. Trata-se de derivação imprópria: o verbo "jantar" passou a funcionar como substantivo.</div>
-        </div>
-
-        <div class="exercise-item">
-            <div class="question"><span class="q-num">3</span> A palavra <strong>"cujo"</strong> em <em>"O aluno cujo caderno foi perdido ficou triste"</em> é um pronome:</div>
-            <div class="options-group" id="ex5-q3">
-                <button class="option-btn" onclick="checkAnswer(this, false, 'ex5-q3')">a) Demonstrativo</button>
-                <button class="option-btn" onclick="checkAnswer(this, false, 'ex5-q3')">b) Indefinido</button>
-                <button class="option-btn" onclick="checkAnswer(this, true, 'ex5-q3')">c) Relativo (com valor de posse)</button>
-                <button class="option-btn" onclick="checkAnswer(this, false, 'ex5-q3')">d) Interrogativo</button>
-            </div>
-            <div class="feedback-msg" id="fb-ex5-q3">"Cujo" é pronome relativo com valor possessivo — retoma "aluno" e indica posse ("cujo caderno" = o caderno do aluno). Nunca use artigo após "cujo"!</div>
-        </div>
-
-        <div class="score-display" id="score-ex5" style="display:none">
-            <span id="score-ex5-num"></span>
-            <div id="score-ex5-text"></div>
-        </div>
-    </div>
-
-    <div class="nav-buttons">
-        <button class="btn-nav btn-prev" onclick="showUnit(4)">&#9664; Unidade 4</button>
-        <button class="btn-nav btn-next" onclick="showUnit(6)">Unidade 6: Exercícios &#9654;</button>
-    </div>
-</div>
-
->
+</body>
