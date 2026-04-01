@@ -1860,10 +1860,26 @@
         .token-class { display: block; font-size: 0.7rem; text-transform: uppercase; padding: 2px 8px; border-radius: 0 0 6px 6px; border: 2px solid; border-top: none; font-weight: 700; }
 
         
-        .unit-view        { display: none !important; }
-        .unit-view.active { display: block !important; animation: fadeIn 0.3s ease; }
-        @keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
-        /* Fonador */
+        .unit-view{display:none!important}.unit-view.active{display:block!important;animation:fadeIn .3s ease}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+        /* ── Tables (ev-table pattern — all section tables) ── */
+        .ev-table{width:100%;border-collapse:collapse;font-size:.87rem;table-layout:fixed}
+        .ev-table th{background:var(--primary);color:white;padding:9px 13px;text-align:left;font-weight:600;word-wrap:break-word}
+        .ev-table td{padding:8px 13px;border-bottom:1px solid var(--border);vertical-align:middle;word-wrap:break-word}
+        .ev-table tr:last-child td{border-bottom:none}
+        .ev-table tr:nth-child(even) td{background:rgba(0,0,0,.015)}
+        .ev-tipo{background:var(--bg-alt)!important;font-weight:700;text-align:center;border-right:2px solid var(--primary-light);white-space:nowrap;min-width:80px}
+        /* ── IPA tables ── */
+        .ipa-section{margin:22px 0}.ipa-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.87rem}
+        .ipa-table th{background:var(--primary);color:white;padding:7px 11px;text-align:left;font-weight:600}
+        .ipa-table td{padding:7px 11px;border-bottom:1px solid var(--border);vertical-align:middle}
+        .ipa-table tr:nth-child(even) td{background:var(--bg-alt)}
+        .ipa-symbol{font-size:1.1rem;color:var(--primary);font-weight:700}
+        .ipa-highlight{color:var(--primary);font-weight:800}.ipa-example{font-weight:600}
+        .ipa-group-header td{background:var(--primary-dark)!important;color:white!important;font-size:.74rem;text-transform:uppercase;padding:4px 11px!important;font-weight:700}
+        .btn-phoneme{background:var(--primary);color:white;border:none;border-radius:50%;width:26px;height:26px;cursor:pointer;font-size:.77rem;display:inline-flex;align-items:center;justify-content:center;transition:.17s;flex-shrink:0}
+        .btn-phoneme:hover{background:var(--primary-dark);transform:scale(1.12)}
+        /* ── Fonador Card ── */
         .fonador-card{background:white;border:1px solid var(--border);border-radius:12px;padding:20px;margin:16px 0;box-shadow:0 2px 8px rgba(0,0,0,.06)}
         .fonador-title{font-weight:700;font-size:1.05rem;color:var(--primary);margin-bottom:14px;text-align:center}
         .fonador-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
@@ -1872,10 +1888,9 @@
         .fonador-item{display:flex;align-items:flex-start;gap:8px;margin-bottom:7px;font-size:.83rem}
         .fonador-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
         .fonador-flow{display:flex;align-items:center;justify-content:center;gap:6px;background:var(--primary);color:white;border-radius:8px;padding:9px 14px;font-size:.84rem;font-weight:600;flex-wrap:wrap}
-        .fonador-flow .arrow{opacity:.7}
-        .fonador-out{background:rgba(255,255,255,.25);border-radius:5px;padding:2px 10px}
+        .fonador-flow .arrow{opacity:.7}.fonador-out{background:rgba(255,255,255,.25);border-radius:5px;padding:2px 10px}
         @media(max-width:640px){.fonador-grid{grid-template-columns:1fr}}
-        /* IPA Chart */
+        /* ── Interactive IPA Chart ── */
         .ipa-chart-mini{background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:16px 0;box-shadow:0 2px 8px rgba(0,0,0,.06)}
         .ipa-chart-header{background:var(--primary);color:white;padding:11px 18px;font-weight:700;font-size:.9rem}
         .ipa-group-block{padding:12px 18px;border-bottom:1px solid var(--bg-alt)}
@@ -1891,23 +1906,7 @@
         .ipa-sym-btn.playing{background:var(--primary-dark);color:white;transform:scale(.96)}
         .ipa-chart-note{padding:10px 18px;background:var(--bg-alt);font-size:.75rem;color:var(--text-muted);text-align:center}
         .ipa-chart-note a{color:var(--primary)}
-        /* Tables */
-        .ev-table{width:100%;border-collapse:collapse;font-size:.87rem}
-        .ev-table th{background:var(--primary);color:white;padding:9px 12px;text-align:left;font-weight:600}
-        .ev-table td{padding:8px 12px;border-bottom:1px solid var(--border);vertical-align:middle}
-        .ev-table tr:last-child td{border-bottom:none}
-        .ev-tipo{background:var(--bg-alt)!important;font-weight:700;text-align:center;border-right:2px solid var(--primary-light);white-space:nowrap}
-        .ipa-section{margin:22px 0}.ipa-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.87rem}
-        .ipa-table th{background:var(--primary);color:white;padding:7px 11px;text-align:left;font-weight:600}
-        .ipa-table td{padding:7px 11px;border-bottom:1px solid var(--border);vertical-align:middle}
-        .ipa-table tr:nth-child(even) td{background:var(--bg-alt)}
-        .ipa-symbol{font-size:1.1rem;color:var(--primary);font-weight:700}
-        .ipa-highlight{color:var(--primary);font-weight:800}
-        .ipa-example{font-weight:600}
-        .ipa-group-header td{background:var(--primary-dark)!important;color:white!important;font-size:.74rem;text-transform:uppercase;padding:4px 11px!important;font-weight:700}
-        .btn-phoneme{background:var(--primary);color:white;border:none;border-radius:50%;width:26px;height:26px;cursor:pointer;font-size:.77rem;display:inline-flex;align-items:center;justify-content:center;transition:.17s;flex-shrink:0}
-        .btn-phoneme:hover{background:var(--primary-dark);transform:scale(1.12)}
-        /* Quiz */
+        /* ── Misc ── */
         .inline-quiz{background:#f0f9f4;border:1px solid #b2dfdb;border-radius:10px;padding:16px 20px;margin:17px 0}
         .inline-quiz .quiz-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--primary);margin-bottom:5px}
         .inline-quiz .quiz-question{font-weight:600;margin-bottom:10px}
@@ -1920,10 +1919,8 @@
         .inline-quiz .quiz-feedback.show{display:block}
         .inline-quiz .quiz-feedback.correct{background:#d4edda;color:#155724;border-left:4px solid #28a745}
         .inline-quiz .quiz-feedback.wrong{background:#f8d7da;color:#721c24;border-left:4px solid #dc3545}
-        /* Info boxes */
         .info-box{background:#e8f4fd;border-left:4px solid #2196f3;border-radius:0 8px 8px 0;padding:11px 15px;margin:13px 0;font-size:.89rem}
-        .info-box.warning{background:#fff8e1;border-color:#ff9800}
-        .info-box.success{background:#e8f5e9;border-color:#4caf50}
+        .info-box.warning{background:#fff8e1;border-color:#ff9800}.info-box.success{background:#e8f5e9;border-color:#4caf50}
         .info-box strong{display:block;margin-bottom:3px;font-size:.79rem;text-transform:uppercase;letter-spacing:.4px}
         .accent-rule{background:white;border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin:15px 0;box-shadow:0 2px 5px rgba(0,0,0,.05)}
         .accent-rule .rule-title{font-size:.97rem;font-weight:700;color:var(--primary);border-bottom:2px solid var(--primary-light);padding-bottom:6px;margin-bottom:9px}
@@ -1932,10 +1929,8 @@
         .tonic{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px;font-weight:700;color:var(--primary-dark)}
         .morpheme-box{display:flex;flex-wrap:wrap;gap:4px;align-items:center;margin:9px 0}
         .morpheme{display:inline-block;padding:5px 10px;border-radius:6px;font-weight:700;font-size:.89rem;text-align:center}
-        .morpheme.radical{background:#e8f5e9;border:2px solid #4caf50;color:#2e7d32}
-        .morpheme.prefixo{background:#e3f2fd;border:2px solid #2196f3;color:#1565c0}
-        .morpheme.sufixo{background:#fff3e0;border:2px solid #ff9800;color:#e65100}
-        .morpheme.desinencia{background:#fce4ec;border:2px solid #e91e63;color:#880e4f}
+        .morpheme.radical{background:#e8f5e9;border:2px solid #4caf50;color:#2e7d32}.morpheme.prefixo{background:#e3f2fd;border:2px solid #2196f3;color:#1565c0}
+        .morpheme.sufixo{background:#fff3e0;border:2px solid #ff9800;color:#e65100}.morpheme.desinencia{background:#fce4ec;border:2px solid #e91e63;color:#880e4f}
         .morpheme.vogtem{background:#f3e5f5;border:2px solid #9c27b0;color:#4a148c}
         .morpheme-label{font-size:.62rem;display:block;font-weight:600;text-transform:uppercase;text-align:center}
         .class-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.75rem;font-weight:700;text-transform:uppercase}
@@ -1946,13 +1941,10 @@
         .class-badge.numeral{background:#e8eaf6;color:#283593}.class-badge.artigo{background:#f1f8e9;color:#33691e}
         .sentence-analysis{background:white;border:1px solid var(--border);border-radius:9px;padding:15px;margin:13px 0}
         .sentence-text{font-size:1.01rem;font-weight:600;margin-bottom:13px;padding:8px;background:var(--bg-alt);border-radius:7px;text-align:center}
-        .word-tokens{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
-        .word-token{text-align:center}
+        .word-tokens{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}.word-token{text-align:center}
         .token-word{display:block;font-weight:700;font-size:.92rem;padding:5px 10px;border-radius:6px 6px 0 0;border:2px solid;border-bottom:none}
         .token-class{display:block;font-size:.62rem;text-transform:uppercase;padding:2px 7px;border-radius:0 0 6px 6px;border:2px solid;border-top:none;font-weight:700}
         .unit-card .unit-icon{font-size:1.45rem;margin-bottom:6px;display:block}
-        .credits-box{background:#f8f0ff;border:1px solid #9c27b0;border-radius:8px;padding:10px 14px;margin-top:14px;font-size:.78rem;color:#4a148c}
-        .credits-box strong{display:block;margin-bottom:3px}
 
         </style>
 </head>
@@ -2452,14 +2444,14 @@
             <div class="video-item">
                 <h4>O que é Fonologia?</h4>
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/BOj2xCwIo8M?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen loading="lazy" loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/CCiVp0Mmmwk?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen loading="lazy" loading="lazy"></iframe>
                 </div>
                 <p class="video-caption">Introdução à fonologia e aos sons da língua portuguesa.</p>
             </div>
             <div class="video-item">
                 <h4>Fonemas do Português</h4>
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/CCiVp0Mmmwk?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/xCk9wJp0yWQ?cc_load_policy=1&cc_lang_pref=pt" allowfullscreen></iframe>
                 </div>
                 <p class="video-caption">Classificação dos fonemas: vogais, semivogais e consoantes.</p>
             </div>
@@ -2477,11 +2469,29 @@
         <p>Embora frequentemente confundidas, <strong>Fonética</strong> e <strong>Fonologia</strong> estudam aspectos bem distintos dos sons da língua:</p>
 
         <div class="table-wrapper">
-            <table class="data-table">
-                <thead><tr><th>Disciplina</th><th>O que estuda</th><th>Foco</th><th>Para concursos?</th></tr></thead>
+            <table class="data-table ev-table">
+                <colgroup>
+                    <col style="width:110px">
+                    <col style="width:auto">
+                    <col style="width:220px">
+                    <col style="width:130px">
+                </colgroup>
+                <thead>
+                    <tr><th>Disciplina</th><th>O que estuda</th><th>Foco</th><th>Para concursos?</th></tr>
+                </thead>
                 <tbody>
-                    <tr><td><strong>Fonética</strong></td><td>Os sons em si: como são produzidos fisicamente pelo aparelho fonador</td><td>Articulação, acústica, percepção</td><td>⚠️ Menos cobrada</td></tr>
-                    <tr><td><strong>Fonologia</strong></td><td>A função dos sons na língua: como distinguem palavras e formam significados</td><td>Fonemas, sílabas, tonicidade</td><td>✅ Muito cobrada</td></tr>
+                    <tr>
+                        <td class="ev-tipo"><strong>Fonética</strong></td>
+                        <td>Os sons em si: como são produzidos fisicamente pelo aparelho fonador</td>
+                        <td>Articulação, acústica, percepção</td>
+                        <td style="text-align:center">⚠️ Menos cobrada</td>
+                    </tr>
+                    <tr>
+                        <td class="ev-tipo"><strong>Fonologia</strong></td>
+                        <td>A função dos sons na língua: como distinguem palavras e formam significados</td>
+                        <td>Fonemas, sílabas, tonicidade</td>
+                        <td style="text-align:center">✅ Muito cobrada</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -2549,11 +2559,26 @@
             <h4>Dígrafo — 2 letras, 1 fonema</h4>
             <p>O dígrafo constitui-se de <strong>duas letras representando um só fonema</strong>. A segunda letra é <em>diacrítica</em> (ajuda na pronúncia).</p>
             <div class="table-wrapper">
-                <table class="data-table" style="font-size:0.88rem">
-                    <thead><tr><th>Tipo</th><th>Dígrafos</th><th>Exemplos</th></tr></thead>
+                <table class="data-table ev-table">
+                    <colgroup>
+                        <col style="width:160px">
+                        <col style="width:240px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <thead>
+                        <tr><th>Tipo</th><th>Dígrafos</th><th>Exemplos</th></tr>
+                    </thead>
                     <tbody>
-                        <tr><td><strong>Consonantais</strong></td><td>gu, qu, ch, lh, nh, rr, ss, sc, sç, xc, xs</td><td>GUErra, QUEda, CHave, LHama, NHoque, aRRastão, aSSimile, deSCendente, creSÇa, eXCitado</td></tr>
-                        <tr><td><strong>Vocálicos (nasais)</strong></td><td>vogal + m/n na mesma sílaba</td><td>cAMpo, ANta, EMpresa, ENtrada, IMbatível, OMbro, UMbigo</td></tr>
+                        <tr>
+                            <td class="ev-tipo"><strong>Consonantais</strong></td>
+                            <td>gu, qu, ch, lh, nh, rr, ss, sc, sç, xc, xs</td>
+                            <td><strong>GU</strong>erra, <strong>QU</strong>eda, <strong>CH</strong>ave, <strong>LH</strong>ama, <strong>NH</strong>oque, a<strong>RR</strong>astão, a<strong>SS</strong>imile, de<strong>SC</strong>endente, cre<strong>SÇ</strong>a, e<strong>XC</strong>itado</td>
+                        </tr>
+                        <tr>
+                            <td class="ev-tipo"><strong>Vocálicos (nasais)</strong></td>
+                            <td>vogal + m/n na mesma sílaba</td>
+                            <td>c<strong>AM</strong>po, <strong>AN</strong>ta, <strong>EM</strong>presa, <strong>EN</strong>trada, <strong>IM</strong>batível, <strong>OM</strong>bro, <strong>UM</strong>bigo</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -2614,14 +2639,21 @@
             <div class="collapsible-content">
                 <p>São fonemas produzidos <strong>livremente, sem obstrução</strong> da passagem do ar. São sempre o <strong>centro</strong> de cada sílaba.</p>
                 <div class="table-wrapper">
-                    <table class="data-table" style="font-size:0.88rem">
+                    <table class="data-table ev-table" style="font-size:0.88rem">
+                        <colgroup>
+                            <col style="width:60px">
+                            <col style="width:auto">
+                            <col style="width:auto">
+                            <col style="width:260px">
+                        </colgroup>
+                        
                         <thead><tr><th>Vogal</th><th>Oral</th><th>Nasal</th><th>Observação</th></tr></thead>
                         <tbody>
-                            <tr><td><strong>A</strong></td><td>c<span class="tonic">a</span>sa</td><td>c<span class="tonic">â</span>mara</td><td>Sempre vogal!</td></tr>
-                            <tr><td><strong>E</strong></td><td>h<span class="tonic">é</span>lio, estr<span class="tonic">a</span>da</td><td>c<span class="tonic">en</span>tro</td><td>Em fim de palavra, soa como I: pente → "penti"</td></tr>
-                            <tr><td><strong>I</strong></td><td>am<span class="tonic">i</span>go</td><td><span class="tonic">ín</span>dio</td><td>Quando acentuado, é sempre vogal</td></tr>
-                            <tr><td><strong>O</strong></td><td>p<span class="tonic">ó</span>de</td><td>l<span class="tonic">on</span>ge</td><td>Em fim de palavra, soa como U: ovo → "ovu"</td></tr>
-                            <tr><td><strong>U</strong></td><td>sa<span class="tonic">ú</span>de</td><td><span class="tonic">un</span>tar</td><td>Quando acentuado, é sempre vogal</td></tr>
+                            <tr><td class="ev-tipo"><strong>A</strong></td><td>c<span class="tonic">a</span>sa</td><td>c<span class="tonic">â</span>mara</td><td>Sempre vogal!</td></tr>
+                            <tr><td class="ev-tipo"><strong>E</strong></td><td>h<span class="tonic">é</span>lio, estr<span class="tonic">a</span>da</td><td>c<span class="tonic">en</span>tro</td><td>Em fim de palavra, soa como I: pente → "penti"</td></tr>
+                            <tr><td class="ev-tipo"><strong>I</strong></td><td>am<span class="tonic">i</span>go</td><td><span class="tonic">ín</span>dio</td><td>Quando acentuado, é sempre vogal</td></tr>
+                            <tr><td class="ev-tipo"><strong>O</strong></td><td>p<span class="tonic">ó</span>de</td><td>l<span class="tonic">on</span>ge</td><td>Em fim de palavra, soa como U: ovo → "ovu"</td></tr>
+                            <tr><td class="ev-tipo"><strong>U</strong></td><td>sa<span class="tonic">ú</span>de</td><td><span class="tonic">un</span>tar</td><td>Quando acentuado, é sempre vogal</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -4846,39 +4878,18 @@
         function checkPractice(btn,ok,qid){var c=document.getElementById(qid);if(!c)return;c.querySelectorAll('.pq-option').forEach(function(b){b.disabled=true;});if(ok){btn.classList.add('correct');c.classList.add('answered-correct');}else{btn.classList.add('wrong');c.classList.add('answered-wrong');c.querySelectorAll('.pq-option').forEach(function(b){if(b.getAttribute('onclick')&&b.getAttribute('onclick').indexOf('true')>-1)b.classList.add('correct');});}var fb=document.getElementById(qid+'-feedback');if(fb){fb.style.display='block';fb.className='pq-feedback '+(ok?'correct-fb':'wrong-fb');}updatePracticeScore();}
         function updatePracticeScore(){var tot=document.querySelectorAll('.practice-question').length;var cor=document.querySelectorAll('.practice-question.answered-correct').length;var ans=cor+document.querySelectorAll('.practice-question.answered-wrong').length;var se=document.getElementById('practiceScoreText');if(se)se.textContent=cor+' de '+ans+' corretas ('+tot+' total)';}
         document.addEventListener('keydown',function(e){var n=parseInt(state.currentView.replace('unit',''));if(e.key==='ArrowRight'&&!isNaN(n)&&n<6)showUnit(n+1);else if(e.key==='ArrowLeft'){if(!isNaN(n)&&n>1)showUnit(n-1);else if(n===1)showView('welcome');}else if(e.key==='Home')showView('welcome');});
-
-        // ─── Phoneme Audio System — LOCAL FILES (espeak-ng/pt-BR) ───────────
-        // Files generated with espeak-ng v1.51, voice pt-BR, 22050Hz mono OGG
-        // Carrier syllable method (standard linguistics practice for consonants)
-        // Nasal vowels use demonstrative words (mão, tem, vim, bom, um)
-        // All files hosted at audio/fonemas/ in this repository
-        var BASE = 'audio/fonemas/';
-        var AUDIO_MAP = {
-            'a':'​a','e':'e','ɛ':'eps','i':'i','o':'o','ɔ':'ope','u':'u',
-            'ã':'an','ẽ':'en','ĩ':'in','õ':'on','ũ':'un',
-            'p':'p','b':'b','t':'t','d':'d','k':'k','g':'g',
-            'f':'f','v':'v','s':'s','z':'z','ʃ':'sh','ʒ':'zh',
-            'm':'m','n':'n','ɲ':'nh','l':'l','ʎ':'lh',
-            'ɾ':'r','ʁ':'rr','r':'r'
-        };
+        var BASE='audio/fonemas/';
+        var AUDIO_MAP={'a':'a','e':'e','ɛ':'eps','i':'i','o':'o','ɔ':'ope','u':'u','ã':'an','ẽ':'en','ĩ':'in','õ':'on','ũ':'un','p':'p','b':'b','t':'t','d':'d','k':'k','g':'g','f':'f','v':'v','s':'s','z':'z','ʃ':'sh','ʒ':'zh','m':'m','n':'n','ɲ':'nh','l':'l','ʎ':'lh','ɾ':'r','ʁ':'rr','r':'r'};
         var _cache={};
         function pronouncePhoneme(ipa,btn){
-            var key=AUDIO_MAP[ipa];
-            if(!key){return;}
+            var key=AUDIO_MAP[ipa];if(!key)return;
             var url=BASE+key+'.ogg';
             if(btn){btn.classList.add('playing');setTimeout(function(){btn.classList.remove('playing');},700);}
             window.speechSynthesis.cancel();
-            var cached=_cache[url];
-            if(!cached){cached=new Audio(url);_cache[url]=cached;}
+            var cached=_cache[url];if(!cached){cached=new Audio(url);_cache[url]=cached;}
             cached.currentTime=0;
-            cached.play().catch(function(){
-                // TTS fallback if file fails
-                var ttsMap={'a':'a','e':'ê','ɛ':'é','i':'i','o':'ô','ɔ':'ó','u':'u','ã':'mão','ẽ':'tem','ĩ':'vim','õ':'bom','ũ':'um','p':'pa','b':'ba','t':'ta','d':'da','k':'ca','g':'ga','f':'fa','v':'va','s':'sa','z':'za','ʃ':'xa','ʒ':'ja','m':'ma','n':'na','ɲ':'nha','l':'la','ʎ':'lha','ɾ':'caro','ʁ':'rato','r':'ara'};
-                var u=new SpeechSynthesisUtterance(ttsMap[ipa]||ipa);u.lang='pt-BR';u.rate=.5;u.pitch=1;window.speechSynthesis.speak(u);
-            });
+            cached.play().catch(function(){var tts={'a':'a','e':'ê','ɛ':'é','i':'i','o':'ô','ɔ':'ó','u':'u','ã':'mão','ẽ':'tem','ĩ':'vim','õ':'bom','ũ':'um','p':'pa','b':'ba','t':'ta','d':'da','k':'ca','g':'ga','f':'fa','v':'va','s':'sa','z':'za','ʃ':'xa','ʒ':'ja','m':'ma','n':'na','ɲ':'nha','l':'la','ʎ':'lha','ɾ':'caro','ʁ':'rato','r':'ara'};var u=new SpeechSynthesisUtterance(tts[ipa]||ipa);u.lang='pt-BR';u.rate=.5;u.pitch=1;window.speechSynthesis.speak(u);});
         }
-        // ────────────────────────────────────────────────────────────────────
-
         updateNav();
         localStorage.setItem('cursoId','portugues1');
         if(typeof Courses!=='undefined')Courses.setCursoId('portugues1');
