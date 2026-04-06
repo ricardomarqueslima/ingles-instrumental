@@ -12,7 +12,8 @@
         "b) Variedade lingu\u00edstica e adequa\u00e7\u00e3o ao contexto comunicativo",
         "c) Diferen\u00e7a entre l\u00edngua escrita e l\u00edngua oral",
         "d) Comunica\u00e7\u00e3o n\u00e3o verbal do emissor"
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 2,
@@ -23,7 +24,8 @@
         "b) Os gestos e express\u00f5es constituem comunica\u00e7\u00e3o n\u00e3o verbal, que complementa e refor\u00e7a a comunica\u00e7\u00e3o verbal.",
         "c) A comunica\u00e7\u00e3o n\u00e3o verbal substitui integralmente a verbal nesse contexto.",
         "d) Varia\u00e7\u00f5es de tom de voz n\u00e3o fazem parte de nenhum tipo de comunica\u00e7\u00e3o classificada pela lingu\u00edstica."
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 3,
@@ -34,7 +36,8 @@
         "b) A linguagem \u00e9 um conceito mais amplo que abrange a l\u00edngua como uma de suas manifesta\u00e7\u00f5es.",
         "c) A l\u00edngua \u00e9 inata, enquanto a linguagem \u00e9 adquirida socialmente.",
         "d) A linguagem se restringe \u00e0 comunica\u00e7\u00e3o verbal escrita."
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 4,
@@ -43,19 +46,23 @@
       "statements": [
         {
           "id": "4a",
-          "text": "A norma culta \u00e9 a \u00fanica forma correta de uma l\u00edngua; todas as demais variedades s\u00e3o erros gramaticais."
+          "text": "A norma culta é a única forma correta de uma língua; todas as demais variedades são erros gramaticais.",
+          "isCorrect": false
         },
         {
           "id": "4b",
-          "text": "Socioletos s\u00e3o varia\u00e7\u00f5es lingu\u00edsticas associadas a grupos sociais espec\u00edficos, como faixa et\u00e1ria, profiss\u00e3o ou classe social."
+          "text": "Socioletos são variações linguísticas associadas a grupos sociais específicos, como faixa etária, profissão ou classe social.",
+          "isCorrect": true
         },
         {
           "id": "4c",
-          "text": "A oralidade se caracteriza por maior planejamento e formalidade em compara\u00e7\u00e3o com a escrita."
+          "text": "A oralidade se caracteriza por maior planejamento e formalidade em comparação com a escrita.",
+          "isCorrect": false
         },
         {
           "id": "4d",
-          "text": "O referente, no esquema da comunica\u00e7\u00e3o, \u00e9 o assunto ou contexto sobre o qual a mensagem trata."
+          "text": "O referente, no esquema da comunicação, é o assunto ou contexto sobre o qual a mensagem trata.",
+          "isCorrect": true
         }
       ]
     },
@@ -89,6 +96,11 @@
         "canal",
         "c\u00f3digo",
         "referente"
+      ],
+      "correctAnswers": [
+        "emissor",
+        "receptor",
+        "canal"
       ]
     },
     {
@@ -106,7 +118,13 @@
         "Varia\u00e7\u00e3o associada a um grupo social",
         "Adapta\u00e7\u00e3o da fala conforme a situa\u00e7\u00e3o comunicativa",
         "Variedade de prest\u00edgio social, usada em contextos formais"
-      ]
+      ],
+      "correctMapping": {
+        "Dialeto": "Variação associada a uma região geográfica",
+        "Socioleto": "Variação associada a um grupo social",
+        "Registro": "Adaptação da fala conforme a situação comunicativa",
+        "Norma culta": "Variedade de prestígio social, usada em contextos formais"
+      }
     },
     {
       "id": 8,
@@ -117,7 +135,8 @@
         "b) Fun\u00e7\u00e3o referencial, pois apenas informa um fato.",
         "c) Fun\u00e7\u00e3o conativa, pois busca influenciar o comportamento do destinat\u00e1rio.",
         "d) Fun\u00e7\u00e3o f\u00e1tica, pois testa o canal de comunica\u00e7\u00e3o."
-      ]
+      ],
+      "correctAnswer": 2
     },
     {
       "id": 9,
@@ -126,19 +145,23 @@
       "statements": [
         {
           "id": "9a",
-          "text": "A escrita sempre reproduz fielmente a fala, sendo apenas uma transcri\u00e7\u00e3o da oralidade."
+          "text": "A escrita sempre reproduz fielmente a fala, sendo apenas uma transcri\u00e7\u00e3o da oralidade.",
+          "isCorrect": false
         },
         {
           "id": "9b",
-          "text": "Na fun\u00e7\u00e3o po\u00e9tica, a \u00eanfase recai sobre a pr\u00f3pria mensagem e sua elabora\u00e7\u00e3o est\u00e9tica."
+          "text": "Na fun\u00e7\u00e3o po\u00e9tica, a \u00eanfase recai sobre a pr\u00f3pria mensagem e sua elabora\u00e7\u00e3o est\u00e9tica.",
+          "isCorrect": true
         },
         {
           "id": "9c",
-          "text": "Um serm\u00e3o pode combinar simultaneamente m\u00faltiplas fun\u00e7\u00f5es da linguagem."
+          "text": "Um serm\u00e3o pode combinar simultaneamente m\u00faltiplas fun\u00e7\u00f5es da linguagem.",
+          "isCorrect": true
         },
         {
           "id": "9d",
-          "text": "O c\u00f3digo, no processo comunicativo, refere-se exclusivamente \u00e0 l\u00edngua portuguesa."
+          "text": "O c\u00f3digo, no processo comunicativo, refere-se exclusivamente \u00e0 l\u00edngua portuguesa.",
+          "isCorrect": false
         }
       ]
     },
@@ -159,7 +182,14 @@
         "Canal",
         "C\u00f3digo",
         "Referente"
-      ]
+      ],
+      "correctMapping": {
+        "Professor de teologia": "Emissor",
+        "Alunos": "Receptor",
+        "E-mail (internet)": "Canal",
+        "Língua portuguesa escrita": "Código",
+        "Eclesiologia": "Referente"
+      }
     }
   ]
 }

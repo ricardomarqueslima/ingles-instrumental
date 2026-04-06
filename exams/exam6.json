@@ -13,7 +13,8 @@
         "b) o manuscrito hebraico antigo",
         "c) o antigo manuscrito hebraico",
         "d) o manuscrito antigo hebraico"
-      ]
+      ],
+      "correctAnswer": 2
     },
     {
       "id": 2,
@@ -25,7 +26,8 @@
         "b) youth, Sunday, prayer, church",
         "c) attended, school, meeting, building",
         "d) group, school, meeting, building"
-      ]
+      ],
+      "correctAnswer": 0
     },
     {
       "id": 3,
@@ -34,19 +36,23 @@
       "statements": [
         {
           "id": "3a",
-          "text": "Em 'beautiful ancient stone church', os adjetivos seguem a ordem: opiniao - idade - material, antes do substantivo."
+          "text": "Em 'beautiful ancient stone church', os adjetivos seguem a ordem: opiniao - idade - material, antes do substantivo.",
+          "isCorrect": true
         },
         {
           "id": "3b",
-          "text": "O composto 'Bible study group' se traduz literalmente como 'Biblia estudo grupo' em portugues."
+          "text": "O composto 'Bible study group' se traduz literalmente como 'Biblia estudo grupo' em portugues.",
+          "isCorrect": true
         },
         {
           "id": "3c",
-          "text": "Em ingles, o modificador vem antes do nucleo do grupo nominal, enquanto em portugues geralmente vem depois."
+          "text": "Em ingles, o modificador vem antes do nucleo do grupo nominal, enquanto em portugues geralmente vem depois.",
+          "isCorrect": true
         },
         {
           "id": "3d",
-          "text": "A expressao 'church history professor' contem tres substantivos, sendo 'professor' o nucleo do grupo nominal."
+          "text": "A expressao 'church history professor' contem tres substantivos, sendo 'professor' o nucleo do grupo nominal.",
+          "isCorrect": true
         }
       ]
     },
@@ -65,7 +71,13 @@
         "sala de oracao",
         "estudante de teologia",
         "campo missionario"
-      ]
+      ],
+      "correctMapping": {
+        "worship service": "culto de adoracao",
+        "prayer room": "sala de oracao",
+        "theology student": "estudante de teologia",
+        "mission field": "campo missionario"
+      }
     },
     {
       "id": 5,
@@ -79,6 +91,11 @@
         "small",
         "Roman",
         "round"
+      ],
+      "correctAnswers": [
+        "beautiful",
+        "ancient",
+        "golden"
       ]
     },
     {
@@ -96,7 +113,13 @@
         "profecia do Antigo Testamento",
         "livro de teologia reformada",
         "Novo Testamento grego"
-      ]
+      ],
+      "correctMapping": {
+        "Old Testament prophecy": "profecia do Antigo Testamento",
+        "Reformed theology book": "livro de teologia reformada",
+        "Greek New Testament": "Novo Testamento grego",
+        "pastoral care ministry": "ministerio de cuidado pastoral"
+      }
     },
     {
       "id": 7,
@@ -108,7 +131,8 @@
         "b) a beautiful large old stone church",
         "c) a old beautiful large stone church",
         "d) a large stone old beautiful church"
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 8,
@@ -117,19 +141,23 @@
       "statements": [
         {
           "id": "8a",
-          "text": "'Seminary admission committee' traduz-se como 'comite de admissao do seminario'."
+          "text": "'Seminary admission committee' traduz-se como 'comite de admissao do seminario'.",
+          "isCorrect": true
         },
         {
           "id": "8b",
-          "text": "'Church planting movement' traduz-se como 'igreja plantando movimento'."
+          "text": "'Church planting movement' traduz-se como 'igreja plantando movimento'.",
+          "isCorrect": false
         },
         {
           "id": "8c",
-          "text": "'Daily devotional reading' traduz-se como 'leitura devocional diaria'."
+          "text": "'Daily devotional reading' traduz-se como 'leitura devocional diaria'.",
+          "isCorrect": true
         },
         {
           "id": "8d",
-          "text": "'Youth ministry leader' traduz-se como 'lider do ministerio de jovens'."
+          "text": "'Youth ministry leader' traduz-se como 'lider do ministerio de jovens'.",
+          "isCorrect": true
         }
       ]
     },
@@ -147,6 +175,14 @@
         "systematic",
         "Brazilian",
         "annual"
+      ],
+      "correctAnswers": [
+        "annual",
+        "international",
+        "renowned",
+        "Brazilian",
+        "Reformed",
+        "systematic"
       ]
     },
     {
@@ -164,7 +200,13 @@
         "project (projeto)",
         "reform (reforma)",
         "ministry (ministerio)"
-      ]
+      ],
+      "correctMapping": {
+        "church growth strategy": "strategy (estrategia)",
+        "Bible translation project": "project (projeto)",
+        "theological education reform": "reform (reforma)",
+        "worship music ministry": "ministry (ministerio)"
+      }
     }
   ]
 }

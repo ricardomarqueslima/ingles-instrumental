@@ -13,7 +13,8 @@
         "b) Past Perfect (Passado Perfeito)",
         "c) Present Perfect (Presente Perfeito)",
         "d) Past Continuous (Passado Continuo)"
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 2,
@@ -25,7 +26,8 @@
         "b) Pronome possessivo (possessive pronoun)",
         "c) Pronome relativo (relative pronoun)",
         "d) Pronome reflexivo (reflexive pronoun)"
-      ]
+      ],
+      "correctAnswer": 2
     },
     {
       "id": 3,
@@ -37,7 +39,8 @@
         "b) 'most theological' e comparativo e 'longer than' e superlativo",
         "c) Ambos sao comparativos de superioridade",
         "d) Ambos sao superlativos"
-      ]
+      ],
+      "correctAnswer": 0
     },
     {
       "id": 4,
@@ -46,23 +49,28 @@
       "statements": [
         {
           "id": "4a",
-          "text": "Na frase 'Christ Himself bore our sins on the cross', a palavra 'Himself' e um pronome reflexivo que enfatiza o sujeito."
+          "text": "Na frase 'Christ Himself bore our sins on the cross', a palavra 'Himself' e um pronome reflexivo que enfatiza o sujeito.",
+          "isCorrect": true
         },
         {
           "id": "4b",
-          "text": "Na frase 'The church has grown significantly since its founding', o tempo verbal e Present Perfect."
+          "text": "Na frase 'The church has grown significantly since its founding', o tempo verbal e Present Perfect.",
+          "isCorrect": true
         },
         {
           "id": "4c",
-          "text": "Na frase 'Their faith was stronger than ours', 'Their' e pronome possessivo adjetivo e 'ours' e pronome possessivo substantivo."
+          "text": "Na frase 'Their faith was stronger than ours', 'Their' e pronome possessivo adjetivo e 'ours' e pronome possessivo substantivo.",
+          "isCorrect": true
         },
         {
           "id": "4d",
-          "text": "Na frase 'Jesus will come again', o tempo verbal e Simple Present."
+          "text": "Na frase 'Jesus will come again', o tempo verbal e Simple Present.",
+          "isCorrect": false
         },
         {
           "id": "4e",
-          "text": "Na frase 'The psalm that David wrote', 'that' funciona como pronome demonstrativo."
+          "text": "Na frase 'The psalm that David wrote', 'that' funciona como pronome demonstrativo.",
+          "isCorrect": false
         }
       ]
     },
@@ -81,7 +89,13 @@
         "Present Perfect",
         "Simple Future",
         "Present Continuous"
-      ]
+      ],
+      "correctMapping": {
+        "God CREATED the heavens and the earth.": "Simple Past",
+        "The church HAS WITNESSED many revivals.": "Present Perfect",
+        "Believers WILL INHERIT eternal life.": "Simple Future",
+        "The pastor IS PREPARING his sermon.": "Present Continuous"
+      }
     },
     {
       "id": 6,
@@ -100,7 +114,14 @@
         "Pronome relativo caso objetivo (relative - object)",
         "Pronome reflexivo (reflexive)",
         "Pronome possessivo substantivo (possessive - independent)"
-      ]
+      ],
+      "correctMapping": {
+        "whom": "Pronome relativo caso objetivo (relative - object)",
+        "herself": "Pronome reflexivo (reflexive)",
+        "theirs": "Pronome possessivo substantivo (possessive - independent)",
+        "we": "Pronome pessoal (personal - subject)",
+        "whose": "Pronome relativo caso possessivo (relative - possessive)"
+      }
     },
     {
       "id": 7,
@@ -116,6 +137,12 @@
         "wrote",
         "study",
         "discovered"
+      ],
+      "correctAnswers": [
+        "had reached",
+        "had written",
+        "are studying",
+        "have discovered"
       ]
     },
     {
@@ -128,7 +155,8 @@
         "b) 'Genesis is the first book of the Old Testament.'",
         "c) 'It contains fifty chapters.'",
         "d) 'Moses is traditionally considered the author of the five books.'"
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 9,
@@ -137,19 +165,23 @@
       "statements": [
         {
           "id": "9a",
-          "text": "'The Gospel of John is more theological than the Synoptic Gospels.' - Forma comparativa correta."
+          "text": "'The Gospel of John is more theological than the Synoptic Gospels.' - Forma comparativa correta.",
+          "isCorrect": true
         },
         {
           "id": "9b",
-          "text": "'Revelation is the most difficultest book to interpret.' - Forma superlativa correta."
+          "text": "'Revelation is the most difficultest book to interpret.' - Forma superlativa correta.",
+          "isCorrect": false
         },
         {
           "id": "9c",
-          "text": "'Paul's letters are better known than the General Epistles.' - Forma comparativa irregular correta."
+          "text": "'Paul's letters are better known than the General Epistles.' - Forma comparativa irregular correta.",
+          "isCorrect": true
         },
         {
           "id": "9d",
-          "text": "'The Dead Sea Scrolls are the oldest biblical manuscripts ever found.' - Forma superlativa correta."
+          "text": "'The Dead Sea Scrolls are the oldest biblical manuscripts ever found.' - Forma superlativa correta.",
+          "isCorrect": true
         }
       ]
     },
@@ -169,6 +201,14 @@
         "he",
         "They",
         "she"
+      ],
+      "correctAnswers": [
+        "who",
+        "himself",
+        "His",
+        "him",
+        "he",
+        "himself"
       ]
     }
   ]

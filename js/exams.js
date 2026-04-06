@@ -21,14 +21,22 @@ const ExamEngine = {
       return;
     }
 
-    // Carregar JSON da prova (caminho: exams/{cursoId}/exam{N}.json)
+    // Carregar JSON da prova via Backend (evita bloqueio de segurança do navegador)
     try {
-      const resp = await fetch('exams/' + cursoId + '/exam' + modulo + '.json');
-      if (!resp.ok) throw new Error('Prova nao encontrada');
-      this.currentExam = await resp.json();
+      const examData = await API.getExamData(cursoId, modulo);
+      if (examData.error) {
+        alert("Erro do servidor: " + examData.error);
+        return;
+      }
+      this.currentExam = examData;
     } catch (err) {
-      alert('Erro ao carregar a prova. Tente novamente.');
-      console.error(err);
+      alert("Erro de conexão: " + err.message);
+      return;
+    }
+
+    // Trava de segurança: Se o arquivo da prova não tiver o formato esperado
+    if (!this.currentExam || !this.currentExam.questions || !Array.isArray(this.currentExam.questions)) {
+      alert("Erro Crítico: Formato da prova não reconhecido ou vazio.");
       return;
     }
 
@@ -39,13 +47,19 @@ const ExamEngine = {
 
     // Mostrar container de prova
     this.showExamView();
-    this.renderQuestion();
-    this.startTimer();
+    
+    try {
+      this.renderQuestion();
+      this.startTimer();
+    } catch (renderErr) {
+      console.error("Erro CRÍTICO ao renderizar a prova:", renderErr);
+      document.getElementById('examQuestionArea').innerHTML = '<div style="color:#c0392b; padding:30px; background:#ffebee; border-radius:10px;"><h3>Erro de Formato no JSON</h3><p>O arquivo da prova foi carregado, mas a estrutura das questões está diferente do esperado pelo sistema.</p><p style="font-family:monospace; margin-top:10px;">Detalhe técnico: ' + renderErr.message + '</p></div>';
+    }
   },
 
   showExamView() {
     // Esconder todas as views
-    document.querySelectorAll('.unit-view, #welcome').forEach(v => v.classList.remove('active'));
+    document.querySelectorAll('.unit-view, #welcome').forEach(v => { v.classList.remove('active'); v.style.display = 'none'; });
 
     const container = document.getElementById('examContainer');
     container.classList.add('active');
@@ -73,7 +87,7 @@ const ExamEngine = {
     const current = this.currentQuestion + 1;
     const answered = Object.keys(this.answers).length;
 
-    document.getElementById('examProgress').textContent = `Questao ${current} de ${total}`;
+    document.getElementById('examProgress').textContent = `Questão ${current} de ${total}`;
     document.getElementById('examAnswered').textContent = `${answered} respondida${answered !== 1 ? 's' : ''}`;
 
     // Barra de progresso
@@ -96,7 +110,7 @@ const ExamEngine = {
     // Botoes prev/next
     document.getElementById('examPrevBtn').disabled = this.currentQuestion === 0;
     document.getElementById('examNextBtn').textContent =
-      this.currentQuestion === total - 1 ? 'Revisar' : 'Proxima';
+      this.currentQuestion === total - 1 ? 'Revisar' : 'Próxima';
   },
 
   _alertsShown: {},
@@ -228,7 +242,7 @@ const ExamEngine = {
     let html = `
       <div class="exam-question" data-type="${q.type}">
         <div class="exam-q-header">
-          <span class="exam-q-number">Questao ${this.currentQuestion + 1}</span>
+          <span class="exam-q-number">Questão ${this.currentQuestion + 1}</span>
           <span class="exam-q-type">${this.getTypeBadge(q.type)}</span>
         </div>
         <div class="exam-q-prompt">${q.prompt}</div>
@@ -378,7 +392,7 @@ const ExamEngine = {
     html += `
       <div class="fb-container">
         <div class="fb-sentence">${sentenceHTML}</div>
-        <div class="fb-instruction">Clique numa palavra e depois numa lacuna para preenche-la.</div>
+        <div class="fb-instruction">Clique numa palavra e depois numa lacuna para preenchê-la.</div>
         <div class="fb-wordbank" id="fbWordBank">`;
 
     shuffledWords.forEach(word => {
@@ -768,9 +782,9 @@ const ExamEngine = {
     const answered = Object.keys(this.answers).length;
     const unanswered = total - answered;
 
-    let msg = `Voce respondeu ${answered} de ${total} questoes.`;
+    let msg = `Você respondeu ${answered} de ${total} questões.`;
     if (unanswered > 0) {
-      msg += `\n\n${unanswered} questao(oes) sem resposta. Deseja revisar antes de enviar?`;
+      msg += `\n\n${unanswered} questão(ões) sem resposta. Deseja revisar antes de enviar?`;
     } else {
       msg += '\n\nDeseja enviar a prova?';
     }
@@ -785,7 +799,7 @@ const ExamEngine = {
     this.stopTimer();
 
     if (timeExpired) {
-      alert('Tempo esgotado! Suas respostas serao enviadas automaticamente.');
+      alert('Tempo esgotado! Suas respostas serão enviadas automaticamente.');
     }
 
     const tempoGasto = Math.floor((Date.now() - this.startTime) / 1000);
@@ -849,10 +863,10 @@ const ExamEngine = {
     const total = data.total;
 
     let notaClass, notaMsg, notaEmoji;
-    if (nota >= 90) { notaClass = 'excellent'; notaMsg = 'Excelente! Voce dominou este conteudo!'; notaEmoji = '&#127942;'; }
-    else if (nota >= 70) { notaClass = 'good'; notaMsg = 'Muito bem! Otimo desempenho!'; notaEmoji = '&#11088;'; }
-    else if (nota >= 50) { notaClass = 'average'; notaMsg = 'Bom esforco! Revise os pontos que errou.'; notaEmoji = '&#128161;'; }
-    else { notaClass = 'poor'; notaMsg = 'Nao desanime! Revise o conteudo e procure o professor.'; notaEmoji = '&#128218;'; }
+    if (nota >= 90) { notaClass = 'excellent'; notaMsg = 'Excelente! Você dominou este conteúdo!'; notaEmoji = '&#127942;'; }
+    else if (nota >= 70) { notaClass = 'good'; notaMsg = 'Muito bem! Ótimo desempenho!'; notaEmoji = '&#11088;'; }
+    else if (nota >= 50) { notaClass = 'average'; notaMsg = 'Bom esforço! Revise os pontos que errou.'; notaEmoji = '&#128161;'; }
+    else { notaClass = 'poor'; notaMsg = 'Não desanime! Revise o conteúdo e procure o professor.'; notaEmoji = '&#128218;'; }
 
     let detalhesHTML = '';
     if (data.detalhes) {
@@ -862,7 +876,7 @@ const ExamEngine = {
         detalhesHTML += `
           <div class="result-item ${cls}">
             <span class="result-icon">${icon}</span>
-            <span>Questao ${d.questao}: ${d.correta ? 'Correta' : 'Incorreta'}</span>
+            <span>Questão ${d.questao}: ${d.correta ? 'Correta' : 'Incorreta'}</span>
           </div>`;
       });
     }
@@ -871,7 +885,7 @@ const ExamEngine = {
       <div class="exam-result ${notaClass}">
         <div class="result-emoji">${notaEmoji}</div>
         <h2 class="result-nota">${nota}%</h2>
-        <p class="result-acertos">${acertos} de ${total} questoes corretas</p>
+        <p class="result-acertos">${acertos} de ${total} questões corretas</p>
         <p class="result-msg">${notaMsg}</p>
 
         <div class="result-details">
@@ -879,12 +893,12 @@ const ExamEngine = {
         </div>
 
         <p class="result-info">
-          Sua nota foi registrada e sera validada pelo professor.<br>
-          Apos a validacao, voce recebera um email com o detalhamento completo.
+          Sua nota foi registrada e será validada pelo professor.<br>
+          Após a validação, você receberá um e-mail com o detalhamento completo.
         </p>
 
         <button class="btn-exam btn-back" onclick="ExamEngine.backToUnit()">
-          Voltar ao Conteudo
+          Voltar ao Conteúdo
         </button>
       </div>`;
 

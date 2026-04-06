@@ -44,7 +44,7 @@ var Admin = {
     document.getElementById('dashboard').style.display = 'block';
 
     var configRes = await API.getConfig();
-    var studentsRes = await API.getStudents();
+    var studentsRes = await API.getStudents(this.selectedCourse);
     var gradesRes = await API.getAllGrades();
 
     if (!configRes.success) {
@@ -76,10 +76,15 @@ var Admin = {
     }
   },
 
-  selectCourse: function(cursoId) {
+  async selectCourse(cursoId) {
     this.selectedCourse = cursoId;
+    
+    var studentsRes = await API.getStudents(this.selectedCourse);
+    this.students = studentsRes.success ? studentsRes.data : [];
+    
     this.renderStats();
     this.renderModuleGrid();
+    this.renderStudentsTable();
     this.renderGradesTable();
     this.renderSettings();
   },
@@ -162,7 +167,7 @@ var Admin = {
     for (var i = 0; i < this.students.length; i++) {
       var s = this.students[i];
       var date = s.dataRegistro ? new Date(s.dataRegistro).toLocaleDateString('pt-BR') : '-';
-      var cursos = (s.cursos || []).join(', ') || '-';
+      var cursos = s.cursos || '-';
       var tr = document.createElement('tr');
       tr.innerHTML = '<td>' + s.nome + '</td><td>' + s.email + '</td><td>' + cursos + '</td><td>' + date + '</td><td>' + s.provasFeitas + '</td>';
       tbody.appendChild(tr);

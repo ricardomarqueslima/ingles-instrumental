@@ -13,7 +13,8 @@
         "b) Adjetivo (adjective)",
         "c) Adverbio (adverb)",
         "d) Verbo (verb)"
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 2,
@@ -25,7 +26,8 @@
         "b) boldly",
         "c) proclaimed",
         "d) gospel"
-      ]
+      ],
+      "correctAnswer": 2
     },
     {
       "id": 3,
@@ -37,7 +39,8 @@
         "b) the early Christians",
         "c) remarkable perseverance",
         "d) Through many trials"
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 4,
@@ -46,19 +49,23 @@
       "statements": [
         {
           "id": "4a",
-          "text": "Na frase 'God loves His people', 'God' e o sujeito, 'loves' e o verbo, e 'His people' e o objeto."
+          "text": "Na frase 'God loves His people', 'God' e o sujeito, 'loves' e o verbo, e 'His people' e o objeto.",
+          "isCorrect": true
         },
         {
           "id": "4b",
-          "text": "Na frase 'The disciples followed Jesus', a palavra 'followed' funciona como substantivo."
+          "text": "Na frase 'The disciples followed Jesus', a palavra 'followed' funciona como substantivo.",
+          "isCorrect": false
         },
         {
           "id": "4c",
-          "text": "Em ingles, a ordem padrao da frase e Sujeito-Verbo-Objeto (SVO), diferente do portugues que permite mais flexibilidade."
+          "text": "Em ingles, a ordem padrao da frase e Sujeito-Verbo-Objeto (SVO), diferente do portugues que permite mais flexibilidade.",
+          "isCorrect": true
         },
         {
           "id": "4d",
-          "text": "Na frase 'Graciously, the Lord forgave their sins', a palavra 'Graciously' e o sujeito da oracao."
+          "text": "Na frase 'Graciously, the Lord forgave their sins', a palavra 'Graciously' e o sujeito da oracao.",
+          "isCorrect": false
         }
       ]
     },
@@ -77,7 +84,13 @@
         "Verbo (verb)",
         "Adjetivo (adjective)",
         "Conjuncao/Conector (conjunction)"
-      ]
+      ],
+      "correctMapping": {
+        "righteousness": "Substantivo (noun)",
+        "sanctify": "Verbo (verb)",
+        "eternal": "Adjetivo (adjective)",
+        "therefore": "Conjuncao/Conector (conjunction)"
+      }
     },
     {
       "id": 6,
@@ -91,6 +104,12 @@
         "still",
         "quickly",
         "dark"
+      ],
+      "correctAnswers": [
+        "good",
+        "gently",
+        "green",
+        "still"
       ]
     },
     {
@@ -110,7 +129,14 @@
         "Palavra que nomeia seres, lugares, coisas ou ideias",
         "Palavra que qualifica ou caracteriza um substantivo",
         "Palavra que estabelece relacao entre termos"
-      ]
+      ],
+      "correctMapping": {
+        "Noun": "Palavra que nomeia seres, lugares, coisas ou ideias",
+        "Adjective": "Palavra que qualifica ou caracteriza um substantivo",
+        "Adverb": "Palavra que modifica um verbo, adjetivo ou outro adverbio",
+        "Preposition": "Palavra que estabelece relacao entre termos",
+        "Conjunction": "Palavra que liga oracoes ou termos"
+      }
     },
     {
       "id": 8,
@@ -122,7 +148,8 @@
         "b) Adverbio - modifica o verbo 'guided'",
         "c) Verbo - indica a acao principal",
         "d) Preposicao - conecta 'leader' a 'guided'"
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 9,
@@ -132,19 +159,23 @@
       "statements": [
         {
           "id": "9a",
-          "text": "A palavra 'SOVEREIGN' funciona como adjetivo, modificando o substantivo 'God'."
+          "text": "A palavra 'SOVEREIGN' funciona como adjetivo, modificando o substantivo 'God'.",
+          "isCorrect": true
         },
         {
           "id": "9b",
-          "text": "A palavra 'MERCIFULLY' e um adverbio que modifica o verbo 'granted'."
+          "text": "A palavra 'MERCIFULLY' e um adverbio que modifica o verbo 'granted'.",
+          "isCorrect": true
         },
         {
           "id": "9c",
-          "text": "A palavra 'SALVATION' funciona como verbo na frase."
+          "text": "A palavra 'SALVATION' funciona como verbo na frase.",
+          "isCorrect": false
         },
         {
           "id": "9d",
-          "text": "A palavra 'REPENTANT' e um adjetivo que modifica 'sinners'."
+          "text": "A palavra 'REPENTANT' e um adjetivo que modifica 'sinners'.",
+          "isCorrect": true
         }
       ]
     },
@@ -163,7 +194,13 @@
         "Adverbio modificador (Adverb)",
         "Verbo principal (Main verb)",
         "Objeto direto (Direct object)"
-      ]
+      ],
+      "correctMapping": {
+        "The prophet Isaiah": "Sujeito (Subject)",
+        "clearly": "Adverbio modificador (Adverb)",
+        "announced": "Verbo principal (Main verb)",
+        "God's redemptive plan": "Objeto direto (Direct object)"
+      }
     }
   ]
 }

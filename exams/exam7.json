@@ -13,7 +13,8 @@
         "b) Os fariseus",
         "c) As leis e os rituais",
         "d) Os caminhos para a justica"
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 2,
@@ -25,7 +26,8 @@
         "b) Nevertheless",
         "c) Furthermore",
         "d) Consequently"
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 3,
@@ -35,23 +37,28 @@
       "statements": [
         {
           "id": "3a",
-          "text": "O conector 'However' indica uma relacao de contraste com a frase anterior."
+          "text": "O conector 'However' indica uma relacao de contraste com a frase anterior.",
+          "isCorrect": true
         },
         {
           "id": "3b",
-          "text": "O pronome 'their' na segunda frase refere-se a 'severe persecution'."
+          "text": "O pronome 'their' na segunda frase refere-se a 'severe persecution'.",
+          "isCorrect": false
         },
         {
           "id": "3c",
-          "text": "A expressao 'On the contrary' reafirma a mesma ideia da frase anterior."
+          "text": "A expressao 'On the contrary' reafirma a mesma ideia da frase anterior.",
+          "isCorrect": false
         },
         {
           "id": "3d",
-          "text": "O conector 'Moreover' adiciona uma informacao complementar ao argumento."
+          "text": "O conector 'Moreover' adiciona uma informacao complementar ao argumento.",
+          "isCorrect": true
         },
         {
           "id": "3e",
-          "text": "O pronome 'it' na terceira frase refere-se a 'suffering' (sofrimento)."
+          "text": "O pronome 'it' na terceira frase refere-se a 'suffering' (sofrimento).",
+          "isCorrect": true
         }
       ]
     },
@@ -72,7 +79,14 @@
         "exemplificacao",
         "adicao de informacao",
         "resultado/efeito"
-      ]
+      ],
+      "correctMapping": {
+        "therefore": "conclusao/consequencia logica",
+        "however": "contraste/oposicao",
+        "for instance": "exemplificacao",
+        "in addition": "adicao de informacao",
+        "as a result": "resultado/efeito"
+      }
     },
     {
       "id": 5,
@@ -86,6 +100,11 @@
         "Nevertheless",
         "For this reason",
         "In conclusion"
+      ],
+      "correctAnswers": [
+        "However",
+        "Therefore",
+        "Nevertheless"
       ]
     },
     {
@@ -106,7 +125,14 @@
         "a doutrina da justificacao (the doctrine of justification)",
         "de Paulo (Paul's)",
         "da doutrina/do ensino (of this teaching)"
-      ]
+      ],
+      "correctMapping": {
+        "his (primeira frase)": "de Paulo (Paul's)",
+        "it (segunda frase)": "a carta (the letter)",
+        "he (segunda frase)": "Paulo (Paul)",
+        "This teaching (terceira frase)": "a doutrina da justificacao (the doctrine of justification)",
+        "its (quarta frase)": "da doutrina/do ensino (of this teaching)"
+      }
     },
     {
       "id": 7,
@@ -118,7 +144,8 @@
         "b) Sinonimia - palavras diferentes com significados semelhantes substituem o mesmo referente",
         "c) Antonimia - palavras com significados opostos criam contraste",
         "d) Hiponimia - palavras especificas substituem um termo geral"
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 8,
@@ -133,6 +160,12 @@
         "their",
         "his",
         "those"
+      ],
+      "correctAnswers": [
+        "It",
+        "them",
+        "their",
+        "them"
       ]
     },
     {
@@ -142,19 +175,23 @@
       "statements": [
         {
           "id": "9a",
-          "text": "'Jesus performed many miracles. Furthermore, He healed the sick and raised the dead.' - O conector 'Furthermore' esta usado corretamente para adicionar informacao."
+          "text": "'Jesus performed many miracles. Furthermore, He healed the sick and raised the dead.' - O conector 'Furthermore' esta usado corretamente para adicionar informacao.",
+          "isCorrect": true
         },
         {
           "id": "9b",
-          "text": "'The Reformers rejected papal authority. Therefore, they embraced it fully.' - O conector 'Therefore' esta usado corretamente para indicar consequencia."
+          "text": "'The Reformers rejected papal authority. Therefore, they embraced it fully.' - O conector 'Therefore' esta usado corretamente para indicar consequencia.",
+          "isCorrect": false
         },
         {
           "id": "9c",
-          "text": "'Augustine wrote extensively about grace. Similarly, Calvin also emphasized divine grace in his theology.' - O conector 'Similarly' esta usado corretamente para indicar semelhanca."
+          "text": "'Augustine wrote extensively about grace. Similarly, Calvin also emphasized divine grace in his theology.' - O conector 'Similarly' esta usado corretamente para indicar semelhanca.",
+          "isCorrect": true
         },
         {
           "id": "9d",
-          "text": "'The Bible teaches love for enemies. In contrast, many Christians practice this teaching daily.' - O conector 'In contrast' esta usado corretamente para indicar oposicao."
+          "text": "'The Bible teaches love for enemies. In contrast, many Christians practice this teaching daily.' - O conector 'In contrast' esta usado corretamente para indicar oposicao.",
+          "isCorrect": false
         }
       ]
     },
@@ -173,7 +210,13 @@
         "concessao/contraste",
         "comparacao/semelhanca",
         "reformulacao/explicacao"
-      ]
+      ],
+      "correctMapping": {
+        "consequently": "causa e efeito",
+        "although": "concessao/contraste",
+        "likewise": "comparacao/semelhanca",
+        "in other words": "reformulacao/explicacao"
+      }
     }
   ]
 }

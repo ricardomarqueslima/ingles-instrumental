@@ -12,7 +12,8 @@
         "b) A fon\u00e9tica estuda a escrita e a fonologia estuda a fala.",
         "c) A fon\u00e9tica e a fonologia s\u00e3o sin\u00f4nimos usados em contextos diferentes.",
         "d) A fonologia estuda os sons individuais e a fon\u00e9tica estuda as combina\u00e7\u00f5es de sons."
-      ]
+      ],
+      "correctAnswer": 0
     },
     {
       "id": 2,
@@ -23,7 +24,8 @@
         "b) Porque a troca de um \u00fanico fonema (/a/ por /o/) gera mudan\u00e7a de significado, provando que esses fonemas s\u00e3o distintivos.",
         "c) Porque as duas palavras pertencem \u00e0 mesma classe gramatical.",
         "d) Porque as consoantes iniciais s\u00e3o id\u00eanticas e as vogais finais tamb\u00e9m."
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 3,
@@ -34,7 +36,8 @@
         "b) 6 fonemas e 7 letras",
         "c) 7 fonemas e 6 letras",
         "d) 8 fonemas e 7 letras"
-      ]
+      ],
+      "correctAnswer": 0
     },
     {
       "id": 4,
@@ -43,19 +46,23 @@
       "statements": [
         {
           "id": "4a",
-          "text": "O fonema \u00e9 a menor unidade sonora capaz de estabelecer distin\u00e7\u00e3o de significado entre palavras."
+          "text": "O fonema \u00e9 a menor unidade sonora capaz de estabelecer distin\u00e7\u00e3o de significado entre palavras.",
+          "isCorrect": true
         },
         {
           "id": "4b",
-          "text": "Na palavra \u201cchave\u201d, o d\u00edgrafo \u201cch\u201d representa dois fonemas distintos."
+          "text": "Na palavra \u201cchave\u201d, o d\u00edgrafo \u201cch\u201d representa dois fonemas distintos.",
+          "isCorrect": false
         },
         {
           "id": "4c",
-          "text": "Um ditongo ocorre quando duas vogais est\u00e3o na mesma s\u00edlaba, sendo uma vogal e uma semivogal."
+          "text": "Um ditongo ocorre quando duas vogais est\u00e3o na mesma s\u00edlaba, sendo uma vogal e uma semivogal.",
+          "isCorrect": false
         },
         {
           "id": "4d",
-          "text": "O encontro consonantal em \u201cpregador\u201d \u00e9 formado pela sequ\u00eancia \u201cpr\u201d, em que ambas as consoantes s\u00e3o pronunciadas."
+          "text": "O encontro consonantal em \u201cpregador\u201d \u00e9 formado pela sequ\u00eancia \u201cpr\u201d, em que ambas as consoantes s\u00e3o pronunciadas.",
+          "isCorrect": true
         }
       ]
     },
@@ -76,7 +83,14 @@
         "Tritongo",
         "Ditongo crescente oral",
         "Ditongo decrescente oral"
-      ]
+      ],
+      "correctMapping": {
+        "sa\u00fa-de (a-\u00fa)": "Hiato",
+        "pai (a-i)": "Ditongo decrescente oral",
+        "Pa-ra-guai (u-a-i)": "Tritongo",
+        "i-gre-ja (e-ja)": "Ditongo crescente oral",
+        "cau-sa (a-u)": "Ditongo decrescente oral"
+      }
     },
     {
       "id": 6,
@@ -90,6 +104,11 @@
         "oclusivo",
         "alveolar",
         "lateral"
+      ],
+      "correctAnswers": [
+        "fricativo",
+        "labiodental",
+        "nasal"
       ]
     },
     {
@@ -109,7 +128,14 @@
         "Encontro consonantal",
         "Encontro consonantal",
         "D\u00edgrafo consonantal"
-      ]
+      ],
+      "correctMapping": {
+        "carro (rr)": "D\u00edgrafo consonantal",
+        "guerra (gu)": "D\u00edgrafo consonantal",
+        "flor (fl)": "Encontro consonantal",
+        "pneu (pn)": "Encontro consonantal",
+        "nascimento (sc)": "D\u00edgrafo consonantal"
+      }
     },
     {
       "id": 8,
@@ -120,7 +146,8 @@
         "b) As vogais podem ser classificadas por tr\u00eas crit\u00e9rios: altura da l\u00edngua (abertura), posi\u00e7\u00e3o da l\u00edngua (anterior/central/posterior) e papel das cavidades (oral/nasal).",
         "c) Todas as vogais do portugu\u00eas s\u00e3o orais; n\u00e3o existem vogais nasais.",
         "d) A altura da l\u00edngua n\u00e3o interfere na produ\u00e7\u00e3o das vogais portuguesas."
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 9,
@@ -129,19 +156,23 @@
       "statements": [
         {
           "id": "9a",
-          "text": "Na palavra \u201cqueiro\u201d (de \u201cqueirosiano\u201d), o \u201cqu\u201d \u00e9 um d\u00edgrafo porque a letra \u201cu\u201d n\u00e3o \u00e9 pronunciada."
+          "text": "Na palavra \u201cqueiro\u201d (de \u201cqueirosiano\u201d), o \u201cqu\u201d \u00e9 um d\u00edgrafo porque a letra \u201cu\u201d n\u00e3o \u00e9 pronunciada.",
+          "isCorrect": true
         },
         {
           "id": "9b",
-          "text": "O hiato se caracteriza por duas vogais adjacentes que pertencem a s\u00edlabas diferentes."
+          "text": "O hiato se caracteriza por duas vogais adjacentes que pertencem a s\u00edlabas diferentes.",
+          "isCorrect": true
         },
         {
           "id": "9c",
-          "text": "Em \u201csalmo\u201d, o grupo \u201clm\u201d constitui um d\u00edgrafo."
+          "text": "Em \u201csalmo\u201d, o grupo \u201clm\u201d constitui um d\u00edgrafo.",
+          "isCorrect": false
         },
         {
           "id": "9d",
-          "text": "O tritongo \u00e9 o encontro de tr\u00eas vogais na mesma s\u00edlaba: semivogal + vogal + semivogal."
+          "text": "O tritongo \u00e9 o encontro de tr\u00eas vogais na mesma s\u00edlaba: semivogal + vogal + semivogal.",
+          "isCorrect": true
         }
       ]
     },
@@ -162,7 +193,14 @@
         "Alveolar (ou dental)",
         "Velar",
         "Alveolar"
-      ]
+      ],
+      "correctMapping": {
+        "/p/ e /b/": "Bilabial",
+        "/f/ e /v/": "Labiodental",
+        "/t/ e /d/": "Alveolar (ou dental)",
+        "/k/ e /g/": "Velar",
+        "/s/ e /z/": "Alveolar"
+      }
     }
   ]
 }

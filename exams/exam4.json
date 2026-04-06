@@ -13,7 +13,8 @@
         "b) holiness (santidade/retidao)",
         "c) weakness (fraqueza)",
         "d) loneliness (solidao)"
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 2,
@@ -25,7 +26,8 @@
         "b) sin/Christ (pecado/Cristo) - sao antonimos diretos",
         "c) death/life (morte/vida) - sao antonimos classicos",
         "d) Ambas as alternativas A e C estao corretas"
-      ]
+      ],
+      "correctAnswer": 3
     },
     {
       "id": 3,
@@ -44,7 +46,14 @@
         "curse/condemnation",
         "judgment/punishment",
         "damnation/perdition"
-      ]
+      ],
+      "correctMapping": {
+        "faith": "doubt/unbelief",
+        "salvation": "damnation/perdition",
+        "blessing": "curse/condemnation",
+        "holy": "profane/secular",
+        "mercy": "judgment/punishment"
+      }
     },
     {
       "id": 4,
@@ -53,23 +62,28 @@
       "statements": [
         {
           "id": "4a",
-          "text": "Grace e mercy sao sinonimos (ambos expressam bondade divina imerecida)."
+          "text": "Grace e mercy sao sinonimos (ambos expressam bondade divina imerecida).",
+          "isCorrect": true
         },
         {
           "id": "4b",
-          "text": "Redemption e condemnation sao sinonimos."
+          "text": "Redemption e condemnation sao sinonimos.",
+          "isCorrect": false
         },
         {
           "id": "4c",
-          "text": "Sin e transgression sao sinonimos (ambos se referem a violacao da lei divina)."
+          "text": "Sin e transgression sao sinonimos (ambos se referem a violacao da lei divina).",
+          "isCorrect": true
         },
         {
           "id": "4d",
-          "text": "Humble e proud sao antonimos."
+          "text": "Humble e proud sao antonimos.",
+          "isCorrect": true
         },
         {
           "id": "4e",
-          "text": "Worship e praise sao antonimos."
+          "text": "Worship e praise sao antonimos.",
+          "isCorrect": false
         }
       ]
     },
@@ -88,7 +102,13 @@
         "Biblia/Holy Writ",
         "assembleia/flock",
         "proclamar/proclaim"
-      ]
+      ],
+      "correctMapping": {
+        "Scripture": "Biblia/Holy Writ",
+        "congregation": "assembleia/flock",
+        "preach": "proclamar/proclaim",
+        "repentance": "arrependimento/contrition"
+      }
     },
     {
       "id": 6,
@@ -103,6 +123,13 @@
         "benevolence",
         "sorrowful",
         "wrath"
+      ],
+      "correctAnswers": [
+        "joyful",
+        "Gospel",
+        "faithful",
+        "grateful",
+        "benevolence"
       ]
     },
     {
@@ -115,7 +142,8 @@
         "b) temporary",
         "c) promising",
         "d) believing"
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 8,
@@ -134,7 +162,14 @@
         "evil/perverso",
         "prediction/oracle",
         "agreement/pact"
-      ]
+      ],
+      "correctMapping": {
+        "forgiveness": "pardon/absolvicao",
+        "wicked": "evil/perverso",
+        "prophecy": "prediction/oracle",
+        "disciple": "follower/aprendiz",
+        "covenant": "agreement/pact"
+      }
     },
     {
       "id": 9,
@@ -151,7 +186,13 @@
         "darkness/trevas",
         "hatred/odio",
         "falsehood/mentira"
-      ]
+      ],
+      "correctMapping": {
+        "light": "darkness/trevas",
+        "love": "hatred/odio",
+        "truth": "falsehood/mentira",
+        "hope": "despair/desespero"
+      }
     },
     {
       "id": 10,
@@ -161,19 +202,23 @@
       "statements": [
         {
           "id": "10a",
-          "text": "No texto, 'flourish' e 'perish' funcionam como antonimos (prosperar vs perecer)."
+          "text": "No texto, 'flourish' e 'perish' funcionam como antonimos (prosperar vs perecer).",
+          "isCorrect": true
         },
         {
           "id": "10b",
-          "text": "No texto, 'righteous' e 'wicked' sao sinonimos."
+          "text": "No texto, 'righteous' e 'wicked' sao sinonimos.",
+          "isCorrect": false
         },
         {
           "id": "10c",
-          "text": "No texto, 'exalts' e 'humbles' funcionam como antonimos (exaltar vs humilhar)."
+          "text": "No texto, 'exalts' e 'humbles' funcionam como antonimos (exaltar vs humilhar).",
+          "isCorrect": true
         },
         {
           "id": "10d",
-          "text": "'Humble' e 'exalted' sao apresentados como conceitos opostos no texto."
+          "text": "'Humble' e 'exalted' sao apresentados como conceitos opostos no texto.",
+          "isCorrect": true
         }
       ]
     }

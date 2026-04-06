@@ -250,7 +250,7 @@
                 <h2>Painel do Professor</h2>
                 <p>Ingl&ecirc;s Instrumental - CG05</p>
             </div>
-            <form class="login-form" onsubmit="Admin.handleLogin(event)">
+            <form class="login-form" onsubmit="event.preventDefault(); Admin.handleLogin(event)">
                 <div class="field">
                     <label>Email</label>
                     <input type="email" id="adminEmail" placeholder="professor@email.com" required>
@@ -278,10 +278,10 @@
         <div class="admin-layout">
             <nav class="sidebar">
                 <button class="sidebar-item active" onclick="Admin.showSection('sectionOverview')">
-                    <span class="sidebar-icon">&#128200;</span> Visao Geral
+                    <span class="sidebar-icon">&#128200;</span> Visão Geral
                 </button>
                 <button class="sidebar-item" onclick="Admin.showSection('sectionModules')">
-                    <span class="sidebar-icon">&#128218;</span> Modulos
+                    <span class="sidebar-icon">&#128218;</span> Módulos
                 </button>
                 <button class="sidebar-item" onclick="Admin.showSection('sectionStudents')">
                     <span class="sidebar-icon">&#128101;</span> Alunos
@@ -290,7 +290,7 @@
                     <span class="sidebar-icon">&#128202;</span> Notas
                 </button>
                 <button class="sidebar-item" onclick="Admin.showSection('sectionSettings')">
-                    <span class="sidebar-icon">&#9881;</span> Configuracoes
+                    <span class="sidebar-icon">&#9881;</span> Configurações
                 </button>
             </nav>
 
@@ -305,7 +305,7 @@
 
                 <!-- OVERVIEW -->
                 <div id="sectionOverview" class="admin-section active">
-                    <h2 class="section-title">Visao Geral</h2>
+                    <h2 class="section-title">Visão Geral</h2>
                     <div class="stats-grid">
                         <div class="stat-card">
                             <div class="stat-number" id="statStudents">0</div>
@@ -317,23 +317,23 @@
                         </div>
                         <div class="stat-card">
                             <div class="stat-number" id="statPending">0</div>
-                            <div class="stat-label">Pendentes de Validacao</div>
+                            <div class="stat-label">Pendentes de Validação</div>
                         </div>
                         <div class="stat-card">
                             <div class="stat-number" id="statAverage">0%</div>
-                            <div class="stat-label">Media Geral</div>
+                            <div class="stat-label">Média Geral</div>
                         </div>
                     </div>
 
-                    <h3 style="margin-bottom:12px; color: var(--primary);">Controle dos Modulos</h3>
+                    <h3 style="margin-bottom:12px; color: var(--primary);">Controle dos Módulos</h3>
                     <div class="module-grid" id="moduleGrid"></div>
                 </div>
 
                 <!-- MODULES -->
                 <div id="sectionModules" class="admin-section">
-                    <h2 class="section-title">Controle de Modulos</h2>
+                    <h2 class="section-title">Controle de Módulos</h2>
                     <p style="color: var(--text-light); margin-bottom: 20px;">
-                        Ative ou desative o acesso ao conteudo e as provas de cada modulo.
+                        Ative ou desative o acesso ao conteúdo e às provas de cada módulo.
                     </p>
                     <div class="module-grid" id="moduleGrid2"></div>
                 </div>
@@ -368,17 +368,17 @@
                             <h3>Todas as Notas</h3>
                             <div class="filters">
                                 <select id="filterModule" onchange="Admin.renderGradesTable()">
-                                    <option value="all">Todos os modulos</option>
-                                    <option value="1">Modulo 1</option>
-                                    <option value="2">Modulo 2</option>
-                                    <option value="3">Modulo 3</option>
-                                    <option value="4">Modulo 4</option>
-                                    <option value="5">Modulo 5</option>
-                                    <option value="6">Modulo 6</option>
-                                    <option value="7">Modulo 7</option>
-                                    <option value="8">Modulo 8</option>
-                                    <option value="9">Modulo 9</option>
-                                    <option value="10">Modulo 10</option>
+                                    <option value="all">Todos os módulos</option>
+                                    <option value="1">Módulo 1</option>
+                                    <option value="2">Módulo 2</option>
+                                    <option value="3">Módulo 3</option>
+                                    <option value="4">Módulo 4</option>
+                                    <option value="5">Módulo 5</option>
+                                    <option value="6">Módulo 6</option>
+                                    <option value="7">Módulo 7</option>
+                                    <option value="8">Módulo 8</option>
+                                    <option value="9">Módulo 9</option>
+                                    <option value="10">Módulo 10</option>
                                 </select>
                                 <select id="filterStatus" onchange="Admin.renderGradesTable()">
                                     <option value="all">Todos</option>
@@ -391,12 +391,12 @@
                             <thead>
                                 <tr>
                                     <th>Aluno</th>
-                                    <th>Curso/Modulo</th>
+                                    <th>Curso/Módulo</th>
                                     <th>Nota</th>
                                     <th>Data</th>
                                     <th>Tempo</th>
                                     <th>Status</th>
-                                    <th>Acao</th>
+                                    <th>Ação</th>
                                 </tr>
                             </thead>
                             <tbody id="gradesBody"></tbody>
@@ -406,7 +406,7 @@
 
                 <!-- SETTINGS -->
                 <div id="sectionSettings" class="admin-section">
-                    <h2 class="section-title">Configuracoes</h2>
+                    <h2 class="section-title">Configurações</h2>
                     <div id="settingsContainer"></div>
                 </div>
             </div>

@@ -4,30 +4,35 @@
  */
 
 var API = {
-  BASE_URL: 'https://script.google.com/macros/s/AKfycbyKgiLjCCEL1cZhBdvuPS14BigcrKr5-xka6jTUYr_2BqE4OECKhsqUfE0RU0-AeHdt5w/exec',
+  BASE_URL: 'http://localhost:3000',
 
   loading: false,
 
-  async call(action, data) {
-    data = data || {};
+  async call(endpoint, data = null, method = 'POST') {
     this.loading = true;
     this.showLoading(true);
 
     try {
-      var payload = Object.assign({ action: action }, data);
+      var options = {
+        method: method,
+        headers: { 'Content-Type': 'application/json' }
+      };
+      
+      if (data && method !== 'GET') {
+        options.body = JSON.stringify(data);
+      }
 
-      var response = await fetch(this.BASE_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'text/plain' },
-        body: JSON.stringify(payload)
-      });
-
-      if (!response.ok) throw new Error('Erro de rede: ' + response.status);
+      var response = await fetch(this.BASE_URL + endpoint, options);
+      
+      if (!response.ok && response.status !== 400 && response.status !== 401) {
+        throw new Error('Erro de rede: ' + response.status);
+      }
+      
       return await response.json();
 
     } catch (err) {
       console.error('Erro na API:', err);
-      return { success: false, error: 'Erro de conexao. Verifique sua internet e tente novamente.' };
+      return { success: false, error: 'Erro de conexao. O servidor backend esta rodando?' };
     } finally {
       this.loading = false;
       this.showLoading(false);
@@ -45,65 +50,80 @@ var API = {
 
   // ===== AUTH =====
   async register(nome, email, password, inviteCode, foto) {
-    return this.call('register', { nome: nome, email: email, password: password, inviteCode: inviteCode, foto: foto });
+    return this.call('/auth/register', { nome: nome, email: email, password: password, inviteCode: inviteCode, foto: foto });
   },
 
   async updatePhoto(foto) {
     var token = localStorage.getItem('sessionToken');
-    return this.call('updatePhoto', { token: token, foto: foto });
+    if (!token) return { success: false, error: 'Sessão inválida' };
+    return this.call('/auth/update-photo', { token: token, foto: foto });
   },
 
   async login(email, password) {
-    return this.call('login', { email: email, password: password });
+    return this.call('/auth/login', { email: email, password: password });
   },
 
   async logout() {
-    var token = localStorage.getItem('sessionToken');
-    var result = await this.call('logout', { token: token });
     localStorage.removeItem('sessionToken');
     localStorage.removeItem('userName');
     localStorage.removeItem('userEmail');
     localStorage.removeItem('userPhoto');
-    return result;
+    return { success: true };
   },
 
   async checkSession() {
     var token = localStorage.getItem('sessionToken');
     if (!token) return { success: false };
-    return this.call('checkSession', { token: token });
+    
+    // Valida o token de segurança real no backend
+    const res = await this.call('/auth/access', { token: token, cursoId: this._getCursoId() });
+    if (res.success) {
+      return { success: true, data: { nome: localStorage.getItem('userName') || 'Aluno', email: localStorage.getItem('userEmail'), foto: localStorage.getItem('userPhoto') } };
+    }
+    return { success: false };
   },
 
   async getAccess(cursoId) {
     var token = localStorage.getItem('sessionToken');
-    if (!token) return { success: false };
-    return this.call('getAccess', { token: token, cursoId: cursoId || this._getCursoId() });
+    return this.call('/auth/access', { token: token, cursoId: cursoId || this._getCursoId() });
   },
 
   // ===== COURSES =====
   async getCourses() {
-    return this.call('getCourses', {});
+    const res = await this.call('/courses', null, 'GET');
+    if (Array.isArray(res)) {
+      return { success: true, data: res };
+    }
+    return res;
   },
 
   async getEnrollments() {
     var token = localStorage.getItem('sessionToken');
     if (!token) return { success: false };
-    return this.call('getEnrollments', { token: token });
+    return this.call('/courses/enrollments', { token: token });
   },
 
   async enrollCourse(inviteCode) {
     var token = localStorage.getItem('sessionToken');
-    return this.call('enrollCourse', { token: token, inviteCode: inviteCode });
+    return this.call('/courses/enroll', { token: token, inviteCode: inviteCode });
   },
 
   // ===== EXAMS =====
   async startExam(modulo, cursoId) {
-    var token = localStorage.getItem('sessionToken');
-    return this.call('startExam', { token: token, modulo: modulo, cursoId: cursoId || this._getCursoId() });
+    // O novo backend valida a prova no momento do envio (submit).
+    // Podemos permitir o início da prova localmente sem fazer requisição de rede.
+    return { success: true };
+  },
+
+  async getExamData(cursoId, modulo) {
+    const data = await this.call('/exams/data/' + cursoId + '/' + modulo + '?t=' + Date.now(), null, 'GET');
+    console.log("RAW Exam Data do Servidor:", data);
+    return data;
   },
 
   async submitExam(modulo, respostas, tempoGasto, cursoId) {
     var token = localStorage.getItem('sessionToken');
-    return this.call('submitExam', { token: token, modulo: modulo, respostas: respostas, tempoGasto: tempoGasto, cursoId: cursoId || this._getCursoId() });
+    return this.call('/exams/submit', { token: token, modulo: modulo, respostas: respostas, tempoGasto: tempoGasto, cursoId: cursoId || this._getCursoId() });
   },
 
   async getGrades(cursoId) {
@@ -113,42 +133,42 @@ var API = {
 
   // ===== ADMIN =====
   async adminLogin(email, password) {
-    return this.call('adminLogin', { email: email, password: password });
+    return this.call('/admin/login', { email: email, password: password });
   },
 
-  async getStudents() {
+  async getStudents(cursoId) {
     var adminToken = localStorage.getItem('adminToken');
-    return this.call('getStudents', { adminToken: adminToken });
+    return this.call('/admin/students', { token: adminToken, cursoId: cursoId });
   },
 
   async getAllGrades(cursoId) {
     var adminToken = localStorage.getItem('adminToken');
-    return this.call('getAllGrades', { adminToken: adminToken, cursoId: cursoId });
+    return this.call('/admin/grades', { token: adminToken, cursoId: cursoId });
   },
 
   async toggleModule(cursoId, modulo, tipo, habilitado) {
     var adminToken = localStorage.getItem('adminToken');
-    return this.call('toggleModule', { adminToken: adminToken, cursoId: cursoId, modulo: modulo, tipo: tipo, habilitado: habilitado });
+    return this.call('/admin/toggle-module', { token: adminToken, cursoId: cursoId, modulo: modulo, tipo: tipo, habilitado: habilitado });
   },
 
   async validateGrade(cursoId, email, modulo) {
     var adminToken = localStorage.getItem('adminToken');
-    return this.call('validateGrade', { adminToken: adminToken, cursoId: cursoId, email: email, modulo: modulo });
+    return this.call('/admin/validate-grade', { token: adminToken, cursoId: cursoId, email: email, modulo: modulo });
   },
 
   async updateInviteCode(cursoId, newCode) {
     var adminToken = localStorage.getItem('adminToken');
-    return this.call('updateInviteCode', { adminToken: adminToken, cursoId: cursoId, newCode: newCode });
+    return this.call('/admin/update-invite', { token: adminToken, cursoId: cursoId, newCode: newCode });
   },
 
   async updateAdminPassword(newPassword) {
     var adminToken = localStorage.getItem('adminToken');
-    return this.call('updateAdminPassword', { adminToken: adminToken, newPassword: newPassword });
+    return this.call('/admin/update-password', { token: adminToken, newPassword: newPassword });
   },
 
   async getConfig() {
     var adminToken = localStorage.getItem('adminToken');
-    return this.call('getConfig', { adminToken: adminToken });
+    return this.call('/admin/config', { token: adminToken });
   },
 
   async adminGetCourses() {

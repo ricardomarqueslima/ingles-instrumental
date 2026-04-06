@@ -1,0 +1,117 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  STUDENT
+  ADMIN
+  TEACHER
+}
+
+model User {
+  id           String    @id @default(uuid())
+  name         String
+  email        String    @unique
+  passwordHash String
+  role         Role      @default(STUDENT)
+  avatarUrl    String?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  attempts     Attempt[]
+  enrollments  Enrollment[]
+}
+
+model Course {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  isActive    Boolean  @default(true)
+  inviteCode  String   @default("SPA2026")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  modules     Module[]
+  enrollments Enrollment[]
+}
+
+model Enrollment {
+  id        String   @id @default(uuid())
+  userId    String
+  courseId  String
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, courseId])
+}
+
+model Module {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  order       Int
+  isContentActive Boolean @default(true)
+  isExamActive    Boolean @default(false)
+  courseId    String
+  course      Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  lessons     Lesson[]
+  questions   Question[]
+  attempts    Attempt[]
+}
+
+enum LessonType {
+  VIDEO
+  TEXT
+  AUDIO
+}
+
+model Lesson {
+  id          String     @id @default(uuid())
+  title       String
+  content     String
+  type        LessonType
+  order       Int
+  moduleId    String
+  module      Module     @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+}
+
+enum QuestionType {
+  MULTIPLE_CHOICE
+  TRUE_FALSE
+  FILL_BLANK
+}
+
+model Question {
+  id          String       @id @default(uuid())
+  prompt      String
+  type        QuestionType
+  moduleId    String
+  module      Module       @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  options     Option[]
+}
+
+model Option {
+  id          String   @id @default(uuid())
+  text        String
+  isCorrect   Boolean
+  questionId  String
+  question    Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+}
+
+model Attempt {
+  id          String   @id @default(uuid())
+  score       Float
+  details     String?  // Armazena o JSON stringificado com as respostas detalhadas do aluno
+  isValidated Boolean  @default(false)
+  isEmailSent Boolean  @default(false)
+  finishedAt  DateTime @default(now())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  moduleId    String
+  module      Module   @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+}

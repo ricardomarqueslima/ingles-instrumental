@@ -15,16 +15,19 @@ const Auth = {
   async init() {
     const token = localStorage.getItem('sessionToken');
     if (token) {
+      API.showLoading(true);
       const result = await API.checkSession();
       if (result.success) {
         this.setLoggedIn(result.data.nome, result.data.email, result.data.foto);
         await this.loadAccess();
+        API.showLoading(false);
         // Se nao tem foto, solicitar
         if (!result.data.foto) {
           this.showPhotoRequest();
         }
         return;
       }
+      API.showLoading(false);
       localStorage.removeItem('sessionToken');
       localStorage.removeItem('userName');
       localStorage.removeItem('userEmail');
@@ -55,6 +58,9 @@ const Auth = {
       this.userGrades = result.data.grades || {};
       this.numModulos = result.data.courseInfo ? result.data.courseInfo.numModulos : 8;
       this.updateModuleStates();
+    } else {
+      console.error('❌ Erro ao carregar acessos do Banco de Dados:', result.error);
+      if (result.error && result.error.includes('Token')) { this.handleLogout(); }
     }
   },
 
@@ -62,37 +68,61 @@ const Auth = {
 
   updateModuleStates() {
     if (!this.accessConfig) return;
-    var maxMod = this.numModulos || 8;
+
+    // À PROVA DE FALHAS: O JS agora garante que todos os botões existam, mesmo que faltem no HTML!
+    const cursoId = localStorage.getItem('cursoId') || 'ingles';
+    const maxMod = cursoId.includes('portugues') ? 5 : 8; // Módulo 6 de PT não tem prova
+
     for (let m = 1; m <= maxMod; m++) {
-      const examArea = document.getElementById('exam-area-' + m);
+      let examArea = document.getElementById('exam-area-' + m);
+      
+      // Se o HTML perdeu o botão, nós o recriamos magicamente aqui:
+      if (!examArea) {
+        const unitView = document.getElementById('unit' + m);
+        if (unitView) {
+          examArea = document.createElement('div');
+          examArea.className = 'exam-btn-area';
+          examArea.id = 'exam-area-' + m;
+          examArea.innerHTML = '<button class="btn-exam" onclick="ExamEngine.start(' + m + ')" disabled>Prova bloqueada</button><p class="exam-status" id="exam-status-' + m + '"></p>';
+          const navBtns = unitView.querySelector('.nav-buttons');
+          if (navBtns) unitView.insertBefore(examArea, navBtns);
+          else unitView.appendChild(examArea);
+        }
+      }
+
       if (!examArea) continue;
+
       const examUnlocked = this.accessConfig['modulo' + m + '_prova'];
       const gradeData = this.userGrades['modulo' + m];
       const btn = examArea.querySelector('.btn-exam');
       const status = examArea.querySelector('.exam-status');
       if (gradeData) {
-        btn.style.display = 'none';
-        status.innerHTML = '<span class="exam-done">Prova realizada - Nota: <strong>' + gradeData.nota + '%</strong>' + (gradeData.validada ? ' <span class="validated-badge">Validada</span>' : ' <span class="pending-badge">Aguardando validacao</span>') + '</span>';
+        btn.style.display = 'inline-flex';
+        btn.disabled = true;
+        btn.classList.add('locked');
+        btn.textContent = 'Prova Realizada';
+        status.innerHTML = '<span class="exam-done">Nota: <strong>' + gradeData.nota + '%</strong>' + (gradeData.validada ? ' <span class="validated-badge">Validada</span>' : ' <span class="pending-badge">Aguardando validação</span>') + '</span>';
         status.style.display = 'block';
-      } else if (examUnlocked) {
+      } else if (examUnlocked !== false) {
         btn.style.display = 'inline-flex';
         btn.disabled = false;
+        btn.classList.remove('locked');
         btn.textContent = 'Fazer Prova da Unidade ' + m;
         status.style.display = 'none';
       } else {
         btn.style.display = 'inline-flex';
         btn.disabled = true;
-        btn.textContent = 'Prova bloqueada';
         btn.classList.add('locked');
-        status.innerHTML = '<span class="exam-locked-msg">O professor ainda nao liberou esta prova.</span>';
+        btn.textContent = 'Prova bloqueada';
+        status.innerHTML = '<span class="exam-locked-msg">O professor ainda não liberou esta prova.</span>';
         status.style.display = 'block';
       }
     }
   },
 
   isModuleAccessible(moduleNum) {
-    if (!this.accessConfig) return false;
-    return this.accessConfig['modulo' + moduleNum + '_conteudo'] === true;
+    if (!this.accessConfig) return true;
+    return this.accessConfig['modulo' + moduleNum + '_conteudo'] !== false;
   },
 
   showAuthOverlay() {

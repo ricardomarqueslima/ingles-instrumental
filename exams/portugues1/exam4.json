@@ -12,7 +12,8 @@
         "b) Adjetivos, pois caracterizam os substantivos \u201cigreja\u201d e \u201cculto\u201d.",
         "c) Adv\u00e9rbios, pois modificam os verbos da ora\u00e7\u00e3o.",
         "d) Pronomes, pois substituem nomes na ora\u00e7\u00e3o."
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 2,
@@ -23,7 +24,8 @@
         "b) Modo subjuntivo, pret\u00e9rito imperfeito",
         "c) Modo indicativo, futuro do pret\u00e9rito",
         "d) Modo indicativo, pret\u00e9rito mais-que-perfeito"
-      ]
+      ],
+      "correctAnswer": 2
     },
     {
       "id": 3,
@@ -34,7 +36,8 @@
         "b) \u201cNingu\u00e9m disse-me a verdade.\u201d",
         "c) \u201cN\u00e3o se esque\u00e7am de orar.\u201d",
         "d) \u201cFar-se-\u00eda o batismo, se houvesse-se \u00e1gua.\u201d"
-      ]
+      ],
+      "correctAnswer": 2
     },
     {
       "id": 4,
@@ -43,19 +46,23 @@
       "statements": [
         {
           "id": "4a",
-          "text": "Substantivos abstratos designam seres que existem independentemente de outros, como \u201cmesa\u201d e \u201clivro\u201d."
+          "text": "Substantivos abstratos designam seres que existem independentemente de outros, como \u201cmesa\u201d e \u201clivro\u201d.",
+          "isCorrect": false
         },
         {
           "id": "4b",
-          "text": "Locu\u00e7\u00e3o adjetiva \u00e9 a express\u00e3o formada por preposi\u00e7\u00e3o + substantivo com valor de adjetivo, como \u201cde Deus\u201d (= divino)."
+          "text": "Locu\u00e7\u00e3o adjetiva \u00e9 a express\u00e3o formada por preposi\u00e7\u00e3o + substantivo com valor de adjetivo, como \u201cde Deus\u201d (= divino).",
+          "isCorrect": true
         },
         {
           "id": "4c",
-          "text": "O verbo no modo subjuntivo expressa certeza e fatos concretos."
+          "text": "O verbo no modo subjuntivo expressa certeza e fatos concretos.",
+          "isCorrect": false
         },
         {
           "id": "4d",
-          "text": "Preposi\u00e7\u00f5es s\u00e3o palavras invariantes que estabelecem rela\u00e7\u00f5es de depend\u00eancia entre termos da ora\u00e7\u00e3o."
+          "text": "Preposi\u00e7\u00f5es s\u00e3o palavras invariantes que estabelecem rela\u00e7\u00f5es de depend\u00eancia entre termos da ora\u00e7\u00e3o.",
+          "isCorrect": true
         }
       ]
     },
@@ -76,7 +83,14 @@
         "Pronome demonstrativo",
         "Pronome interrogativo",
         "Pronome relativo"
-      ]
+      ],
+      "correctMapping": {
+        "\u201cEle\u201d pregou o serm\u00e3o.": "Pronome pessoal do caso reto",
+        "\u201cNossa\u201d f\u00e9 \u00e9 inabal\u00e1vel.": "Pronome possessivo",
+        "\u201cIsso\u201d foi dito no culto.": "Pronome demonstrativo",
+        "\u201cQuem\u201d participar\u00e1 da ceia?": "Pronome interrogativo",
+        "O texto \u201cque\u201d lemos \u00e9 de Paulo.": "Pronome relativo"
+      }
     },
     {
       "id": 6,
@@ -89,6 +103,11 @@
         "ger\u00fandio",
         "imperativo",
         "subjuntivo"
+      ],
+      "correctAnswers": [
+        "infinitivo",
+        "partic\u00edpio",
+        "ger\u00fandio"
       ]
     },
     {
@@ -108,7 +127,14 @@
         "\u201cO pastor pregou eloquentemente.\u201d (eloquentemente)",
         "\u201cO livro de Romanos\u201d (de)",
         "\u201cO rebanho seguia o pastor.\u201d (rebanho)"
-      ]
+      ],
+      "correctMapping": {
+        "Interjeicao": "\u201cAm\u00e9m!\u201d",
+        "Conjun\u00e7\u00e3o": "\u201cOrai, porque o tempo est\u00e1 pr\u00f3ximo.\u201d (porque)",
+        "Adv\u00e9rbio": "\u201cO pastor pregou eloquentemente.\u201d (eloquentemente)",
+        "Preposi\u00e7\u00e3o": "\u201cO livro de Romanos\u201d (de)",
+        "Substantivo coletivo": "\u201cO rebanho seguia o pastor.\u201d (rebanho)"
+      }
     },
     {
       "id": 8,
@@ -117,19 +143,23 @@
       "statements": [
         {
           "id": "8a",
-          "text": "A mes\u00f3clise s\u00f3 ocorre com verbos no futuro do presente ou futuro do pret\u00e9rito do indicativo."
+          "text": "A mes\u00f3clise s\u00f3 ocorre com verbos no futuro do presente ou futuro do pret\u00e9rito do indicativo.",
+          "isCorrect": true
         },
         {
           "id": "8b",
-          "text": "Palavras negativas (n\u00e3o, nunca, jamais) atraem o pronome obl\u00edquo, exigindo pr\u00f3clise."
+          "text": "Palavras negativas (n\u00e3o, nunca, jamais) atraem o pronome obl\u00edquo, exigindo pr\u00f3clise.",
+          "isCorrect": true
         },
         {
           "id": "8c",
-          "text": "O adjetivo no grau superlativo relativo compara a qualidade de um ser com a de todos os demais de um grupo."
+          "text": "O adjetivo no grau superlativo relativo compara a qualidade de um ser com a de todos os demais de um grupo.",
+          "isCorrect": true
         },
         {
           "id": "8d",
-          "text": "Conjun\u00e7\u00f5es coordenativas e subordinativas exercem a mesma fun\u00e7\u00e3o sint\u00e1tica na ora\u00e7\u00e3o."
+          "text": "Conjun\u00e7\u00f5es coordenativas e subordinativas exercem a mesma fun\u00e7\u00e3o sint\u00e1tica na ora\u00e7\u00e3o.",
+          "isCorrect": false
         }
       ]
     },
@@ -143,7 +173,8 @@
         "b) Cinco: artigo, substantivo, verbo, adv\u00e9rbio e adjetivo.",
         "c) Seis: artigo, substantivo, verbo, adv\u00e9rbio, adjetivo e preposi\u00e7\u00e3o.",
         "d) Sete: artigo, substantivo, verbo, adv\u00e9rbio, adjetivo, preposi\u00e7\u00e3o e pronome."
-      ]
+      ],
+      "correctAnswer": 2
     },
     {
       "id": 10,
@@ -162,7 +193,14 @@
         "Substantivo comum abstrato (doutrina)",
         "Substantivo pr\u00f3prio",
         "Substantivo coletivo"
-      ]
+      ],
+      "correctMapping": {
+        "f\u00e9": "Substantivo abstrato",
+        "Presbit\u00e9rio": "Substantivo comum concreto",
+        "Calv\u00ednismo": "Substantivo comum abstrato (doutrina)",
+        "Jerusal\u00e9m": "Substantivo pr\u00f3prio",
+        "rebanho": "Substantivo coletivo"
+      }
     }
   ]
 }
