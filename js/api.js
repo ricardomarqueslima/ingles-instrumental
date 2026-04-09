@@ -3,8 +3,18 @@
  * Plataforma Multicursos - Seminario Presbiteriano da Amazonia
  */
 
+function getBaseUrl() {
+  const hostname = window.location.hostname;
+  // Use a URL de desenvolvimento se estiver em localhost, 127.0.0.1 ou em um ambiente de desenvolvimento na nuvem.
+  if (hostname === 'localhost' || hostname === '127.0.0.1' || hostname.endsWith('.github.dev')) {
+    return 'http://localhost:3000'; // URL de Desenvolvimento
+  } else {
+    return 'https://api.spacursos.com.br'; // URL de Produção
+  }
+}
+
 var API = {
-  BASE_URL: 'http://localhost:3000',
+  BASE_URL: getBaseUrl(),
 
   loading: false,
 
