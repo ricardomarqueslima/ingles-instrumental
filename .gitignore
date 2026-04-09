@@ -2,3 +2,17 @@ google-apps-script/
 .claude/
 .DS_Store
 Iniciar Inglês Instrumental.command
+
+# Build artifacts
+backend/dist/
+backend/dev.db
+
+# Binários pesados
+*.pdf
+*.zip
+*.mp4
+fonemas-wav/
+
+# Deploy gerado
+deploy-frontend/
+frontend-spa.zip
