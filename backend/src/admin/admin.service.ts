@@ -118,7 +118,8 @@ export class AdminService {
       nome: a.user.name, email: a.user.email,
       cursoId: a.module.course.title.includes('Ingl') ? 'ingles' : 'portugues1',
       modulo: a.module.order, nota: a.score, data: a.finishedAt,
-      validada: a.isValidated, emailEnviado: a.isEmailSent
+      validada: a.isValidated, emailEnviado: a.isEmailSent,
+      detalhes: a.details ? JSON.parse(a.details) : null
     }));
     return { success: true, data };
   }

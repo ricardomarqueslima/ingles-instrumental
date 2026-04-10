@@ -191,11 +191,12 @@ var Admin = {
     else if (fStat === 'validated') filtered = filtered.filter(function(g) { return g.validada; });
 
     if (filtered.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="8" class="empty-msg">Nenhuma nota encontrada.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="9" class="empty-msg">Nenhuma nota encontrada.</td></tr>';
       return;
     }
 
     filtered.sort(function(a, b) { return a.validada === b.validada ? 0 : a.validada ? 1 : -1; });
+    this._filteredGrades = filtered;
 
     for (var i = 0; i < filtered.length; i++) {
       var g = filtered[i];
@@ -212,7 +213,8 @@ var Admin = {
         '<td>' + (g.validada ? '<span class="badge-validated">Validada</span>' : '<span class="badge-pending">Pendente</span>') + '</td>' +
         '<td>' + (g.validada
           ? (g.emailEnviado ? '<span class="badge-sent">Email enviado</span>' : '<span class="badge-pending">Email pendente</span>')
-          : '<button class="btn-validate" onclick="Admin.validateGrade(\'' + (g.cursoId || 'ingles') + '\',\'' + g.email + '\',' + g.modulo + ')">Validar</button>') + '</td>';
+          : '<button class="btn-validate" onclick="Admin.validateGrade(\'' + (g.cursoId || 'ingles') + '\',\'' + g.email + '\',' + g.modulo + ')">Validar</button>') + '</td>' +
+        '<td>' + (g.detalhes ? '<button class="btn-gabarito" onclick="Admin.showGabarito(' + i + ')">Ver Gabarito</button>' : '-') + '</td>';
       tbody.appendChild(tr);
     }
   },
@@ -272,6 +274,51 @@ var Admin = {
     var result = await API.updateAdminPassword(input.value);
     if (result.success) { alert('Senha atualizada!'); input.value = ''; }
     else alert(result.error || 'Erro.');
+  },
+
+  _filteredGrades: [],
+
+  showGabarito: function(index) {
+    var g = this._filteredGrades[index];
+    if (!g || !g.detalhes) return;
+
+    var modal = document.getElementById('gabaritoModal');
+    var body = document.getElementById('gabaritoBody');
+    if (!modal || !body) return;
+
+    var notaClass = g.nota >= 70 ? 'nota-good' : g.nota >= 50 ? 'nota-avg' : 'nota-bad';
+    var acertos = g.detalhes.filter(function(d) { return d.correta; }).length;
+
+    var html = '<div class="gabarito-header-info">' +
+      '<h3>' + g.nome + '</h3>' +
+      '<p>' + (g.cursoId || 'ingles') + ' - M\u00f3dulo ' + g.modulo + '</p>' +
+      '<p class="gabarito-nota ' + notaClass + '">Nota: ' + g.nota + '% (' + acertos + '/' + g.detalhes.length + ' acertos)</p>' +
+    '</div>';
+
+    for (var i = 0; i < g.detalhes.length; i++) {
+      var d = g.detalhes[i];
+      var statusClass = d.correta ? 'gabarito-certo' : 'gabarito-errado';
+      var statusIcon = d.correta ? '\u2705' : '\u274C';
+      html += '<div class="gabarito-questao ' + statusClass + '">' +
+        '<div class="gabarito-q-header">' +
+          '<span class="gabarito-q-num">Quest\u00e3o ' + d.questao + '</span>' +
+          '<span>' + statusIcon + (d.correta ? ' Acertou' : ' Errou') + '</span>' +
+        '</div>' +
+        '<p class="gabarito-enunciado">' + (d.enunciado || '') + '</p>' +
+        '<div class="gabarito-respostas">' +
+          '<p><strong>Resposta do aluno:</strong> ' + (d.respostaAluno || 'Em branco') + '</p>' +
+          '<p><strong>Gabarito correto:</strong> ' + (d.gabarito || '-') + '</p>' +
+        '</div>' +
+      '</div>';
+    }
+
+    body.innerHTML = html;
+    modal.style.display = 'flex';
+  },
+
+  closeGabarito: function() {
+    var modal = document.getElementById('gabaritoModal');
+    if (modal) modal.style.display = 'none';
   },
 
   showSection: function(sectionId) {
