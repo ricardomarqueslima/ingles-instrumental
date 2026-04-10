@@ -174,6 +174,11 @@ var API = {
     return this.call('/admin/validate-grade', { token: adminToken, cursoId: cursoId, email: email, modulo: modulo });
   },
 
+  async deleteGrade(cursoId, email, modulo) {
+    var adminToken = localStorage.getItem('adminToken');
+    return this.call('/admin/delete-grade', { token: adminToken, cursoId: cursoId, email: email, modulo: modulo });
+  },
+
   async updateInviteCode(cursoId, newCode) {
     var adminToken = localStorage.getItem('adminToken');
     return this.call('/admin/update-invite', { token: adminToken, cursoId: cursoId, newCode: newCode });

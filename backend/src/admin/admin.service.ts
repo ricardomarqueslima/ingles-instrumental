@@ -214,4 +214,26 @@ export class AdminService {
     });
     return { success: true };
   }
+
+  async deleteGrade(token: string, cursoIdStr: string, email: string, moduloOrder: number) {
+    if (!this.verifyAdmin(token)) return { success: false, error: 'Sessão inválida' };
+
+    const course = await this.prisma.course.findFirst({
+      where: { title: { contains: cursoIdStr.includes('ingles') ? 'Ingl' : 'Portug' } },
+      include: { modules: true }
+    });
+    const module = course?.modules.find(m => m.order === moduloOrder);
+    const user = await this.prisma.user.findUnique({ where: { email } });
+
+    if (!user || !module) return { success: false, error: 'Dados inválidos' };
+
+    const attempt = await this.prisma.attempt.findFirst({
+      where: { userId: user.id, moduleId: module.id }
+    });
+    if (!attempt) return { success: false, error: 'Nota não encontrada.' };
+
+    await this.prisma.attempt.delete({ where: { id: attempt.id } });
+
+    return { success: true, message: 'Nota excluída. O aluno pode refazer a prova.' };
+  }
 }

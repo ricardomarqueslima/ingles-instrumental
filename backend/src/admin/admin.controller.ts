@@ -36,4 +36,9 @@ export class AdminController {
   updateAdminPassword(@Body() body: any) {
     return this.adminService.updateAdminPassword(body.token, body.newPassword);
   }
+
+  @Post('delete-grade')
+  deleteGrade(@Body() body: any) {
+    return this.adminService.deleteGrade(body.token, body.cursoId, body.email, body.modulo);
+  }
 }

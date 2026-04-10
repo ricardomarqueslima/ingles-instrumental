@@ -204,6 +204,13 @@
         }
         .btn-gabarito:hover { background: var(--primary-light); box-shadow: 0 2px 8px rgba(26,86,50,0.3); }
 
+        .btn-delete {
+            padding: 6px 14px; background: var(--accent); color: white; border: none;
+            border-radius: 8px; cursor: pointer; font-weight: 700; font-size: 0.8rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .btn-delete:hover { background: #a93226; box-shadow: 0 2px 8px rgba(192,57,43,0.4); }
+
         .gabarito-header-info { text-align: center; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 2px solid var(--border); }
         .gabarito-header-info h3 { color: var(--primary); font-size: 1.2rem; margin-bottom: 4px; }
         .gabarito-header-info p { color: var(--text-light); font-size: 0.9rem; }
@@ -419,6 +426,7 @@
                                     <th>Status</th>
                                     <th>Ação</th>
                                     <th>Gabarito</th>
+                                    <th>Excluir</th>
                                 </tr>
                             </thead>
                             <tbody id="gradesBody"></tbody>

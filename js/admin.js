@@ -191,7 +191,7 @@ var Admin = {
     else if (fStat === 'validated') filtered = filtered.filter(function(g) { return g.validada; });
 
     if (filtered.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="9" class="empty-msg">Nenhuma nota encontrada.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="10" class="empty-msg">Nenhuma nota encontrada.</td></tr>';
       return;
     }
 
@@ -214,7 +214,8 @@ var Admin = {
         '<td>' + (g.validada
           ? (g.emailEnviado ? '<span class="badge-sent">Email enviado</span>' : '<span class="badge-pending">Email pendente</span>')
           : '<button class="btn-validate" onclick="Admin.validateGrade(\'' + (g.cursoId || 'ingles') + '\',\'' + g.email + '\',' + g.modulo + ')">Validar</button>') + '</td>' +
-        '<td>' + (g.detalhes ? '<button class="btn-gabarito" onclick="Admin.showGabarito(' + i + ')">Ver Gabarito</button>' : '-') + '</td>';
+        '<td>' + (g.detalhes ? '<button class="btn-gabarito" onclick="Admin.showGabarito(' + i + ')">Ver Gabarito</button>' : '-') + '</td>' +
+        '<td><button class="btn-delete" onclick="Admin.deleteGrade(\'' + (g.cursoId || 'ingles') + '\',\'' + g.email + '\',' + g.modulo + ',\'' + g.nome + '\')">Excluir</button></td>';
       tbody.appendChild(tr);
     }
   },
@@ -274,6 +275,17 @@ var Admin = {
     var result = await API.updateAdminPassword(input.value);
     if (result.success) { alert('Senha atualizada!'); input.value = ''; }
     else alert(result.error || 'Erro.');
+  },
+
+  async deleteGrade(cursoId, email, modulo, nome) {
+    if (!confirm('Tem certeza que deseja EXCLUIR a nota do M\u00f3dulo ' + modulo + ' (' + cursoId + ') de ' + nome + '?\n\nO aluno poder\u00e1 refazer a prova.')) return;
+    var result = await API.deleteGrade(cursoId, email, modulo);
+    if (result.success) {
+      alert('Nota exclu\u00edda! O aluno pode refazer a prova.');
+      this.loadDashboard();
+    } else {
+      alert(result.error || 'Erro ao excluir nota.');
+    }
   },
 
   _filteredGrades: [],
