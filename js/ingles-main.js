@@ -276,7 +276,7 @@
             // 1. Add play buttons to all .example-box .en elements
             document.querySelectorAll('.example-box .en').forEach(el => {
                 if (el.querySelector('.tts-btn')) return; // already has one
-                const text = el.textContent.trim();
+                const text = el.getAttribute('data-tts') || el.textContent.trim();
                 if (!text) return;
                 const btn = document.createElement('button');
                 btn.className = 'tts-btn';
