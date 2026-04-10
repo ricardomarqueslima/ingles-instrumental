@@ -145,6 +145,14 @@
             white-space: nowrap;
         }
 
+        /* Forgot Password */
+        .forgot-link { text-align: center; margin-top: 12px; font-size: 0.85rem; }
+        .forgot-link a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        .forgot-link a:hover { text-decoration: underline; }
+        .forgot-title { font-family: 'Merriweather', serif; font-size: 1.1rem; color: var(--primary); text-align: center; margin-bottom: 6px; }
+        .forgot-desc { font-size: 0.85rem; color: var(--text-light); text-align: center; margin-bottom: 18px; }
+        #resetCode { text-align: center; font-size: 1.3rem; letter-spacing: 6px; font-weight: 700; }
+
         .no-courses { text-align: center; padding: 40px; color: var(--text-light); }
 
         footer { text-align: center; padding: 20px; color: var(--text-light); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 40px; }

@@ -24,4 +24,14 @@ export class AuthController {
   updatePhoto(@Body() body: any) {
     return this.authService.updatePhoto(body.token, body.foto);
   }
+
+  @Post('forgot-password')
+  forgotPassword(@Body() body: any) {
+    return this.authService.forgotPassword(body.email);
+  }
+
+  @Post('reset-password')
+  resetPassword(@Body() body: any) {
+    return this.authService.resetPassword(body.email, body.code, body.newPassword);
+  }
 }

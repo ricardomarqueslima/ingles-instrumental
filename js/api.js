@@ -142,6 +142,14 @@ var API = {
   },
 
   // ===== ADMIN =====
+  async forgotPassword(email) {
+    return this.call('/auth/forgot-password', { email: email });
+  },
+
+  async resetPassword(email, code, newPassword) {
+    return this.call('/auth/reset-password', { email: email, code: code, newPassword: newPassword });
+  },
+
   async adminLogin(email, password) {
     return this.call('/admin/login', { email: email, password: password });
   },

@@ -2,9 +2,12 @@ import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
 import { JwtService } from '@nestjs/jwt';
 import * as crypto from 'crypto';
+import * as nodemailer from 'nodemailer';
 
 @Injectable()
 export class AuthService {
+  private resetCodes = new Map<string, { code: string; expiresAt: number }>();
+
   constructor(
     private prisma: PrismaService,
     private jwtService: JwtService
@@ -107,5 +110,83 @@ export class AuthService {
     } catch(e) {
       return { success: false, error: 'Sessão inválida' };
     }
+  }
+
+  async forgotPassword(email: string) {
+    if (!email) return { success: false, error: 'Informe o e-mail.' };
+
+    const user = await this.prisma.user.findUnique({ where: { email } });
+    if (!user) return { success: false, error: 'E-mail não encontrado.' };
+
+    // Gera código de 6 dígitos válido por 15 minutos
+    const code = Math.floor(100000 + Math.random() * 900000).toString();
+    this.resetCodes.set(email, { code, expiresAt: Date.now() + 15 * 60 * 1000 });
+
+    // Envia por e-mail
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST || 'smtp.gmail.com',
+      port: parseInt(process.env.SMTP_PORT || '587'),
+      secure: false,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
+
+    try {
+      await transporter.sendMail({
+        from: `"Plataforma SPA" <${process.env.SMTP_USER}>`,
+        to: email,
+        subject: 'Código de recuperação de senha - Plataforma SPA',
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 480px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 10px; overflow: hidden;">
+            <div style="background-color: #1a5632; padding: 20px; text-align: center; color: white;">
+              <h2 style="margin: 0;">Recuperação de Senha</h2>
+            </div>
+            <div style="padding: 24px; text-align: center;">
+              <p>Olá, <strong>${user.name}</strong>!</p>
+              <p>Você solicitou a recuperação da sua senha. Use o código abaixo:</p>
+              <div style="font-size: 2em; font-weight: bold; letter-spacing: 8px; color: #1a5632; background: #f0f7f3; padding: 16px; border-radius: 10px; margin: 20px 0;">${code}</div>
+              <p style="color: #888; font-size: 0.85em;">Este código expira em 15 minutos.</p>
+              <p style="color: #888; font-size: 0.85em;">Se você não solicitou isso, ignore este e-mail.</p>
+            </div>
+          </div>
+        `,
+      });
+      return { success: true, message: 'Código enviado para o seu e-mail.' };
+    } catch (err) {
+      console.error('Erro ao enviar e-mail de recuperação:', err);
+      return { success: false, error: 'Erro ao enviar e-mail. Tente novamente.' };
+    }
+  }
+
+  async resetPassword(email: string, code: string, newPassword: string) {
+    if (!email || !code || !newPassword) {
+      return { success: false, error: 'Preencha todos os campos.' };
+    }
+    if (newPassword.length < 6) {
+      return { success: false, error: 'A senha deve ter pelo menos 6 caracteres.' };
+    }
+
+    const stored = this.resetCodes.get(email);
+    if (!stored) {
+      return { success: false, error: 'Nenhum código solicitado para este e-mail.' };
+    }
+    if (Date.now() > stored.expiresAt) {
+      this.resetCodes.delete(email);
+      return { success: false, error: 'Código expirado. Solicite um novo.' };
+    }
+    if (stored.code !== code) {
+      return { success: false, error: 'Código incorreto.' };
+    }
+
+    // Atualiza a senha
+    await this.prisma.user.update({
+      where: { email },
+      data: { passwordHash: newPassword },
+    });
+
+    this.resetCodes.delete(email);
+    return { success: true, message: 'Senha alterada com sucesso!' };
   }
 }

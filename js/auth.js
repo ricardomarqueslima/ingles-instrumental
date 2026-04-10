@@ -330,5 +330,77 @@ const Auth = {
     if (logoutBtn) logoutBtn.style.display = 'none';
     if (typeof showView === 'function') showView('welcome');
     this.showAuthOverlay();
+  },
+
+  // ===== RECUPERAÇÃO DE SENHA =====
+  showForgotPassword() {
+    var loginForm = document.getElementById('loginForm');
+    var registerForm = document.getElementById('registerForm');
+    var forgotForm = document.getElementById('forgotForm');
+    var authTabs = document.querySelector('.auth-tabs');
+    if (loginForm) loginForm.style.display = 'none';
+    if (registerForm) registerForm.style.display = 'none';
+    if (forgotForm) forgotForm.style.display = 'block';
+    if (authTabs) authTabs.style.display = 'none';
+    var errorEl = document.getElementById('forgotError');
+    if (errorEl) errorEl.textContent = '';
+    // Mostrar etapa 1 (email), esconder etapa 2 (código)
+    var step1 = document.getElementById('forgotStep1');
+    var step2 = document.getElementById('forgotStep2');
+    if (step1) step1.style.display = 'block';
+    if (step2) step2.style.display = 'none';
+  },
+
+  hideForgotPassword() {
+    var loginForm = document.getElementById('loginForm');
+    var forgotForm = document.getElementById('forgotForm');
+    var authTabs = document.querySelector('.auth-tabs');
+    if (loginForm) loginForm.style.display = 'block';
+    if (forgotForm) forgotForm.style.display = 'none';
+    if (authTabs) authTabs.style.display = 'flex';
+    this.switchAuthTab('login');
+  },
+
+  async handleForgotSubmit(e) {
+    e.preventDefault();
+    var email = document.getElementById('forgotEmail').value.trim();
+    var errorEl = document.getElementById('forgotError');
+    if (!email) { errorEl.textContent = 'Informe o e-mail.'; return; }
+    errorEl.textContent = '';
+    var result = await API.forgotPassword(email);
+    if (result.success) {
+      // Avança para etapa 2
+      this._resetEmail = email;
+      var step1 = document.getElementById('forgotStep1');
+      var step2 = document.getElementById('forgotStep2');
+      if (step1) step1.style.display = 'none';
+      if (step2) step2.style.display = 'block';
+      errorEl.style.color = 'var(--success)';
+      errorEl.textContent = result.message || 'Código enviado!';
+    } else {
+      errorEl.style.color = 'var(--accent)';
+      errorEl.textContent = result.error || 'Erro ao enviar código.';
+    }
+  },
+
+  async handleResetSubmit(e) {
+    e.preventDefault();
+    var code = document.getElementById('resetCode').value.trim();
+    var newPass = document.getElementById('resetPassword').value;
+    var confirmPass = document.getElementById('resetConfirmPassword').value;
+    var errorEl = document.getElementById('forgotError');
+    if (!code || !newPass || !confirmPass) { errorEl.style.color = 'var(--accent)'; errorEl.textContent = 'Preencha todos os campos.'; return; }
+    if (newPass !== confirmPass) { errorEl.style.color = 'var(--accent)'; errorEl.textContent = 'As senhas não coincidem.'; return; }
+    if (newPass.length < 6) { errorEl.style.color = 'var(--accent)'; errorEl.textContent = 'A senha deve ter pelo menos 6 caracteres.'; return; }
+    errorEl.textContent = '';
+    var result = await API.resetPassword(this._resetEmail, code, newPass);
+    if (result.success) {
+      errorEl.style.color = 'var(--success)';
+      errorEl.textContent = result.message || 'Senha alterada!';
+      setTimeout(function() { Auth.hideForgotPassword(); }, 2000);
+    } else {
+      errorEl.style.color = 'var(--accent)';
+      errorEl.textContent = result.error || 'Erro ao redefinir senha.';
+    }
   }
 };

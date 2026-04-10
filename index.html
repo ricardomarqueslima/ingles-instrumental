@@ -54,7 +54,42 @@
                 </div>
                 <div class="auth-error" id="loginError"></div>
                 <button type="submit" class="auth-submit">Entrar</button>
+                <p class="forgot-link"><a href="#" onclick="event.preventDefault(); Auth.showForgotPassword();">Esqueci minha senha</a></p>
             </form>
+            <div id="forgotForm" style="display:none" class="auth-form">
+                <div class="auth-error" id="forgotError"></div>
+                <div id="forgotStep1">
+                    <p class="forgot-title">Recuperar Senha</p>
+                    <p class="forgot-desc">Informe seu e-mail cadastrado. Enviaremos um c&oacute;digo de 6 d&iacute;gitos.</p>
+                    <form onsubmit="event.preventDefault(); Auth.handleForgotSubmit(event)">
+                        <div class="auth-field">
+                            <label>Email</label>
+                            <input type="email" id="forgotEmail" placeholder="seu@email.com" required>
+                        </div>
+                        <button type="submit" class="auth-submit">Enviar C&oacute;digo</button>
+                    </form>
+                </div>
+                <div id="forgotStep2" style="display:none">
+                    <p class="forgot-title">Redefinir Senha</p>
+                    <p class="forgot-desc">Digite o c&oacute;digo recebido por e-mail e sua nova senha.</p>
+                    <form onsubmit="event.preventDefault(); Auth.handleResetSubmit(event)">
+                        <div class="auth-field">
+                            <label>C&oacute;digo de 6 d&iacute;gitos</label>
+                            <input type="text" id="resetCode" placeholder="000000" maxlength="6" required>
+                        </div>
+                        <div class="auth-field">
+                            <label>Nova Senha</label>
+                            <input type="password" id="resetPassword" placeholder="M&iacute;nimo 6 caracteres" required>
+                        </div>
+                        <div class="auth-field">
+                            <label>Confirmar Nova Senha</label>
+                            <input type="password" id="resetConfirmPassword" placeholder="Repita a nova senha" required>
+                        </div>
+                        <button type="submit" class="auth-submit">Redefinir Senha</button>
+                    </form>
+                </div>
+                <p class="forgot-link" style="margin-top:16px;"><a href="#" onclick="event.preventDefault(); Auth.hideForgotPassword();">Voltar ao login</a></p>
+            </div>
             <form id="registerForm" class="auth-form" style="display:none" onsubmit="event.preventDefault(); Auth.handleRegister(event)">
                 <div class="auth-field">
                     <label>Nome Completo</label>
@@ -120,9 +155,9 @@
         Semin&aacute;rio Presbiteriano da Amaz&ocirc;nia &bull; Plataforma de Cursos Online &bull; &ldquo;Procura apresentar-te a Deus aprovado&rdquo; &mdash; 2 Tm 2:15
     </footer>
 
-    <script src="js/api.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="js/courses.js"></script>
-    <script src="js/index-main.js?v=1"></script>
+    <script src="js/api.js?v=2"></script>
+    <script src="js/auth.js?v=2"></script>
+    <script src="js/courses.js?v=2"></script>
+    <script src="js/index-main.js?v=2"></script>
 </body>
 </html>
