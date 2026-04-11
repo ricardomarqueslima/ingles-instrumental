@@ -12,7 +12,8 @@
         "b) Prefixo 'un-' (excesso) + raiz 'faith' (fe) + sufixo '-ful' (sem) + sufixo '-ness' (acao) = acao de ter muita fe",
         "c) Prefixo 'un-' (negacao) + raiz 'faith' (fe) + sufixo '-ful' (cheio de) + sufixo '-ness' (lugar) = lugar sem fe",
         "d) Nao ha afixos nesta palavra; e uma palavra simples"
-      ]
+      ],
+      "correctAnswer": 0
     },
     {
       "id": 2,
@@ -24,7 +25,8 @@
         "b) 'Mis-' indica negacao total - misinterpret = nao interpretar",
         "c) 'Mis-' indica erro/equivoco - misinterpret = interpretar erroneamente",
         "d) 'Mis-' indica excesso - misinterpret = interpretar demais"
-      ]
+      ],
+      "correctAnswer": 2
     },
     {
       "id": 3,
@@ -41,7 +43,13 @@
         "antes/anterior (predestinacao)",
         "de volta/novamente (redencao/resgate)",
         "negacao/ausencia (incredulidade)"
-      ]
+      ],
+      "correctMapping": {
+        "pre- (predestination)": "antes/anterior (predestinacao)",
+        "re- (redemption)": "de volta/novamente (redencao/resgate)",
+        "un- (unbelief)": "negacao/ausencia (incredulidade)",
+        "dis- (disobedience)": "negacao/oposto (desobediencia)"
+      }
     },
     {
       "id": 4,
@@ -50,23 +58,28 @@
       "statements": [
         {
           "id": "4a",
-          "text": "O sufixo '-tion' em 'salvation' transforma o verbo 'salvar' em substantivo (acao de salvar)."
+          "text": "O sufixo '-tion' em 'salvation' transforma o verbo 'salvar' em substantivo (acao de salvar).",
+          "isCorrect": true
         },
         {
           "id": "4b",
-          "text": "O sufixo '-less' em 'graceless' indica 'cheio de graca'."
+          "text": "O sufixo '-less' em 'graceless' indica 'cheio de graca'.",
+          "isCorrect": false
         },
         {
           "id": "4c",
-          "text": "O sufixo '-ment' em 'atonement' indica um substantivo que expressa resultado ou estado."
+          "text": "O sufixo '-ment' em 'atonement' indica um substantivo que expressa resultado ou estado.",
+          "isCorrect": true
         },
         {
           "id": "4d",
-          "text": "O sufixo '-able' em 'teachable' indica capacidade ou possibilidade (capaz de ser ensinado)."
+          "text": "O sufixo '-able' em 'teachable' indica capacidade ou possibilidade (capaz de ser ensinado).",
+          "isCorrect": true
         },
         {
           "id": "4e",
-          "text": "O sufixo '-ly' em 'righteously' transforma o adjetivo em adverbio (de maneira justa)."
+          "text": "O sufixo '-ly' em 'righteously' transforma o adjetivo em adverbio (de maneira justa).",
+          "isCorrect": true
         }
       ]
     },
@@ -82,7 +95,8 @@
         "mis",
         "fear",
         "re"
-      ]
+      ],
+      "correctAnswers": ["dis", "faith", "mis", "fear"]
     },
     {
       "id": 6,
@@ -101,7 +115,14 @@
         "injusto/improbo",
         "reformacao",
         "devoto em oracao"
-      ]
+      ],
+      "correctMapping": {
+        "overcoming": "superando/vencendo",
+        "unrighteous": "injusto/improbo",
+        "reformation": "reformacao",
+        "prayerful": "devoto em oracao",
+        "disobedience": "desobediencia"
+      }
     },
     {
       "id": 7,
@@ -113,7 +134,8 @@
         "b) unconditional (prefixo un- e sufixo -al)",
         "c) predestination (prefixo pre- e sufixo -tion)",
         "d) sanctification (sufixo -tion apenas)"
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 8,
@@ -130,7 +152,13 @@
         "prefixo re- + raiz deem + sufixo -able",
         "prefixo un- + raiz god + sufixo -li + sufixo -ness",
         "prefixo over- + raiz joy + sufixo -ed"
-      ]
+      ],
+      "correctMapping": {
+        "redeemable": "prefixo re- + raiz deem + sufixo -able",
+        "ungodliness": "prefixo un- + raiz god + sufixo -li + sufixo -ness",
+        "overjoyed": "prefixo over- + raiz joy + sufixo -ed",
+        "disbelief": "prefixo dis- + raiz belief"
+      }
     },
     {
       "id": 9,
@@ -139,19 +167,23 @@
       "statements": [
         {
           "id": "9a",
-          "text": "Predetermination = pre (antes) + determine (determinar) + ation (substantivo) = ato de determinar antes/predeterminacao"
+          "text": "Predetermination = pre (antes) + determine (determinar) + ation (substantivo) = ato de determinar antes/predeterminacao",
+          "isCorrect": true
         },
         {
           "id": "9b",
-          "text": "Merciless = mercy (misericordia) + less (sem) = sem misericordia/impiedoso"
+          "text": "Merciless = mercy (misericordia) + less (sem) = sem misericordia/impiedoso",
+          "isCorrect": true
         },
         {
           "id": "9c",
-          "text": "Repentance = re (de volta) + pent (pensar) + ance (substantivo) = ato de pensar novamente/arrependimento"
+          "text": "Repentance = re (de volta) + pent (pensar) + ance (substantivo) = ato de pensar novamente/arrependimento",
+          "isCorrect": true
         },
         {
           "id": "9d",
-          "text": "Anticlericalism = anti (contra) + clerical (clerical) + ism (doutrina) = doutrina contra o clero/anticlericalismo"
+          "text": "Anticlericalism = anti (contra) + clerical (clerical) + ism (doutrina) = doutrina contra o clero/anticlericalismo",
+          "isCorrect": true
         }
       ]
     },
@@ -164,7 +196,8 @@
         "b) -ness (righteousness)",
         "c) -tion (righteoustion)",
         "d) -able (righteousable)"
-      ]
+      ],
+      "correctAnswer": 1
     }
   ]
 }

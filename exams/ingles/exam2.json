@@ -13,7 +13,8 @@
         "b) Cognato falso - significa 'conglomerado'",
         "c) Cognato falso - significa 'congresso'",
         "d) Cognato verdadeiro - significa 'condenacao'"
-      ]
+      ],
+      "correctAnswer": 0
     },
     {
       "id": 2,
@@ -25,7 +26,8 @@
         "b) 'Eventually' e um cognato falso - nao significa 'eventualmente', mas sim 'finalmente/por fim'",
         "c) 'Controversy' e um cognato falso - nao significa 'controversia'",
         "d) 'Sermon' e um cognato falso - nao significa 'sermao'"
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 3,
@@ -34,23 +36,28 @@
       "statements": [
         {
           "id": "3a",
-          "text": "'Baptism' e um cognato verdadeiro de 'batismo'."
+          "text": "'Baptism' e um cognato verdadeiro de 'batismo'.",
+          "isCorrect": true
         },
         {
           "id": "3b",
-          "text": "'Sensible' e um cognato verdadeiro de 'sensivel'."
+          "text": "'Sensible' e um cognato verdadeiro de 'sensivel'.",
+          "isCorrect": false
         },
         {
           "id": "3c",
-          "text": "'Theology' e um cognato verdadeiro de 'teologia'."
+          "text": "'Theology' e um cognato verdadeiro de 'teologia'.",
+          "isCorrect": true
         },
         {
           "id": "3d",
-          "text": "'Actually' e um cognato verdadeiro de 'atualmente'."
+          "text": "'Actually' e um cognato verdadeiro de 'atualmente'.",
+          "isCorrect": false
         },
         {
           "id": "3e",
-          "text": "'Prophet' e um cognato verdadeiro de 'profeta'."
+          "text": "'Prophet' e um cognato verdadeiro de 'profeta'.",
+          "isCorrect": true
         }
       ]
     },
@@ -73,7 +80,15 @@
         "cognato falso (nao significa fabrica, mas tecido)",
         "cognato verdadeiro (graca)",
         "cognato falso (nao significa pretender, mas fingir)"
-      ]
+      ],
+      "correctMapping": {
+        "redemption": "cognato verdadeiro (redencao)",
+        "library": "cognato falso (nao significa livraria, mas biblioteca)",
+        "communion": "cognato verdadeiro (comunhao)",
+        "fabric": "cognato falso (nao significa fabrica, mas tecido)",
+        "grace": "cognato verdadeiro (graca)",
+        "pretend": "cognato falso (nao significa pretender, mas fingir)"
+      }
     },
     {
       "id": 5,
@@ -87,7 +102,8 @@
         "fabric",
         "currently",
         "bookstore"
-      ]
+      ],
+      "correctAnswers": ["library", "currently", "lecture"]
     },
     {
       "id": 6,
@@ -106,7 +122,14 @@
         "especifico/determinado",
         "presumir/supor",
         "romance (livro)/novo"
-      ]
+      ],
+      "correctMapping": {
+        "attend": "comparecer/participar",
+        "assume": "presumir/supor",
+        "particular": "especifico/determinado",
+        "realize": "perceber/dar-se conta",
+        "novel": "romance (livro)/novo"
+      }
     },
     {
       "id": 7,
@@ -118,7 +141,8 @@
         "b) 4 cognatos verdadeiros",
         "c) 5 cognatos verdadeiros",
         "d) 6 cognatos verdadeiros"
-      ]
+      ],
+      "correctAnswer": 2
     },
     {
       "id": 8,
@@ -127,19 +151,23 @@
       "statements": [
         {
           "id": "8a",
-          "text": "'The deacon was very sympathetic to the family's situation.' - 'Sympathetic' significa 'simpatico'. (traducao sugerida)"
+          "text": "'The deacon was very sympathetic to the family's situation.' - 'Sympathetic' significa 'simpatico'. (traducao sugerida)",
+          "isCorrect": false
         },
         {
           "id": "8b",
-          "text": "'The seminary offers a comprehensive curriculum.' - 'Comprehensive' significa 'abrangente/completo'. (traducao sugerida)"
+          "text": "'The seminary offers a comprehensive curriculum.' - 'Comprehensive' significa 'abrangente/completo'. (traducao sugerida)",
+          "isCorrect": true
         },
         {
           "id": "8c",
-          "text": "'The pastor was asked to resign after the incident.' - 'Resign' significa 'resignar-se'. (traducao sugerida)"
+          "text": "'The pastor was asked to resign after the incident.' - 'Resign' significa 'resignar-se'. (traducao sugerida)",
+          "isCorrect": false
         },
         {
           "id": "8d",
-          "text": "'The missionary showed great courage and determination.' - 'Determination' significa 'determinacao'. (traducao sugerida)"
+          "text": "'The missionary showed great courage and determination.' - 'Determination' significa 'determinacao'. (traducao sugerida)",
+          "isCorrect": true
         }
       ]
     },
@@ -158,7 +186,13 @@
         "diario/periodico",
         "apoiar/sustentar",
         "pretender/ter a intencao"
-      ]
+      ],
+      "correctMapping": {
+        "journal": "diario/periodico",
+        "parents": "pais (pai e mae)",
+        "intend": "pretender/ter a intencao",
+        "support": "apoiar/sustentar"
+      }
     },
     {
       "id": 10,
@@ -169,7 +203,8 @@
         "b) communion, revelation, doctrine, miracle",
         "c) actually, denomination, fabric, angel",
         "d) eventually, seminary, pretend, psalm"
-      ]
+      ],
+      "correctAnswer": 1
     }
   ]
 }
