@@ -13,7 +13,8 @@
         "b) Parishioners significa 'membros da igreja/paróquia'",
         "c) Parishioners significa 'pastores auxiliares'",
         "d) Parishioners significa 'missionários'"
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 2,
@@ -25,7 +26,8 @@
         "b) Expiação/reconciliação",
         "c) Confissão pública",
         "d) Batismo"
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 3,
@@ -35,19 +37,23 @@
       "statements": [
         {
           "id": "3a",
-          "text": "A palavra 'plight' pode ser inferida como 'situação difícil' pelo contexto de famílias empobrecidas."
+          "text": "A palavra 'plight' pode ser inferida como 'situação difícil' pelo contexto de famílias empobrecidas.",
+          "isCorrect": true
         },
         {
           "id": "3b",
-          "text": "A palavra 'benevolence' pode ser inferida como 'punição' pelo contexto da frase."
+          "text": "A palavra 'benevolence' pode ser inferida como 'punição' pelo contexto da frase.",
+          "isCorrect": false
         },
         {
           "id": "3c",
-          "text": "A palavra 'resolved' indica que os líderes tomaram uma decisão firme."
+          "text": "A palavra 'resolved' indica que os líderes tomaram uma decisão firme.",
+          "isCorrect": true
         },
         {
           "id": "3d",
-          "text": "A palavra 'relief' pode ser entendida como 'alívio/ajuda' com base no contexto."
+          "text": "A palavra 'relief' pode ser entendida como 'alívio/ajuda' com base no contexto.",
+          "isCorrect": true
         }
       ]
     },
@@ -67,7 +73,13 @@
         "cuidadoso/minucioso",
         "colegas/iguais",
         "obscuro/pouco claro"
-      ]
+      ],
+      "correctMapping": {
+        "meticulous": "cuidadoso/minucioso",
+        "obscure": "obscuro/pouco claro",
+        "deemed": "considerado/julgado",
+        "peers": "colegas/iguais"
+      }
     },
     {
       "id": 5,
@@ -81,7 +93,8 @@
         "church",
         "mountain",
         "Bible"
-      ]
+      ],
+      "correctAnswers": ["village", "message", "language", "church"]
     },
     {
       "id": 6,
@@ -93,7 +106,8 @@
         "b) Firme e inabalável",
         "c) Indiferente",
         "d) Revoltado"
-      ]
+      ],
+      "correctAnswer": 1
     },
     {
       "id": 7,
@@ -111,7 +125,13 @@
         "aliança/pacto",
         "previu/profetizou",
         "transgressões/pecados"
-      ]
+      ],
+      "correctMapping": {
+        "foretold": "previu/profetizou",
+        "covenant": "aliança/pacto",
+        "forsook": "abandonaram/deixaram",
+        "transgressions": "transgressões/pecados"
+      }
     },
     {
       "id": 8,
@@ -121,15 +141,18 @@
       "statements": [
         {
           "id": "8a",
-          "text": "A palavra 'encompasses' pode ser inferida como 'abrange/inclui' com base na ideia de uma variedade de disciplinas."
+          "text": "A palavra 'encompasses' pode ser inferida como 'abrange/inclui' com base na ideia de uma variedade de disciplinas.",
+          "isCorrect": true
         },
         {
           "id": "8b",
-          "text": "A palavra 'exegete' pode ser inferida como 'ignorar' pelo contexto acadêmico."
+          "text": "A palavra 'exegete' pode ser inferida como 'ignorar' pelo contexto acadêmico.",
+          "isCorrect": false
         },
         {
           "id": "8c",
-          "text": "A palavra 'articulate' no contexto significa 'expressar com clareza'."
+          "text": "A palavra 'articulate' no contexto significa 'expressar com clareza'.",
+          "isCorrect": true
         }
       ]
     },
@@ -149,7 +172,13 @@
         "entristecida/enlutada",
         "despertar/avivamento",
         "tribulações/sofrimentos"
-      ]
+      ],
+      "correctMapping": {
+        "grieved": "entristecida/enlutada",
+        "awakening": "despertar/avivamento",
+        "tribulations": "tribulações/sofrimentos",
+        "cornerstone": "pedra angular/fundamento"
+      }
     },
     {
       "id": 10,
@@ -161,7 +190,8 @@
         "b) Sola fide significa 'somente a fé'",
         "c) Sola fide é um termo para 'somente a graça'",
         "d) Sola fide refere-se ao batismo infantil"
-      ]
+      ],
+      "correctAnswer": 1
     }
   ]
 }
