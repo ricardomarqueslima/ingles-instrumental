@@ -112,7 +112,7 @@
     {
       "id": 7,
       "type": "column_match",
-      "prompt": "Leia as frases abaixo e associe cada palavra sublinhada ao significado inferido pelo contexto:",
+      "prompt": "Leia as frases abaixo e associe cada palavra destacada ao significado inferido pelo contexto:",
       "text": "1) The prophet <strong>foretold</strong> the coming of the Messiah. 2) God's <strong>covenant</strong> with Abraham was everlasting. 3) The disciples <strong>forsook</strong> everything to follow Jesus. 4) The priest offered a burnt offering to atone for the people's <strong>transgressions</strong>.",
       "leftColumn": [
         "foretold",

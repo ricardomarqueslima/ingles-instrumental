@@ -177,7 +177,8 @@
     {
       "id": 10,
       "type": "drag_match",
-      "prompt": "Identifique a função sintática de cada elemento destacado na frase: 'The prophet Isaiah clearly announced God's redemptive plan to the people of Israel.'",
+      "prompt": "Identifique a função sintática de cada elemento destacado na frase:",
+      "text": "<strong>The prophet Isaiah</strong> <strong>clearly</strong> <strong>announced</strong> <strong>God's redemptive plan</strong> to the people of Israel.",
       "items": [
         "The prophet Isaiah",
         "clearly",

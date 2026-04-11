@@ -151,22 +151,22 @@
       "statements": [
         {
           "id": "8a",
-          "text": "'The deacon was very sympathetic to the family's situation.' - 'Sympathetic' significa 'simpático'. (tradução sugerida)",
+          "text": "'The deacon was very <strong>sympathetic</strong> to the family's situation.' - 'Sympathetic' significa 'simpático'. (tradução sugerida)",
           "isCorrect": false
         },
         {
           "id": "8b",
-          "text": "'The seminary offers a comprehensive curriculum.' - 'Comprehensive' significa 'abrangente/completo'. (tradução sugerida)",
+          "text": "'The seminary offers a <strong>comprehensive</strong> curriculum.' - 'Comprehensive' significa 'abrangente/completo'. (tradução sugerida)",
           "isCorrect": true
         },
         {
           "id": "8c",
-          "text": "'The pastor was asked to resign after the incident.' - 'Resign' significa 'resignar-se'. (tradução sugerida)",
+          "text": "'The pastor was asked to <strong>resign</strong> after the incident.' - 'Resign' significa 'resignar-se'. (tradução sugerida)",
           "isCorrect": false
         },
         {
           "id": "8d",
-          "text": "'The missionary showed great courage and determination.' - 'Determination' significa 'determinação'. (tradução sugerida)",
+          "text": "'The missionary showed great courage and <strong>determination</strong>.' - 'Determination' significa 'determinação'. (tradução sugerida)",
           "isCorrect": true
         }
       ]
