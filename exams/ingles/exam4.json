@@ -1,38 +1,38 @@
 {
   "module": 4,
-  "title": "Prova - Sinonimia e Antonimia",
+  "title": "Prova - Sinonímia e Antonímia",
   "timeLimit": 5400,
   "questions": [
     {
       "id": 1,
       "type": "multiple_choice",
-      "prompt": "Qual das opcoes apresenta um sinonimo correto para a palavra 'righteousness' no contexto teologico?",
+      "prompt": "Qual das opções apresenta um sinônimo correto para a palavra 'righteousness' no contexto teológico?",
       "text": "The Lord loves righteousness and justice; the earth is full of His unfailing love. (Psalm 33:5)",
       "options": [
         "a) wickedness (maldade)",
-        "b) holiness (santidade/retidao)",
+        "b) holiness (santidade/retidão)",
         "c) weakness (fraqueza)",
-        "d) loneliness (solidao)"
+        "d) loneliness (solidão)"
       ],
       "correctAnswer": 1
     },
     {
       "id": 2,
       "type": "multiple_choice",
-      "prompt": "Identifique o par de antonimos presente no texto abaixo:",
+      "prompt": "Identifique o par de antônimos presente no texto abaixo:",
       "text": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord. (Romans 6:23)",
       "options": [
-        "a) wages/gift (salario/presente) - representam conceitos opostos no texto",
-        "b) sin/Christ (pecado/Cristo) - sao antonimos diretos",
-        "c) death/life (morte/vida) - sao antonimos classicos",
-        "d) Ambas as alternativas A e C estao corretas"
+        "a) wages/gift (salário/presente) - representam conceitos opostos no texto",
+        "b) sin/Christ (pecado/Cristo) - são antônimos diretos",
+        "c) death/life (morte/vida) - são antônimos clássicos",
+        "d) Ambas as alternativas A e C estão corretas"
       ],
       "correctAnswer": 3
     },
     {
       "id": 3,
       "type": "column_match",
-      "prompt": "Associe cada palavra teologica em ingles ao seu antonimo correto:",
+      "prompt": "Associe cada palavra teológica em inglês ao seu antônimo correto:",
       "leftColumn": [
         "faith",
         "salvation",
@@ -58,31 +58,31 @@
     {
       "id": 4,
       "type": "true_false",
-      "prompt": "Avalie se os pares de palavras apresentados sao sinonimos (S) ou antonimos (A) no contexto teologico:",
+      "prompt": "Avalie se os pares de palavras apresentados são sinônimos (S) ou antônimos (A) no contexto teológico:",
       "statements": [
         {
           "id": "4a",
-          "text": "Grace e mercy sao sinonimos (ambos expressam bondade divina imerecida).",
+          "text": "Grace e mercy são sinônimos (ambos expressam bondade divina imerecida).",
           "isCorrect": true
         },
         {
           "id": "4b",
-          "text": "Redemption e condemnation sao sinonimos.",
+          "text": "Redemption e condemnation são sinônimos.",
           "isCorrect": false
         },
         {
           "id": "4c",
-          "text": "Sin e transgression sao sinonimos (ambos se referem a violacao da lei divina).",
+          "text": "Sin e transgression são sinônimos (ambos se referem à violação da lei divina).",
           "isCorrect": true
         },
         {
           "id": "4d",
-          "text": "Humble e proud sao antonimos.",
+          "text": "Humble e proud são antônimos.",
           "isCorrect": true
         },
         {
           "id": "4e",
-          "text": "Worship e praise sao antonimos.",
+          "text": "Worship e praise são antônimos.",
           "isCorrect": false
         }
       ]
@@ -90,7 +90,7 @@
     {
       "id": 5,
       "type": "drag_match",
-      "prompt": "Associe cada palavra a seu sinonimo no contexto biblico/teologico:",
+      "prompt": "Associe cada palavra a seu sinônimo no contexto bíblico/teológico:",
       "items": [
         "Scripture",
         "congregation",
@@ -99,12 +99,12 @@
       ],
       "targets": [
         "arrependimento/contrition",
-        "Biblia/Holy Writ",
+        "Bíblia/Holy Writ",
         "assembleia/flock",
         "proclamar/proclaim"
       ],
       "correctMapping": {
-        "Scripture": "Biblia/Holy Writ",
+        "Scripture": "Bíblia/Holy Writ",
         "congregation": "assembleia/flock",
         "preach": "proclamar/proclaim",
         "repentance": "arrependimento/contrition"
@@ -113,7 +113,7 @@
     {
       "id": 6,
       "type": "fill_blank",
-      "prompt": "Substitua as palavras entre parenteses por um sinonimo adequado do banco de palavras:",
+      "prompt": "Substitua as palavras entre parênteses por um sinônimo adequado do banco de palavras:",
       "sentence": "The ___ (happy/alegre) pastor shared the ___ (good news/boas novas) with the ___ (believers/crentes). They were ___ (thankful/agradecidos) for God's ___ (kindness/bondade).",
       "wordBank": [
         "joyful",
@@ -129,7 +129,7 @@
     {
       "id": 7,
       "type": "multiple_choice",
-      "prompt": "No texto abaixo, qual palavra funcionaria como antonimo de 'eternal' (eterno)?",
+      "prompt": "No texto abaixo, qual palavra funcionaria como antônimo de 'eternal' (eterno)?",
       "text": "God promises eternal life to those who believe. This life is not temporary or fleeting, but everlasting.",
       "options": [
         "a) everlasting",
@@ -142,7 +142,7 @@
     {
       "id": 8,
       "type": "column_match",
-      "prompt": "Associe cada palavra da coluna esquerda ao seu sinonimo na coluna direita, no contexto teologico:",
+      "prompt": "Associe cada palavra da coluna esquerda ao seu sinônimo na coluna direita, no contexto teológico:",
       "leftColumn": [
         "forgiveness",
         "wicked",
@@ -152,13 +152,13 @@
       ],
       "rightColumn": [
         "follower/aprendiz",
-        "pardon/absolvicao",
+        "pardon/absolvição",
         "evil/perverso",
         "prediction/oracle",
         "agreement/pact"
       ],
       "correctMapping": {
-        "forgiveness": "pardon/absolvicao",
+        "forgiveness": "pardon/absolvição",
         "wicked": "evil/perverso",
         "prophecy": "prediction/oracle",
         "disciple": "follower/aprendiz",
@@ -168,7 +168,7 @@
     {
       "id": 9,
       "type": "drag_match",
-      "prompt": "Associe cada palavra ao seu antonimo correto no contexto biblico:",
+      "prompt": "Associe cada palavra ao seu antônimo correto no contexto bíblico:",
       "items": [
         "light",
         "love",
@@ -178,12 +178,12 @@
       "targets": [
         "despair/desespero",
         "darkness/trevas",
-        "hatred/odio",
+        "hatred/ódio",
         "falsehood/mentira"
       ],
       "correctMapping": {
         "light": "darkness/trevas",
-        "love": "hatred/odio",
+        "love": "hatred/ódio",
         "truth": "falsehood/mentira",
         "hope": "despair/desespero"
       }
@@ -191,27 +191,27 @@
     {
       "id": 10,
       "type": "true_false",
-      "prompt": "Leia o texto e avalie as afirmacoes sobre relacoes de sinonimia e antonimia:",
+      "prompt": "Leia o texto e avalie as afirmações sobre relações de sinonímia e antonímia:",
       "text": "The righteous shall flourish like a palm tree, but the wicked shall perish. God exalts the humble and humbles the exalted.",
       "statements": [
         {
           "id": "10a",
-          "text": "No texto, 'flourish' e 'perish' funcionam como antonimos (prosperar vs perecer).",
+          "text": "No texto, 'flourish' e 'perish' funcionam como antônimos (prosperar vs perecer).",
           "isCorrect": true
         },
         {
           "id": "10b",
-          "text": "No texto, 'righteous' e 'wicked' sao sinonimos.",
+          "text": "No texto, 'righteous' e 'wicked' são sinônimos.",
           "isCorrect": false
         },
         {
           "id": "10c",
-          "text": "No texto, 'exalts' e 'humbles' funcionam como antonimos (exaltar vs humilhar).",
+          "text": "No texto, 'exalts' e 'humbles' funcionam como antônimos (exaltar vs humilhar).",
           "isCorrect": true
         },
         {
           "id": "10d",
-          "text": "'Humble' e 'exalted' sao apresentados como conceitos opostos no texto.",
+          "text": "'Humble' e 'exalted' são apresentados como conceitos opostos no texto.",
           "isCorrect": true
         }
       ]

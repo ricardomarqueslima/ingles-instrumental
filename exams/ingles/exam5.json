@@ -1,17 +1,17 @@
 {
   "module": 5,
-  "title": "Prova - Aspectos Morfossintaticos",
+  "title": "Prova - Aspectos Morfossintáticos",
   "timeLimit": 5400,
   "questions": [
     {
       "id": 1,
       "type": "multiple_choice",
-      "prompt": "Leia a frase abaixo e identifique a classe gramatical da palavra destacada em maiusculas.",
+      "prompt": "Leia a frase abaixo e identifique a classe gramatical da palavra destacada em maiúsculas.",
       "text": "The FAITHFUL congregation gathered for the evening prayer service.",
       "options": [
         "a) Substantivo (noun)",
         "b) Adjetivo (adjective)",
-        "c) Adverbio (adverb)",
+        "c) Advérbio (adverb)",
         "d) Verbo (verb)"
       ],
       "correctAnswer": 1
@@ -19,7 +19,7 @@
     {
       "id": 2,
       "type": "multiple_choice",
-      "prompt": "Na frase teologica abaixo, qual palavra funciona como o VERBO PRINCIPAL da oracao?",
+      "prompt": "Na frase teológica abaixo, qual palavra funciona como o VERBO PRINCIPAL da oração?",
       "text": "The apostle Paul boldly proclaimed the gospel of grace to the Gentiles.",
       "options": [
         "a) apostle",
@@ -32,7 +32,7 @@
     {
       "id": 3,
       "type": "multiple_choice",
-      "prompt": "Analise a frase e identifique corretamente o SUJEITO (Subject) da oracao.",
+      "prompt": "Analise a frase e identifique corretamente o SUJEITO (Subject) da oração.",
       "text": "Through many trials, the early Christians demonstrated remarkable perseverance.",
       "options": [
         "a) many trials",
@@ -45,11 +45,11 @@
     {
       "id": 4,
       "type": "true_false",
-      "prompt": "Analise cada afirmacao sobre a estrutura SVO (Sujeito-Verbo-Objeto) em ingles e indique se e Verdadeira (V) ou Falsa (F).",
+      "prompt": "Analise cada afirmação sobre a estrutura SVO (Sujeito-Verbo-Objeto) em inglês e indique se é Verdadeira (V) ou Falsa (F).",
       "statements": [
         {
           "id": "4a",
-          "text": "Na frase 'God loves His people', 'God' e o sujeito, 'loves' e o verbo, e 'His people' e o objeto.",
+          "text": "Na frase 'God loves His people', 'God' é o sujeito, 'loves' é o verbo, e 'His people' é o objeto.",
           "isCorrect": true
         },
         {
@@ -59,12 +59,12 @@
         },
         {
           "id": "4c",
-          "text": "Em ingles, a ordem padrao da frase e Sujeito-Verbo-Objeto (SVO), diferente do portugues que permite mais flexibilidade.",
+          "text": "Em inglês, a ordem padrão da frase é Sujeito-Verbo-Objeto (SVO), diferente do português que permite mais flexibilidade.",
           "isCorrect": true
         },
         {
           "id": "4d",
-          "text": "Na frase 'Graciously, the Lord forgave their sins', a palavra 'Graciously' e o sujeito da oracao.",
+          "text": "Na frase 'Graciously, the Lord forgave their sins', a palavra 'Graciously' é o sujeito da oração.",
           "isCorrect": false
         }
       ]
@@ -72,7 +72,7 @@
     {
       "id": 5,
       "type": "drag_match",
-      "prompt": "Arraste cada palavra para sua classe gramatical correta, considerando o contexto das frases teologicas.",
+      "prompt": "Arraste cada palavra para sua classe gramatical correta, considerando o contexto das frases teológicas.",
       "items": [
         "righteousness",
         "sanctify",
@@ -83,19 +83,19 @@
         "Substantivo (noun)",
         "Verbo (verb)",
         "Adjetivo (adjective)",
-        "Conjuncao/Conector (conjunction)"
+        "Conjunção/Conector (conjunction)"
       ],
       "correctMapping": {
         "righteousness": "Substantivo (noun)",
         "sanctify": "Verbo (verb)",
         "eternal": "Adjetivo (adjective)",
-        "therefore": "Conjuncao/Conector (conjunction)"
+        "therefore": "Conjunção/Conector (conjunction)"
       }
     },
     {
       "id": 6,
       "type": "fill_blank",
-      "prompt": "Complete a frase abaixo com as palavras do banco, prestando atencao a classe gramatical necessaria em cada espaco.",
+      "prompt": "Complete a frase abaixo com as palavras do banco, prestando atenção à classe gramatical necessária em cada espaço.",
       "sentence": "The ___ shepherd ___ leads his flock to ___ pastures beside ___ waters.",
       "wordBank": [
         "good",
@@ -110,7 +110,7 @@
     {
       "id": 7,
       "type": "column_match",
-      "prompt": "Associe cada termo gramatical em ingles com sua definicao correta em portugues.",
+      "prompt": "Associe cada termo gramatical em inglês com sua definição correta em português.",
       "leftColumn": [
         "Noun",
         "Adjective",
@@ -119,37 +119,37 @@
         "Conjunction"
       ],
       "rightColumn": [
-        "Palavra que liga oracoes ou termos",
-        "Palavra que modifica um verbo, adjetivo ou outro adverbio",
+        "Palavra que liga orações ou termos",
+        "Palavra que modifica um verbo, adjetivo ou outro advérbio",
         "Palavra que nomeia seres, lugares, coisas ou ideias",
         "Palavra que qualifica ou caracteriza um substantivo",
-        "Palavra que estabelece relacao entre termos"
+        "Palavra que estabelece relação entre termos"
       ],
       "correctMapping": {
         "Noun": "Palavra que nomeia seres, lugares, coisas ou ideias",
         "Adjective": "Palavra que qualifica ou caracteriza um substantivo",
-        "Adverb": "Palavra que modifica um verbo, adjetivo ou outro adverbio",
-        "Preposition": "Palavra que estabelece relacao entre termos",
-        "Conjunction": "Palavra que liga oracoes ou termos"
+        "Adverb": "Palavra que modifica um verbo, adjetivo ou outro advérbio",
+        "Preposition": "Palavra que estabelece relação entre termos",
+        "Conjunction": "Palavra que liga orações ou termos"
       }
     },
     {
       "id": 8,
       "type": "multiple_choice",
-      "prompt": "Na frase abaixo, a palavra 'gracefully' pertence a qual classe gramatical e qual e sua funcao?",
+      "prompt": "Na frase abaixo, a palavra 'gracefully' pertence a qual classe gramatical e qual é sua função?",
       "text": "The worship leader gracefully guided the congregation through the hymns.",
       "options": [
         "a) Adjetivo - modifica o substantivo 'leader'",
-        "b) Adverbio - modifica o verbo 'guided'",
-        "c) Verbo - indica a acao principal",
-        "d) Preposicao - conecta 'leader' a 'guided'"
+        "b) Advérbio - modifica o verbo 'guided'",
+        "c) Verbo - indica a ação principal",
+        "d) Preposição - conecta 'leader' a 'guided'"
       ],
       "correctAnswer": 1
     },
     {
       "id": 9,
       "type": "true_false",
-      "prompt": "Leia o trecho teologico e avalie as afirmacoes sobre as classes gramaticais das palavras destacadas.",
+      "prompt": "Leia o trecho teológico e avalie as afirmações sobre as classes gramaticais das palavras destacadas.",
       "text": "The SOVEREIGN God MERCIFULLY granted SALVATION to the REPENTANT sinners.",
       "statements": [
         {
@@ -159,7 +159,7 @@
         },
         {
           "id": "9b",
-          "text": "A palavra 'MERCIFULLY' e um adverbio que modifica o verbo 'granted'.",
+          "text": "A palavra 'MERCIFULLY' é um advérbio que modifica o verbo 'granted'.",
           "isCorrect": true
         },
         {
@@ -169,7 +169,7 @@
         },
         {
           "id": "9d",
-          "text": "A palavra 'REPENTANT' e um adjetivo que modifica 'sinners'.",
+          "text": "A palavra 'REPENTANT' é um adjetivo que modifica 'sinners'.",
           "isCorrect": true
         }
       ]
@@ -177,7 +177,7 @@
     {
       "id": 10,
       "type": "drag_match",
-      "prompt": "Identifique a funcao sintatica de cada elemento destacado na frase: 'The prophet Isaiah clearly announced God's redemptive plan to the people of Israel.'",
+      "prompt": "Identifique a função sintática de cada elemento destacado na frase: 'The prophet Isaiah clearly announced God's redemptive plan to the people of Israel.'",
       "items": [
         "The prophet Isaiah",
         "clearly",
@@ -186,13 +186,13 @@
       ],
       "targets": [
         "Sujeito (Subject)",
-        "Adverbio modificador (Adverb)",
+        "Advérbio modificador (Adverb)",
         "Verbo principal (Main verb)",
         "Objeto direto (Direct object)"
       ],
       "correctMapping": {
         "The prophet Isaiah": "Sujeito (Subject)",
-        "clearly": "Adverbio modificador (Adverb)",
+        "clearly": "Advérbio modificador (Adverb)",
         "announced": "Verbo principal (Main verb)",
         "God's redemptive plan": "Objeto direto (Direct object)"
       }

@@ -12,14 +12,14 @@
         "a) Simple Past (Passado Simples)",
         "b) Past Perfect (Passado Perfeito)",
         "c) Present Perfect (Presente Perfeito)",
-        "d) Past Continuous (Passado Continuo)"
+        "d) Past Continuous (Passado Contínuo)"
       ],
       "correctAnswer": 1
     },
     {
       "id": 2,
       "type": "multiple_choice",
-      "prompt": "Qual tipo de pronome e a palavra 'who' na frase abaixo?",
+      "prompt": "Qual tipo de pronome é a palavra 'who' na frase abaixo?",
       "text": "The theologian who wrote this commentary spent thirty years studying the Greek manuscripts.",
       "options": [
         "a) Pronome pessoal (personal pronoun)",
@@ -35,36 +35,36 @@
       "prompt": "Analise a frase e identifique a forma comparativa ou superlativa utilizada.",
       "text": "The Epistle to the Romans is considered the most theological of all Paul's letters, and it is longer than the Epistle to the Galatians.",
       "options": [
-        "a) 'most theological' e superlativo e 'longer than' e comparativo",
-        "b) 'most theological' e comparativo e 'longer than' e superlativo",
-        "c) Ambos sao comparativos de superioridade",
-        "d) Ambos sao superlativos"
+        "a) 'most theological' é superlativo e 'longer than' é comparativo",
+        "b) 'most theological' é comparativo e 'longer than' é superlativo",
+        "c) Ambos são comparativos de superioridade",
+        "d) Ambos são superlativos"
       ],
       "correctAnswer": 0
     },
     {
       "id": 4,
       "type": "true_false",
-      "prompt": "Avalie as afirmacoes sobre os elementos gramaticais nas frases teologicas abaixo.",
+      "prompt": "Avalie as afirmações sobre os elementos gramaticais nas frases teológicas abaixo.",
       "statements": [
         {
           "id": "4a",
-          "text": "Na frase 'Christ Himself bore our sins on the cross', a palavra 'Himself' e um pronome reflexivo que enfatiza o sujeito.",
+          "text": "Na frase 'Christ Himself bore our sins on the cross', a palavra 'Himself' é um pronome reflexivo que enfatiza o sujeito.",
           "isCorrect": true
         },
         {
           "id": "4b",
-          "text": "Na frase 'The church has grown significantly since its founding', o tempo verbal e Present Perfect.",
+          "text": "Na frase 'The church has grown significantly since its founding', o tempo verbal é Present Perfect.",
           "isCorrect": true
         },
         {
           "id": "4c",
-          "text": "Na frase 'Their faith was stronger than ours', 'Their' e pronome possessivo adjetivo e 'ours' e pronome possessivo substantivo.",
+          "text": "Na frase 'Their faith was stronger than ours', 'Their' é pronome possessivo adjetivo e 'ours' é pronome possessivo substantivo.",
           "isCorrect": true
         },
         {
           "id": "4d",
-          "text": "Na frase 'Jesus will come again', o tempo verbal e Simple Present.",
+          "text": "Na frase 'Jesus will come again', o tempo verbal é Simple Present.",
           "isCorrect": false
         },
         {
@@ -100,7 +100,7 @@
     {
       "id": 6,
       "type": "column_match",
-      "prompt": "Associe cada pronome com sua classificacao gramatical correta.",
+      "prompt": "Associe cada pronome com sua classificação gramatical correta.",
       "leftColumn": [
         "whom",
         "herself",
@@ -143,7 +143,7 @@
     {
       "id": 8,
       "type": "multiple_choice",
-      "prompt": "Leia o trecho e identifique qual frase contem um numero ordinal.",
+      "prompt": "Leia o trecho e identifique qual frase contém um número ordinal.",
       "text": "There are sixty-six books in the Bible. Genesis is the first book of the Old Testament. It contains fifty chapters. Moses is traditionally considered the author of the five books of the Pentateuch.",
       "options": [
         "a) 'There are sixty-six books in the Bible.'",
@@ -156,7 +156,7 @@
     {
       "id": 9,
       "type": "true_false",
-      "prompt": "Analise as formas comparativas e superlativas nas frases abaixo e indique se estao gramaticalmente corretas.",
+      "prompt": "Analise as formas comparativas e superlativas nas frases abaixo e indique se estão gramaticalmente corretas.",
       "statements": [
         {
           "id": "9a",

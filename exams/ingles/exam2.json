@@ -6,13 +6,13 @@
     {
       "id": 1,
       "type": "multiple_choice",
-      "prompt": "A palavra 'congregation' em ingles e um cognato verdadeiro ou falso? Qual e o significado correto?",
+      "prompt": "A palavra 'congregation' em inglês é um cognato verdadeiro ou falso? Qual é o significado correto?",
       "text": "The congregation sang hymns of praise during the worship service.",
       "options": [
-        "a) Cognato verdadeiro - significa 'congregacao'",
+        "a) Cognato verdadeiro - significa 'congregação'",
         "b) Cognato falso - significa 'conglomerado'",
         "c) Cognato falso - significa 'congresso'",
-        "d) Cognato verdadeiro - significa 'condenacao'"
+        "d) Cognato verdadeiro - significa 'condenação'"
       ],
       "correctAnswer": 0
     },
@@ -22,41 +22,41 @@
       "prompt": "Identifique o cognato falso (false friend) presente na frase abaixo:",
       "text": "The pastor said he would eventually address the controversy in his next sermon.",
       "options": [
-        "a) 'Pastor' e um cognato falso - nao significa 'pastor'",
-        "b) 'Eventually' e um cognato falso - nao significa 'eventualmente', mas sim 'finalmente/por fim'",
-        "c) 'Controversy' e um cognato falso - nao significa 'controversia'",
-        "d) 'Sermon' e um cognato falso - nao significa 'sermao'"
+        "a) 'Pastor' é um cognato falso - não significa 'pastor'",
+        "b) 'Eventually' é um cognato falso - não significa 'eventualmente', mas sim 'finalmente/por fim'",
+        "c) 'Controversy' é um cognato falso - não significa 'controvérsia'",
+        "d) 'Sermon' é um cognato falso - não significa 'sermão'"
       ],
       "correctAnswer": 1
     },
     {
       "id": 3,
       "type": "true_false",
-      "prompt": "Avalie as afirmacoes abaixo sobre cognatos verdadeiros e falsos no vocabulario teologico:",
+      "prompt": "Avalie as afirmações abaixo sobre cognatos verdadeiros e falsos no vocabulário teológico:",
       "statements": [
         {
           "id": "3a",
-          "text": "'Baptism' e um cognato verdadeiro de 'batismo'.",
+          "text": "'Baptism' é um cognato verdadeiro de 'batismo'.",
           "isCorrect": true
         },
         {
           "id": "3b",
-          "text": "'Sensible' e um cognato verdadeiro de 'sensivel'.",
+          "text": "'Sensible' é um cognato verdadeiro de 'sensível'.",
           "isCorrect": false
         },
         {
           "id": "3c",
-          "text": "'Theology' e um cognato verdadeiro de 'teologia'.",
+          "text": "'Theology' é um cognato verdadeiro de 'teologia'.",
           "isCorrect": true
         },
         {
           "id": "3d",
-          "text": "'Actually' e um cognato verdadeiro de 'atualmente'.",
+          "text": "'Actually' é um cognato verdadeiro de 'atualmente'.",
           "isCorrect": false
         },
         {
           "id": "3e",
-          "text": "'Prophet' e um cognato verdadeiro de 'profeta'.",
+          "text": "'Prophet' é um cognato verdadeiro de 'profeta'.",
           "isCorrect": true
         }
       ]
@@ -74,26 +74,26 @@
         "pretend"
       ],
       "targets": [
-        "cognato verdadeiro (redencao)",
-        "cognato falso (nao significa livraria, mas biblioteca)",
-        "cognato verdadeiro (comunhao)",
-        "cognato falso (nao significa fabrica, mas tecido)",
-        "cognato verdadeiro (graca)",
-        "cognato falso (nao significa pretender, mas fingir)"
+        "cognato verdadeiro (redenção)",
+        "cognato falso (não significa livraria, mas biblioteca)",
+        "cognato verdadeiro (comunhão)",
+        "cognato falso (não significa fábrica, mas tecido)",
+        "cognato verdadeiro (graça)",
+        "cognato falso (não significa pretender, mas fingir)"
       ],
       "correctMapping": {
-        "redemption": "cognato verdadeiro (redencao)",
-        "library": "cognato falso (nao significa livraria, mas biblioteca)",
-        "communion": "cognato verdadeiro (comunhao)",
-        "fabric": "cognato falso (nao significa fabrica, mas tecido)",
-        "grace": "cognato verdadeiro (graca)",
-        "pretend": "cognato falso (nao significa pretender, mas fingir)"
+        "redemption": "cognato verdadeiro (redenção)",
+        "library": "cognato falso (não significa livraria, mas biblioteca)",
+        "communion": "cognato verdadeiro (comunhão)",
+        "fabric": "cognato falso (não significa fábrica, mas tecido)",
+        "grace": "cognato verdadeiro (graça)",
+        "pretend": "cognato falso (não significa pretender, mas fingir)"
       }
     },
     {
       "id": 5,
       "type": "fill_blank",
-      "prompt": "Complete as frases com a traducao correta das palavras entre parenteses. Cuidado com os cognatos falsos!",
+      "prompt": "Complete as frases com a tradução correta das palavras entre parênteses. Cuidado com os cognatos falsos!",
       "sentence": "The ___ (biblioteca) of the seminary has many ancient texts. The student was ___ (atualmente) writing a paper on Reformation history. The ___ (palestra) on hermeneutics was very informative.",
       "wordBank": [
         "library",
@@ -108,7 +108,7 @@
     {
       "id": 6,
       "type": "column_match",
-      "prompt": "Associe cada cognato falso ao seu significado real em ingles (nao ao significado aparente em portugues):",
+      "prompt": "Associe cada cognato falso ao seu significado real em inglês (não ao significado aparente em português):",
       "leftColumn": [
         "attend",
         "assume",
@@ -119,14 +119,14 @@
       "rightColumn": [
         "perceber/dar-se conta",
         "comparecer/participar",
-        "especifico/determinado",
+        "específico/determinado",
         "presumir/supor",
         "romance (livro)/novo"
       ],
       "correctMapping": {
         "attend": "comparecer/participar",
         "assume": "presumir/supor",
-        "particular": "especifico/determinado",
+        "particular": "específico/determinado",
         "realize": "perceber/dar-se conta",
         "novel": "romance (livro)/novo"
       }
@@ -147,26 +147,26 @@
     {
       "id": 8,
       "type": "true_false",
-      "prompt": "Leia as frases e julgue se a traducao sugerida para o cognato destacado esta correta:",
+      "prompt": "Leia as frases e julgue se a tradução sugerida para o cognato destacado está correta:",
       "statements": [
         {
           "id": "8a",
-          "text": "'The deacon was very sympathetic to the family's situation.' - 'Sympathetic' significa 'simpatico'. (traducao sugerida)",
+          "text": "'The deacon was very sympathetic to the family's situation.' - 'Sympathetic' significa 'simpático'. (tradução sugerida)",
           "isCorrect": false
         },
         {
           "id": "8b",
-          "text": "'The seminary offers a comprehensive curriculum.' - 'Comprehensive' significa 'abrangente/completo'. (traducao sugerida)",
+          "text": "'The seminary offers a comprehensive curriculum.' - 'Comprehensive' significa 'abrangente/completo'. (tradução sugerida)",
           "isCorrect": true
         },
         {
           "id": "8c",
-          "text": "'The pastor was asked to resign after the incident.' - 'Resign' significa 'resignar-se'. (traducao sugerida)",
+          "text": "'The pastor was asked to resign after the incident.' - 'Resign' significa 'resignar-se'. (tradução sugerida)",
           "isCorrect": false
         },
         {
           "id": "8d",
-          "text": "'The missionary showed great courage and determination.' - 'Determination' significa 'determinacao'. (traducao sugerida)",
+          "text": "'The missionary showed great courage and determination.' - 'Determination' significa 'determinação'. (tradução sugerida)",
           "isCorrect": true
         }
       ]
@@ -174,7 +174,7 @@
     {
       "id": 9,
       "type": "drag_match",
-      "prompt": "Associe cada palavra em ingles ao seu significado correto em portugues. Atencao aos cognatos falsos!",
+      "prompt": "Associe cada palavra em inglês ao seu significado correto em português. Atenção aos cognatos falsos!",
       "items": [
         "journal",
         "parents",
@@ -182,22 +182,22 @@
         "support"
       ],
       "targets": [
-        "pais (pai e mae)",
-        "diario/periodico",
+        "pais (pai e mãe)",
+        "diário/periódico",
         "apoiar/sustentar",
-        "pretender/ter a intencao"
+        "pretender/ter a intenção"
       ],
       "correctMapping": {
-        "journal": "diario/periodico",
-        "parents": "pais (pai e mae)",
-        "intend": "pretender/ter a intencao",
+        "journal": "diário/periódico",
+        "parents": "pais (pai e mãe)",
+        "intend": "pretender/ter a intenção",
         "support": "apoiar/sustentar"
       }
     },
     {
       "id": 10,
       "type": "multiple_choice",
-      "prompt": "Qual das alternativas contem APENAS cognatos verdadeiros usados em contexto teologico?",
+      "prompt": "Qual das alternativas contém APENAS cognatos verdadeiros usados em contexto teológico?",
       "options": [
         "a) salvation, grace, library, prophet",
         "b) communion, revelation, doctrine, miracle",
