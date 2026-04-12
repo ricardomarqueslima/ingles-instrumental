@@ -145,7 +145,7 @@
                     <span class="nav-num">8</span> Reconhecimento
                 </a>
                 <a class="nav-item" onclick="showUnit(9)">
-                    <span class="nav-num">9</span> Extra
+                    <span class="nav-num">9</span> Revis&atilde;o
                 </a>
             </div>
         </nav>
@@ -214,10 +214,10 @@
                         <p>Pronomes, tempos verbais, comparativos e superlativos.</p>
                     </div>
                     <div class="unit-card" onclick="showUnit(9)">
-                        <div class="card-icon">&#128640;</div>
+                        <div class="card-icon">&#127942;</div>
                         <div class="unit-num">9</div>
-                        <h3>M&oacute;dulo Extra</h3>
-                        <p>Novos conte&uacute;dos e avalia&ccedil;&otilde;es em desenvolvimento.</p>
+                        <h3>Revis&atilde;o Geral</h3>
+                        <p>50 exerc&iacute;cios de fixa&ccedil;&atilde;o cobrindo todos os m&oacute;dulos.</p>
                     </div>
                 </div>
             </div>
@@ -227,13 +227,379 @@
         <div id="unit9" class="unit-view">
             <div class="unit-header">
                 <span class="unit-badge">UNIDADE 9</span>
-                <h2>M&oacute;dulo Adicional</h2>
-                <p>Este m&oacute;dulo est&aacute; sendo preparado pelo professor.</p>
+                <h2>Revis&atilde;o Geral</h2>
+                <p>50 exerc&iacute;cios de fixa&ccedil;&atilde;o sem nota, cobrindo todo o conte&uacute;do do curso. Pratique quantas vezes quiser!</p>
             </div>
-            <div class="exam-btn-area" id="exam-area-9">
-                <button class="btn-exam" onclick="ExamEngine.start(9)" disabled>Prova bloqueada</button>
-                <p class="exam-status" id="exam-status-9"></p>
+
+            <!-- ===== SEÇÃO 1: INFERÊNCIA CONTEXTUAL (Q1-Q6) ===== -->
+            <div class="exercise-area">
+                <h3>&#128270; Se&ccedil;&atilde;o 1 &mdash; Infer&ecirc;ncia Contextual</h3>
+                <p style="margin-bottom:15px;font-size:0.9rem;">Infira o significado das palavras destacadas usando as pistas do contexto:</p>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">1</span> &ldquo;The early church demonstrated remarkable <strong>zeal</strong> in spreading the Gospel, tirelessly preaching from house to house.&rdquo; &mdash; <em>zeal</em> significa:</div>
+                    <div class="options-group" id="r9-q1"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q1')">a) Medo</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q1')">b) Fervor / entusiasmo</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q1')">c) Pregui&ccedil;a</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q1')">d) Desprezo</button></div>
+                    <div class="feedback-msg" id="fb-r9-q1"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">2</span> &ldquo;The apostles were <strong>apprehended</strong> by the authorities and thrown into prison for preaching about Jesus.&rdquo; &mdash; <em>apprehended</em> significa:</div>
+                    <div class="options-group" id="r9-q2"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q2')">a) Elogiados</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q2')">b) Ignorados</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q2')">c) Presos / capturados</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q2')">d) Enviados</button></div>
+                    <div class="feedback-msg" id="fb-r9-q2"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">3</span> &ldquo;God&rsquo;s <strong>providence</strong> sustains all creation; nothing happens apart from His sovereign will and care.&rdquo; &mdash; <em>providence</em> significa:</div>
+                    <div class="options-group" id="r9-q3"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q3')">a) Aus&ecirc;ncia</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q3')">b) Provid&ecirc;ncia / cuidado soberano</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q3')">c) Puni&ccedil;&atilde;o</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q3')">d) Ignor&acirc;ncia</button></div>
+                    <div class="feedback-msg" id="fb-r9-q3"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">4</span> &ldquo;The psalmist found <strong>solace</strong> in prayer during times of deep sorrow and distress.&rdquo; &mdash; <em>solace</em> significa:</div>
+                    <div class="options-group" id="r9-q4"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q4')">a) Cons&ocirc;lo / conforto</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q4')">b) Solid&atilde;o</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q4')">c) Raiva</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q4')">d) Confus&atilde;o</button></div>
+                    <div class="feedback-msg" id="fb-r9-q4"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">5</span> &ldquo;The Bereans were <strong>commended</strong> because they examined the Scriptures daily to verify Paul&rsquo;s teaching.&rdquo; &mdash; <em>commended</em> significa:</div>
+                    <div class="options-group" id="r9-q5"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q5')">a) Condenados</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q5')">b) Expulsos</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q5')">c) Elogiados / recomendados</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q5')">d) Punidos</button></div>
+                    <div class="feedback-msg" id="fb-r9-q5"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">6</span> &ldquo;Christ&rsquo;s <strong>intercession</strong> on behalf of believers is continuous; He always lives to plead for them before the Father.&rdquo; &mdash; <em>intercession</em> significa:</div>
+                    <div class="options-group" id="r9-q6"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q6')">a) Condena&ccedil;&atilde;o</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q6')">b) Intercess&atilde;o / media&ccedil;&atilde;o</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q6')">c) Rejei&ccedil;&atilde;o</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q6')">d) Interrup&ccedil;&atilde;o</button></div>
+                    <div class="feedback-msg" id="fb-r9-q6"></div>
+                </div>
+
+                <div class="score-display" id="score-r9s1"><div class="score-number" id="score-r9s1-num"></div><div class="score-text" id="score-r9s1-text"></div></div>
             </div>
+
+            <!-- ===== SEÇÃO 2: COGNATOS (Q7-Q13) ===== -->
+            <div class="exercise-area">
+                <h3>&#129309; Se&ccedil;&atilde;o 2 &mdash; Cognatos Verdadeiros e Falsos</h3>
+                <p style="margin-bottom:15px;font-size:0.9rem;">Identifique se o cognato &eacute; verdadeiro ou falso:</p>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">7</span> A palavra <strong>sensible</strong> em ingl&ecirc;s significa:</div>
+                    <div class="options-group" id="r9-q7"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q7')">a) Sens&iacute;vel (cognato verdadeiro)</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q7')">b) Sensato / prudente (cognato falso)</button></div>
+                    <div class="feedback-msg" id="fb-r9-q7"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">8</span> A palavra <strong>resurrection</strong> em ingl&ecirc;s significa:</div>
+                    <div class="options-group" id="r9-q8"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q8')">a) Ressurrei&ccedil;&atilde;o (cognato verdadeiro)</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q8')">b) Restaura&ccedil;&atilde;o (cognato falso)</button></div>
+                    <div class="feedback-msg" id="fb-r9-q8"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">9</span> A palavra <strong>actually</strong> em ingl&ecirc;s significa:</div>
+                    <div class="options-group" id="r9-q9"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q9')">a) Atualmente (cognato verdadeiro)</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q9')">b) Na verdade / de fato (cognato falso)</button></div>
+                    <div class="feedback-msg" id="fb-r9-q9"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">10</span> A palavra <strong>doctrine</strong> em ingl&ecirc;s significa:</div>
+                    <div class="options-group" id="r9-q10"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q10')">a) Doutrina (cognato verdadeiro)</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q10')">b) Documento (cognato falso)</button></div>
+                    <div class="feedback-msg" id="fb-r9-q10"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">11</span> A palavra <strong>pretend</strong> em ingl&ecirc;s significa:</div>
+                    <div class="options-group" id="r9-q11"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q11')">a) Pretender (cognato verdadeiro)</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q11')">b) Fingir (cognato falso)</button></div>
+                    <div class="feedback-msg" id="fb-r9-q11"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">12</span> A palavra <strong>compromise</strong> em ingl&ecirc;s significa:</div>
+                    <div class="options-group" id="r9-q12"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q12')">a) Compromisso (cognato verdadeiro)</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q12')">b) Acordo m&uacute;tuo / concess&atilde;o (cognato falso)</button></div>
+                    <div class="feedback-msg" id="fb-r9-q12"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">13</span> A palavra <strong>sanctification</strong> em ingl&ecirc;s significa:</div>
+                    <div class="options-group" id="r9-q13"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q13')">a) Santifica&ccedil;&atilde;o (cognato verdadeiro)</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q13')">b) Sacrif&iacute;cio (cognato falso)</button></div>
+                    <div class="feedback-msg" id="fb-r9-q13"></div>
+                </div>
+
+                <div class="score-display" id="score-r9s2"><div class="score-number" id="score-r9s2-num"></div><div class="score-text" id="score-r9s2-text"></div></div>
+            </div>
+
+            <!-- ===== SEÇÃO 3: AFIXAÇÃO (Q14-Q19) ===== -->
+            <div class="exercise-area">
+                <h3>&#128297; Se&ccedil;&atilde;o 3 &mdash; Afixa&ccedil;&atilde;o (Prefixos e Sufixos)</h3>
+                <p style="margin-bottom:15px;font-size:0.9rem;">Analise a forma&ccedil;&atilde;o das palavras:</p>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">14</span> A palavra <strong>unforgiveness</strong> &eacute; formada por:</div>
+                    <div class="options-group" id="r9-q14"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q14')">a) Prefixo un- (nega&ccedil;&atilde;o) + forgive (perdoar) + sufixo -ness (qualidade) = falta de perd&atilde;o</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q14')">b) Prefixo un- (excesso) + forgive + sufixo -ness (lugar) = lugar de perd&atilde;o</button></div>
+                    <div class="feedback-msg" id="fb-r9-q14"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">15</span> O prefixo <strong>pre-</strong> em <em>predestination</em> indica:</div>
+                    <div class="options-group" id="r9-q15"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q15')">a) Antes / anterioridade</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q15')">b) Depois / posterioridade</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q15')">c) Nega&ccedil;&atilde;o / aus&ecirc;ncia</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q15')">d) Repeti&ccedil;&atilde;o</button></div>
+                    <div class="feedback-msg" id="fb-r9-q15"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">16</span> O sufixo <strong>-ous</strong> em <em>righteous</em> transforma a palavra em:</div>
+                    <div class="options-group" id="r9-q16"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q16')">a) Substantivo</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q16')">b) Adjetivo (que possui a qualidade de)</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q16')">c) Verbo</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q16')">d) Adv&eacute;rbio</button></div>
+                    <div class="feedback-msg" id="fb-r9-q16"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">17</span> A palavra <strong>disobedience</strong> &eacute; formada pelo prefixo <em>dis-</em> que indica:</div>
+                    <div class="options-group" id="r9-q17"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q17')">a) Nega&ccedil;&atilde;o / oposto (desobedi&ecirc;ncia)</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q17')">b) Repeti&ccedil;&atilde;o (obedi&ecirc;ncia renovada)</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q17')">c) Excesso (muita obedi&ecirc;ncia)</button></div>
+                    <div class="feedback-msg" id="fb-r9-q17"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">18</span> Qual sufixo transforma o verbo <em>justify</em> em substantivo?</div>
+                    <div class="options-group" id="r9-q18"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q18')">a) -ness (justifyness)</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q18')">b) -ly (justifyly)</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q18')">c) -cation (justification)</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q18')">d) -able (justifiable)</button></div>
+                    <div class="feedback-msg" id="fb-r9-q18"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">19</span> A palavra <strong>redeemable</strong> pode ser decomposta em:</div>
+                    <div class="options-group" id="r9-q19"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q19')">a) re- (de volta) + deem (considerar) + -able (capaz de) = capaz de ser redimido</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q19')">b) red- (vermelho) +eem + -able = capaz de avermelhar</button></div>
+                    <div class="feedback-msg" id="fb-r9-q19"></div>
+                </div>
+
+                <div class="score-display" id="score-r9s3"><div class="score-number" id="score-r9s3-num"></div><div class="score-text" id="score-r9s3-text"></div></div>
+            </div>
+
+            <!-- ===== SEÇÃO 4: SINÔNIMOS E ANTÔNIMOS (Q20-Q25) ===== -->
+            <div class="exercise-area">
+                <h3>&#8596; Se&ccedil;&atilde;o 4 &mdash; Sin&ocirc;nimos e Ant&ocirc;nimos</h3>
+                <p style="margin-bottom:15px;font-size:0.9rem;">Identifique rela&ccedil;&otilde;es de significado entre as palavras:</p>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">20</span> <strong>Forgiveness</strong> e <strong>pardon</strong> s&atilde;o:</div>
+                    <div class="options-group" id="r9-q20"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q20')">a) Sin&ocirc;nimos</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q20')">b) Ant&ocirc;nimos</button></div>
+                    <div class="feedback-msg" id="fb-r9-q20"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">21</span> <strong>Righteous</strong> e <strong>wicked</strong> s&atilde;o:</div>
+                    <div class="options-group" id="r9-q21"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q21')">a) Sin&ocirc;nimos</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q21')">b) Ant&ocirc;nimos</button></div>
+                    <div class="feedback-msg" id="fb-r9-q21"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">22</span> Qual &eacute; o ant&ocirc;nimo de <strong>eternal</strong> (eterno)?</div>
+                    <div class="options-group" id="r9-q22"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q22')">a) Everlasting</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q22')">b) Temporary</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q22')">c) Perpetual</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q22')">d) Infinite</button></div>
+                    <div class="feedback-msg" id="fb-r9-q22"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">23</span> Qual &eacute; o sin&ocirc;nimo de <strong>preach</strong> (pregar)?</div>
+                    <div class="options-group" id="r9-q23"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q23')">a) Proclaim (proclamar)</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q23')">b) Conceal (esconder)</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q23')">c) Deny (negar)</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q23')">d) Destroy (destruir)</button></div>
+                    <div class="feedback-msg" id="fb-r9-q23"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">24</span> <strong>Salvation</strong> e <strong>damnation</strong> s&atilde;o:</div>
+                    <div class="options-group" id="r9-q24"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q24')">a) Sin&ocirc;nimos</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q24')">b) Ant&ocirc;nimos</button></div>
+                    <div class="feedback-msg" id="fb-r9-q24"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">25</span> <strong>Grace</strong> e <strong>mercy</strong> s&atilde;o:</div>
+                    <div class="options-group" id="r9-q25"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q25')">a) Sin&ocirc;nimos (ambos expressam bondade divina imerecida)</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q25')">b) Ant&ocirc;nimos (significados opostos)</button></div>
+                    <div class="feedback-msg" id="fb-r9-q25"></div>
+                </div>
+
+                <div class="score-display" id="score-r9s4"><div class="score-number" id="score-r9s4-num"></div><div class="score-text" id="score-r9s4-text"></div></div>
+            </div>
+
+            <!-- ===== SEÇÃO 5: ESTRUTURA DA ORAÇÃO (Q26-Q32) ===== -->
+            <div class="exercise-area">
+                <h3>&#128200; Se&ccedil;&atilde;o 5 &mdash; Estrutura da Ora&ccedil;&atilde;o</h3>
+                <p style="margin-bottom:15px;font-size:0.9rem;">Identifique sujeito, verbo, classes gramaticais e tipos de ora&ccedil;&atilde;o:</p>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">26</span> &ldquo;The sovereign God justifies sinners by grace.&rdquo; &mdash; O sujeito e o verbo s&atilde;o:</div>
+                    <div class="options-group" id="r9-q26"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q26')">a) Sinners / justifies</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q26')">b) God / justifies</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q26')">c) Grace / justifies</button></div>
+                    <div class="feedback-msg" id="fb-r9-q26"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">27</span> Na frase &ldquo;The <strong>faithful</strong> pastor preached boldly&rdquo;, a palavra <em>faithful</em> &eacute;:</div>
+                    <div class="options-group" id="r9-q27"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q27')">a) Substantivo</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q27')">b) Adjetivo</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q27')">c) Adv&eacute;rbio</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q27')">d) Verbo</button></div>
+                    <div class="feedback-msg" id="fb-r9-q27"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">28</span> Na frase &ldquo;Paul <strong>earnestly</strong> prayed for the churches&rdquo;, a palavra <em>earnestly</em> &eacute;:</div>
+                    <div class="options-group" id="r9-q28"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q28')">a) Adjetivo</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q28')">b) Adv&eacute;rbio (modifica o verbo <em>prayed</em>)</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q28')">c) Substantivo</button></div>
+                    <div class="feedback-msg" id="fb-r9-q28"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">29</span> &ldquo;God works all things together for good.&rdquo; (Rm 8:28) &mdash; Tipo de ora&ccedil;&atilde;o:</div>
+                    <div class="options-group" id="r9-q29"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q29')">a) Simples</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q29')">b) Composta</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q29')">c) Complexa</button></div>
+                    <div class="feedback-msg" id="fb-r9-q29"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">30</span> &ldquo;Man is totally depraved, yet God regenerates him.&rdquo; &mdash; Tipo de ora&ccedil;&atilde;o:</div>
+                    <div class="options-group" id="r9-q30"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q30')">a) Simples</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q30')">b) Composta (duas cl&aacute;usulas unidas por <em>yet</em>)</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q30')">c) Complexa</button></div>
+                    <div class="feedback-msg" id="fb-r9-q30"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">31</span> &ldquo;I can do all things through him who strengthens me.&rdquo; (Fp 4:13) &mdash; Tipo de ora&ccedil;&atilde;o:</div>
+                    <div class="options-group" id="r9-q31"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q31')">a) Simples</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q31')">b) Composta</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q31')">c) Complexa (cl&aacute;usula subordinada com <em>who</em>)</button></div>
+                    <div class="feedback-msg" id="fb-r9-q31"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">32</span> Na frase &ldquo;The church in prayer.&rdquo;, o problema &eacute;:</div>
+                    <div class="options-group" id="r9-q32"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q32')">a) Fragmento &mdash; falta o verbo</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q32')">b) Run-on &mdash; falta conjun&ccedil;&atilde;o</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q32')">c) N&atilde;o h&aacute; problema</button></div>
+                    <div class="feedback-msg" id="fb-r9-q32"></div>
+                </div>
+
+                <div class="score-display" id="score-r9s5"><div class="score-number" id="score-r9s5-num"></div><div class="score-text" id="score-r9s5-text"></div></div>
+            </div>
+
+            <!-- ===== SEÇÃO 6: ORDEM DAS PALAVRAS (Q33-Q38) ===== -->
+            <div class="exercise-area">
+                <h3>&#128260; Se&ccedil;&atilde;o 6 &mdash; Ordem das Palavras e Grupos Nominais</h3>
+                <p style="margin-bottom:15px;font-size:0.9rem;">Analise a ordem dos modificadores e substantivos compostos:</p>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">33</span> Qual &eacute; a tradu&ccedil;&atilde;o correta de &ldquo;<strong>the old Greek manuscript</strong>&rdquo;?</div>
+                    <div class="options-group" id="r9-q33"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q33')">a) O grego velho manuscrito</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q33')">b) O antigo manuscrito grego</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q33')">c) O manuscrito velho e grego</button></div>
+                    <div class="feedback-msg" id="fb-r9-q33"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">34</span> No composto <strong>Sunday school teacher</strong>, qual &eacute; o n&uacute;cleo (head noun)?</div>
+                    <div class="options-group" id="r9-q34"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q34')">a) Sunday</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q34')">b) School</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q34')">c) Teacher (o &uacute;ltimo substantivo)</button></div>
+                    <div class="feedback-msg" id="fb-r9-q34"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">35</span> &ldquo;<strong>Bible study group</strong>&rdquo; traduz-se como:</div>
+                    <div class="options-group" id="r9-q35"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q35')">a) B&iacute;blia estudo grupo</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q35')">b) Grupo de estudo b&iacute;blico</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q35')">c) Estudo do grupo da B&iacute;blia</button></div>
+                    <div class="feedback-msg" id="fb-r9-q35"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">36</span> Qual &eacute; a ordem correta de adjetivos em ingl&ecirc;s? &ldquo;a ___ ___ ___ church&rdquo;</div>
+                    <div class="options-group" id="r9-q36"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q36')">a) stone old beautiful</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q36')">b) beautiful old stone</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q36')">c) old stone beautiful</button></div>
+                    <div class="feedback-msg" id="fb-r9-q36"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">37</span> &ldquo;<strong>Reformed theology book</strong>&rdquo; traduz-se como:</div>
+                    <div class="options-group" id="r9-q37"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q37')">a) Livro de teologia reformada</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q37')">b) Reformada teologia livro</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q37')">c) Teologia de livro reformado</button></div>
+                    <div class="feedback-msg" id="fb-r9-q37"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">38</span> &ldquo;<strong>Church planting movement</strong>&rdquo; traduz-se como:</div>
+                    <div class="options-group" id="r9-q38"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q38')">a) Igreja plantando movimento</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q38')">b) Movimento de planta&ccedil;&atilde;o de igrejas</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q38')">c) Planta&ccedil;&atilde;o de movimento de igreja</button></div>
+                    <div class="feedback-msg" id="fb-r9-q38"></div>
+                </div>
+
+                <div class="score-display" id="score-r9s6"><div class="score-number" id="score-r9s6-num"></div><div class="score-text" id="score-r9s6-text"></div></div>
+            </div>
+
+            <!-- ===== SEÇÃO 7: COESÃO TEXTUAL (Q39-Q44) ===== -->
+            <div class="exercise-area">
+                <h3>&#128279; Se&ccedil;&atilde;o 7 &mdash; Coes&atilde;o Textual</h3>
+                <p style="margin-bottom:15px;font-size:0.9rem;">Identifique conectores, refer&ecirc;ncias pronominais e rela&ccedil;&otilde;es l&oacute;gicas:</p>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">39</span> Qual conector indica <strong>contraste</strong>?</div>
+                    <div class="options-group" id="r9-q39"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q39')">a) Therefore</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q39')">b) However</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q39')">c) Furthermore</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q39')">d) For instance</button></div>
+                    <div class="feedback-msg" id="fb-r9-q39"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">40</span> Qual conector indica <strong>consequ&ecirc;ncia</strong>?</div>
+                    <div class="options-group" id="r9-q40"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q40')">a) Consequently</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q40')">b) Although</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q40')">c) Likewise</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q40')">d) In other words</button></div>
+                    <div class="feedback-msg" id="fb-r9-q40"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">41</span> &ldquo;The Pharisees questioned Jesus. <strong>They</strong> believed that rituals were the only path.&rdquo; &mdash; <em>They</em> refere-se a:</div>
+                    <div class="options-group" id="r9-q41"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q41')">a) Jesus e os disc&iacute;pulos</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q41')">b) Os fariseus</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q41')">c) Os rituais</button></div>
+                    <div class="feedback-msg" id="fb-r9-q41"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">42</span> &ldquo;Paul wrote to the Romans. In <strong>it</strong>, he explained justification.&rdquo; &mdash; <em>it</em> refere-se a:</div>
+                    <div class="options-group" id="r9-q42"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q42')">a) A carta (the letter)</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q42')">b) Roma (Romans)</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q42')">c) A justifica&ccedil;&atilde;o</button></div>
+                    <div class="feedback-msg" id="fb-r9-q42"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">43</span> &ldquo;The PASTOR delivered a sermon. The MINISTER spoke about grace. The CLERGYMAN emphasized love.&rdquo; &mdash; Que recurso de coes&atilde;o &eacute; usado?</div>
+                    <div class="options-group" id="r9-q43"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q43')">a) Repeti&ccedil;&atilde;o</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q43')">b) Sinon&iacute;mia (palavras diferentes para o mesmo referente)</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q43')">c) Anton&iacute;mia</button></div>
+                    <div class="feedback-msg" id="fb-r9-q43"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">44</span> &ldquo;Augustine wrote about grace. <strong>Similarly</strong>, Calvin emphasized divine grace.&rdquo; &mdash; O conector <em>Similarly</em> indica:</div>
+                    <div class="options-group" id="r9-q44"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q44')">a) Semelhan&ccedil;a / compara&ccedil;&atilde;o</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q44')">b) Contraste / oposi&ccedil;&atilde;o</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q44')">c) Causa e efeito</button></div>
+                    <div class="feedback-msg" id="fb-r9-q44"></div>
+                </div>
+
+                <div class="score-display" id="score-r9s7"><div class="score-number" id="score-r9s7-num"></div><div class="score-text" id="score-r9s7-text"></div></div>
+            </div>
+
+            <!-- ===== SEÇÃO 8: RECONHECIMENTO GRAMATICAL (Q45-Q50) ===== -->
+            <div class="exercise-area">
+                <h3>&#127891; Se&ccedil;&atilde;o 8 &mdash; Reconhecimento Gramatical</h3>
+                <p style="margin-bottom:15px;font-size:0.9rem;">Identifique tempos verbais, pronomes e formas comparativas:</p>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">45</span> &ldquo;God <strong>created</strong> the heavens and the earth.&rdquo; &mdash; O tempo verbal &eacute;:</div>
+                    <div class="options-group" id="r9-q45"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q45')">a) Simple Past</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q45')">b) Present Perfect</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q45')">c) Past Perfect</button></div>
+                    <div class="feedback-msg" id="fb-r9-q45"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">46</span> &ldquo;The church <strong>has witnessed</strong> many revivals.&rdquo; &mdash; O tempo verbal &eacute;:</div>
+                    <div class="options-group" id="r9-q46"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q46')">a) Simple Past</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q46')">b) Present Perfect</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q46')">c) Simple Present</button></div>
+                    <div class="feedback-msg" id="fb-r9-q46"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">47</span> Na frase &ldquo;The theologian <strong>who</strong> wrote this commentary...&rdquo;, a palavra <em>who</em> &eacute;:</div>
+                    <div class="options-group" id="r9-q47"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q47')">a) Pronome pessoal</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q47')">b) Pronome relativo</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q47')">c) Pronome possessivo</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q47')">d) Pronome reflexivo</button></div>
+                    <div class="feedback-msg" id="fb-r9-q47"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">48</span> &ldquo;Romans is <strong>more theological</strong> than Galatians.&rdquo; &mdash; A forma usada &eacute;:</div>
+                    <div class="options-group" id="r9-q48"><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q48')">a) Comparativo de superioridade</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q48')">b) Superlativo</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q48')">c) Comparativo de igualdade</button></div>
+                    <div class="feedback-msg" id="fb-r9-q48"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">49</span> &ldquo;Christ <strong>Himself</strong> bore our sins on the cross.&rdquo; &mdash; A palavra <em>Himself</em> &eacute;:</div>
+                    <div class="options-group" id="r9-q49"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q49')">a) Pronome pessoal</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q49')">b) Pronome reflexivo (enfatiza o sujeito)</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q49')">c) Pronome possessivo</button></div>
+                    <div class="feedback-msg" id="fb-r9-q49"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="question"><span class="q-num">50</span> &ldquo;The missionaries <strong>had already planted</strong> three churches before they returned.&rdquo; &mdash; O tempo verbal &eacute;:</div>
+                    <div class="options-group" id="r9-q50"><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q50')">a) Simple Past</button><button class="option-btn" onclick="checkAnswer(this, true, 'r9-q50')">b) Past Perfect</button><button class="option-btn" onclick="checkAnswer(this, false, 'r9-q50')">c) Present Perfect</button></div>
+                    <div class="feedback-msg" id="fb-r9-q50"></div>
+                </div>
+
+                <div class="score-display" id="score-r9s8"><div class="score-number" id="score-r9s8-num"></div><div class="score-text" id="score-r9s8-text"></div></div>
+            </div>
+
+            <div class="motivation-box">
+                <div class="emoji">&#127942;</div>
+                <p>&ldquo;Parab&eacute;ns por completar a Revis&atilde;o Geral! Voc&ecirc; revisou todos os conceitos do curso. Continue praticando &mdash; a persist&ecirc;ncia &eacute; a chave para dominar o ingl&ecirc;s instrumental.&rdquo;</p>
+            </div>
+
             <div class="nav-buttons">
                 <button class="nav-btn" onclick="showUnit(8)">&#9664; Unidade 8</button>
                 <button class="nav-btn primary" onclick="showView('welcome')">&#127968; Voltar ao In&iacute;cio</button>
