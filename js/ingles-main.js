@@ -200,12 +200,23 @@
                 loadVoices();
                 this.synth.onvoiceschanged = loadVoices;
 
-                // Speed slider
-                const slider = document.getElementById('speedSlider');
-                const display = document.getElementById('speedValue');
-                slider.addEventListener('input', () => {
-                    this.rate = parseFloat(slider.value);
-                    display.textContent = this.rate.toFixed(1) + 'x';
+                // Speed control — create floating widget near TTS buttons
+                this.createSpeedWidget();
+            },
+
+            createSpeedWidget() {
+                var widget = document.createElement('div');
+                widget.id = 'ttsSpeedWidget';
+                widget.innerHTML = '<span class="tts-speed-label">&#128264; Velocidade:</span>' +
+                    '<input type="range" id="speedSlider" min="0.3" max="1.5" step="0.1" value="0.8">' +
+                    '<span id="speedValue">0.8x</span>';
+                document.body.appendChild(widget);
+                var slider = document.getElementById('speedSlider');
+                var display = document.getElementById('speedValue');
+                var self = this;
+                slider.addEventListener('input', function() {
+                    self.rate = parseFloat(slider.value);
+                    display.textContent = self.rate.toFixed(1) + 'x';
                 });
             },
 

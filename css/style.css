@@ -195,11 +195,6 @@
             padding: 40px 20px;
         }
 
-        .welcome-screen .welcome-icon {
-            font-size: 64px;
-            margin-bottom: 20px;
-        }
-
         .welcome-screen h2 {
             font-family: 'Merriweather', serif;
             font-size: 2rem;
@@ -211,7 +206,7 @@
             font-size: 1.1rem;
             color: var(--text-light);
             margin-bottom: 30px;
-            max-width: 600px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -222,7 +217,7 @@
             padding: 25px 30px;
             border-radius: var(--radius);
             margin: 25px auto;
-            max-width: 600px;
+            max-width: 800px;
             font-family: 'Merriweather', serif;
             font-style: italic;
             font-size: 1rem;
@@ -239,10 +234,10 @@
 
         .units-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 16px;
             margin-top: 35px;
-            max-width: 600px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -1266,17 +1261,37 @@
         #logoutBtn {
             display: none;
             align-items: center;
-            background: rgba(192,57,43,0.8);
-            color: white;
-            border: none;
+            background: rgba(255,255,255,0.12);
+            color: rgba(255,255,255,0.85);
+            border: 1px solid rgba(255,255,255,0.2);
             padding: 6px 14px;
             border-radius: 20px;
             cursor: pointer;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 600;
             transition: var(--transition);
         }
-        #logoutBtn:hover { background: var(--accent); }
+        #logoutBtn:hover { background: rgba(255,255,255,0.25); color: white; }
+
+        /* ===================== TTS SPEED WIDGET ===================== */
+        #ttsSpeedWidget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+            z-index: 500;
+            font-size: 0.82rem;
+        }
+        .tts-speed-label { color: var(--text-light); font-weight: 600; white-space: nowrap; }
+        #ttsSpeedWidget input[type=range] { width: 80px; cursor: pointer; }
+        #speedValue { font-weight: 700; color: var(--primary); min-width: 32px; }
 
         /* ===================== EXAM BUTTON AREA ===================== */
         .exam-btn-area {
@@ -1768,7 +1783,14 @@
             }
         }
 
+        @media (max-width: 768px) {
+            .units-grid { grid-template-columns: repeat(2, 1fr); }
+            .header-controls { gap: 8px; }
+            .progress-badge, .btn-presenter { display: none; }
+            #ttsSpeedWidget { bottom: 10px; right: 10px; padding: 8px 12px; }
+        }
         @media (max-width: 600px) {
+            .units-grid { grid-template-columns: 1fr; }
             .dm-columns { grid-template-columns: 1fr; }
             .cm-columns { grid-template-columns: 1fr; }
             #cmLines { display: none; }

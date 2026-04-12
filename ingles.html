@@ -104,20 +104,15 @@
                 </div>
             </div>
             <div class="header-controls">
-                <span id="userGreeting"><span id="userPhotoContainer" class="user-photo-placeholder">&#128100;</span> Ol&aacute;, <span id="userName"></span></span>
-                <a id="adminLink" href="admin.html" style="display:none;align-items:center;background:rgba(212,160,23,0.9);color:#1a1a1a;padding:6px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;text-decoration:none;">Painel Admin</a>
-                <button id="logoutBtn" onclick="Auth.handleLogout()">Sair</button>
                 <div class="progress-badge">
                     &#9733; <span id="progressText">0 de 8 unidades</span>
                 </div>
-                <div class="speed-control">
-                    <label>&#128264; Velocidade:</label>
-                    <input type="range" class="speed-slider" id="speedSlider" min="0.3" max="1.5" step="0.1" value="0.8">
-                    <span class="speed-value" id="speedValue">0.8x</span>
-                </div>
                 <button class="btn-presenter" onclick="togglePresenterMode()">
-                    &#128250; Modo Apresenta&ccedil;&atilde;o
+                    &#128250; Apresenta&ccedil;&atilde;o
                 </button>
+                <a id="adminLink" href="admin.html" style="display:none;align-items:center;background:rgba(212,160,23,0.9);color:#1a1a1a;padding:6px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;text-decoration:none;">Admin</a>
+                <span id="userGreeting"><span id="userPhotoContainer" class="user-photo-placeholder">&#128100;</span> <span id="userName"></span></span>
+                <button id="logoutBtn" onclick="Auth.handleLogout()">Sair</button>
             </div>
         </div>
         <nav>
@@ -160,7 +155,6 @@
         <!-- ==================== WELCOME ==================== -->
         <div id="welcome" class="unit-view active">
             <div class="welcome-screen">
-                <div class="welcome-icon">&#128218;</div>
                 <h2>Bem-vindo ao Ingl&ecirc;s Instrumental!</h2>
                 <p class="subtitle">
                     Uma jornada interativa para desenvolver habilidades de leitura e compreens&atilde;o de textos teol&oacute;gicos em l&iacute;ngua inglesa.
