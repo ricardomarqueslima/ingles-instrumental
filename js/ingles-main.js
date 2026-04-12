@@ -140,6 +140,68 @@
             }
         }
 
+        // ===================== REVISÃO GERAL (UNIT 9) =====================
+        function showRevSection(num) {
+            document.getElementById('rev-cards').style.display = 'none';
+            for (var i = 1; i <= 8; i++) {
+                var sec = document.getElementById('rev-section-' + i);
+                if (sec) sec.style.display = (i === num) ? 'block' : 'none';
+            }
+            window.scrollTo({ top: document.getElementById('unit9').offsetTop, behavior: 'smooth' });
+        }
+
+        function hideRevSection() {
+            for (var i = 1; i <= 8; i++) {
+                var sec = document.getElementById('rev-section-' + i);
+                if (sec) sec.style.display = 'none';
+            }
+            document.getElementById('rev-cards').style.display = 'grid';
+            window.scrollTo({ top: document.getElementById('unit9').offsetTop, behavior: 'smooth' });
+        }
+
+        function checkRevAnswer(btn, isCorrect, groupId) {
+            var group = document.getElementById(groupId);
+            var buttons = group.querySelectorAll('.option-btn');
+            var feedbackEl = document.getElementById('fb-' + groupId);
+            var exerciseItem = btn.closest('.exercise-item');
+            var detailedFeedback = exerciseItem ? exerciseItem.getAttribute('data-feedback') : '';
+
+            if (group.dataset.answered) return;
+            group.dataset.answered = 'true';
+
+            buttons.forEach(function(b) { b.classList.add('disabled'); });
+
+            if (isCorrect) {
+                btn.classList.add('correct');
+                feedbackEl.className = 'feedback-msg rev-feedback show correct';
+                feedbackEl.innerHTML = '<strong>&#10004; Correto!</strong><br><br>' + detailedFeedback;
+            } else {
+                btn.classList.add('incorrect');
+                buttons.forEach(function(b) {
+                    if (b.onclick && b.onclick.toString().includes('true')) {
+                        b.classList.add('correct');
+                    }
+                });
+                feedbackEl.className = 'feedback-msg rev-feedback show incorrect';
+                feedbackEl.innerHTML = '<strong>&#10008; Incorreto.</strong> Veja a explica&ccedil;&atilde;o:<br><br>' + detailedFeedback;
+            }
+
+            // Track score
+            var exGroup = groupId.split('-q')[0];
+            if (!exerciseTracker[exGroup]) {
+                exerciseTracker[exGroup] = { total: 0, correct: 0, answered: 0 };
+            }
+            var section = exerciseItem.closest('.exercise-area');
+            if (section) {
+                exerciseTracker[exGroup].total = section.querySelectorAll('.exercise-item').length;
+            }
+            exerciseTracker[exGroup].answered++;
+            if (isCorrect) exerciseTracker[exGroup].correct++;
+            if (exerciseTracker[exGroup].answered >= exerciseTracker[exGroup].total) {
+                showScore(exGroup);
+            }
+        }
+
         // ===================== COLLAPSIBLE =====================
         document.addEventListener('click', function(e) {
             if (e.target.closest('.collapsible-header')) {

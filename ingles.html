@@ -228,10 +228,134 @@
             <div class="unit-header">
                 <span class="unit-badge">UNIDADE 9</span>
                 <h2>Revis&atilde;o Geral</h2>
-                <p>50 exerc&iacute;cios de fixa&ccedil;&atilde;o sem nota, cobrindo todo o conte&uacute;do do curso. Pratique quantas vezes quiser!</p>
+                <p>Exerc&iacute;cios de fixa&ccedil;&atilde;o sem nota, cobrindo todo o conte&uacute;do do curso. Escolha um tema para revisar:</p>
             </div>
 
-            <!-- ===== SEÇÃO 1: INFERÊNCIA CONTEXTUAL (Q1-Q6) ===== -->
+            <!-- CARDS DE NAVEGAÇÃO -->
+            <div id="rev-cards" class="rev-cards-grid">
+                <div class="rev-card" onclick="showRevSection(1)">
+                    <div class="rev-card-icon">&#128270;</div>
+                    <h4>Infer&ecirc;ncia Contextual</h4>
+                    <p>6 exerc&iacute;cios</p>
+                </div>
+                <div class="rev-card" onclick="showRevSection(2)">
+                    <div class="rev-card-icon">&#129309;</div>
+                    <h4>Cognatos</h4>
+                    <p>7 exerc&iacute;cios</p>
+                </div>
+                <div class="rev-card" onclick="showRevSection(3)">
+                    <div class="rev-card-icon">&#128297;</div>
+                    <h4>Afixa&ccedil;&atilde;o</h4>
+                    <p>6 exerc&iacute;cios</p>
+                </div>
+                <div class="rev-card" onclick="showRevSection(4)">
+                    <div class="rev-card-icon">&#8596;</div>
+                    <h4>Sin&ocirc;nimos e Ant&ocirc;nimos</h4>
+                    <p>6 exerc&iacute;cios</p>
+                </div>
+                <div class="rev-card" onclick="showRevSection(5)">
+                    <div class="rev-card-icon">&#128200;</div>
+                    <h4>Estrutura da Ora&ccedil;&atilde;o</h4>
+                    <p>7 exerc&iacute;cios</p>
+                </div>
+                <div class="rev-card" onclick="showRevSection(6)">
+                    <div class="rev-card-icon">&#128260;</div>
+                    <h4>Ordem das Palavras</h4>
+                    <p>6 exerc&iacute;cios</p>
+                </div>
+                <div class="rev-card" onclick="showRevSection(7)">
+                    <div class="rev-card-icon">&#128279;</div>
+                    <h4>Coes&atilde;o Textual</h4>
+                    <p>6 exerc&iacute;cios</p>
+                </div>
+                <div class="rev-card" onclick="showRevSection(8)">
+                    <div class="rev-card-icon">&#127891;</div>
+                    <h4>Reconhecimento Gramatical</h4>
+                    <p>6 exerc&iacute;cios</p>
+                </div>
+            </div>
+
+            <!-- ============================================================ -->
+            <!-- SEÇÃO 1: INFERÊNCIA CONTEXTUAL                              -->
+            <!-- ============================================================ -->
+            <div id="rev-section-1" class="rev-section" style="display:none;">
+                <button class="rev-back-btn" onclick="hideRevSection()">&#9664; Voltar aos temas</button>
+
+                <div class="section">
+                    <h3><span class="icon">&#128218;</span> Relembrando: Infer&ecirc;ncia Contextual</h3>
+                    <p>A <strong>infer&ecirc;ncia contextual</strong> &eacute; a habilidade de deduzir o significado de uma palavra desconhecida usando as pistas que o pr&oacute;prio texto oferece. Antes de recorrer ao dicion&aacute;rio, observe:</p>
+                    <ul style="margin:12px 0 16px;">
+                        <li><strong>Palavras ao redor (co-texto):</strong> termos vizinhos frequentemente explicam a palavra.</li>
+                        <li><strong>Pistas tipogr&aacute;ficas:</strong> it&aacute;lico, negrito, par&ecirc;nteses e aspas sinalizam defini&ccedil;&otilde;es.</li>
+                        <li><strong>Conex&otilde;es l&oacute;gicas:</strong> conectores como <em>that is</em>, <em>in other words</em>, <em>such as</em>.</li>
+                        <li><strong>Conhecimento pr&eacute;vio:</strong> o que voc&ecirc; j&aacute; sabe sobre o assunto ajuda a inferir.</li>
+                        <li><strong>Repeti&ccedil;&atilde;o e par&aacute;frase:</strong> o autor repete a ideia com outras palavras.</li>
+                    </ul>
+                    <div class="example-box theological">
+                        <div class="label">&#9981; Exemplo</div>
+                        <div class="en">&ldquo;The doctrine of <span class="highlight">atonement</span>, <strong>that is</strong>, the reconciliation between God and humanity through Christ&rsquo;s sacrifice, is central to Christian theology.&rdquo;</div>
+                        <div class="pt">&#128161; A express&atilde;o <em>&ldquo;that is&rdquo;</em> introduz a defini&ccedil;&atilde;o: <strong>atonement</strong> = expia&ccedil;&atilde;o/reconcilia&ccedil;&atilde;o.</div>
+                    </div>
+                </div>
+
+                <div class="exercise-area">
+                    <h3>&#127891; Exerc&iacute;cios &mdash; Infer&ecirc;ncia Contextual</h3>
+                    <p style="margin-bottom:15px;font-size:0.9rem;">Leia cada frase, identifique as pistas contextuais e infira o significado da palavra destacada:</p>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;The early church demonstrated remarkable <em>zeal</em> in spreading the Gospel, tirelessly preaching from house to house.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;A igreja primitiva demonstrou not&aacute;vel <em>fervor</em> ao espalhar o Evangelho, pregando incansavelmente de casa em casa.&rdquo;<br><strong>Pistas:</strong> As palavras <em>tirelessly</em> (incansavelmente) e <em>preaching from house to house</em> indicam esfor&ccedil;o intenso e entusiasmo, levando ao significado de <strong>fervor/entusiasmo</strong>.">
+                        <div class="question"><span class="q-num">1</span> &ldquo;The early church demonstrated remarkable <strong>zeal</strong> in spreading the Gospel, tirelessly preaching from house to house.&rdquo; &mdash; <em>zeal</em> significa:</div>
+                        <div class="options-group" id="r9-q1"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q1')">a) Medo</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q1')">b) Fervor / entusiasmo</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q1')">c) Pregui&ccedil;a</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q1')">d) Desprezo</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q1"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;The apostles were <em>apprehended</em> by the authorities and thrown into prison for preaching about Jesus.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;Os ap&oacute;stolos foram <em>presos</em> pelas autoridades e lan&ccedil;ados na pris&atilde;o por pregarem sobre Jesus.&rdquo;<br><strong>Pistas:</strong> A sequ&ecirc;ncia <em>by the authorities</em> (pelas autoridades) e <em>thrown into prison</em> (lan&ccedil;ados na pris&atilde;o) deixa claro que <em>apprehended</em> = <strong>capturados/presos</strong>.">
+                        <div class="question"><span class="q-num">2</span> &ldquo;The apostles were <strong>apprehended</strong> by the authorities and thrown into prison for preaching about Jesus.&rdquo; &mdash; <em>apprehended</em> significa:</div>
+                        <div class="options-group" id="r9-q2"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q2')">a) Elogiados</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q2')">b) Ignorados</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q2')">c) Presos / capturados</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q2')">d) Enviados</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q2"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;God&rsquo;s <em>providence</em> sustains all creation; nothing happens apart from His sovereign will and care.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;A <em>provid&ecirc;ncia</em> de Deus sustenta toda a cria&ccedil;&atilde;o; nada acontece fora de Sua vontade e cuidado soberano.&rdquo;<br><strong>Pistas:</strong> O verbo <em>sustains</em> (sustenta) e a express&atilde;o <em>sovereign will and care</em> (vontade e cuidado soberano) revelam que <em>providence</em> = <strong>provid&ecirc;ncia, cuidado soberano de Deus</strong>. Conceito central na teologia reformada (Westminster, Cap. V).">
+                        <div class="question"><span class="q-num">3</span> &ldquo;God&rsquo;s <strong>providence</strong> sustains all creation; nothing happens apart from His sovereign will and care.&rdquo; &mdash; <em>providence</em> significa:</div>
+                        <div class="options-group" id="r9-q3"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q3')">a) Aus&ecirc;ncia</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q3')">b) Provid&ecirc;ncia / cuidado soberano</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q3')">c) Puni&ccedil;&atilde;o</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q3')">d) Ignor&acirc;ncia</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q3"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;The psalmist found <em>solace</em> in prayer during times of deep sorrow and distress.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;O salmista encontrou <em>cons&ocirc;lo</em> na ora&ccedil;&atilde;o durante tempos de profunda tristeza e ang&uacute;stia.&rdquo;<br><strong>Pistas:</strong> O contraste com <em>sorrow and distress</em> (tristeza e ang&uacute;stia) indica que <em>solace</em> &eacute; algo oposto &mdash; um al&iacute;vio. Al&eacute;m disso, <em>found ... in prayer</em> (encontrou na ora&ccedil;&atilde;o) confirma: <strong>cons&ocirc;lo/conforto</strong>.">
+                        <div class="question"><span class="q-num">4</span> &ldquo;The psalmist found <strong>solace</strong> in prayer during times of deep sorrow and distress.&rdquo; &mdash; <em>solace</em> significa:</div>
+                        <div class="options-group" id="r9-q4"><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q4')">a) Cons&ocirc;lo / conforto</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q4')">b) Solid&atilde;o</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q4')">c) Raiva</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q4')">d) Confus&atilde;o</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q4"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;The Bereans were <em>commended</em> because they examined the Scriptures daily to verify Paul&rsquo;s teaching.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;Os bereanos foram <em>elogiados</em> porque examinavam as Escrituras diariamente para verificar o ensino de Paulo.&rdquo;<br><strong>Pistas:</strong> O conector <em>because</em> (porque) introduz a raz&atilde;o positiva: <em>examined the Scriptures daily</em> (examinavam as Escrituras diariamente). Uma a&ccedil;&atilde;o louvável levou a uma rea&ccedil;&atilde;o positiva &mdash; <strong>commended = elogiados</strong>. Refer&ecirc;ncia: Atos 17:11.">
+                        <div class="question"><span class="q-num">5</span> &ldquo;The Bereans were <strong>commended</strong> because they examined the Scriptures daily to verify Paul&rsquo;s teaching.&rdquo; &mdash; <em>commended</em> significa:</div>
+                        <div class="options-group" id="r9-q5"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q5')">a) Condenados</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q5')">b) Expulsos</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q5')">c) Elogiados / recomendados</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q5')">d) Punidos</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q5"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;Christ&rsquo;s <em>intercession</em> on behalf of believers is continuous; He always lives to plead for them before the Father.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;A <em>intercess&atilde;o</em> de Cristo em favor dos crentes &eacute; cont&iacute;nua; Ele sempre vive para interceder por eles diante do Pai.&rdquo;<br><strong>Pistas:</strong> As express&otilde;es <em>on behalf of</em> (em favor de), <em>plead for them</em> (interceder por eles) e <em>before the Father</em> (diante do Pai) definem com precis&atilde;o: <strong>intercession = intercess&atilde;o/media&ccedil;&atilde;o</strong>. Refer&ecirc;ncia: Hebreus 7:25.">
+                        <div class="question"><span class="q-num">6</span> &ldquo;Christ&rsquo;s <strong>intercession</strong> on behalf of believers is continuous; He always lives to plead for them before the Father.&rdquo; &mdash; <em>intercession</em> significa:</div>
+                        <div class="options-group" id="r9-q6"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q6')">a) Condena&ccedil;&atilde;o</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q6')">b) Intercess&atilde;o / media&ccedil;&atilde;o</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q6')">c) Rejei&ccedil;&atilde;o</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q6')">d) Interrup&ccedil;&atilde;o</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q6"></div>
+                    </div>
+
+                    <div class="score-display" id="score-r9s1"><div class="score-number" id="score-r9s1-num"></div><div class="score-text" id="score-r9s1-text"></div></div>
+                </div>
+
+                <button class="rev-back-btn" onclick="hideRevSection()" style="margin-top:20px;">&#9664; Voltar aos temas</button>
+            </div>
+
+            <!-- SEÇÕES 2-8: PLACEHOLDER (serão implementadas após aprovação) -->
+            <div id="rev-section-2" class="rev-section" style="display:none;"><button class="rev-back-btn" onclick="hideRevSection()">&#9664; Voltar aos temas</button><div class="section"><h3>&#129309; Em breve: Cognatos</h3><p>Esta se&ccedil;&atilde;o ser&aacute; implementada em seguida.</p></div></div>
+            <div id="rev-section-3" class="rev-section" style="display:none;"><button class="rev-back-btn" onclick="hideRevSection()">&#9664; Voltar aos temas</button><div class="section"><h3>&#128297; Em breve: Afixa&ccedil;&atilde;o</h3><p>Esta se&ccedil;&atilde;o ser&aacute; implementada em seguida.</p></div></div>
+            <div id="rev-section-4" class="rev-section" style="display:none;"><button class="rev-back-btn" onclick="hideRevSection()">&#9664; Voltar aos temas</button><div class="section"><h3>&#8596; Em breve: Sin&ocirc;nimos e Ant&ocirc;nimos</h3><p>Esta se&ccedil;&atilde;o ser&aacute; implementada em seguida.</p></div></div>
+            <div id="rev-section-5" class="rev-section" style="display:none;"><button class="rev-back-btn" onclick="hideRevSection()">&#9664; Voltar aos temas</button><div class="section"><h3>&#128200; Em breve: Estrutura da Ora&ccedil;&atilde;o</h3><p>Esta se&ccedil;&atilde;o ser&aacute; implementada em seguida.</p></div></div>
+            <div id="rev-section-6" class="rev-section" style="display:none;"><button class="rev-back-btn" onclick="hideRevSection()">&#9664; Voltar aos temas</button><div class="section"><h3>&#128260; Em breve: Ordem das Palavras</h3><p>Esta se&ccedil;&atilde;o ser&aacute; implementada em seguida.</p></div></div>
+            <div id="rev-section-7" class="rev-section" style="display:none;"><button class="rev-back-btn" onclick="hideRevSection()">&#9664; Voltar aos temas</button><div class="section"><h3>&#128279; Em breve: Coes&atilde;o Textual</h3><p>Esta se&ccedil;&atilde;o ser&aacute; implementada em seguida.</p></div></div>
+            <div id="rev-section-8" class="rev-section" style="display:none;"><button class="rev-back-btn" onclick="hideRevSection()">&#9664; Voltar aos temas</button><div class="section"><h3>&#127891; Em breve: Reconhecimento Gramatical</h3><p>Esta se&ccedil;&atilde;o ser&aacute; implementada em seguida.</p></div></div>
+
+            <!-- CONTEÚDO ANTIGO REMOVIDO - substituído pelas seções com cards acima -->
+            <!-- MARCADOR PARA REMOÇÃO: início do bloco antigo -->
+            <div style="display:none;">
             <div class="exercise-area">
                 <h3>&#128270; Se&ccedil;&atilde;o 1 &mdash; Infer&ecirc;ncia Contextual</h3>
                 <p style="margin-bottom:15px;font-size:0.9rem;">Infira o significado das palavras destacadas usando as pistas do contexto:</p>
@@ -592,13 +716,10 @@
                     <div class="feedback-msg" id="fb-r9-q50"></div>
                 </div>
 
-                <div class="score-display" id="score-r9s8"><div class="score-number" id="score-r9s8-num"></div><div class="score-text" id="score-r9s8-text"></div></div>
+                <div class="score-display" id="score-r9s8x"><div class="score-number" id="score-r9s8x-num"></div><div class="score-text" id="score-r9s8x-text"></div></div>
             </div>
-
-            <div class="motivation-box">
-                <div class="emoji">&#127942;</div>
-                <p>&ldquo;Parab&eacute;ns por completar a Revis&atilde;o Geral! Voc&ecirc; revisou todos os conceitos do curso. Continue praticando &mdash; a persist&ecirc;ncia &eacute; a chave para dominar o ingl&ecirc;s instrumental.&rdquo;</p>
             </div>
+            <!-- FIM DO BLOCO ANTIGO OCULTO -->
 
             <div class="nav-buttons">
                 <button class="nav-btn" onclick="showUnit(8)">&#9664; Unidade 8</button>

@@ -1273,6 +1273,63 @@
         }
         #logoutBtn:hover { background: rgba(255,255,255,0.25); color: white; }
 
+        /* ===================== REVISÃO GERAL (UNIT 9) ===================== */
+        .rev-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+        .rev-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .rev-card:hover {
+            border-color: var(--primary-light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        .rev-card-icon { font-size: 32px; margin-bottom: 8px; }
+        .rev-card h4 { font-size: 0.9rem; color: var(--primary-dark); margin-bottom: 4px; }
+        .rev-card p { font-size: 0.78rem; color: var(--text-light); }
+
+        .rev-back-btn {
+            background: none;
+            border: 2px solid var(--border);
+            color: var(--primary);
+            padding: 8px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.85rem;
+            font-family: 'Open Sans', sans-serif;
+            transition: var(--transition);
+            margin-bottom: 20px;
+        }
+        .rev-back-btn:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+        .rev-feedback {
+            margin-top: 10px;
+            padding: 14px 18px;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            line-height: 1.7;
+            background: #f0faf4;
+            border-left: 4px solid var(--success);
+        }
+
+        @media (max-width: 768px) {
+            .rev-cards-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .rev-cards-grid { grid-template-columns: 1fr; }
+        }
+
         /* ===================== TTS SPEED WIDGET ===================== */
         #ttsSpeedWidget {
             position: fixed;
