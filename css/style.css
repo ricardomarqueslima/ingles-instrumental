@@ -1294,7 +1294,12 @@
             transform: translateY(-3px);
             box-shadow: var(--shadow-lg);
         }
-        .rev-card-icon { font-size: 32px; margin-bottom: 8px; }
+        .rev-card-num {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: var(--primary); color: white;
+            display: inline-flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 0.95rem; margin-bottom: 8px;
+        }
         .rev-card h4 { font-size: 0.9rem; color: var(--primary-dark); margin-bottom: 4px; }
         .rev-card p { font-size: 0.78rem; color: var(--text-light); }
 

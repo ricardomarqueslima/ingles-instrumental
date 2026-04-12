@@ -234,42 +234,42 @@
             <!-- CARDS DE NAVEGAÇÃO -->
             <div id="rev-cards" class="rev-cards-grid">
                 <div class="rev-card" onclick="showRevSection(1)">
-                    <div class="rev-card-icon">&#128270;</div>
+                    <div class="rev-card-num">1</div>
                     <h4>Infer&ecirc;ncia Contextual</h4>
                     <p>6 exerc&iacute;cios</p>
                 </div>
                 <div class="rev-card" onclick="showRevSection(2)">
-                    <div class="rev-card-icon">&#129309;</div>
+                    <div class="rev-card-num">2</div>
                     <h4>Cognatos</h4>
                     <p>7 exerc&iacute;cios</p>
                 </div>
                 <div class="rev-card" onclick="showRevSection(3)">
-                    <div class="rev-card-icon">&#128297;</div>
+                    <div class="rev-card-num">3</div>
                     <h4>Afixa&ccedil;&atilde;o</h4>
                     <p>6 exerc&iacute;cios</p>
                 </div>
                 <div class="rev-card" onclick="showRevSection(4)">
-                    <div class="rev-card-icon">&#8596;</div>
+                    <div class="rev-card-num">4</div>
                     <h4>Sin&ocirc;nimos e Ant&ocirc;nimos</h4>
                     <p>6 exerc&iacute;cios</p>
                 </div>
                 <div class="rev-card" onclick="showRevSection(5)">
-                    <div class="rev-card-icon">&#128200;</div>
+                    <div class="rev-card-num">5</div>
                     <h4>Estrutura da Ora&ccedil;&atilde;o</h4>
                     <p>7 exerc&iacute;cios</p>
                 </div>
                 <div class="rev-card" onclick="showRevSection(6)">
-                    <div class="rev-card-icon">&#128260;</div>
+                    <div class="rev-card-num">6</div>
                     <h4>Ordem das Palavras</h4>
                     <p>6 exerc&iacute;cios</p>
                 </div>
                 <div class="rev-card" onclick="showRevSection(7)">
-                    <div class="rev-card-icon">&#128279;</div>
+                    <div class="rev-card-num">7</div>
                     <h4>Coes&atilde;o Textual</h4>
                     <p>6 exerc&iacute;cios</p>
                 </div>
                 <div class="rev-card" onclick="showRevSection(8)">
-                    <div class="rev-card-icon">&#127891;</div>
+                    <div class="rev-card-num">8</div>
                     <h4>Reconhecimento Gramatical</h4>
                     <p>6 exerc&iacute;cios</p>
                 </div>
@@ -279,10 +279,10 @@
             <!-- SEÇÃO 1: INFERÊNCIA CONTEXTUAL                              -->
             <!-- ============================================================ -->
             <div id="rev-section-1" class="rev-section" style="display:none;">
-                <button class="rev-back-btn" onclick="hideRevSection()">&#9664; Voltar aos temas</button>
+                <button class="rev-back-btn" onclick="hideRevSection()">Voltar aos temas</button>
 
                 <div class="section">
-                    <h3><span class="icon">&#128218;</span> Relembrando: Infer&ecirc;ncia Contextual</h3>
+                    <h3>Relembrando: Infer&ecirc;ncia Contextual</h3>
                     <p>A <strong>infer&ecirc;ncia contextual</strong> &eacute; a habilidade de deduzir o significado de uma palavra desconhecida usando as pistas que o pr&oacute;prio texto oferece. Antes de recorrer ao dicion&aacute;rio, observe:</p>
                     <ul style="margin:12px 0 16px;">
                         <li><strong>Palavras ao redor (co-texto):</strong> termos vizinhos frequentemente explicam a palavra.</li>
@@ -299,7 +299,7 @@
                 </div>
 
                 <div class="exercise-area">
-                    <h3>&#127891; Exerc&iacute;cios &mdash; Infer&ecirc;ncia Contextual</h3>
+                    <h3>Exerc&iacute;cios &mdash; Infer&ecirc;ncia Contextual</h3>
                     <p style="margin-bottom:15px;font-size:0.9rem;">Leia cada frase, identifique as pistas contextuais e infira o significado da palavra destacada:</p>
 
                     <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;The early church demonstrated remarkable <em>zeal</em> in spreading the Gospel, tirelessly preaching from house to house.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;A igreja primitiva demonstrou not&aacute;vel <em>fervor</em> ao espalhar o Evangelho, pregando incansavelmente de casa em casa.&rdquo;<br><strong>Pistas:</strong> As palavras <em>tirelessly</em> (incansavelmente) e <em>preaching from house to house</em> indicam esfor&ccedil;o intenso e entusiasmo, levando ao significado de <strong>fervor/entusiasmo</strong>.">
@@ -338,20 +338,462 @@
                         <div class="feedback-msg rev-feedback" id="fb-r9-q6"></div>
                     </div>
 
-                    <div class="score-display" id="score-r9s1"><div class="score-number" id="score-r9s1-num"></div><div class="score-text" id="score-r9s1-text"></div></div>
                 </div>
 
-                <button class="rev-back-btn" onclick="hideRevSection()" style="margin-top:20px;">&#9664; Voltar aos temas</button>
+                <button class="rev-back-btn" onclick="hideRevSection()" style="margin-top:20px;">Voltar aos temas</button>
             </div>
 
             <!-- SEÇÕES 2-8: PLACEHOLDER (serão implementadas após aprovação) -->
-            <div id="rev-section-2" class="rev-section" style="display:none;"><button class="rev-back-btn" onclick="hideRevSection()">&#9664; Voltar aos temas</button><div class="section"><h3>&#129309; Em breve: Cognatos</h3><p>Esta se&ccedil;&atilde;o ser&aacute; implementada em seguida.</p></div></div>
-            <div id="rev-section-3" class="rev-section" style="display:none;"><button class="rev-back-btn" onclick="hideRevSection()">&#9664; Voltar aos temas</button><div class="section"><h3>&#128297; Em breve: Afixa&ccedil;&atilde;o</h3><p>Esta se&ccedil;&atilde;o ser&aacute; implementada em seguida.</p></div></div>
-            <div id="rev-section-4" class="rev-section" style="display:none;"><button class="rev-back-btn" onclick="hideRevSection()">&#9664; Voltar aos temas</button><div class="section"><h3>&#8596; Em breve: Sin&ocirc;nimos e Ant&ocirc;nimos</h3><p>Esta se&ccedil;&atilde;o ser&aacute; implementada em seguida.</p></div></div>
-            <div id="rev-section-5" class="rev-section" style="display:none;"><button class="rev-back-btn" onclick="hideRevSection()">&#9664; Voltar aos temas</button><div class="section"><h3>&#128200; Em breve: Estrutura da Ora&ccedil;&atilde;o</h3><p>Esta se&ccedil;&atilde;o ser&aacute; implementada em seguida.</p></div></div>
-            <div id="rev-section-6" class="rev-section" style="display:none;"><button class="rev-back-btn" onclick="hideRevSection()">&#9664; Voltar aos temas</button><div class="section"><h3>&#128260; Em breve: Ordem das Palavras</h3><p>Esta se&ccedil;&atilde;o ser&aacute; implementada em seguida.</p></div></div>
-            <div id="rev-section-7" class="rev-section" style="display:none;"><button class="rev-back-btn" onclick="hideRevSection()">&#9664; Voltar aos temas</button><div class="section"><h3>&#128279; Em breve: Coes&atilde;o Textual</h3><p>Esta se&ccedil;&atilde;o ser&aacute; implementada em seguida.</p></div></div>
-            <div id="rev-section-8" class="rev-section" style="display:none;"><button class="rev-back-btn" onclick="hideRevSection()">&#9664; Voltar aos temas</button><div class="section"><h3>&#127891; Em breve: Reconhecimento Gramatical</h3><p>Esta se&ccedil;&atilde;o ser&aacute; implementada em seguida.</p></div></div>
+            <div id="rev-section-2" class="rev-section" style="display:none;">
+                <button class="rev-back-btn" onclick="hideRevSection()">Voltar aos temas</button>
+
+                <div class="section">
+                    <h3>Relembrando: Cognatos Verdadeiros e Falsos</h3>
+                    <p>Os <strong>cognatos</strong> s&atilde;o palavras em ingl&ecirc;s e portugu&ecirc;s que compartilham origem etimol&oacute;gica (geralmente do latim ou grego). Existem dois tipos:</p>
+                    <ul style="margin:12px 0 16px;">
+                        <li><strong>Cognatos verdadeiros:</strong> possuem forma semelhante <em>e</em> significado igual ou muito pr&oacute;ximo nas duas l&iacute;nguas. Exemplos: <em>resurrection</em> = ressurrei&ccedil;&atilde;o; <em>doctrine</em> = doutrina; <em>sanctification</em> = santifica&ccedil;&atilde;o.</li>
+                        <li><strong>Cognatos falsos (false friends):</strong> possuem forma semelhante, mas significados <em>diferentes</em>. Exemplos: <em>actually</em> = na verdade (n&atilde;o &ldquo;atualmente&rdquo;); <em>pretend</em> = fingir (n&atilde;o &ldquo;pretender&rdquo;); <em>sensible</em> = sensato/prudente (n&atilde;o &ldquo;sens&iacute;vel&rdquo;).</li>
+                    </ul>
+                    <p>Ao encontrar uma palavra parecida com o portugu&ecirc;s, n&atilde;o assuma automaticamente que o significado &eacute; o mesmo. Verifique o contexto da frase para confirmar.</p>
+                    <div class="example-box theological">
+                        <div class="label">Exemplo</div>
+                        <div class="en">&ldquo;The pastor <strong>actually</strong> preached for two hours, not one.&rdquo;</div>
+                        <div class="pt">Cuidado: <em>actually</em> n&atilde;o &eacute; &ldquo;atualmente&rdquo;. Significa <strong>na verdade / de fato</strong>. Tradu&ccedil;&atilde;o: &ldquo;O pastor <em>na verdade</em> pregou por duas horas, n&atilde;o uma.&rdquo;</div>
+                    </div>
+                </div>
+
+                <div class="exercise-area">
+                    <h3>Exerc&iacute;cios &mdash; Cognatos</h3>
+                    <p style="margin-bottom:15px;font-size:0.9rem;">Classifique cada palavra em ingl&ecirc;s como cognato verdadeiro ou cognato falso em rela&ccedil;&atilde;o ao portugu&ecirc;s:</p>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavra:</strong> <em>sensible</em><br><strong>Significado real:</strong> sensato, prudente, razo&aacute;vel.<br><strong>N&atilde;o significa:</strong> &ldquo;sens&iacute;vel&rdquo; (que em ingl&ecirc;s &eacute; <em>sensitive</em>).<br><strong>Classifica&ccedil;&atilde;o:</strong> Cognato falso &mdash; a forma &eacute; parecida, mas o significado &eacute; diferente.<br><strong>Exemplo teol&oacute;gico:</strong> &ldquo;A sensible interpretation of Scripture considers the historical context.&rdquo; &mdash; &ldquo;Uma interpreta&ccedil;&atilde;o <em>sensata</em> das Escrituras considera o contexto hist&oacute;rico.&rdquo;">
+                        <div class="question"><span class="q-num">7</span> A palavra <strong>&ldquo;sensible&rdquo;</strong> &eacute; um cognato verdadeiro ou falso em rela&ccedil;&atilde;o ao portugu&ecirc;s &ldquo;sens&iacute;vel&rdquo;?</div>
+                        <div class="options-group" id="r9-q7"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q7')">a) Cognato verdadeiro</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q7')">b) Cognato falso</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q7"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavra:</strong> <em>resurrection</em><br><strong>Significado real:</strong> ressurrei&ccedil;&atilde;o.<br><strong>Classifica&ccedil;&atilde;o:</strong> Cognato verdadeiro &mdash; a forma e o significado correspondem perfeitamente nas duas l&iacute;nguas. Ambas derivam do latim <em>resurrectionem</em>.<br><strong>Exemplo teol&oacute;gico:</strong> &ldquo;The resurrection of Christ is the foundation of the Christian faith.&rdquo; &mdash; &ldquo;A <em>ressurrei&ccedil;&atilde;o</em> de Cristo &eacute; o fundamento da f&eacute; crist&atilde;.&rdquo;">
+                        <div class="question"><span class="q-num">8</span> A palavra <strong>&ldquo;resurrection&rdquo;</strong> &eacute; um cognato verdadeiro ou falso em rela&ccedil;&atilde;o ao portugu&ecirc;s &ldquo;ressurrei&ccedil;&atilde;o&rdquo;?</div>
+                        <div class="options-group" id="r9-q8"><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q8')">a) Cognato verdadeiro</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q8')">b) Cognato falso</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q8"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavra:</strong> <em>actually</em><br><strong>Significado real:</strong> na verdade, de fato, realmente.<br><strong>N&atilde;o significa:</strong> &ldquo;atualmente&rdquo; (que em ingl&ecirc;s &eacute; <em>currently</em> ou <em>nowadays</em>).<br><strong>Classifica&ccedil;&atilde;o:</strong> Cognato falso &mdash; apesar da semelhan&ccedil;a, os significados s&atilde;o distintos.<br><strong>Exemplo teol&oacute;gico:</strong> &ldquo;The text actually refers to spiritual death, not physical death.&rdquo; &mdash; &ldquo;O texto <em>na verdade</em> se refere &agrave; morte espiritual, n&atilde;o &agrave; morte f&iacute;sica.&rdquo;">
+                        <div class="question"><span class="q-num">9</span> A palavra <strong>&ldquo;actually&rdquo;</strong> &eacute; um cognato verdadeiro ou falso em rela&ccedil;&atilde;o ao portugu&ecirc;s &ldquo;atualmente&rdquo;?</div>
+                        <div class="options-group" id="r9-q9"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q9')">a) Cognato verdadeiro</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q9')">b) Cognato falso</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q9"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavra:</strong> <em>doctrine</em><br><strong>Significado real:</strong> doutrina.<br><strong>Classifica&ccedil;&atilde;o:</strong> Cognato verdadeiro &mdash; forma e significado s&atilde;o equivalentes. Ambas v&ecirc;m do latim <em>doctrina</em>.<br><strong>Exemplo teol&oacute;gico:</strong> &ldquo;Sound doctrine is essential for the health of the church.&rdquo; &mdash; &ldquo;A s&atilde; <em>doutrina</em> &eacute; essencial para a sa&uacute;de da igreja.&rdquo;">
+                        <div class="question"><span class="q-num">10</span> A palavra <strong>&ldquo;doctrine&rdquo;</strong> &eacute; um cognato verdadeiro ou falso em rela&ccedil;&atilde;o ao portugu&ecirc;s &ldquo;doutrina&rdquo;?</div>
+                        <div class="options-group" id="r9-q10"><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q10')">a) Cognato verdadeiro</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q10')">b) Cognato falso</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q10"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavra:</strong> <em>pretend</em><br><strong>Significado real:</strong> fingir, simular.<br><strong>N&atilde;o significa:</strong> &ldquo;pretender&rdquo; (que em ingl&ecirc;s &eacute; <em>intend</em> ou <em>plan</em>).<br><strong>Classifica&ccedil;&atilde;o:</strong> Cognato falso &mdash; a semelhan&ccedil;a na forma engana; os significados s&atilde;o muito diferentes.<br><strong>Exemplo teol&oacute;gico:</strong> &ldquo;The hypocrites pretend to be righteous, but their hearts are far from God.&rdquo; &mdash; &ldquo;Os hip&oacute;critas <em>fingem</em> ser justos, mas seus cora&ccedil;&otilde;es est&atilde;o longe de Deus.&rdquo;">
+                        <div class="question"><span class="q-num">11</span> A palavra <strong>&ldquo;pretend&rdquo;</strong> &eacute; um cognato verdadeiro ou falso em rela&ccedil;&atilde;o ao portugu&ecirc;s &ldquo;pretender&rdquo;?</div>
+                        <div class="options-group" id="r9-q11"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q11')">a) Cognato verdadeiro</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q11')">b) Cognato falso</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q11"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavra:</strong> <em>compromise</em><br><strong>Significado real:</strong> acordo m&uacute;tuo, concess&atilde;o, meio-termo.<br><strong>N&atilde;o significa:</strong> &ldquo;compromisso&rdquo; no sentido de obriga&ccedil;&atilde;o (que em ingl&ecirc;s &eacute; <em>commitment</em>).<br><strong>Classifica&ccedil;&atilde;o:</strong> Cognato falso &mdash; <em>compromise</em> envolve ceder algo para chegar a um acordo, n&atilde;o assumir uma obriga&ccedil;&atilde;o.<br><strong>Exemplo teol&oacute;gico:</strong> &ldquo;We must never compromise the truth of the Gospel for the sake of popularity.&rdquo; &mdash; &ldquo;N&atilde;o devemos jamais <em>fazer concess&otilde;es</em> com a verdade do Evangelho por causa de popularidade.&rdquo;">
+                        <div class="question"><span class="q-num">12</span> A palavra <strong>&ldquo;compromise&rdquo;</strong> &eacute; um cognato verdadeiro ou falso em rela&ccedil;&atilde;o ao portugu&ecirc;s &ldquo;compromisso&rdquo;?</div>
+                        <div class="options-group" id="r9-q12"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q12')">a) Cognato verdadeiro</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q12')">b) Cognato falso</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q12"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavra:</strong> <em>sanctification</em><br><strong>Significado real:</strong> santifica&ccedil;&atilde;o.<br><strong>Classifica&ccedil;&atilde;o:</strong> Cognato verdadeiro &mdash; forma e significado correspondem nas duas l&iacute;nguas. Ambas derivam do latim <em>sanctificationem</em>.<br><strong>Exemplo teol&oacute;gico:</strong> &ldquo;Sanctification is the work of the Holy Spirit in conforming believers to the image of Christ.&rdquo; &mdash; &ldquo;A <em>santifica&ccedil;&atilde;o</em> &eacute; a obra do Esp&iacute;rito Santo em conformar os crentes &agrave; imagem de Cristo.&rdquo;">
+                        <div class="question"><span class="q-num">13</span> A palavra <strong>&ldquo;sanctification&rdquo;</strong> &eacute; um cognato verdadeiro ou falso em rela&ccedil;&atilde;o ao portugu&ecirc;s &ldquo;santifica&ccedil;&atilde;o&rdquo;?</div>
+                        <div class="options-group" id="r9-q13"><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q13')">a) Cognato verdadeiro</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q13')">b) Cognato falso</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q13"></div>
+                    </div>
+
+                </div>
+
+                <button class="rev-back-btn" onclick="hideRevSection()" style="margin-top:20px;">Voltar aos temas</button>
+            </div>
+            <div id="rev-section-3" class="rev-section" style="display:none;">
+                <button class="rev-back-btn" onclick="hideRevSection()">Voltar aos temas</button>
+
+                <div class="section">
+                    <h3>Relembrando: Afixa&ccedil;&atilde;o (Prefixos e Sufixos)</h3>
+                    <p>A <strong>afixa&ccedil;&atilde;o</strong> &eacute; o processo de adicionar <em>prefixos</em> (antes da raiz) ou <em>sufixos</em> (depois da raiz) para modificar o significado ou a classe gramatical de uma palavra. Conhecer os afixos mais comuns permite deduzir o significado de palavras desconhecidas.</p>
+                    <ul style="margin:12px 0 10px;">
+                        <li><strong>Prefixos comuns:</strong></li>
+                        <ul style="margin:4px 0 8px;">
+                            <li><em>un-</em> = nega&ccedil;&atilde;o (unholy = profano)</li>
+                            <li><em>dis-</em> = oposto/nega&ccedil;&atilde;o (disobey = desobedecer)</li>
+                            <li><em>re-</em> = novamente/de volta (redeem = resgatar)</li>
+                            <li><em>pre-</em> = antes/anterioridade (predestination = predestina&ccedil;&atilde;o)</li>
+                            <li><em>mis-</em> = erro/equivocadamente (misinterpret = interpretar mal)</li>
+                        </ul>
+                        <li><strong>Sufixos comuns:</strong></li>
+                        <ul style="margin:4px 0 8px;">
+                            <li><em>-tion / -sion</em> = transforma verbo em substantivo (justify &rarr; justification)</li>
+                            <li><em>-ness</em> = qualidade/estado (righteous &rarr; righteousness)</li>
+                            <li><em>-ful</em> = cheio de (faithful = fiel)</li>
+                            <li><em>-less</em> = sem (faithless = sem f&eacute;)</li>
+                            <li><em>-able / -ible</em> = capaz de ser (redeemable = capaz de ser redimido)</li>
+                            <li><em>-ly</em> = transforma adjetivo em adv&eacute;rbio (graciously = graciosamente)</li>
+                            <li><em>-ous</em> = transforma em adjetivo (righteous = justo)</li>
+                            <li><em>-ment</em> = resultado/a&ccedil;&atilde;o (atonement = expia&ccedil;&atilde;o)</li>
+                        </ul>
+                    </ul>
+                    <div class="example-box theological">
+                        <div class="label">Exemplo</div>
+                        <div class="en">&ldquo;<strong>un</strong>forgive<strong>ness</strong>&rdquo; = <em>un-</em> (nega&ccedil;&atilde;o) + <em>forgive</em> (perdoar) + <em>-ness</em> (qualidade) = falta de perd&atilde;o</div>
+                        <div class="pt">Decompor a palavra em seus afixos revela o significado sem precisar do dicion&aacute;rio.</div>
+                    </div>
+                </div>
+
+                <div class="exercise-area">
+                    <h3>Exerc&iacute;cios &mdash; Afixa&ccedil;&atilde;o</h3>
+                    <p style="margin-bottom:15px;font-size:0.9rem;">Analise a forma&ccedil;&atilde;o das palavras e identifique o papel dos afixos:</p>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavra:</strong> <em>unforgiveness</em><br><strong>Decomposi&ccedil;&atilde;o morfol&oacute;gica:</strong><br>- <em>un-</em> (prefixo de nega&ccedil;&atilde;o) + <em>forgive</em> (perdoar &mdash; raiz verbal) + <em>-ness</em> (sufixo que transforma em substantivo, indicando qualidade/estado)<br><strong>Significado:</strong> falta de perd&atilde;o, aus&ecirc;ncia de perd&atilde;o.<br><strong>Exemplo teol&oacute;gico:</strong> &ldquo;Unforgiveness is a barrier to spiritual growth and communion with God.&rdquo; &mdash; &ldquo;A <em>falta de perd&atilde;o</em> &eacute; uma barreira ao crescimento espiritual e &agrave; comunh&atilde;o com Deus.&rdquo;">
+                        <div class="question"><span class="q-num">14</span> Qual &eacute; a decomposi&ccedil;&atilde;o correta de <strong>&ldquo;unforgiveness&rdquo;</strong>?</div>
+                        <div class="options-group" id="r9-q14"><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q14')">a) un- (nega&ccedil;&atilde;o) + forgive (perdoar) + -ness (qualidade) = falta de perd&atilde;o</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q14')">b) under- (abaixo) + forgive (perdoar) + -ness (qualidade) = perd&atilde;o inferior</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q14')">c) un- (nega&ccedil;&atilde;o) + forget (esquecer) + -ness (qualidade) = esquecimento</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q14"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavra:</strong> <em>predestination</em><br><strong>Decomposi&ccedil;&atilde;o morfol&oacute;gica:</strong><br>- <em>pre-</em> (prefixo = antes, anterioridade) + <em>destin(e)</em> (destinar &mdash; raiz) + <em>-ation</em> (sufixo que transforma em substantivo)<br><strong>O prefixo <em>pre-</em> indica:</strong> anterioridade, algo que ocorre antes.<br><strong>Exemplo teol&oacute;gico:</strong> &ldquo;The doctrine of predestination teaches that God chose His elect before the foundation of the world.&rdquo; &mdash; &ldquo;A doutrina da <em>predestina&ccedil;&atilde;o</em> ensina que Deus escolheu Seus eleitos antes da funda&ccedil;&atilde;o do mundo.&rdquo;">
+                        <div class="question"><span class="q-num">15</span> Na palavra <strong>&ldquo;predestination&rdquo;</strong>, o prefixo <em>pre-</em> indica:</div>
+                        <div class="options-group" id="r9-q15"><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q15')">a) Antes / anterioridade</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q15')">b) Depois / posterioridade</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q15')">c) Contra / oposi&ccedil;&atilde;o</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q15')">d) Junto / uni&atilde;o</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q15"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavra:</strong> <em>righteous</em><br><strong>Decomposi&ccedil;&atilde;o morfol&oacute;gica:</strong><br>- <em>right</em> (correto, justo &mdash; raiz) + <em>-eous</em> (variante de <em>-ous</em>, sufixo que transforma em adjetivo)<br><strong>O sufixo <em>-ous</em> transforma a palavra em:</strong> adjetivo (que possui a qualidade de).<br><strong>Significado:</strong> justo, reto, &iacute;ntegro.<br><strong>Exemplo teol&oacute;gico:</strong> &ldquo;Noah was a righteous man who walked faithfully with God.&rdquo; &mdash; &ldquo;No&eacute; era um homem <em>justo</em> que andava fielmente com Deus.&rdquo;">
+                        <div class="question"><span class="q-num">16</span> Na palavra <strong>&ldquo;righteous&rdquo;</strong>, o sufixo <em>-ous</em> transforma a palavra em:</div>
+                        <div class="options-group" id="r9-q16"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q16')">a) Substantivo</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q16')">b) Adjetivo</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q16')">c) Verbo</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q16')">d) Adv&eacute;rbio</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q16"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavra:</strong> <em>disobedience</em><br><strong>Decomposi&ccedil;&atilde;o morfol&oacute;gica:</strong><br>- <em>dis-</em> (prefixo = nega&ccedil;&atilde;o/oposto) + <em>obey</em> (obedecer &mdash; raiz verbal, com altera&ccedil;&atilde;o para <em>obedi-</em>) + <em>-ence</em> (sufixo que transforma em substantivo)<br><strong>O prefixo <em>dis-</em> indica:</strong> nega&ccedil;&atilde;o, oposto.<br><strong>Significado:</strong> desobedi&ecirc;ncia.<br><strong>Exemplo teol&oacute;gico:</strong> &ldquo;Through one man&rsquo;s disobedience, sin entered the world.&rdquo; &mdash; &ldquo;Pela <em>desobedi&ecirc;ncia</em> de um s&oacute; homem, o pecado entrou no mundo.&rdquo; (Romanos 5:19)">
+                        <div class="question"><span class="q-num">17</span> Na palavra <strong>&ldquo;disobedience&rdquo;</strong>, o prefixo <em>dis-</em> indica:</div>
+                        <div class="options-group" id="r9-q17"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q17')">a) Repeti&ccedil;&atilde;o</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q17')">b) Nega&ccedil;&atilde;o / oposto</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q17')">c) Excesso</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q17')">d) Anterioridade</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q17"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavra:</strong> <em>justification</em><br><strong>Decomposi&ccedil;&atilde;o morfol&oacute;gica:</strong><br>- <em>justify</em> (justificar &mdash; raiz verbal) + <em>-cation</em> (variante de <em>-tion</em>, sufixo que transforma verbo em substantivo)<br><strong>O sufixo correto &eacute;:</strong> <em>-cation</em>, que transforma o verbo <em>justify</em> no substantivo <em>justification</em> (justifica&ccedil;&atilde;o).<br><strong>Exemplo teol&oacute;gico:</strong> &ldquo;Justification by faith alone is a central doctrine of the Reformation.&rdquo; &mdash; &ldquo;A <em>justifica&ccedil;&atilde;o</em> somente pela f&eacute; &eacute; uma doutrina central da Reforma.&rdquo;">
+                        <div class="question"><span class="q-num">18</span> Qual sufixo transforma o verbo <strong>&ldquo;justify&rdquo;</strong> no substantivo <strong>&ldquo;justification&rdquo;</strong>?</div>
+                        <div class="options-group" id="r9-q18"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q18')">a) -ness</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q18')">b) -ment</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q18')">c) -cation</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q18')">d) -ful</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q18"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavra:</strong> <em>redeemable</em><br><strong>Decomposi&ccedil;&atilde;o morfol&oacute;gica:</strong><br>- <em>re-</em> (prefixo = novamente/de volta) + <em>deem</em> (julgar, considerar &mdash; raiz) + <em>-able</em> (sufixo = capaz de ser)<br><strong>Significado:</strong> capaz de ser redimido, resgatado.<br><strong>O prefixo <em>re-</em> indica repeti&ccedil;&atilde;o/restaura&ccedil;&atilde;o e o sufixo <em>-able</em> indica possibilidade.</strong><br><strong>Exemplo teol&oacute;gico:</strong> &ldquo;Every sinner is redeemable through the blood of Christ.&rdquo; &mdash; &ldquo;Todo pecador &eacute; <em>redim&iacute;vel</em> (capaz de ser redimido) pelo sangue de Cristo.&rdquo;">
+                        <div class="question"><span class="q-num">19</span> Qual &eacute; a decomposi&ccedil;&atilde;o correta de <strong>&ldquo;redeemable&rdquo;</strong>?</div>
+                        <div class="options-group" id="r9-q19"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q19')">a) red- (vermelho) + deem (julgar) + -able (capaz de)</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q19')">b) re- (novamente/de volta) + deem (julgar) + -able (capaz de ser) = capaz de ser redimido</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q19')">c) re- (novamente) + deem (julgar) + -able (cheio de) = cheio de julgamento</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q19"></div>
+                    </div>
+
+                </div>
+
+                <button class="rev-back-btn" onclick="hideRevSection()" style="margin-top:20px;">Voltar aos temas</button>
+            </div>
+            <div id="rev-section-4" class="rev-section" style="display:none;">
+                <button class="rev-back-btn" onclick="hideRevSection()">Voltar aos temas</button>
+
+                <div class="section">
+                    <h3>Relembrando: Sin&ocirc;nimos e Ant&ocirc;nimos</h3>
+                    <p>Em ingl&ecirc;s teol&oacute;gico, reconhecer <strong>sin&ocirc;nimos</strong> (palavras com significado semelhante) e <strong>ant&ocirc;nimos</strong> (palavras com significado oposto) &eacute; essencial para compreender textos sem depender do dicion&aacute;rio.</p>
+                    <ul style="margin:12px 0 16px;">
+                        <li><strong>Sin&ocirc;nimos:</strong> palavras que podem substituir umas &agrave;s outras sem alterar substancialmente o sentido. Exemplos: <em>forgiveness / pardon</em> (perd&atilde;o); <em>grace / mercy</em> (gra&ccedil;a / miseric&oacute;rdia &mdash; conceitos pr&oacute;ximos no contexto b&iacute;blico).</li>
+                        <li><strong>Ant&ocirc;nimos:</strong> palavras que expressam ideias opostas. Exemplos: <em>salvation / damnation</em> (salva&ccedil;&atilde;o / condena&ccedil;&atilde;o); <em>righteous / wicked</em> (justo / &iacute;mpio).</li>
+                    </ul>
+                    <p>Ao encontrar uma palavra desconhecida, procure no texto um sin&ocirc;nimo (que refor&ccedil;a o sentido) ou um ant&ocirc;nimo (que mostra o contraste), pois autores teol&oacute;gicos frequentemente usam pares para enfatizar conceitos.</p>
+                    <div class="example-box theological">
+                        <div class="label">Exemplo</div>
+                        <div class="en">&ldquo;God offers <strong>salvation</strong> to those who believe, but <strong>damnation</strong> awaits those who reject His grace.&rdquo;</div>
+                        <div class="pt"><em>Salvation</em> (salva&ccedil;&atilde;o) e <em>damnation</em> (condena&ccedil;&atilde;o) s&atilde;o <strong>ant&ocirc;nimos</strong>: o contraste entre &ldquo;believe&rdquo; e &ldquo;reject&rdquo; confirma a oposi&ccedil;&atilde;o.</div>
+                    </div>
+                </div>
+
+                <div class="exercise-area">
+                    <h3>Exerc&iacute;cios &mdash; Sin&ocirc;nimos e Ant&ocirc;nimos</h3>
+                    <p style="margin-bottom:15px;font-size:0.9rem;">Identifique a rela&ccedil;&atilde;o entre as palavras apresentadas:</p>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavras:</strong> <em>forgiveness</em> (perd&atilde;o) e <em>pardon</em> (perd&atilde;o/indul&ccedil;&atilde;o).<br><strong>Rela&ccedil;&atilde;o:</strong> Sin&ocirc;nimos &mdash; ambas significam o ato de perdoar, de liberar algu&eacute;m de uma culpa ou d&iacute;vida.<br><strong>Exemplo b&iacute;blico:</strong> &ldquo;If we confess our sins, He is faithful to grant us forgiveness and pardon.&rdquo; &mdash; &ldquo;Se confessarmos nossos pecados, Ele &eacute; fiel para nos conceder <em>perd&atilde;o</em> e <em>indul&ccedil;&atilde;o</em>.&rdquo; (cf. 1 Jo&atilde;o 1:9)">
+                        <div class="question"><span class="q-num">20</span> As palavras <strong>&ldquo;forgiveness&rdquo;</strong> e <strong>&ldquo;pardon&rdquo;</strong> s&atilde;o:</div>
+                        <div class="options-group" id="r9-q20"><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q20')">a) Sin&ocirc;nimos</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q20')">b) Ant&ocirc;nimos</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q20"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavras:</strong> <em>righteous</em> (justo, reto) e <em>wicked</em> (&iacute;mpio, perverso).<br><strong>Rela&ccedil;&atilde;o:</strong> Ant&ocirc;nimos &mdash; expressam qualidades morais opostas. Na B&iacute;blia, o justo segue a Deus, enquanto o &iacute;mpio se afasta dEle.<br><strong>Exemplo b&iacute;blico:</strong> &ldquo;The Lord watches over the way of the righteous, but the way of the wicked leads to destruction.&rdquo; &mdash; &ldquo;O Senhor conhece o caminho dos <em>justos</em>, mas o caminho dos <em>&iacute;mpios</em> leva &agrave; destrui&ccedil;&atilde;o.&rdquo; (Salmo 1:6)">
+                        <div class="question"><span class="q-num">21</span> As palavras <strong>&ldquo;righteous&rdquo;</strong> e <strong>&ldquo;wicked&rdquo;</strong> s&atilde;o:</div>
+                        <div class="options-group" id="r9-q21"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q21')">a) Sin&ocirc;nimos</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q21')">b) Ant&ocirc;nimos</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q21"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavra:</strong> <em>eternal</em> (eterno).<br><strong>Ant&ocirc;nimo correto:</strong> <em>temporary</em> (tempor&aacute;rio) &mdash; o que &eacute; eterno n&atilde;o tem fim; o que &eacute; tempor&aacute;rio &eacute; passageiro.<br><strong>Exemplo b&iacute;blico:</strong> &ldquo;For our light and temporary troubles are achieving for us an eternal glory that far outweighs them all.&rdquo; &mdash; &ldquo;Pois as nossas tribula&ccedil;&otilde;es leves e <em>moment&acirc;neas</em> est&atilde;o produzindo para n&oacute;s uma gl&oacute;ria <em>eterna</em> que a todas ultrapassa.&rdquo; (2 Cor&iacute;ntios 4:17)">
+                        <div class="question"><span class="q-num">22</span> Qual &eacute; o ant&ocirc;nimo de <strong>&ldquo;eternal&rdquo;</strong> (eterno)?</div>
+                        <div class="options-group" id="r9-q22"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q22')">a) Infinite (infinito)</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q22')">b) Temporary (tempor&aacute;rio)</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q22')">c) Spiritual (espiritual)</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q22')">d) Divine (divino)</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q22"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavra:</strong> <em>preach</em> (pregar, proclamar).<br><strong>Sin&ocirc;nimo correto:</strong> <em>proclaim</em> (proclamar) &mdash; ambas significam anunciar/declarar uma mensagem publicamente, especialmente o Evangelho.<br><strong>Exemplo b&iacute;blico:</strong> &ldquo;Go into all the world and preach the Gospel; proclaim the good news to every creature.&rdquo; &mdash; &ldquo;Ide por todo o mundo e <em>pregai</em> o Evangelho; <em>proclamai</em> as boas novas a toda criatura.&rdquo; (cf. Marcos 16:15)">
+                        <div class="question"><span class="q-num">23</span> Qual &eacute; o sin&ocirc;nimo de <strong>&ldquo;preach&rdquo;</strong> (pregar)?</div>
+                        <div class="options-group" id="r9-q23"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q23')">a) Condemn (condenar)</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q23')">b) Whisper (sussurrar)</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q23')">c) Proclaim (proclamar)</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q23')">d) Deny (negar)</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q23"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavras:</strong> <em>salvation</em> (salva&ccedil;&atilde;o) e <em>damnation</em> (condena&ccedil;&atilde;o).<br><strong>Rela&ccedil;&atilde;o:</strong> Ant&ocirc;nimos &mdash; representam destinos espirituais opostos. <em>Salvation</em> &eacute; o livramento do pecado e da morte; <em>damnation</em> &eacute; a condena&ccedil;&atilde;o eterna.<br><strong>Exemplo b&iacute;blico:</strong> &ldquo;He who believes shall receive salvation, but he who rejects the truth faces damnation.&rdquo; &mdash; &ldquo;Aquele que cr&ecirc; receber&aacute; <em>salva&ccedil;&atilde;o</em>, mas aquele que rejeita a verdade enfrentar&aacute; a <em>condena&ccedil;&atilde;o</em>.&rdquo;">
+                        <div class="question"><span class="q-num">24</span> As palavras <strong>&ldquo;salvation&rdquo;</strong> e <strong>&ldquo;damnation&rdquo;</strong> s&atilde;o:</div>
+                        <div class="options-group" id="r9-q24"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q24')">a) Sin&ocirc;nimos</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q24')">b) Ant&ocirc;nimos</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q24"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Palavras:</strong> <em>grace</em> (gra&ccedil;a) e <em>mercy</em> (miseric&oacute;rdia).<br><strong>Rela&ccedil;&atilde;o:</strong> Sin&ocirc;nimos (no contexto teol&oacute;gico) &mdash; embora com nuances distintas (gra&ccedil;a = favor imerecido; miseric&oacute;rdia = compaix&atilde;o diante do sofrimento), ambas descrevem a bondade de Deus para com pecadores indignos e frequentemente aparecem juntas nas Escrituras.<br><strong>Exemplo b&iacute;blico:</strong> &ldquo;Let us approach the throne of God with confidence, so that we may receive mercy and find grace to help us in our time of need.&rdquo; &mdash; &ldquo;Cheguemo-nos ao trono de Deus com confian&ccedil;a, para que recebamos <em>miseric&oacute;rdia</em> e encontremos <em>gra&ccedil;a</em> para socorro em tempo oportuno.&rdquo; (Hebreus 4:16)">
+                        <div class="question"><span class="q-num">25</span> As palavras <strong>&ldquo;grace&rdquo;</strong> e <strong>&ldquo;mercy&rdquo;</strong> s&atilde;o:</div>
+                        <div class="options-group" id="r9-q25"><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q25')">a) Sin&ocirc;nimos</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q25')">b) Ant&ocirc;nimos</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q25"></div>
+                    </div>
+
+                </div>
+
+                <button class="rev-back-btn" onclick="hideRevSection()" style="margin-top:20px;">Voltar aos temas</button>
+            </div>
+            <div id="rev-section-5" class="rev-section" style="display:none;">
+                <button class="rev-back-btn" onclick="hideRevSection()">Voltar aos temas</button>
+
+                <div class="section">
+                    <h3>Relembrando: Estrutura da Ora&ccedil;&atilde;o</h3>
+                    <p>A estrutura b&aacute;sica da ora&ccedil;&atilde;o em ingl&ecirc;s segue a ordem <strong>Sujeito + Verbo + Objeto (SVO)</strong>. Existem tr&ecirc;s tipos principais de ora&ccedil;&atilde;o:</p>
+                    <ul style="margin:12px 0 16px;">
+                        <li><strong>Simple sentence (ora&ccedil;&atilde;o simples):</strong> cont&eacute;m apenas uma cl&aacute;usula independente (um sujeito e um verbo).</li>
+                        <li><strong>Compound sentence (ora&ccedil;&atilde;o composta):</strong> duas cl&aacute;usulas independentes unidas por uma conjun&ccedil;&atilde;o coordenativa (<em>and, but, yet, or, so</em>).</li>
+                        <li><strong>Complex sentence (ora&ccedil;&atilde;o complexa):</strong> uma cl&aacute;usula principal + uma subordinada, introduzida por <em>who, because, when, although, if</em>.</li>
+                    </ul>
+                    <p><strong>Erros comuns:</strong></p>
+                    <ul style="margin:12px 0 16px;">
+                        <li><strong>Fragment (fragmento):</strong> falta o verbo &mdash; n&atilde;o &eacute; uma ora&ccedil;&atilde;o completa.</li>
+                        <li><strong>Run-on (emenda):</strong> duas ora&ccedil;&otilde;es juntas sem conjun&ccedil;&atilde;o ou pontua&ccedil;&atilde;o adequada.</li>
+                    </ul>
+                </div>
+
+                <div class="exercise-area">
+                    <h3>Exerc&iacute;cios &mdash; Estrutura da Ora&ccedil;&atilde;o</h3>
+                    <p style="margin-bottom:15px;font-size:0.9rem;">Analise cada frase e identifique os elementos ou o tipo de ora&ccedil;&atilde;o:</p>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;The sovereign God justifies sinners by grace.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;O Deus soberano justifica pecadores pela gra&ccedil;a.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> O sujeito &eacute; <em>God</em> (Deus) &mdash; &eacute; quem pratica a a&ccedil;&atilde;o. O verbo principal &eacute; <em>justifies</em> (justifica). <em>Sovereign</em> &eacute; adjetivo que modifica <em>God</em>, e <em>sinners</em> &eacute; o objeto direto.">
+                        <div class="question"><span class="q-num">26</span> &ldquo;The sovereign God justifies sinners by grace.&rdquo; &mdash; O sujeito e o verbo s&atilde;o:</div>
+                        <div class="options-group" id="r9-q26"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q26')">a) Sovereign / justifies</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q26')">b) God / justifies</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q26')">c) Sinners / justifies</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q26')">d) Grace / sovereign</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q26"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;The faithful pastor preached boldly.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;O pastor fiel pregou corajosamente.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> <em>Faithful</em> &eacute; um <strong>adjetivo</strong> que modifica o substantivo <em>pastor</em>. Ele descreve uma qualidade do pastor (fiel). N&atilde;o confundir com adv&eacute;rbio &mdash; adjetivos modificam substantivos, adv&eacute;rbios modificam verbos.">
+                        <div class="question"><span class="q-num">27</span> &ldquo;The faithful pastor preached boldly.&rdquo; &mdash; A palavra <em>faithful</em> &eacute;:</div>
+                        <div class="options-group" id="r9-q27"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q27')">a) Substantivo</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q27')">b) Adjetivo</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q27')">c) Adv&eacute;rbio</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q27')">d) Verbo</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q27"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;Paul earnestly prayed for the churches.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;Paulo orou fervorosamente pelas igrejas.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> <em>Earnestly</em> &eacute; um <strong>adv&eacute;rbio</strong> que modifica o verbo <em>prayed</em> (orou). Ele indica <em>como</em> Paulo orou. Adv&eacute;rbios em ingl&ecirc;s frequentemente terminam em <em>-ly</em>.">
+                        <div class="question"><span class="q-num">28</span> &ldquo;Paul earnestly prayed for the churches.&rdquo; &mdash; A palavra <em>earnestly</em> &eacute;:</div>
+                        <div class="options-group" id="r9-q28"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q28')">a) Adjetivo</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q28')">b) Substantivo</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q28')">c) Adv&eacute;rbio (modifica <em>prayed</em>)</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q28')">d) Preposi&ccedil;&atilde;o</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q28"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;God works all things together for good.&rdquo; (Rm 8:28)<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;Deus faz todas as coisas cooperarem para o bem.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> Esta &eacute; uma <strong>ora&ccedil;&atilde;o simples (Simple sentence)</strong>. Possui apenas uma cl&aacute;usula independente com um sujeito (<em>God</em>) e um verbo (<em>works</em>). N&atilde;o h&aacute; conjun&ccedil;&atilde;o coordenativa nem cl&aacute;usula subordinada.">
+                        <div class="question"><span class="q-num">29</span> &ldquo;God works all things together for good.&rdquo; (Rm 8:28) &mdash; O tipo de ora&ccedil;&atilde;o &eacute;:</div>
+                        <div class="options-group" id="r9-q29"><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q29')">a) Simple (simples)</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q29')">b) Compound (composta)</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q29')">c) Complex (complexa)</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q29')">d) Fragment (fragmento)</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q29"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;Man is totally depraved, yet God regenerates him.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;O homem &eacute; totalmente depravado, contudo Deus o regenera.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> Esta &eacute; uma <strong>ora&ccedil;&atilde;o composta (Compound sentence)</strong>. H&aacute; duas cl&aacute;usulas independentes: &ldquo;Man is totally depraved&rdquo; e &ldquo;God regenerates him&rdquo;, unidas pela conjun&ccedil;&atilde;o coordenativa <em>yet</em> (contudo).">
+                        <div class="question"><span class="q-num">30</span> &ldquo;Man is totally depraved, yet God regenerates him.&rdquo; &mdash; O tipo de ora&ccedil;&atilde;o &eacute;:</div>
+                        <div class="options-group" id="r9-q30"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q30')">a) Simple (simples)</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q30')">b) Compound (composta &mdash; duas cl&aacute;usulas com <em>yet</em>)</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q30')">c) Complex (complexa)</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q30')">d) Fragment (fragmento)</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q30"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;I can do all things through him who strengthens me.&rdquo; (Fp 4:13)<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;Tudo posso naquele que me fortalece.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> Esta &eacute; uma <strong>ora&ccedil;&atilde;o complexa (Complex sentence)</strong>. A cl&aacute;usula principal &eacute; &ldquo;I can do all things through him&rdquo; e a cl&aacute;usula subordinada &eacute; &ldquo;who strengthens me&rdquo;, introduzida pelo pronome relativo <em>who</em>.">
+                        <div class="question"><span class="q-num">31</span> &ldquo;I can do all things through him who strengthens me.&rdquo; (Fp 4:13) &mdash; O tipo de ora&ccedil;&atilde;o &eacute;:</div>
+                        <div class="options-group" id="r9-q31"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q31')">a) Simple (simples)</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q31')">b) Compound (composta)</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q31')">c) Complex (complexa &mdash; cl&aacute;usula subordinada com <em>who</em>)</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q31')">d) Run-on (emenda)</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q31"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;The church in prayer.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;A igreja em ora&ccedil;&atilde;o.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> Isto &eacute; um <strong>fragmento (Fragment)</strong>. N&atilde;o h&aacute; verbo na frase &mdash; apenas um sujeito (<em>The church</em>) e um sintagma preposicional (<em>in prayer</em>). Para ser uma ora&ccedil;&atilde;o completa, precisaria de um verbo, como: &ldquo;The church <em>was</em> in prayer.&rdquo;">
+                        <div class="question"><span class="q-num">32</span> &ldquo;The church in prayer.&rdquo; &mdash; O problema desta constru&ccedil;&atilde;o &eacute;:</div>
+                        <div class="options-group" id="r9-q32"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q32')">a) Run-on (emenda)</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q32')">b) Fragment (fragmento &mdash; n&atilde;o h&aacute; verbo)</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q32')">c) Compound mal formada</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q32')">d) N&atilde;o h&aacute; problema</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q32"></div>
+                    </div>
+
+                </div>
+
+                <button class="rev-back-btn" onclick="hideRevSection()" style="margin-top:20px;">Voltar aos temas</button>
+            </div>
+
+            <div id="rev-section-6" class="rev-section" style="display:none;">
+                <button class="rev-back-btn" onclick="hideRevSection()">Voltar aos temas</button>
+
+                <div class="section">
+                    <h3>Relembrando: Ordem das Palavras</h3>
+                    <p>Em ingl&ecirc;s, os modificadores (adjetivos) v&ecirc;m <strong>antes</strong> do substantivo, ao contr&aacute;rio do portugu&ecirc;s, onde geralmente v&ecirc;m depois. Al&eacute;m disso, quando h&aacute; v&aacute;rios adjetivos, eles seguem uma ordem fixa:</p>
+                    <ul style="margin:12px 0 16px;">
+                        <li><strong>Ordem dos adjetivos:</strong> opini&atilde;o &gt; tamanho &gt; idade &gt; cor &gt; origem &gt; material.</li>
+                        <li><strong>Substantivos compostos:</strong> em sequ&ecirc;ncias como <em>Sunday school teacher</em>, a &uacute;ltima palavra &eacute; o <strong>n&uacute;cleo</strong> (head noun). As anteriores funcionam como modificadores.</li>
+                    </ul>
+                    <p>Ao traduzir para o portugu&ecirc;s, &eacute; preciso inverter a ordem: <em>Reformed theology book</em> = &ldquo;Livro de teologia reformada&rdquo; (o n&uacute;cleo <em>book</em> vem por &uacute;ltimo em ingl&ecirc;s, mas primeiro em portugu&ecirc;s).</p>
+                </div>
+
+                <div class="exercise-area">
+                    <h3>Exerc&iacute;cios &mdash; Ordem das Palavras</h3>
+                    <p style="margin-bottom:15px;font-size:0.9rem;">Traduza ou analise a estrutura de cada express&atilde;o:</p>
+
+                    <div class="exercise-item" data-feedback="<strong>Express&atilde;o:</strong> &ldquo;the old Greek manuscript&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;O antigo manuscrito grego.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> Em ingl&ecirc;s os adjetivos <em>old</em> (antigo) e <em>Greek</em> (grego) v&ecirc;m antes do substantivo <em>manuscript</em>. Na tradu&ccedil;&atilde;o, o substantivo vem primeiro e os adjetivos depois: &ldquo;manuscrito antigo grego&rdquo; ou, mais natural, &ldquo;antigo manuscrito grego&rdquo;.">
+                        <div class="question"><span class="q-num">33</span> &ldquo;the old Greek manuscript&rdquo; traduz-se como:</div>
+                        <div class="options-group" id="r9-q33"><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q33')">a) O antigo manuscrito grego</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q33')">b) O grego antigo manuscrito</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q33')">c) O manuscrito do antigo grego</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q33')">d) O velho grego do manuscrito</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q33"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Express&atilde;o:</strong> &ldquo;Sunday school teacher&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;Professor de escola dominical.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> Em substantivos compostos em ingl&ecirc;s, o <strong>n&uacute;cleo</strong> &eacute; sempre a <strong>&uacute;ltima palavra</strong>: <em>teacher</em> (professor). As palavras anteriores funcionam como modificadores: <em>Sunday school</em> (escola dominical) descreve o tipo de professor.">
+                        <div class="question"><span class="q-num">34</span> Em &ldquo;Sunday school teacher&rdquo;, o n&uacute;cleo (head noun) &eacute;:</div>
+                        <div class="options-group" id="r9-q34"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q34')">a) Sunday</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q34')">b) School</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q34')">c) Teacher (&uacute;ltimo substantivo)</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q34')">d) Sunday school</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q34"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Express&atilde;o:</strong> &ldquo;Bible study group&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;Grupo de estudo b&iacute;blico.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> O n&uacute;cleo &eacute; <em>group</em> (grupo), modificado por <em>Bible study</em> (estudo b&iacute;blico). Na tradu&ccedil;&atilde;o, invertemos a ordem: o n&uacute;cleo vem primeiro em portugu&ecirc;s.">
+                        <div class="question"><span class="q-num">35</span> &ldquo;Bible study group&rdquo; traduz-se como:</div>
+                        <div class="options-group" id="r9-q35"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q35')">a) B&iacute;blia de grupo de estudo</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q35')">b) Grupo de estudo b&iacute;blico</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q35')">c) Estudo de grupo da B&iacute;blia</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q35')">d) Grupo b&iacute;blico de estudo</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q35"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Express&atilde;o:</strong> &ldquo;a beautiful old stone church&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;Uma bela e antiga igreja de pedra.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> A ordem correta dos adjetivos em ingl&ecirc;s &eacute;: <strong>opini&atilde;o</strong> (<em>beautiful</em>) &gt; <strong>idade</strong> (<em>old</em>) &gt; <strong>material</strong> (<em>stone</em>). N&atilde;o se diz <em>old beautiful stone</em> nem <em>stone old beautiful</em>.">
+                        <div class="question"><span class="q-num">36</span> Complete com a ordem correta: &ldquo;a ___ ___ ___ church&rdquo;:</div>
+                        <div class="options-group" id="r9-q36"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q36')">a) stone old beautiful</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q36')">b) old stone beautiful</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q36')">c) beautiful old stone</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q36')">d) old beautiful stone</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q36"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Express&atilde;o:</strong> &ldquo;Reformed theology book&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;Livro de teologia reformada.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> O n&uacute;cleo &eacute; <em>book</em> (livro), a &uacute;ltima palavra. <em>Reformed theology</em> (teologia reformada) funciona como modificador composto. Na tradu&ccedil;&atilde;o, invertemos: o n&uacute;cleo vem primeiro.">
+                        <div class="question"><span class="q-num">37</span> &ldquo;Reformed theology book&rdquo; traduz-se como:</div>
+                        <div class="options-group" id="r9-q37"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q37')">a) Reformada teologia do livro</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q37')">b) Teologia do livro reformado</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q37')">c) Livro de teologia reformada</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q37')">d) Livro reformado de teologia</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q37"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Express&atilde;o:</strong> &ldquo;Church planting movement&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;Movimento de planta&ccedil;&atilde;o de igrejas.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> O n&uacute;cleo &eacute; <em>movement</em> (movimento), modificado por <em>church planting</em> (planta&ccedil;&atilde;o de igrejas). A tradu&ccedil;&atilde;o inverte a ordem, colocando o n&uacute;cleo primeiro e os modificadores como complementos preposicionais.">
+                        <div class="question"><span class="q-num">38</span> &ldquo;Church planting movement&rdquo; traduz-se como:</div>
+                        <div class="options-group" id="r9-q38"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q38')">a) Igreja de movimento de planta&ccedil;&atilde;o</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q38')">b) Planta&ccedil;&atilde;o de movimento de igrejas</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q38')">c) Movimento de planta&ccedil;&atilde;o de igrejas</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q38')">d) Movimento da igreja plantada</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q38"></div>
+                    </div>
+
+                </div>
+
+                <button class="rev-back-btn" onclick="hideRevSection()" style="margin-top:20px;">Voltar aos temas</button>
+            </div>
+
+            <div id="rev-section-7" class="rev-section" style="display:none;">
+                <button class="rev-back-btn" onclick="hideRevSection()">Voltar aos temas</button>
+
+                <div class="section">
+                    <h3>Relembrando: Coes&atilde;o Textual</h3>
+                    <p>A <strong>coes&atilde;o textual</strong> &eacute; o conjunto de mecanismos que conectam as partes de um texto, garantindo flu&ecirc;ncia e coer&ecirc;ncia. Os principais recursos s&atilde;o:</p>
+                    <ul style="margin:12px 0 16px;">
+                        <li><strong>Conectores (discourse markers):</strong> <em>however</em> = contraste; <em>therefore / consequently</em> = consequ&ecirc;ncia; <em>furthermore / moreover</em> = adi&ccedil;&atilde;o; <em>for instance / for example</em> = exemplifica&ccedil;&atilde;o; <em>similarly</em> = semelhan&ccedil;a.</li>
+                        <li><strong>Refer&ecirc;ncia pronominal:</strong> pronomes que retomam substantivos j&aacute; mencionados (<em>he, she, it, they, this, those</em>).</li>
+                        <li><strong>Coes&atilde;o lexical &mdash; sinon&iacute;mia:</strong> uso de sin&ocirc;nimos para evitar repeti&ccedil;&atilde;o (<em>pastor / minister / clergyman</em> referindo-se &agrave; mesma pessoa).</li>
+                    </ul>
+                </div>
+
+                <div class="exercise-area">
+                    <h3>Exerc&iacute;cios &mdash; Coes&atilde;o Textual</h3>
+                    <p style="margin-bottom:15px;font-size:0.9rem;">Identifique o tipo de conector ou o recurso de coes&atilde;o utilizado:</p>
+
+                    <div class="exercise-item" data-feedback="<strong>Pergunta:</strong> Qual conector indica contraste?<br><strong>Resposta:</strong> <em>However</em> (contudo, no entanto).<br><strong>Explica&ccedil;&atilde;o:</strong> <em>However</em> &eacute; o conector mais comum para introduzir uma ideia que se op&otilde;e ou contrasta com a anterior. Outros exemplos: <em>nevertheless, on the other hand, yet</em>.">
+                        <div class="question"><span class="q-num">39</span> Qual conector indica <strong>contraste</strong>?</div>
+                        <div class="options-group" id="r9-q39"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q39')">a) Furthermore</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q39')">b) However</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q39')">c) Therefore</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q39')">d) For instance</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q39"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Pergunta:</strong> Qual conector indica consequ&ecirc;ncia?<br><strong>Resposta:</strong> <em>Consequently</em> (consequentemente).<br><strong>Explica&ccedil;&atilde;o:</strong> <em>Consequently</em> introduz um resultado ou consequ&ecirc;ncia do que foi dito antes. Outros conectores de consequ&ecirc;ncia: <em>therefore, thus, hence, as a result</em>.">
+                        <div class="question"><span class="q-num">40</span> Qual conector indica <strong>consequ&ecirc;ncia</strong>?</div>
+                        <div class="options-group" id="r9-q40"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q40')">a) However</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q40')">b) Similarly</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q40')">c) Consequently</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q40')">d) Furthermore</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q40"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;The Pharisees questioned Jesus. They believed He was blaspheming.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;Os fariseus questionaram Jesus. Eles acreditavam que Ele estava blasfemando.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> O pronome <em>They</em> retoma <strong>The Pharisees</strong> (os fariseus), mencionados na frase anterior. Este &eacute; um exemplo de refer&ecirc;ncia pronominal &mdash; o pronome evita a repeti&ccedil;&atilde;o do substantivo.">
+                        <div class="question"><span class="q-num">41</span> &ldquo;The Pharisees questioned Jesus. <strong>They</strong> believed He was blaspheming.&rdquo; &mdash; <em>They</em> refere-se a:</div>
+                        <div class="options-group" id="r9-q41"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q41')">a) Jesus e os disc&iacute;pulos</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q41')">b) Os fariseus</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q41')">c) Os saduceus</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q41')">d) O povo em geral</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q41"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;Paul wrote to the Romans. In it, he explained justification by faith.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;Paulo escreveu aos romanos. Nela, ele explicou a justifica&ccedil;&atilde;o pela f&eacute;.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> O pronome <em>it</em> refere-se &agrave; <strong>carta</strong> (the letter/epistle) que Paulo escreveu aos romanos. Embora &ldquo;carta&rdquo; n&atilde;o apare&ccedil;a explicitamente, est&aacute; impl&iacute;cito no verbo <em>wrote to</em> (escreveu para).">
+                        <div class="question"><span class="q-num">42</span> &ldquo;Paul wrote to the Romans. In <strong>it</strong>, he explained justification by faith.&rdquo; &mdash; <em>it</em> refere-se a:</div>
+                        <div class="options-group" id="r9-q42"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q42')">a) Justifica&ccedil;&atilde;o</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q42')">b) Roma</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q42')">c) A carta (the letter)</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q42')">d) A f&eacute;</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q42"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Texto:</strong> &ldquo;The PASTOR led the congregation. The MINISTER preached the sermon. The CLERGYMAN visited the sick.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;O PASTOR liderou a congrega&ccedil;&atilde;o. O MINISTRO pregou o serm&atilde;o. O CL&Eacute;RIGO visitou os enfermos.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> As tr&ecirc;s palavras (<em>pastor, minister, clergyman</em>) s&atilde;o <strong>sin&ocirc;nimos</strong> que se referem &agrave; mesma pessoa. Este recurso de coes&atilde;o chama-se <strong>sinon&iacute;mia</strong> &mdash; evita repeti&ccedil;&atilde;o e mant&eacute;m a refer&ecirc;ncia ao mesmo indiv&iacute;duo.">
+                        <div class="question"><span class="q-num">43</span> &ldquo;The PASTOR... The MINISTER... The CLERGYMAN...&rdquo; &mdash; O recurso de coes&atilde;o utilizado &eacute;:</div>
+                        <div class="options-group" id="r9-q43"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q43')">a) Refer&ecirc;ncia pronominal</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q43')">b) Sinon&iacute;mia</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q43')">c) Conector de contraste</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q43')">d) Repeti&ccedil;&atilde;o lexical</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q43"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;Augustine wrote about grace. Similarly, Calvin emphasized the sovereignty of God in salvation.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;Agostinho escreveu sobre a gra&ccedil;a. De modo semelhante, Calvino enfatizou a soberania de Deus na salva&ccedil;&atilde;o.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> O conector <em>Similarly</em> (de modo semelhante) indica <strong>semelhan&ccedil;a ou compara&ccedil;&atilde;o</strong> entre as ideias de Agostinho e Calvino. Ele mostra que o segundo autor seguiu uma linha de pensamento parecida com a do primeiro.">
+                        <div class="question"><span class="q-num">44</span> &ldquo;Augustine wrote about grace. <strong>Similarly</strong>, Calvin emphasized the sovereignty of God in salvation.&rdquo; &mdash; <em>Similarly</em> indica:</div>
+                        <div class="options-group" id="r9-q44"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q44')">a) Contraste</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q44')">b) Consequ&ecirc;ncia</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q44')">c) Semelhan&ccedil;a / compara&ccedil;&atilde;o</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q44')">d) Exemplifica&ccedil;&atilde;o</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q44"></div>
+                    </div>
+
+                </div>
+
+                <button class="rev-back-btn" onclick="hideRevSection()" style="margin-top:20px;">Voltar aos temas</button>
+            </div>
+
+            <div id="rev-section-8" class="rev-section" style="display:none;">
+                <button class="rev-back-btn" onclick="hideRevSection()">Voltar aos temas</button>
+
+                <div class="section">
+                    <h3>Relembrando: Reconhecimento Gramatical</h3>
+                    <p>Reconhecer estruturas gramaticais &eacute; essencial para a leitura em ingl&ecirc;s. Os pontos-chave s&atilde;o:</p>
+                    <ul style="margin:12px 0 16px;">
+                        <li><strong>Tempos verbais:</strong> Simple Past (<em>created</em>), Present Perfect (<em>has witnessed</em>), Past Perfect (<em>had planted</em>), Simple Future (<em>will inherit</em>).</li>
+                        <li><strong>Pronomes:</strong> relativos (<em>who, whom, whose, which, that</em>), reflexivos (<em>himself, herself, themselves</em>), possessivos (<em>his, her, theirs</em>).</li>
+                        <li><strong>Comparativos e superlativos:</strong> comparativo de superioridade (<em>more... than</em>), superlativo (<em>the most...</em>).</li>
+                    </ul>
+                </div>
+
+                <div class="exercise-area">
+                    <h3>Exerc&iacute;cios &mdash; Reconhecimento Gramatical</h3>
+                    <p style="margin-bottom:15px;font-size:0.9rem;">Identifique o tempo verbal, o tipo de pronome ou a estrutura gramatical em cada frase:</p>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;God created the heavens and the earth.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;Deus criou os c&eacute;us e a terra.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> O verbo <em>created</em> est&aacute; no <strong>Simple Past</strong> (passado simples). Indica uma a&ccedil;&atilde;o conclu&iacute;da no passado. O Simple Past de verbos regulares termina em <em>-ed</em>; <em>create &rarr; created</em>.">
+                        <div class="question"><span class="q-num">45</span> &ldquo;God <strong>created</strong> the heavens and the earth.&rdquo; &mdash; O tempo verbal &eacute;:</div>
+                        <div class="options-group" id="r9-q45"><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q45')">a) Simple Past</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q45')">b) Present Perfect</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q45')">c) Past Perfect</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q45')">d) Simple Present</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q45"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;The church has witnessed many revivals.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;A igreja tem testemunhado muitos avivamentos.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> O verbo <em>has witnessed</em> est&aacute; no <strong>Present Perfect</strong>. Formado por <em>has/have + past participle</em>, indica uma a&ccedil;&atilde;o que come&ccedil;ou no passado e tem relev&acirc;ncia no presente, ou que ocorreu em per&iacute;odo n&atilde;o definido.">
+                        <div class="question"><span class="q-num">46</span> &ldquo;The church <strong>has witnessed</strong> many revivals.&rdquo; &mdash; O tempo verbal &eacute;:</div>
+                        <div class="options-group" id="r9-q46"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q46')">a) Simple Past</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q46')">b) Present Perfect</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q46')">c) Past Continuous</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q46')">d) Simple Present</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q46"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;The theologian who wrote this treatise was Augustine.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;O te&oacute;logo que escreveu este tratado foi Agostinho.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> A palavra <em>who</em> &eacute; um <strong>pronome relativo</strong>. Ele introduz uma cl&aacute;usula subordinada (<em>who wrote this treatise</em>) que identifica qual te&oacute;logo est&aacute; sendo mencionado. <em>Who</em> &eacute; usado para pessoas.">
+                        <div class="question"><span class="q-num">47</span> &ldquo;The theologian <strong>who</strong> wrote this treatise was Augustine.&rdquo; &mdash; <em>who</em> &eacute;:</div>
+                        <div class="options-group" id="r9-q47"><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q47')">a) Pronome relativo</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q47')">b) Pronome reflexivo</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q47')">c) Pronome possessivo</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q47')">d) Conjun&ccedil;&atilde;o</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q47"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;Romans is more theological than Galatians.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;Romanos &eacute; mais teol&oacute;gico do que G&aacute;latas.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> A estrutura <em>more... than</em> &eacute; o <strong>comparativo de superioridade</strong>. Usado com adjetivos longos (de duas ou mais s&iacute;labas): <em>more theological than</em>. Para adjetivos curtos, usa-se o sufixo <em>-er</em> (ex.: <em>older than</em>).">
+                        <div class="question"><span class="q-num">48</span> &ldquo;Romans is <strong>more theological than</strong> Galatians.&rdquo; &mdash; A forma utilizada &eacute;:</div>
+                        <div class="options-group" id="r9-q48"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q48')">a) Superlativo</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q48')">b) Comparativo de superioridade</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q48')">c) Comparativo de igualdade</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q48')">d) Grau normal (positivo)</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q48"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;Christ Himself bore our sins on the cross.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;O pr&oacute;prio Cristo carregou nossos pecados na cruz.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> <em>Himself</em> &eacute; um <strong>pronome reflexivo</strong> usado aqui com fun&ccedil;&atilde;o enf&aacute;tica &mdash; refor&ccedil;a que foi o pr&oacute;prio Cristo (e ningu&eacute;m mais) quem carregou nossos pecados. Pronomes reflexivos: <em>myself, yourself, himself, herself, itself, ourselves, themselves</em>.">
+                        <div class="question"><span class="q-num">49</span> &ldquo;Christ <strong>Himself</strong> bore our sins on the cross.&rdquo; &mdash; <em>Himself</em> &eacute;:</div>
+                        <div class="options-group" id="r9-q49"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q49')">a) Pronome relativo</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q49')">b) Pronome possessivo</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q49')">c) Pronome reflexivo (enfatiza o sujeito)</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q49')">d) Pronome demonstrativo</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q49"></div>
+                    </div>
+
+                    <div class="exercise-item" data-feedback="<strong>Frase:</strong> &ldquo;The missionaries had already planted three churches before they returned.&rdquo;<br><strong>Tradu&ccedil;&atilde;o:</strong> &ldquo;Os mission&aacute;rios j&aacute; haviam plantado tr&ecirc;s igrejas antes de retornarem.&rdquo;<br><strong>Explica&ccedil;&atilde;o:</strong> O verbo <em>had planted</em> est&aacute; no <strong>Past Perfect</strong>. Formado por <em>had + past participle</em>, indica uma a&ccedil;&atilde;o que ocorreu <em>antes</em> de outra a&ccedil;&atilde;o passada (<em>before they returned</em>). O Past Perfect estabelece a sequ&ecirc;ncia temporal entre dois eventos no passado.">
+                        <div class="question"><span class="q-num">50</span> &ldquo;The missionaries <strong>had already planted</strong> three churches before they returned.&rdquo; &mdash; O tempo verbal &eacute;:</div>
+                        <div class="options-group" id="r9-q50"><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q50')">a) Simple Past</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q50')">b) Present Perfect</button><button class="option-btn" onclick="checkRevAnswer(this, true, 'r9-q50')">c) Past Perfect</button><button class="option-btn" onclick="checkRevAnswer(this, false, 'r9-q50')">d) Past Continuous</button></div>
+                        <div class="feedback-msg rev-feedback" id="fb-r9-q50"></div>
+                    </div>
+
+                </div>
+
+                <button class="rev-back-btn" onclick="hideRevSection()" style="margin-top:20px;">Voltar aos temas</button>
+            </div>
 
             <!-- CONTEÚDO ANTIGO REMOVIDO - substituído pelas seções com cards acima -->
             <!-- MARCADOR PARA REMOÇÃO: início do bloco antigo -->
