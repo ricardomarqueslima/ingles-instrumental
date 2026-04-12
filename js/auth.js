@@ -71,7 +71,7 @@ const Auth = {
 
     // À PROVA DE FALHAS: O JS agora garante que todos os botões existam, mesmo que faltem no HTML!
     const cursoId = localStorage.getItem('cursoId') || 'ingles';
-    const maxMod = cursoId.includes('portugues') ? 5 : 8; // Módulo 6 de PT não tem prova
+    const maxMod = cursoId.includes('portugues') ? 5 : 9; // Módulo 6 de PT não tem prova
 
     for (let m = 1; m <= maxMod; m++) {
       let examArea = document.getElementById('exam-area-' + m);
